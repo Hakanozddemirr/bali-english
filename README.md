@@ -16,15 +16,23 @@ Telefona kurmak için: uygulamayı telefonun tarayıcısında aç (aynı Wi-Fi'd
 tarayıcı menüsünden **"Ana Ekrana Ekle"**. Sesli asistan hariç her şey
 çevrimdışı çalışır.
 
-## Yayınlanan sürüm (telefon linki)
+## Yayınlanan sürümler
 
-Uygulama claude.ai Artifact olarak yayında:
+**Ana link (tam sürüm — asistan + çevrimdışı):**
+https://hakanozddemirr.github.io/bali-english/
+
+GitHub Pages, `main` dalındaki `docs/` klasöründen sunulur. Güncelleme:
+
+```bash
+npm run build && rm -rf docs && cp -R dist docs && touch docs/.nojekyll
+git add -A && git commit -m "güncelleme" && git push
+```
+
+(1-2 dakika içinde yayına girer.)
+
+**Yedek link (claude.ai Artifact — asistan çalışmaz):**
 https://claude.ai/code/artifact/316fc6a2-2a36-4bae-96f9-b5b0de04a0e9
-
-- Varsayılan olarak özeldir; yalnızca Claude hesabınla açılır.
-- Sesli asistan bu linkte çalışmaz (sayfa dış API'ye bağlanamaz); diğer her şey çalışır.
-- Güncellemek için: `npm run build:artifact` → bu sohbetten `dist/bali-artifact.html`
-  aynı yoldan yeniden yayınlanır (URL değişmez).
+Güncellemek için: `npm run build:artifact` → `dist/bali-artifact.html` yeniden yayınlanır.
 
 ## İçeriği düzenleme
 
