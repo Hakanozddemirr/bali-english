@@ -35,7 +35,17 @@
     "role": "a friendly hotel receptionist in Ubud, Bali",
     "firstLine": "Good afternoon! Welcome. Do you have a reservation?",
     "situationTr": "Oteline vardın. Resepsiyonda check-in yapıyorsun.",
-    "goalTr": "Rezervasyonun olduğunu söyle, kahvaltı saatini ve wifi şifresini sor."
+    "goalTr": "Rezervasyonun olduğunu söyle, kahvaltı saatini ve wifi şifresini sor.",
+    "script": [
+      { "ai": "Good afternoon! Welcome. Do you have a reservation?", "tr": "İyi günler! Hoş geldiniz. Rezervasyonunuz var mı?", "expect": ["yes", "reservation", "have"], "say": "Yes, I have a reservation." },
+      { "ai": "What is your name, please?", "tr": "İsminiz lütfen?", "expect": ["my name", "hakan", "i am", "i'm"], "say": "My name is Hakan." },
+      { "ai": "Ah yes — ten nights. Your passport, please.", "tr": "Evet — on gece. Pasaportunuz lütfen.", "expect": ["here", "passport"], "say": "Here you are." },
+      { "ai": "Thank you. Your room is number seven.", "tr": "Teşekkürler. Odanız yedi numara.", "expect": ["thank", "seven", "okay"], "say": "Thank you." },
+      { "ai": "Do you have any questions?", "tr": "Sorunuz var mı?", "expect": ["wifi", "password", "yes"], "say": "Yes — what is the wifi password?" },
+      { "ai": "The wifi password is BALI2026.", "tr": "Wifi şifresi: BALI2026.", "expect": ["thank", "breakfast", "what time"], "say": "Thank you. What time is breakfast?" },
+      { "ai": "Breakfast is at eight, near the pool.", "tr": "Kahvaltı saat sekizde, havuzun yanında.", "expect": ["thank", "okay", "great"], "say": "Thank you very much!" },
+      { "ai": "Here is your key. Enjoy your stay!", "tr": "İşte anahtarınız. İyi konaklamalar!", "expect": ["thank", "goodbye"], "say": "Thank you! Goodbye." }
+    ]
   },
   "quiz": {
     "situations": [

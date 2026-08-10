@@ -38,7 +38,18 @@
     "role": "a cheerful waiter at a warung (small restaurant) in Bali",
     "firstLine": "Hello! Welcome! What would you like to drink?",
     "situationTr": "Bir Bali restoranındasın (warung). Garson siparişini almaya geldi.",
-    "goalTr": "İçecek ve yemek siparişi ver, acı olmasın de, sonunda hesabı iste."
+    "goalTr": "İçecek ve yemek siparişi ver, acı olmasın de, sonunda hesabı iste.",
+    "script": [
+      { "ai": "Hello! Welcome! What would you like to drink?", "tr": "Merhaba! Hoş geldiniz! Ne içmek istersiniz?", "expect": ["coffee", "tea", "juice", "water", "beer"], "say": "One coffee, please." },
+      { "ai": "Good! And what would you like to eat?", "tr": "Güzel! Yemek olarak ne alırsınız?", "expect": ["rice", "fried", "noodle", "chicken", "fish"], "say": "I want fried rice." },
+      { "ai": "Good choice! Spicy or not spicy?", "tr": "İyi seçim! Acılı mı, acısız mı?", "expect": ["not spicy", "no spicy", "spicy"], "say": "Not spicy, please." },
+      { "ai": "Okay, not spicy. Anything else?", "tr": "Tamam, acısız. Başka bir şey?", "expect": ["no", "that is all", "thank"], "say": "No, thank you." },
+      { "ai": "Here is your food. Enjoy!", "tr": "Buyurun yemeğiniz. Afiyet olsun!", "expect": ["thank"], "say": "Thank you!" },
+      { "ai": "Is the food good?", "tr": "Yemek güzel mi?", "expect": ["delicious", "good", "yes", "very"], "say": "It's delicious!" },
+      { "ai": "I'm happy! Do you want anything else?", "tr": "Sevindim! Başka bir şey ister misiniz?", "expect": ["no", "bill", "check"], "say": "No, thank you. The bill, please." },
+      { "ai": "Of course. 60,000 rupiah, please.", "tr": "Tabii. 60.000 rupiah lütfen.", "expect": ["card", "pay", "here"], "say": "Can I pay by card?" },
+      { "ai": "Yes, card is okay! Thank you. Come again!", "tr": "Evet, kart olur! Teşekkürler. Yine bekleriz!", "expect": ["thank", "goodbye", "bye"], "say": "Thank you! Goodbye!" }
+    ]
   },
   "quiz": {
     "situations": [

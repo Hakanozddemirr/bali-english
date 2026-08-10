@@ -36,7 +36,17 @@
     "role": "a friendly tour seller on the beach offering waterfall and temple tours",
     "firstLine": "Hello my friend! You want a tour? Very good price!",
     "situationTr": "Plajda yürürken bir tur satıcısı sana şelale ve tapınak turu satmaya çalışıyor.",
-    "goalTr": "Turun saatini, fiyatını ve süresini sor; yarın için iki kişilik yer ayırt."
+    "goalTr": "Turun saatini, fiyatını ve süresini sor; yarın için iki kişilik yer ayırt.",
+    "script": [
+      { "ai": "Hello my friend! You want a tour? Very good price!", "tr": "Merhaba dostum! Tur ister misiniz? Çok iyi fiyat!", "expect": ["what tour", "which", "waterfall", "temple", "tour do you"], "say": "What tour do you have?" },
+      { "ai": "Waterfall and temple tour! Very beautiful!", "tr": "Şelale ve tapınak turu! Çok güzel!", "expect": ["how much", "price", "ticket"], "say": "How much is the ticket?" },
+      { "ai": "Only 400,000 rupiah for one person!", "tr": "Kişi başı sadece 400.000 rupiah!", "expect": ["expensive", "too", "discount"], "say": "That's too expensive!" },
+      { "ai": "Okay, for two people: 600,000 total. Good?", "tr": "Tamam, iki kişi toplam 600.000. İyi mi?", "expect": ["okay", "what time", "start", "yes"], "say": "Okay. What time does the tour start?" },
+      { "ai": "The tour starts at nine in the morning.", "tr": "Tur sabah dokuzda başlıyor.", "expect": ["far", "long", "is it"], "say": "Is it far?" },
+      { "ai": "One hour by car. Very easy!", "tr": "Arabayla bir saat. Çok kolay!", "expect": ["book", "tomorrow", "want"], "say": "I want to book for tomorrow." },
+      { "ai": "Perfect! Two tickets for tomorrow at nine.", "tr": "Harika! Yarın saat dokuz için iki bilet.", "expect": ["thank", "rain"], "say": "Thank you! Will it rain tomorrow?" },
+      { "ai": "No rain tomorrow — sun all day!", "tr": "Yarın yağmur yok — bütün gün güneş!", "expect": ["great", "thank", "see you"], "say": "Great! See you tomorrow!" }
+    ]
   },
   "quiz": {
     "situations": [

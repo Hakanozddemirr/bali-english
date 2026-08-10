@@ -28,14 +28,14 @@ export default function Settings() {
         <div className="sub">Sesli asistan ve uygulama tercihleri</div>
       </header>
 
-      <div className="section-title">Sesli Asistan (Claude)</div>
+      <div className="section-title">Sesli Asistan</div>
       <div className="warn-box">
-        🔑 API anahtarın <b>yalnızca bu cihazda</b> (tarayıcı hafızasında) saklanır, hiçbir yere
-        gönderilmez. Yine de anahtarını <b>kimseyle paylaşma</b>. Anahtar almak için:
-        console.anthropic.com → API Keys
+        🎁 Sesli asistan <b>anahtarsız, ücretsiz</b> çalışır (yerleşik senaryo modu — çevrimdışı
+        bile). İstersen aşağıya bir Anthropic API anahtarı girerek Claude ile serbest sohbete
+        geçebilirsin (ücretli API). Anahtar yalnızca bu cihazda saklanır; kimseyle paylaşma.
       </div>
       <div className="field">
-        <label>Anthropic API Anahtarı</label>
+        <label>Anthropic API Anahtarı (isteğe bağlı)</label>
         <input
           type={showKey ? 'text' : 'password'}
           value={s.apiKey}

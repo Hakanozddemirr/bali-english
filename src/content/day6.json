@@ -40,7 +40,17 @@
     "role": "an energetic souvenir seller at Ubud Art Market who starts with high prices but enjoys bargaining",
     "firstLine": "Hello! Come, come! Very cheap for you!",
     "situationTr": "Ubud pazarındasın. Satıcı sana tişört ve hediyelik satmaya çalışıyor.",
-    "goalTr": "Fiyat sor, pahalı de, indirim iste ve bir fiyatta anlaşıp ürünü al."
+    "goalTr": "Fiyat sor, pahalı de, indirim iste ve bir fiyatta anlaşıp ürünü al.",
+    "script": [
+      { "ai": "Hello! Come, come! Very cheap for you!", "tr": "Merhaba! Gelin gelin! Size çok ucuz!", "expect": ["how much", "t-shirt", "this"], "say": "How much is this t-shirt?" },
+      { "ai": "This t-shirt? 200,000 rupiah. Best quality!", "tr": "Bu tişört mü? 200.000 rupiah. En iyi kalite!", "expect": ["expensive", "too"], "say": "That's too expensive!" },
+      { "ai": "Okay, for you special price: 150,000!", "tr": "Tamam, size özel fiyat: 150.000!", "expect": ["discount", "give me"], "say": "Can you give me a discount?" },
+      { "ai": "Hmm... okay, 120,000. Last price!", "tr": "Hmm... tamam, 120.000. Son fiyat!", "expect": ["fifty", "thousand", "okay?"], "say": "Fifty thousand, okay?" },
+      { "ai": "Fifty?! No no... okay okay, 80,000. Final price!", "tr": "Elli mi?! Yok yok... tamam tamam, 80.000. Kesin son fiyat!", "expect": ["okay", "take", "deal", "yes"], "say": "Okay! I'll take it." },
+      { "ai": "Good! Do you want blue or red?", "tr": "Güzel! Mavi mi kırmızı mı istersiniz?", "expect": ["blue", "red", "black", "white"], "say": "Blue, please." },
+      { "ai": "Blue, nice! Cash or card?", "tr": "Mavi, güzel! Nakit mi kart mı?", "expect": ["card", "cash", "pay"], "say": "Can I pay by card?" },
+      { "ai": "Card is okay! Thank you my friend!", "tr": "Kart olur! Teşekkürler dostum!", "expect": ["thank", "goodbye"], "say": "Thank you! Goodbye!" }
+    ]
   },
   "quiz": {
     "situations": [

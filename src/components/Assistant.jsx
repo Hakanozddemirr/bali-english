@@ -4,30 +4,74 @@ import { useApp, getDayState, ensureDay, recomputeDay } from '../lib/store'
 import { speak, stopSpeaking } from '../lib/tts'
 import { startListening, sttSupported } from '../lib/stt'
 import { chatReply, buildSystemPrompt } from '../lib/claude'
+import { compareSentence, normalize } from '../lib/similarity'
 import { fireConfetti } from '../lib/confetti'
 
 const TARGET_SEC = 600
 // claude.ai üzerinde yayınlanan sürümde dış API çağrıları güvenlik nedeniyle engellidir
 const IS_PUBLISHED = /claude(usercontent)?\.(ai|com)$/.test(window.location.hostname)
 
+const PRAISES = ['Great!', 'Very good!', 'Perfect!', 'Nice!', 'Well done!']
+
 function fmt(sec) {
   return `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`
+}
+
+// Yerleşik (ücretsiz) senaryo motoru: beklenen kalıplardan biri geçiyorsa ya da
+// söylenen cümle model cümleye yeterince benziyorsa bir sonraki adıma geçer.
+function runScriptTurn(script, idx, rawText) {
+  const step = script[idx]
+  const low = rawText.toLowerCase()
+  if (/(^|\W)(help|yardim|yardım)(\W|$)/.test(low)) {
+    return {
+      display: `🇹🇷 “${step.tr}”\n\n${step.ai}`,
+      speakText: step.ai,
+      next: idx,
+    }
+  }
+  const padded = ` ${normalize(rawText)} `
+  const matched =
+    step.expect.some((p) => {
+      const n = normalize(p)
+      return n.includes(' ') ? padded.includes(n) : padded.includes(` ${n} `)
+    }) || compareSentence(step.say, rawText).score >= 0.55
+
+  if (!matched) {
+    return {
+      display: `You can say: “${step.say}” — try it! 🎯`,
+      speakText: `You can say: ${step.say}`,
+      next: idx,
+    }
+  }
+  const praise = PRAISES[idx % PRAISES.length]
+  const nextIdx = idx + 1
+  if (nextIdx >= script.length) {
+    return { display: `${praise} 🎉`, speakText: praise, next: 0, finished: true }
+  }
+  return {
+    display: `${praise} ${script[nextIdx].ai}`,
+    speakText: `${praise} ${script[nextIdx].ai}`,
+    next: nextIdx,
+  }
 }
 
 export default function Assistant({ day, onBack }) {
   const { state, update } = useApp()
   const content = getDay(day)
   const scenario = content.scenario
+  const script = scenario.script || []
   const st = getDayState(state, day)
   const { apiKey, model, rate } = state.settings
+  const mode = apiKey ? 'claude' : 'script'
 
   const [started, setStarted] = useState(false)
-  const [messages, setMessages] = useState([]) // {role:'user'|'assistant', text}
+  const [messages, setMessages] = useState([]) // {role:'user'|'assistant'|'sys', text}
   const [input, setInput] = useState('')
   const [busy, setBusy] = useState(false)
   const [listening, setListening] = useState(false)
   const [err, setErr] = useState('')
   const [secs, setSecs] = useState(st.talkSec)
+  const [stepIdx, setStepIdx] = useState(0)
 
   const recRef = useRef(null)
   const scrollRef = useRef(null)
@@ -81,23 +125,47 @@ export default function Assistant({ day, onBack }) {
     if (el) el.scrollTop = el.scrollHeight
   }, [messages, busy])
 
+  const firstLine = mode === 'script' && script.length ? script[0].ai : scenario.firstLine
+
   const start = () => {
     setStarted(true)
-    setMessages([{ role: 'assistant', text: scenario.firstLine }])
-    speak(scenario.firstLine, rate)
+    setStepIdx(0)
+    setMessages([{ role: 'assistant', text: firstLine }])
+    speak(firstLine, rate)
   }
 
   const send = async (rawText) => {
     const text = (rawText ?? input).trim()
     if (!text || busy) return
-    if (!apiKey) {
-      setErr('Sesli asistan için önce Ayarlar ekranından Anthropic API anahtarını girmen gerekiyor.')
-      return
-    }
     setErr('')
     setInput('')
-    const newMsgs = [...messages, { role: 'user', text }]
-    setMessages(newMsgs)
+
+    // --- Ücretsiz yerleşik mod: yanıt yerelden, internet gerekmez ---
+    if (mode === 'script') {
+      if (!script.length) {
+        setErr('Bu senaryo için yerleşik diyalog bulunamadı.')
+        return
+      }
+      const turn = runScriptTurn(script, stepIdx, text)
+      setMessages((m) => {
+        const out = [...m, { role: 'user', text }, { role: 'assistant', text: turn.display }]
+        if (turn.finished) {
+          out.push({
+            role: 'sys',
+            text: '🎉 Senaryoyu bitirdin! Baştan alıyoruz — süre saymaya devam ediyor.',
+          })
+          out.push({ role: 'assistant', text: script[0].ai })
+        }
+        return out
+      })
+      setStepIdx(turn.next)
+      speak(turn.finished ? `${turn.speakText} That was great! Again: ${script[0].ai}` : turn.speakText, rate)
+      return
+    }
+
+    // --- Claude modu (API anahtarı girilmişse) ---
+    const newMsgs = [...messages.filter((m) => m.role !== 'sys'), { role: 'user', text }]
+    setMessages((m) => [...m, { role: 'user', text }])
     setBusy(true)
     try {
       const history = [
@@ -144,6 +212,23 @@ export default function Assistant({ day, onBack }) {
   }
 
   const lastAi = [...messages].reverse().find((m) => m.role === 'assistant')
+  const curStep = script[stepIdx]
+
+  const showHelp = () => {
+    if (mode === 'claude') {
+      send('help')
+      return
+    }
+    if (!curStep) return
+    setMessages((m) => [...m, { role: 'assistant', text: `🇹🇷 “${curStep.tr}”\n\n${curStep.ai}` }])
+    speak(curStep.ai, rate)
+  }
+
+  const showHint = () => {
+    if (!curStep) return
+    setMessages((m) => [...m, { role: 'sys', text: `💡 Şöyle diyebilirsin: “${curStep.say}”` }])
+    speak(curStep.say, rate)
+  }
 
   return (
     <div className="chat-wrap">
@@ -166,21 +251,28 @@ export default function Assistant({ day, onBack }) {
             </div>
             <p className="desc">📍 {scenario.situationTr}</p>
             <p className="desc">🎯 Hedefin: {scenario.goalTr}</p>
-            <p className="desc">
-              💡 Takılırsan mikrofona <b>“help”</b> de ya da 🆘 butonuna bas — Claude son cümlenin
-              Türkçesini söyler.
-            </p>
+            {mode === 'script' ? (
+              <p className="desc">
+                🎁 <b>Ücretsiz yerleşik mod:</b> Karşındaki rolü uygulama oynar — API anahtarı ve
+                internet gerekmez. Takılırsan 💡 ipucu butonu söylemen gerekeni gösterir, 🆘 son
+                cümlenin Türkçesini verir.
+              </p>
+            ) : (
+              <p className="desc">
+                💡 Takılırsan mikrofona <b>“help”</b> de ya da 🆘 butonuna bas — Claude son cümlenin
+                Türkçesini söyler.
+              </p>
+            )}
             {!sttSupported && (
               <div className="warn-box">
                 Bu tarayıcıda mikrofonla konuşma çalışmıyor; yazarak cevap verebilirsin. En iyi
                 deneyim için Chrome veya Safari kullan.
               </div>
             )}
-            {IS_PUBLISHED && (
+            {IS_PUBLISHED && mode === 'claude' && (
               <div className="warn-box">
-                ⚠️ Bu paylaşılan web sürümünde sesli asistan çalışmaz (sayfa dış bağlantı
-                kuramıyor). Kartlar, sınav, telaffuz ve rehber tam çalışır. Asistan için
-                bilgisayardaki yerel sürümü kullan.
+                ⚠️ Bu claude.ai sürümünde Claude modu çalışmaz (sayfa dış bağlantı kuramıyor).
+                Anahtarı silersen ücretsiz yerleşik mod devreye girer — o her yerde çalışır.
               </div>
             )}
             <button className="btn orange" onClick={start}>▶️ Senaryoyu Başlat</button>
@@ -195,14 +287,16 @@ export default function Assistant({ day, onBack }) {
                 <button
                   key={i}
                   className="bubble ai"
-                  style={{ display: 'block', textAlign: 'left' }}
-                  onClick={() => speak(m.text, rate)}
+                  style={{ display: 'block', textAlign: 'left', whiteSpace: 'pre-wrap' }}
+                  onClick={() => speak(m.text.replace(/🇹🇷 “[^”]*”\s*/g, ''), rate)}
                 >
                   {m.text}
                   <div className="re-listen">🔊 tekrar dinle</div>
                 </button>
-              ) : (
+              ) : m.role === 'user' ? (
                 <div key={i} className="bubble me">{m.text}</div>
+              ) : (
+                <div key={i} className="bubble sys">{m.text}</div>
               ),
             )}
             {busy && <div className="bubble ai">💭 …</div>}
@@ -214,16 +308,22 @@ export default function Assistant({ day, onBack }) {
       {started && (
         <>
           <div style={{ display: 'flex', gap: 8, padding: '0 16px 6px' }}>
-            <button className="btn ghost" style={{ padding: 9, fontSize: 13.5 }} onClick={() => send('help')}>
-              🆘 Yardım (Türkçesi)
+            <button className="btn ghost" style={{ padding: 9, fontSize: 13.5 }} onClick={showHelp}>
+              🆘 Türkçesi
             </button>
-            <button
-              className="btn ghost"
-              style={{ padding: 9, fontSize: 13.5 }}
-              onClick={() => lastAi && speak(lastAi.text, rate)}
-            >
-              🔊 Son Cümleyi Dinle
-            </button>
+            {mode === 'script' ? (
+              <button className="btn ghost" style={{ padding: 9, fontSize: 13.5 }} onClick={showHint}>
+                💡 Ne diyeyim?
+              </button>
+            ) : (
+              <button
+                className="btn ghost"
+                style={{ padding: 9, fontSize: 13.5 }}
+                onClick={() => lastAi && speak(lastAi.text, rate)}
+              >
+                🔊 Son Cümleyi Dinle
+              </button>
+            )}
           </div>
           <div className="chat-input">
             <button

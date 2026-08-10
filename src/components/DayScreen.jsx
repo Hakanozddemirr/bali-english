@@ -59,7 +59,7 @@ export default function DayScreen({ day, onBack, onOpen }) {
           <span className="st">{st.talkDone ? '✅' : '○'}</span>
         </div>
         <div className="desc">
-          Claude ile senaryoyu canlandır — en az 10 dakika. ({fmtMin(Math.min(st.talkSec, 600))} / 10:00)
+          Sesli asistanla senaryoyu canlandır — en az 10 dakika. ({fmtMin(Math.min(st.talkSec, 600))} / 10:00)
         </div>
         <div className="progress"><i style={{ width: `${talkPct}%` }} /></div>
         <button className="btn orange" onClick={() => onOpen('talk')}>

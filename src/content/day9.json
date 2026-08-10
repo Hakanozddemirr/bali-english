@@ -36,7 +36,19 @@
     "role": "a relaxed traveler from Canada watching the sunset at a beach bar, happy to chat",
     "firstLine": "Hi! Beautiful sunset, right?",
     "situationTr": "Gün batımında bir plaj barındasın. Yanındaki gezgin sohbet başlatıyor.",
-    "goalTr": "Nereli olduğunu söyle, Bali hakkında konuş, karşındakine sorular sor ve fotoğraf iste."
+    "goalTr": "Nereli olduğunu söyle, Bali hakkında konuş, karşındakine sorular sor ve fotoğraf iste.",
+    "script": [
+      { "ai": "Hi! Beautiful sunset, right?", "tr": "Selam! Gün batımı çok güzel, değil mi?", "expect": ["yes", "beautiful", "very", "nice"], "say": "Yes, very beautiful!" },
+      { "ai": "Where are you from?", "tr": "Nerelisin?", "expect": ["turkey", "from"], "say": "I'm from Turkey." },
+      { "ai": "Turkey, cool! I'm from Canada. Is this your first time in Bali?", "tr": "Türkiye, harika! Ben Kanadalıyım. Bali'ye ilk gelişin mi?", "expect": ["yes", "first", "no"], "say": "Yes, my first time." },
+      { "ai": "Do you like Bali?", "tr": "Bali'yi sevdin mi?", "expect": ["like", "love", "very much", "yes"], "say": "I like Bali very much!" },
+      { "ai": "Me too! How long are you here?", "tr": "Ben de! Ne kadar kalıyorsun?", "expect": ["ten", "day", "week"], "say": "Ten days." },
+      { "ai": "Nice! Let's have a drink together?", "tr": "Güzel! Birlikte bir şeyler içelim mi?", "expect": ["yes", "let", "okay", "sure"], "say": "Yes, let's have a drink!" },
+      { "ai": "Cheers! Can you take a photo of me with the sunset?", "tr": "Şerefe! Gün batımıyla bir fotoğrafımı çeker misin?", "expect": ["okay", "yes", "sure"], "say": "Okay, sure!" },
+      { "ai": "Thank you! Now I take your photo. Smile!", "tr": "Teşekkürler! Şimdi ben seninkini çekiyorum. Gülümse!", "expect": ["one more", "thank", "okay"], "say": "One more, please!" },
+      { "ai": "Perfect photo! Nice talking to you!", "tr": "Harika fotoğraf! Seninle konuşmak güzeldi!", "expect": ["nice", "you too", "talking"], "say": "Nice talking to you too!" },
+      { "ai": "See you tomorrow maybe?", "tr": "Belki yarın görüşürüz?", "expect": ["see you", "yes", "tomorrow", "goodbye"], "say": "Yes, see you tomorrow!" }
+    ]
   },
   "quiz": {
     "situations": [

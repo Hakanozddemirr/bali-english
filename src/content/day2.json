@@ -35,7 +35,17 @@
     "role": "a polite immigration officer at Bali airport passport control",
     "firstLine": "Good morning. Passport, please.",
     "situationTr": "Bali havalimanına yeni indin. Pasaport kontrolündesin, memur sana sorular soruyor.",
-    "goalTr": "Pasaportunu ver, neden geldiğini ve kaç gün kalacağını söyle."
+    "goalTr": "Pasaportunu ver, neden geldiğini ve kaç gün kalacağını söyle.",
+    "script": [
+      { "ai": "Good morning. Passport, please.", "tr": "Günaydın. Pasaportunuz lütfen.", "expect": ["here", "passport"], "say": "Here is my passport." },
+      { "ai": "Thank you. Why are you here?", "tr": "Teşekkürler. Geliş amacınız nedir?", "expect": ["holiday", "vacation", "tourist"], "say": "I'm here on holiday." },
+      { "ai": "How long will you stay?", "tr": "Ne kadar kalacaksınız?", "expect": ["ten", "day", "week"], "say": "Ten days." },
+      { "ai": "Where will you stay?", "tr": "Nerede kalacaksınız?", "expect": ["hotel", "ubud", "stay"], "say": "I'm staying at a hotel in Ubud." },
+      { "ai": "Is this your first time in Indonesia?", "tr": "Endonezya'ya ilk gelişiniz mi?", "expect": ["yes", "first", "no"], "say": "Yes, my first time." },
+      { "ai": "Okay. Look at the camera, please.", "tr": "Tamam. Kameraya bakın lütfen.", "expect": ["okay", "yes", "sure"], "say": "Okay." },
+      { "ai": "Welcome to Bali! Enjoy your holiday.", "tr": "Bali'ye hoş geldiniz! İyi tatiller.", "expect": ["thank"], "say": "Thank you very much!" },
+      { "ai": "You're welcome. Goodbye!", "tr": "Rica ederim. İyi günler!", "expect": ["goodbye", "bye"], "say": "Goodbye!" }
+    ]
   },
   "quiz": {
     "situations": [

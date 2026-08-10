@@ -43,7 +43,17 @@
     "role": "a friendly Australian traveler relaxing by the hotel pool in Bali",
     "firstLine": "Hello! What's your name?",
     "situationTr": "Otelin havuz başındasın. Yan şezlongdaki gezgin seninle sohbet başlatıyor.",
-    "goalTr": "Selamlaş, adını söyle, nasıl olduğunu söyle ve karşındakine de sor."
+    "goalTr": "Selamlaş, adını söyle, nasıl olduğunu söyle ve karşındakine de sor.",
+    "script": [
+      { "ai": "Hello! What's your name?", "tr": "Merhaba! Senin adın ne?", "expect": ["my name", "i am", "i'm", "hakan"], "say": "My name is Hakan." },
+      { "ai": "Nice to meet you! How are you?", "tr": "Memnun oldum! Nasılsın?", "expect": ["fine", "good", "great", "okay", "not bad"], "say": "I'm fine, thank you." },
+      { "ai": "I'm happy you are fine! Where are you from?", "tr": "İyi olmana sevindim! Nerelisin?", "expect": ["turkey", "from"], "say": "I'm from Turkey." },
+      { "ai": "Turkey! Very nice. Is this your first time in Bali?", "tr": "Türkiye! Çok güzel. Bali'ye ilk gelişin mi?", "expect": ["yes", "first", "no"], "say": "Yes, it's my first time." },
+      { "ai": "Welcome! Do you want some water?", "tr": "Hoş geldin! Su ister misin?", "expect": ["yes", "please", "no thank"], "say": "Yes, please." },
+      { "ai": "Here you are! How many days are you in Bali?", "tr": "Buyur! Bali'de kaç gün kalacaksın?", "expect": ["ten", "day", "week"], "say": "Ten days." },
+      { "ai": "Ten days, perfect! The pool is very nice today.", "tr": "On gün, harika! Havuz bugün çok güzel.", "expect": ["yes", "nice", "beautiful", "good", "very"], "say": "Yes, very nice!" },
+      { "ai": "I will swim now. See you later!", "tr": "Ben yüzmeye gidiyorum. Sonra görüşürüz!", "expect": ["goodbye", "bye", "see you", "later"], "say": "Goodbye! See you later!" }
+    ]
   },
   "quiz": {
     "situations": [
