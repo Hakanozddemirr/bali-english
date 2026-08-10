@@ -1,0 +1,68 @@
+{
+  "day": 3,
+  "title": "Otel",
+  "emoji": "🏨",
+  "words": [
+    { "en": "reception", "v": "🛎️" },
+    { "en": "key", "v": "🔑" },
+    { "en": "room", "v": "🚪" },
+    { "en": "shower", "v": "🚿" },
+    { "en": "soap", "v": "🧼" },
+    { "en": "breakfast", "v": "🍳" },
+    { "en": "pool", "v": "🏊" },
+    { "en": "wifi", "v": "📶" },
+    { "en": "password", "v": "🔐" },
+    { "en": "air conditioning", "v": "❄️" },
+    { "en": "hot", "v": "🔥" },
+    { "en": "cold", "v": "🧊" },
+    { "en": "clean", "v": "✨" },
+    { "en": "broken", "v": "🛠️" },
+    { "en": "light", "v": "💡" }
+  ],
+  "sentences": [
+    "I have a reservation.",
+    "Check-in, please.",
+    "What time is breakfast?",
+    "What is the wifi password?",
+    "Can I have a towel, please?",
+    "The air conditioning is broken.",
+    "The water is cold.",
+    "My room is not clean.",
+    "Check-out, please."
+  ],
+  "scenario": {
+    "title": "Otele Giriş",
+    "role": "a friendly hotel receptionist in Ubud, Bali",
+    "firstLine": "Good afternoon! Welcome. Do you have a reservation?",
+    "situationTr": "Oteline vardın. Resepsiyonda check-in yapıyorsun.",
+    "goalTr": "Rezervasyonun olduğunu söyle, kahvaltı saatini ve wifi şifresini sor."
+  },
+  "quiz": {
+    "situations": [
+      {
+        "q": "Wifi şifresini öğrenmek istiyorsun. Ne sorarsın?",
+        "options": ["What is the wifi password?", "The water is cold.", "Check-out, please.", "Where is gate seven?"]
+      },
+      {
+        "q": "Odandaki klima çalışmıyor. Resepsiyona ne dersin?",
+        "options": ["The air conditioning is broken.", "I have a reservation.", "What time is breakfast?", "The pool is clean."]
+      },
+      {
+        "q": "Resepsiyonist 'How many nights?' diye sordu. Ne dersin?",
+        "options": ["Ten nights.", "Hot water, please.", "I'm going to Ubud.", "The key, thank you."]
+      }
+    ],
+    "listening": [
+      {
+        "audio": "What time is breakfast?",
+        "q": "Soruya uygun cevabı seç.",
+        "options": ["At eight.", "Blue, please.", "Two bags.", "Turn left."]
+      },
+      {
+        "audio": "Here is your key.",
+        "q": "Ne duydun? Anlamını seç.",
+        "options": ["İşte anahtarınız.", "Odanız hazır değil.", "Kahvaltı saat sekizde.", "Havuz kapalı."]
+      }
+    ]
+  }
+}

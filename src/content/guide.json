@@ -1,0 +1,96 @@
+{
+  "categories": [
+    {
+      "title": "Selamlaşma",
+      "emoji": "👋",
+      "phrases": [
+        { "en": "Hello!", "tr": "Merhaba!" },
+        { "en": "Good morning!", "tr": "Günaydın!" },
+        { "en": "Thank you.", "tr": "Teşekkür ederim." },
+        { "en": "You're welcome.", "tr": "Rica ederim." },
+        { "en": "Excuse me.", "tr": "Affedersiniz. / Bakar mısınız?" },
+        { "en": "I'm sorry.", "tr": "Özür dilerim." },
+        { "en": "I don't understand.", "tr": "Anlamıyorum." }
+      ]
+    },
+    {
+      "title": "Havalimanı",
+      "emoji": "🛫",
+      "phrases": [
+        { "en": "I'm here on holiday.", "tr": "Tatil için buradayım." },
+        { "en": "I'm staying for ten days.", "tr": "On gün kalacağım." },
+        { "en": "Here is my passport.", "tr": "İşte pasaportum." },
+        { "en": "Where is my gate?", "tr": "Kapım (uçuş kapısı) nerede?" },
+        { "en": "This is my bag.", "tr": "Bu benim çantam." },
+        { "en": "Where is the taxi?", "tr": "Taksi nerede?" }
+      ]
+    },
+    {
+      "title": "Otel",
+      "emoji": "🏨",
+      "phrases": [
+        { "en": "I have a reservation.", "tr": "Rezervasyonum var." },
+        { "en": "What is the wifi password?", "tr": "Wifi şifresi nedir?" },
+        { "en": "What time is breakfast?", "tr": "Kahvaltı saat kaçta?" },
+        { "en": "Can I have a towel, please?", "tr": "Bir havlu alabilir miyim lütfen?" },
+        { "en": "The air conditioning is broken.", "tr": "Klima bozuk." },
+        { "en": "Can you clean my room, please?", "tr": "Odamı temizler misiniz lütfen?" },
+        { "en": "Check-out, please.", "tr": "Çıkış yapmak istiyorum lütfen." }
+      ]
+    },
+    {
+      "title": "Restoran",
+      "emoji": "🍽️",
+      "phrases": [
+        { "en": "A table for two, please.", "tr": "İki kişilik masa lütfen." },
+        { "en": "The menu, please.", "tr": "Menü lütfen." },
+        { "en": "I want fried rice.", "tr": "Kızarmış pilav (nasi goreng) istiyorum." },
+        { "en": "One coffee, please.", "tr": "Bir kahve lütfen." },
+        { "en": "Not spicy, please.", "tr": "Acısız olsun lütfen." },
+        { "en": "I'm allergic to nuts.", "tr": "Kuruyemişe alerjim var." },
+        { "en": "The bill, please.", "tr": "Hesap lütfen." },
+        { "en": "Can I pay by card?", "tr": "Kartla ödeyebilir miyim?" }
+      ]
+    },
+    {
+      "title": "Ulaşım & Pazarlık",
+      "emoji": "🛵",
+      "phrases": [
+        { "en": "How much to the beach?", "tr": "Plaja ne kadar (tutar)?" },
+        { "en": "Use the meter, please.", "tr": "Taksimetreyi açar mısınız lütfen?" },
+        { "en": "Turn left.", "tr": "Sola dön." },
+        { "en": "Turn right.", "tr": "Sağa dön." },
+        { "en": "Stop here, please.", "tr": "Burada dur lütfen." },
+        { "en": "That's too expensive.", "tr": "Bu çok pahalı." },
+        { "en": "Can you give me a discount?", "tr": "İndirim yapar mısınız?" },
+        { "en": "Fifty thousand, okay?", "tr": "Elli bin, tamam mı?" }
+      ]
+    },
+    {
+      "title": "Acil Durum",
+      "emoji": "🆘",
+      "phrases": [
+        { "en": "Help me, please!", "tr": "Yardım edin lütfen!" },
+        { "en": "I need a doctor.", "tr": "Doktora ihtiyacım var." },
+        { "en": "Where is the pharmacy?", "tr": "Eczane nerede? (Bali'de: apotek)" },
+        { "en": "I'm sick.", "tr": "Hastayım." },
+        { "en": "My stomach hurts.", "tr": "Karnım ağrıyor." },
+        { "en": "I lost my passport.", "tr": "Pasaportumu kaybettim." },
+        { "en": "Call the police, please.", "tr": "Polisi arayın lütfen." },
+        { "en": "It's an emergency!", "tr": "Bu acil bir durum!" }
+      ]
+    },
+    {
+      "title": "Sayılar & Para",
+      "emoji": "💵",
+      "phrases": [
+        { "en": "One, two, three, four, five.", "tr": "Bir, iki, üç, dört, beş." },
+        { "en": "Six, seven, eight, nine, ten.", "tr": "Altı, yedi, sekiz, dokuz, on." },
+        { "en": "Twenty. Fifty.", "tr": "Yirmi. Elli." },
+        { "en": "One hundred thousand.", "tr": "Yüz bin. (≈ 100 bin Rupiah)" },
+        { "en": "How much is this?", "tr": "Bu ne kadar?" },
+        { "en": "Do you have change?", "tr": "Bozuk paranız var mı?" }
+      ]
+    }
+  ]
+}

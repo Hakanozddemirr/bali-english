@@ -1,0 +1,69 @@
+{
+  "day": 9,
+  "title": "Sosyalleşme",
+  "emoji": "🍹",
+  "words": [
+    { "en": "turkey", "v": "🇹🇷" },
+    { "en": "country", "v": "🌍" },
+    { "en": "photo", "v": "📷" },
+    { "en": "music", "v": "🎵" },
+    { "en": "dance", "v": "💃" },
+    { "en": "party", "v": "🎉" },
+    { "en": "beautiful", "v": "🌺" },
+    { "en": "funny", "v": "😂" },
+    { "en": "married", "v": "💍" },
+    { "en": "job", "v": "💼" },
+    { "en": "sunset", "v": "🌇" },
+    { "en": "drink", "v": "🍹" },
+    { "en": "smile", "v": "😄" },
+    { "en": "love", "v": "❤️" },
+    { "en": "together", "v": "🤝" }
+  ],
+  "sentences": [
+    "Where are you from?",
+    "I'm from Turkey.",
+    "This is my first time in Bali.",
+    "I like Bali very much.",
+    "Can you take a photo, please?",
+    "One more, please.",
+    "What's your job?",
+    "Let's have a drink.",
+    "See you tomorrow!",
+    "Nice talking to you."
+  ],
+  "scenario": {
+    "title": "Plaj Barında Sohbet",
+    "role": "a relaxed traveler from Canada watching the sunset at a beach bar, happy to chat",
+    "firstLine": "Hi! Beautiful sunset, right?",
+    "situationTr": "Gün batımında bir plaj barındasın. Yanındaki gezgin sohbet başlatıyor.",
+    "goalTr": "Nereli olduğunu söyle, Bali hakkında konuş, karşındakine sorular sor ve fotoğraf iste."
+  },
+  "quiz": {
+    "situations": [
+      {
+        "q": "Birinin nereli olduğunu merak ediyorsun. Ne sorarsın?",
+        "options": ["Where are you from?", "What's your job?", "How much is this?", "Are you okay?"]
+      },
+      {
+        "q": "Birinden fotoğrafını çekmesini istiyorsun. Ne dersin?",
+        "options": ["Can you take a photo, please?", "Let's have a drink.", "One more, please.", "See you tomorrow!"]
+      },
+      {
+        "q": "Sohbet bitti, vedalaşıyorsun. Ne dersin?",
+        "options": ["Nice talking to you.", "I'm from Turkey.", "What's your job?", "Help me, please!"]
+      }
+    ],
+    "listening": [
+      {
+        "audio": "Where are you from?",
+        "q": "Soruya uygun cevabı seç.",
+        "options": ["I'm from Turkey.", "I'm fine, thank you.", "At nine.", "Two, please."]
+      },
+      {
+        "audio": "How long are you in Bali?",
+        "q": "Soruya uygun cevabı seç.",
+        "options": ["Ten days.", "Very beautiful.", "By card.", "I can't swim."]
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "day": 8,
+  "title": "Acil Durumlar",
+  "emoji": "🆘",
+  "words": [
+    { "en": "doctor", "v": "🧑‍⚕️" },
+    { "en": "hospital", "v": "🏥" },
+    { "en": "pharmacy", "v": "💊" },
+    { "en": "sick", "v": "🤒" },
+    { "en": "pain", "v": "🤕" },
+    { "en": "stomach ache", "v": "🤢" },
+    { "en": "fever", "v": "🌡️" },
+    { "en": "sunburn", "v": "🥵" },
+    { "en": "police", "v": "👮" },
+    { "en": "lost", "v": "🔍" },
+    { "en": "phone", "v": "📱" },
+    { "en": "wallet", "v": "👛" },
+    { "en": "mosquito", "v": "🦟" },
+    { "en": "emergency", "v": "🚨" },
+    { "en": "danger", "v": "⚠️" }
+  ],
+  "sentences": [
+    "Help me, please!",
+    "I need a doctor.",
+    "Where is the pharmacy?",
+    "I'm sick.",
+    "My stomach hurts.",
+    "I have a fever.",
+    "I lost my passport.",
+    "I lost my phone.",
+    "Call the police, please.",
+    "It's an emergency!"
+  ],
+  "scenario": {
+    "title": "Eczanede",
+    "role": "a helpful pharmacist at an apotek (pharmacy) in Bali",
+    "firstLine": "Hello. Can I help you?",
+    "situationTr": "Miden bozuldu ve hafif ateşin var. Eczaneye (apotek) ilaç almaya gittin.",
+    "goalTr": "Şikayetini anlat (mide, ateş), ilaç iste ve nasıl kullanacağını sor."
+  },
+  "quiz": {
+    "situations": [
+      {
+        "q": "Karnın çok ağrıyor. Eczacıya ne dersin?",
+        "options": ["My stomach hurts.", "I lost my phone.", "Call the police, please.", "Where is the beach?"]
+      },
+      {
+        "q": "Telefonun kayboldu. Ne dersin?",
+        "options": ["I lost my phone.", "I have a fever.", "I need a doctor.", "It's delicious!"]
+      },
+      {
+        "q": "Eczane arıyorsun. Ne sorarsın?",
+        "options": ["Where is the pharmacy?", "Where is the pool?", "How much is this?", "What time is it?"]
+      }
+    ],
+    "listening": [
+      {
+        "audio": "Are you okay?",
+        "q": "Soruya uygun cevabı seç.",
+        "options": ["I'm sick.", "I'll take it.", "Two tickets, please.", "Turn left."]
+      },
+      {
+        "audio": "Take this medicine two times a day.",
+        "q": "Ne duydun? Anlamını seç.",
+        "options": ["Bu ilacı günde iki kez al.", "Bu ilacı yemekten önce al.", "Doktora git.", "İki gün dinlen."]
+      }
+    ]
+  }
+}

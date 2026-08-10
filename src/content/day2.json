@@ -1,0 +1,68 @@
+{
+  "day": 2,
+  "title": "Havalimanı",
+  "emoji": "🛫",
+  "words": [
+    { "en": "airport", "v": "🛫" },
+    { "en": "plane", "v": "✈️" },
+    { "en": "passport", "v": "🛂" },
+    { "en": "ticket", "v": "🎫" },
+    { "en": "suitcase", "v": "🧳" },
+    { "en": "bag", "v": "🎒" },
+    { "en": "gate", "v": "🚪" },
+    { "en": "seat", "v": "💺" },
+    { "en": "window", "v": "🪟" },
+    { "en": "taxi", "v": "🚕" },
+    { "en": "bus", "v": "🚌" },
+    { "en": "hotel", "v": "🏨" },
+    { "en": "holiday", "v": "🌴" },
+    { "en": "week", "v": "🗓️" },
+    { "en": "family", "v": "👨‍👩‍👧‍👦" }
+  ],
+  "sentences": [
+    "I'm here on holiday.",
+    "I'm staying for ten days.",
+    "Here is my passport.",
+    "Where is gate seven?",
+    "This is my bag.",
+    "Where is the taxi?",
+    "I'm going to Ubud.",
+    "Can you help me, please?",
+    "I don't speak English well."
+  ],
+  "scenario": {
+    "title": "Pasaport Kontrolü",
+    "role": "a polite immigration officer at Bali airport passport control",
+    "firstLine": "Good morning. Passport, please.",
+    "situationTr": "Bali havalimanına yeni indin. Pasaport kontrolündesin, memur sana sorular soruyor.",
+    "goalTr": "Pasaportunu ver, neden geldiğini ve kaç gün kalacağını söyle."
+  },
+  "quiz": {
+    "situations": [
+      {
+        "q": "Memur 'Why are you here?' diye sordu. Ne dersin?",
+        "options": ["I'm here on holiday.", "The menu, please.", "Where is the taxi?", "This is my bag."]
+      },
+      {
+        "q": "Uçağının kapısını arıyorsun. Ne sorarsın?",
+        "options": ["Where is gate seven?", "Here is my passport.", "I'm going to Ubud.", "Nice to meet you."]
+      },
+      {
+        "q": "Memur 'How long will you stay?' diye sordu. Ne dersin?",
+        "options": ["Ten days.", "My name is Hakan.", "Yes, please.", "The bag is big."]
+      }
+    ],
+    "listening": [
+      {
+        "audio": "Passport, please.",
+        "q": "Ne duydun? Anlamını seç.",
+        "options": ["Pasaportunuz, lütfen.", "Biletiniz nerede?", "Hoş geldiniz.", "Kapı yedi numara."]
+      },
+      {
+        "audio": "Where are you going?",
+        "q": "Soruya uygun cevabı seç.",
+        "options": ["I'm going to Ubud.", "I'm fine, thank you.", "Two bags, please.", "Here is my seat."]
+      }
+    ]
+  }
+}

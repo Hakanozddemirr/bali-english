@@ -1,0 +1,245 @@
+/* ---- Tropikal tema — tüm renkler değişkenlerde (karanlık mod için hazır) ---- */
+:root {
+  --bg: #fff8f0;
+  --card: #ffffff;
+  --ink: #26333b;
+  --ink-soft: #6b7a84;
+  --accent: #0e9f8f;
+  --accent-soft: #d8f1ee;
+  --accent2: #ff7a59;
+  --accent2-soft: #ffe8e1;
+  --gold: #f5b840;
+  --gold-soft: #fdf0d5;
+  --danger: #e0524d;
+  --danger-soft: #fbe3e2;
+  --ok: #2fa860;
+  --ok-soft: #ddf3e5;
+  --line: #f0e6d8;
+  --shadow: 0 4px 16px rgba(120, 90, 50, 0.1);
+  --radius: 20px;
+  --grad-header: linear-gradient(135deg, #0e9f8f 0%, #12b3a0 55%, #f5b840 130%);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: ui-rounded, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+button { font: inherit; color: inherit; border: none; background: none; cursor: pointer; }
+input, select { font: inherit; color: inherit; }
+
+#root { max-width: 560px; margin: 0 auto; min-height: 100dvh; display: flex; flex-direction: column; }
+
+.screen { flex: 1; padding: 16px 16px calc(84px + env(safe-area-inset-bottom)); }
+
+/* ---- Üst başlık ---- */
+.hero {
+  background: var(--grad-header);
+  border-radius: var(--radius);
+  color: #fff;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
+.hero h1 { font-size: 24px; margin-bottom: 4px; }
+.hero .sub { opacity: 0.92; font-size: 15px; }
+.hero .stats { display: flex; gap: 10px; margin-top: 14px; }
+.stat {
+  flex: 1; background: rgba(255, 255, 255, 0.18); border-radius: 14px; padding: 10px 12px;
+  backdrop-filter: blur(4px);
+}
+.stat .big { font-size: 24px; font-weight: 800; }
+.stat .lbl { font-size: 12.5px; opacity: 0.92; }
+
+.topbar { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.topbar h2 { font-size: 21px; flex: 1; }
+.back-btn {
+  width: 42px; height: 42px; border-radius: 14px; background: var(--card);
+  box-shadow: var(--shadow); font-size: 19px; flex-shrink: 0;
+}
+
+/* ---- Gün listesi ---- */
+.day-card {
+  background: var(--card); border-radius: var(--radius); padding: 14px 16px;
+  box-shadow: var(--shadow); margin-bottom: 12px; display: flex; align-items: center; gap: 14px;
+  width: 100%; text-align: left; border: 2px solid transparent;
+}
+.day-card.active { border-color: var(--accent); }
+.day-card.locked-look { opacity: 0.82; }
+.day-card .emoji { font-size: 32px; width: 46px; text-align: center; flex-shrink: 0; }
+.day-card .info { flex: 1; min-width: 0; }
+.day-card .t { display: block; font-weight: 700; font-size: 16.5px; }
+.day-card .s { display: block; font-size: 13px; color: var(--ink-soft); margin-top: 2px; }
+.day-card .check { font-size: 24px; flex-shrink: 0; }
+.task-dots { display: flex; gap: 5px; margin-top: 7px; }
+.task-dots .dot { height: 6px; border-radius: 3px; flex: 1; background: var(--line); overflow: hidden; }
+.task-dots .dot > i { display: block; height: 100%; background: var(--accent); border-radius: 3px; }
+
+/* ---- Görev kartları (gün ekranı) ---- */
+.task-card {
+  background: var(--card); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow);
+  margin-bottom: 12px;
+}
+.task-card .head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.task-card .head .ico { font-size: 24px; }
+.task-card .head .name { font-weight: 700; flex: 1; }
+.task-card .head .st { font-size: 20px; }
+.task-card .desc { font-size: 14px; color: var(--ink-soft); margin-bottom: 12px; }
+.progress { height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; margin-bottom: 12px; }
+.progress > i { display: block; height: 100%; background: var(--accent); border-radius: 4px; transition: width 0.3s; }
+.progress.gold > i { background: var(--gold); }
+
+/* ---- Butonlar ---- */
+.btn {
+  display: block; width: 100%; padding: 14px; border-radius: 16px; font-weight: 700;
+  font-size: 16.5px; text-align: center; transition: transform 0.06s;
+}
+.btn:active { transform: scale(0.97); }
+.btn.primary { background: var(--accent); color: #fff; }
+.btn.orange { background: var(--accent2); color: #fff; }
+.btn.soft { background: var(--accent-soft); color: var(--accent); }
+.btn.ghost { background: var(--card); box-shadow: var(--shadow); }
+.btn.danger { background: var(--danger-soft); color: var(--danger); }
+.btn:disabled { opacity: 0.45; }
+.btn-row { display: flex; gap: 10px; }
+.btn-row .btn { flex: 1; }
+
+/* ---- Kelime kartı ---- */
+.flash-card {
+  background: var(--card); border-radius: 26px; box-shadow: var(--shadow);
+  padding: 36px 20px; text-align: center; margin-bottom: 16px; min-height: 300px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  width: 100%;
+}
+.flash-card .visual { font-size: 96px; line-height: 1.1; }
+.flash-card img.photo, .q-prompt img.photo {
+  width: 100%; max-width: 300px; height: 200px; object-fit: cover;
+  border-radius: 18px; box-shadow: var(--shadow); display: block; margin: 0 auto;
+}
+.opt img.photo {
+  width: 100%; height: 100px; object-fit: cover; border-radius: 12px; display: block;
+}
+.opt:has(img.photo) { padding: 7px; }
+.flash-card .visual.textual { font-size: 72px; font-weight: 800; color: var(--accent2); }
+.flash-card .word { font-size: 32px; font-weight: 800; }
+.flash-card .hint { font-size: 13.5px; color: var(--ink-soft); }
+.speaker { font-size: 26px; }
+
+.tabbar { display: flex; background: var(--card); border-radius: 14px; padding: 4px; box-shadow: var(--shadow); margin-bottom: 14px; }
+.tabbar button { flex: 1; padding: 10px; border-radius: 11px; font-weight: 700; color: var(--ink-soft); font-size: 15px; }
+.tabbar button.on { background: var(--accent); color: #fff; }
+
+/* ---- Eşleştirme / sınav seçenekleri ---- */
+.opt-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.opt {
+  background: var(--card); border-radius: 16px; padding: 16px 10px; box-shadow: var(--shadow);
+  font-weight: 700; font-size: 16px; text-align: center; border: 2.5px solid transparent;
+  min-height: 62px; display: flex; align-items: center; justify-content: center;
+}
+.opt.visual { font-size: 44px; min-height: 84px; }
+.opt.visual.textual { font-size: 34px; font-weight: 800; color: var(--accent2); }
+.opt.good { border-color: var(--ok); background: var(--ok-soft); }
+.opt.bad { border-color: var(--danger); background: var(--danger-soft); }
+.opt.full { grid-column: 1 / -1; }
+.q-prompt {
+  background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 22px 18px; text-align: center; margin-bottom: 14px;
+}
+.q-prompt .visual { font-size: 84px; line-height: 1.1; }
+.q-prompt .visual.textual { font-size: 60px; font-weight: 800; color: var(--accent2); }
+.q-prompt .word { font-size: 27px; font-weight: 800; }
+.q-prompt .tr { font-size: 17px; font-weight: 600; }
+.feedback { text-align: center; font-weight: 800; font-size: 17px; margin: 12px 0; min-height: 24px; }
+.feedback.good { color: var(--ok); }
+.feedback.bad { color: var(--danger); }
+
+/* ---- Sohbet ---- */
+.chat-wrap { display: flex; flex-direction: column; height: calc(100dvh - 84px); }
+.chat-head { padding: 12px 16px 8px; }
+.chat-scroll { flex: 1; overflow-y: auto; padding: 8px 16px; }
+.bubble { max-width: 84%; padding: 11px 14px; border-radius: 18px; margin-bottom: 10px; font-size: 16.5px; position: relative; }
+.bubble.ai { background: var(--card); box-shadow: var(--shadow); border-bottom-left-radius: 6px; }
+.bubble.me { background: var(--accent); color: #fff; margin-left: auto; border-bottom-right-radius: 6px; }
+.bubble.sys { background: var(--gold-soft); color: #8a6d1f; font-size: 14px; max-width: 100%; text-align: center; }
+.bubble .re-listen { margin-top: 4px; font-size: 13px; color: var(--accent); font-weight: 700; }
+.chat-input {
+  padding: 10px 16px calc(12px + env(safe-area-inset-bottom)); display: flex; gap: 8px; align-items: center;
+  background: var(--bg);
+}
+.chat-input input {
+  flex: 1; padding: 13px 14px; border-radius: 16px; border: 2px solid var(--line); background: var(--card);
+  outline: none; font-size: 16px; min-width: 0;
+}
+.chat-input input:focus { border-color: var(--accent); }
+.round-btn {
+  width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; font-size: 22px;
+  background: var(--card); box-shadow: var(--shadow); display: flex; align-items: center; justify-content: center;
+}
+.round-btn.rec { background: var(--danger); color: #fff; animation: pulse 1.2s infinite; }
+.round-btn.send { background: var(--accent); color: #fff; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(224, 82, 77, 0.5); } 70% { box-shadow: 0 0 0 14px rgba(224, 82, 77, 0); } 100% { box-shadow: 0 0 0 0 rgba(224, 82, 77, 0); } }
+.timer-chip {
+  background: var(--card); border-radius: 999px; padding: 6px 13px; font-weight: 800; font-size: 14px;
+  box-shadow: var(--shadow); display: inline-flex; gap: 6px; align-items: center;
+}
+.timer-chip.done { background: var(--ok-soft); color: var(--ok); }
+
+/* ---- Telaffuz ---- */
+.pron-item { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); margin-bottom: 10px; overflow: hidden; }
+.pron-item > button.row { width: 100%; display: flex; align-items: center; gap: 10px; padding: 14px 16px; text-align: left; font-weight: 700; font-size: 16px; }
+.pron-item .score-badge { margin-left: auto; font-size: 13px; font-weight: 800; padding: 3px 9px; border-radius: 999px; background: var(--line); color: var(--ink-soft); flex-shrink: 0; }
+.pron-item .score-badge.ok { background: var(--ok-soft); color: var(--ok); }
+.pron-detail { padding: 0 16px 16px; }
+.word-result { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin: 12px 0; }
+.word-result span { padding: 4px 9px; border-radius: 9px; font-weight: 700; }
+.word-result span.hit { background: var(--ok-soft); color: var(--ok); }
+.word-result span.miss { background: var(--danger-soft); color: var(--danger); }
+.heard-line { text-align: center; font-size: 14px; color: var(--ink-soft); margin-bottom: 8px; }
+
+/* ---- Rehber ---- */
+.guide-cat { margin-bottom: 18px; }
+.guide-cat h3 { font-size: 18px; margin-bottom: 8px; }
+.phrase { background: var(--card); border-radius: 14px; box-shadow: var(--shadow); padding: 11px 14px; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+.phrase .txt { flex: 1; }
+.phrase .en { font-weight: 700; font-size: 16px; }
+.phrase .tr { font-size: 13px; color: var(--ink-soft); margin-top: 1px; }
+
+/* ---- Ayarlar ---- */
+.field { margin-bottom: 16px; }
+.field label { display: block; font-weight: 700; font-size: 14.5px; margin-bottom: 6px; }
+.field input, .field select {
+  width: 100%; padding: 13px 14px; border-radius: 14px; border: 2px solid var(--line);
+  background: var(--card); outline: none; font-size: 16px;
+}
+.field input:focus, .field select:focus { border-color: var(--accent); }
+.field .note { font-size: 13px; color: var(--ink-soft); margin-top: 6px; }
+.warn-box { background: var(--gold-soft); border-radius: 14px; padding: 12px 14px; font-size: 13.5px; color: #8a6d1f; margin-bottom: 16px; }
+
+/* ---- Alt menü ---- */
+.bottom-nav {
+  position: fixed; bottom: 0; left: 0; right: 0; max-width: 560px; margin: 0 auto;
+  display: flex; background: var(--card); border-top: 1px solid var(--line);
+  padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
+  z-index: 50;
+}
+.bottom-nav button { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 6px; border-radius: 12px; font-size: 11.5px; font-weight: 700; color: var(--ink-soft); }
+.bottom-nav button .i { font-size: 23px; }
+.bottom-nav button.on { color: var(--accent); background: var(--accent-soft); }
+
+.empty-note { text-align: center; color: var(--ink-soft); padding: 30px 20px; font-size: 15px; }
+.section-title { font-size: 15px; font-weight: 800; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.4px; margin: 18px 0 10px; }
+.error-box { background: var(--danger-soft); color: var(--danger); border-radius: 14px; padding: 12px 14px; font-size: 14px; margin: 8px 0; }
+
+/* ---- Yazdırma (cep rehberi) ---- */
+@media print {
+  body { background: #fff; }
+  .bottom-nav, .no-print { display: none !important; }
+  .screen { padding: 0; }
+  .phrase { box-shadow: none; border: 1px solid #ddd; break-inside: avoid; }
+  .hero { display: none; }
+}

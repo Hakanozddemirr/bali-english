@@ -1,0 +1,73 @@
+{
+  "day": 6,
+  "title": "Alışveriş & Pazarlık",
+  "emoji": "🛍️",
+  "words": [
+    { "en": "shop", "v": "🏪" },
+    { "en": "t-shirt", "v": "👕" },
+    { "en": "dress", "v": "👗" },
+    { "en": "shoes", "v": "👟" },
+    { "en": "hat", "v": "👒" },
+    { "en": "cheap", "v": "🪙" },
+    { "en": "expensive", "v": "💎" },
+    { "en": "big", "v": "🐘" },
+    { "en": "small", "v": "🐭" },
+    { "en": "red", "v": "🔴" },
+    { "en": "blue", "v": "🔵" },
+    { "en": "white", "v": "⚪" },
+    { "en": "black", "v": "⚫" },
+    { "en": "money", "v": "💵" },
+    { "en": "card", "v": "💳" },
+    { "en": "discount", "v": "💸" },
+    { "en": "twenty", "v": "20" },
+    { "en": "fifty", "v": "50" },
+    { "en": "hundred", "v": "100" },
+    { "en": "thousand", "v": "1000" }
+  ],
+  "sentences": [
+    "How much is this?",
+    "That's too expensive.",
+    "Can you give me a discount?",
+    "Fifty thousand, okay?",
+    "Do you have a big size?",
+    "Do you have this in blue?",
+    "I'm just looking, thank you.",
+    "I'll take it.",
+    "Can I pay by card?"
+  ],
+  "scenario": {
+    "title": "Pazarda Pazarlık",
+    "role": "an energetic souvenir seller at Ubud Art Market who starts with high prices but enjoys bargaining",
+    "firstLine": "Hello! Come, come! Very cheap for you!",
+    "situationTr": "Ubud pazarındasın. Satıcı sana tişört ve hediyelik satmaya çalışıyor.",
+    "goalTr": "Fiyat sor, pahalı de, indirim iste ve bir fiyatta anlaşıp ürünü al."
+  },
+  "quiz": {
+    "situations": [
+      {
+        "q": "Fiyat çok yüksek, indirim istiyorsun. Ne dersin?",
+        "options": ["Can you give me a discount?", "I'll take it.", "Do you have a big size?", "Can I pay by card?"]
+      },
+      {
+        "q": "Sadece bakıyorsun, satıcı ısrar ediyor. Ne dersin?",
+        "options": ["I'm just looking, thank you.", "Fifty thousand, okay?", "How much is this?", "That's too expensive."]
+      },
+      {
+        "q": "Pazarlık bitti, ürünü almaya karar verdin. Ne dersin?",
+        "options": ["I'll take it.", "I'm just looking.", "Do you have this in blue?", "Where is the taxi?"]
+      }
+    ],
+    "listening": [
+      {
+        "audio": "How much is this?",
+        "q": "Ne duydun? Anlamını seç.",
+        "options": ["Bu ne kadar?", "Bu çok güzel.", "Bunu alıyorum.", "İndirim var mı?"]
+      },
+      {
+        "audio": "Two hundred thousand.",
+        "q": "Satıcı hangi fiyatı söyledi?",
+        "options": ["200.000", "2.000", "100.000", "20.000"]
+      }
+    ]
+  }
+}

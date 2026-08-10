@@ -1,0 +1,76 @@
+{
+  "day": 1,
+  "title": "Selamlaşma & Sayılar",
+  "emoji": "👋",
+  "words": [
+    { "en": "hello", "v": "👋" },
+    { "en": "goodbye", "v": "🙋" },
+    { "en": "yes", "v": "✅" },
+    { "en": "no", "v": "❌" },
+    { "en": "please", "v": "🥺" },
+    { "en": "thank you", "v": "🙏" },
+    { "en": "sorry", "v": "😔" },
+    { "en": "name", "v": "📛" },
+    { "en": "friend", "v": "🧑‍🤝‍🧑" },
+    { "en": "water", "v": "💧" },
+    { "en": "toilet", "v": "🚻" },
+    { "en": "help", "v": "🆘" },
+    { "en": "one", "v": "1" },
+    { "en": "two", "v": "2" },
+    { "en": "three", "v": "3" },
+    { "en": "four", "v": "4" },
+    { "en": "five", "v": "5" },
+    { "en": "six", "v": "6" },
+    { "en": "seven", "v": "7" },
+    { "en": "eight", "v": "8" },
+    { "en": "nine", "v": "9" },
+    { "en": "ten", "v": "10" }
+  ],
+  "sentences": [
+    "Hello!",
+    "Good morning!",
+    "My name is Hakan.",
+    "Nice to meet you.",
+    "How are you?",
+    "I'm fine, thank you.",
+    "Yes, please.",
+    "No, thank you.",
+    "I don't understand.",
+    "Where is the toilet?"
+  ],
+  "scenario": {
+    "title": "Tanışma",
+    "role": "a friendly Australian traveler relaxing by the hotel pool in Bali",
+    "firstLine": "Hello! What's your name?",
+    "situationTr": "Otelin havuz başındasın. Yan şezlongdaki gezgin seninle sohbet başlatıyor.",
+    "goalTr": "Selamlaş, adını söyle, nasıl olduğunu söyle ve karşındakine de sor."
+  },
+  "quiz": {
+    "situations": [
+      {
+        "q": "Garson sana su getirdi. Ne dersin?",
+        "options": ["Thank you.", "Goodbye!", "One, two, three.", "Where is the toilet?"]
+      },
+      {
+        "q": "Tuvaleti bulamıyorsun. Ne sorarsın?",
+        "options": ["Where is the toilet?", "My name is Hakan.", "I'm fine, thank you.", "Yes, please."]
+      },
+      {
+        "q": "Biri sana 'How are you?' diye sordu. Ne dersin?",
+        "options": ["I'm fine, thank you.", "Goodbye!", "Three, please.", "Sorry!"]
+      }
+    ],
+    "listening": [
+      {
+        "audio": "Nice to meet you.",
+        "q": "Ne duydun? Anlamını seç.",
+        "options": ["Tanıştığımıza memnun oldum.", "Nasılsın?", "Günaydın.", "Görüşürüz."]
+      },
+      {
+        "audio": "How are you?",
+        "q": "Soruya uygun cevabı seç.",
+        "options": ["I'm fine, thank you.", "My name is Hakan.", "Goodbye!", "Three, please."]
+      }
+    ]
+  }
+}

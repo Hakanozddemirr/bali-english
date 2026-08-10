@@ -1,0 +1,53 @@
+{
+  "day": 10,
+  "title": "Büyük Tekrar",
+  "emoji": "🌈",
+  "words": [],
+  "sentences": [
+    "I'm here on holiday.",
+    "I have a reservation.",
+    "What is the wifi password?",
+    "Not spicy, please.",
+    "The bill, please.",
+    "That's too expensive.",
+    "Can you give me a discount?",
+    "Stop here, please.",
+    "I need a doctor.",
+    "Where are you from?"
+  ],
+  "scenario": {
+    "title": "Bali'de Bir Gün",
+    "role": "several people during one full day in Bali, one after another: first a taxi driver at the airport, then a hotel receptionist, then a waiter at dinner. Play each role in order and announce scene changes briefly in English like: (At the hotel...)",
+    "firstLine": "Hello boss! Airport taxi? Where are you going?",
+    "situationTr": "Uzun senaryo: Havalimanından taksiye bin, otele check-in yap, akşam restoranda yemek ye. Claude sırayla şoförü, resepsiyonisti ve garsonu oynayacak.",
+    "goalTr": "Bir günü baştan sona İngilizce yönet: pazarlık yap, check-in yap, sipariş ver, hesabı iste."
+  },
+  "quiz": {
+    "situations": [
+      {
+        "q": "Havalimanında memur 'Why are you here?' dedi. Ne dersin?",
+        "options": ["I'm here on holiday.", "The bill, please.", "Turn left.", "I'll take it."]
+      },
+      {
+        "q": "Restoranda yemek acıydı, su istiyorsun. Ne dersin?",
+        "options": ["Water, please.", "The menu, please.", "Goodbye!", "I'm just looking."]
+      },
+      {
+        "q": "Kendini kötü hissediyorsun, yardım lazım. Ne dersin?",
+        "options": ["I need a doctor.", "One more, please.", "See you tomorrow!", "Use the meter, please."]
+      }
+    ],
+    "listening": [
+      {
+        "audio": "Do you have a reservation?",
+        "q": "Soruya uygun cevabı seç.",
+        "options": ["Yes, I have a reservation.", "No ice, please.", "Fifty thousand, okay?", "I can't swim well."]
+      },
+      {
+        "audio": "One hundred thousand.",
+        "q": "Hangi fiyatı duydun?",
+        "options": ["100.000", "1.000", "10.000", "50.000"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "day": 7,
+  "title": "Plaj & Aktiviteler",
+  "emoji": "🏝️",
+  "words": [
+    { "en": "beach", "v": "🏖️" },
+    { "en": "sea", "v": "🌊" },
+    { "en": "sun", "v": "☀️" },
+    { "en": "sunscreen", "v": "🧴" },
+    { "en": "swim", "v": "🏊" },
+    { "en": "surf", "v": "🏄" },
+    { "en": "boat", "v": "🚤" },
+    { "en": "tour", "v": "🧭" },
+    { "en": "temple", "v": "🛕" },
+    { "en": "waterfall", "v": "🏞️" },
+    { "en": "monkey", "v": "🐒" },
+    { "en": "rain", "v": "🌧️" },
+    { "en": "cloud", "v": "☁️" },
+    { "en": "time", "v": "⏰" },
+    { "en": "today", "v": "📅" },
+    { "en": "tomorrow", "v": "🌅" }
+  ],
+  "sentences": [
+    "What time is it?",
+    "What time does the tour start?",
+    "I want to book a tour for tomorrow.",
+    "How much is the ticket?",
+    "Is it far?",
+    "Will it rain tomorrow?",
+    "The beach is very beautiful.",
+    "I can't swim well.",
+    "Two tickets, please."
+  ],
+  "scenario": {
+    "title": "Tur Satın Alma",
+    "role": "a friendly tour seller on the beach offering waterfall and temple tours",
+    "firstLine": "Hello my friend! You want a tour? Very good price!",
+    "situationTr": "Plajda yürürken bir tur satıcısı sana şelale ve tapınak turu satmaya çalışıyor.",
+    "goalTr": "Turun saatini, fiyatını ve süresini sor; yarın için iki kişilik yer ayırt."
+  },
+  "quiz": {
+    "situations": [
+      {
+        "q": "Saati öğrenmek istiyorsun. Ne sorarsın?",
+        "options": ["What time is it?", "Is it far?", "How much is the ticket?", "Will it rain tomorrow?"]
+      },
+      {
+        "q": "Yarın için tur ayırtmak istiyorsun. Ne dersin?",
+        "options": ["I want to book a tour for tomorrow.", "The beach is very beautiful.", "I can't swim well.", "What time is it?"]
+      },
+      {
+        "q": "Satıcı 'How many people?' diye sordu. Ne dersin?",
+        "options": ["Two, please.", "At eight.", "Very beautiful.", "No rain."]
+      }
+    ],
+    "listening": [
+      {
+        "audio": "The tour starts at nine.",
+        "q": "Tur saat kaçta başlıyor?",
+        "options": ["9", "5", "12", "2"]
+      },
+      {
+        "audio": "Will it rain tomorrow?",
+        "q": "Ne duydun? Anlamını seç.",
+        "options": ["Yarın yağmur yağacak mı?", "Yarın deniz sıcak mı?", "Tur yarın mı?", "Bugün hava güzel mi?"]
+      }
+    ]
+  }
+}

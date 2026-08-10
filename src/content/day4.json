@@ -1,0 +1,71 @@
+{
+  "day": 4,
+  "title": "Restoran & Kafe",
+  "emoji": "🍽️",
+  "words": [
+    { "en": "menu", "v": "📋" },
+    { "en": "coffee", "v": "☕" },
+    { "en": "tea", "v": "🍵" },
+    { "en": "juice", "v": "🧃" },
+    { "en": "beer", "v": "🍺" },
+    { "en": "rice", "v": "🍚" },
+    { "en": "noodles", "v": "🍜" },
+    { "en": "chicken", "v": "🍗" },
+    { "en": "fish", "v": "🐟" },
+    { "en": "meat", "v": "🥩" },
+    { "en": "egg", "v": "🥚" },
+    { "en": "fruit", "v": "🍉" },
+    { "en": "banana", "v": "🍌" },
+    { "en": "spicy", "v": "🌶️" },
+    { "en": "ice", "v": "🧊" },
+    { "en": "bill", "v": "🧾" },
+    { "en": "delicious", "v": "😋" }
+  ],
+  "sentences": [
+    "A table for two, please.",
+    "The menu, please.",
+    "I want fried rice.",
+    "One coffee, please.",
+    "Not spicy, please.",
+    "I'm allergic to nuts.",
+    "No ice, please.",
+    "It's delicious!",
+    "The bill, please.",
+    "Can I pay by card?"
+  ],
+  "scenario": {
+    "title": "Restoranda Sipariş",
+    "role": "a cheerful waiter at a warung (small restaurant) in Bali",
+    "firstLine": "Hello! Welcome! What would you like to drink?",
+    "situationTr": "Bir Bali restoranındasın (warung). Garson siparişini almaya geldi.",
+    "goalTr": "İçecek ve yemek siparişi ver, acı olmasın de, sonunda hesabı iste."
+  },
+  "quiz": {
+    "situations": [
+      {
+        "q": "Yemeği bitirdin, ödemek istiyorsun. Ne dersin?",
+        "options": ["The bill, please.", "The menu, please.", "It's delicious!", "A table for two, please."]
+      },
+      {
+        "q": "Acı yiyemiyorsun. Sipariş verirken ne dersin?",
+        "options": ["Not spicy, please.", "No ice, please.", "One beer, please.", "I want fried rice."]
+      },
+      {
+        "q": "Garson 'Anything to drink?' diye sordu. Ne dersin?",
+        "options": ["One coffee, please.", "The bill, please.", "I'm allergic to nuts.", "A table for two."]
+      }
+    ],
+    "listening": [
+      {
+        "audio": "Do you want ice?",
+        "q": "Soruya uygun cevabı seç.",
+        "options": ["No ice, please.", "Not spicy, please.", "The bill, please.", "One tea, please."]
+      },
+      {
+        "audio": "It's very spicy.",
+        "q": "Ne duydun? Anlamını seç.",
+        "options": ["Çok acı.", "Çok lezzetli.", "Çok soğuk.", "Çok pahalı."]
+      }
+    ]
+  }
+}

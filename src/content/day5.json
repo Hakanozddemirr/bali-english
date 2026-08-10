@@ -1,0 +1,70 @@
+{
+  "day": 5,
+  "title": "Ulaşım & Scooter",
+  "emoji": "🛵",
+  "words": [
+    { "en": "scooter", "v": "🛵" },
+    { "en": "helmet", "v": "⛑️" },
+    { "en": "car", "v": "🚗" },
+    { "en": "road", "v": "🛣️" },
+    { "en": "map", "v": "🗺️" },
+    { "en": "left", "v": "⬅️" },
+    { "en": "right", "v": "➡️" },
+    { "en": "straight", "v": "⬆️" },
+    { "en": "here", "v": "📍" },
+    { "en": "stop", "v": "🛑" },
+    { "en": "slow", "v": "🐢" },
+    { "en": "fast", "v": "🐆" },
+    { "en": "petrol", "v": "⛽" },
+    { "en": "traffic", "v": "🚦" },
+    { "en": "meter", "v": "⏱️" },
+    { "en": "price", "v": "🏷️" }
+  ],
+  "sentences": [
+    "How much to Seminyak?",
+    "That's too expensive.",
+    "Use the meter, please.",
+    "Turn left.",
+    "Turn right.",
+    "Go straight.",
+    "Stop here, please.",
+    "I want to rent a scooter.",
+    "How much for one day?",
+    "Slow down, please."
+  ],
+  "scenario": {
+    "title": "Taksi Pazarlığı",
+    "role": "a talkative Balinese taxi driver who first offers a high price but accepts a fair one",
+    "firstLine": "Hello boss! Taxi? Where are you going?",
+    "situationTr": "Taksiye biniyorsun. Şoför önce yüksek fiyat söylüyor, pazarlık etmen gerekiyor.",
+    "goalTr": "Nereye gideceğini söyle, fiyat sor, pazarlık yap ve yol tarifi ver (sağ/sol/dur)."
+  },
+  "quiz": {
+    "situations": [
+      {
+        "q": "Şoför çok yüksek fiyat söyledi. Ne dersin?",
+        "options": ["That's too expensive.", "Stop here, please.", "Go straight.", "It's delicious!"]
+      },
+      {
+        "q": "Gideceğin yere geldin, inmek istiyorsun. Ne dersin?",
+        "options": ["Stop here, please.", "Turn left.", "How much for one day?", "Use the meter, please."]
+      },
+      {
+        "q": "Scooter kiralamak istiyorsun. Dükkanda ne dersin?",
+        "options": ["I want to rent a scooter.", "Slow down, please.", "Where is the taxi?", "The bill, please."]
+      }
+    ],
+    "listening": [
+      {
+        "audio": "Turn right.",
+        "q": "Ne duydun? Anlamını seç.",
+        "options": ["Sağa dön.", "Sola dön.", "Düz git.", "Burada dur."]
+      },
+      {
+        "audio": "Where are you going?",
+        "q": "Soruya uygun cevabı seç.",
+        "options": ["To the hotel, please.", "Ten days.", "No ice, please.", "I have a reservation."]
+      }
+    ]
+  }
+}
