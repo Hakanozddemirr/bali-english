@@ -3,21 +3,81 @@
   "title": "Havalimanı",
   "emoji": "🛫",
   "words": [
-    { "en": "airport", "v": "🛫" },
-    { "en": "plane", "v": "✈️" },
-    { "en": "passport", "v": "🛂" },
-    { "en": "ticket", "v": "🎫" },
-    { "en": "suitcase", "v": "🧳" },
-    { "en": "bag", "v": "🎒" },
-    { "en": "gate", "v": "🚪" },
-    { "en": "seat", "v": "💺" },
-    { "en": "window", "v": "🪟" },
-    { "en": "taxi", "v": "🚕" },
-    { "en": "bus", "v": "🚌" },
-    { "en": "hotel", "v": "🏨" },
-    { "en": "holiday", "v": "🌴" },
-    { "en": "week", "v": "🗓️" },
-    { "en": "family", "v": "👨‍👩‍👧‍👦" }
+    {
+      "en": "airport",
+      "v": "🛫",
+      "ex": "The airport is very big."
+    },
+    {
+      "en": "plane",
+      "v": "✈️",
+      "ex": "The plane is late."
+    },
+    {
+      "en": "passport",
+      "v": "🛂",
+      "ex": "Here is my passport."
+    },
+    {
+      "en": "ticket",
+      "v": "🎫",
+      "ex": "Here is my ticket."
+    },
+    {
+      "en": "suitcase",
+      "v": "🧳",
+      "ex": "This is my suitcase."
+    },
+    {
+      "en": "bag",
+      "v": "🎒",
+      "ex": "I have one bag."
+    },
+    {
+      "en": "gate",
+      "v": "🚪",
+      "ex": "Where is gate seven?"
+    },
+    {
+      "en": "seat",
+      "v": "💺",
+      "ex": "This is my seat."
+    },
+    {
+      "en": "window",
+      "v": "🪟",
+      "ex": "A window seat, please."
+    },
+    {
+      "en": "taxi",
+      "v": "🚕",
+      "ex": "Where is the taxi?"
+    },
+    {
+      "en": "bus",
+      "v": "🚌",
+      "ex": "I go by bus."
+    },
+    {
+      "en": "hotel",
+      "v": "🏨",
+      "ex": "My hotel is in Ubud."
+    },
+    {
+      "en": "holiday",
+      "v": "🌴",
+      "ex": "I'm here on holiday."
+    },
+    {
+      "en": "week",
+      "v": "🗓️",
+      "ex": "I'm staying one week."
+    },
+    {
+      "en": "family",
+      "v": "👨‍👩‍👧‍👦",
+      "ex": "This is my family."
+    }
   ],
   "sentences": [
     "I'm here on holiday.",
@@ -37,41 +97,194 @@
     "situationTr": "Bali havalimanına yeni indin. Pasaport kontrolündesin, memur sana sorular soruyor.",
     "goalTr": "Pasaportunu ver, neden geldiğini ve kaç gün kalacağını söyle.",
     "script": [
-      { "ai": "Good morning. Passport, please.", "tr": "Günaydın. Pasaportunuz lütfen.", "expect": ["here", "passport"], "say": "Here is my passport." },
-      { "ai": "Thank you. Why are you here?", "tr": "Teşekkürler. Geliş amacınız nedir?", "expect": ["holiday", "vacation", "tourist"], "say": "I'm here on holiday." },
-      { "ai": "How long will you stay?", "tr": "Ne kadar kalacaksınız?", "expect": ["ten", "day", "week"], "say": "Ten days." },
-      { "ai": "Where will you stay?", "tr": "Nerede kalacaksınız?", "expect": ["hotel", "ubud", "stay"], "say": "I'm staying at a hotel in Ubud." },
-      { "ai": "Is this your first time in Indonesia?", "tr": "Endonezya'ya ilk gelişiniz mi?", "expect": ["yes", "first", "no"], "say": "Yes, my first time." },
-      { "ai": "Okay. Look at the camera, please.", "tr": "Tamam. Kameraya bakın lütfen.", "expect": ["okay", "yes", "sure"], "say": "Okay." },
-      { "ai": "Welcome to Bali! Enjoy your holiday.", "tr": "Bali'ye hoş geldiniz! İyi tatiller.", "expect": ["thank"], "say": "Thank you very much!" },
-      { "ai": "You're welcome. Goodbye!", "tr": "Rica ederim. İyi günler!", "expect": ["goodbye", "bye"], "say": "Goodbye!" }
+      {
+        "ai": "Good morning. Passport, please.",
+        "tr": "Günaydın. Pasaportunuz lütfen.",
+        "expect": [
+          "here",
+          "passport"
+        ],
+        "say": "Here is my passport."
+      },
+      {
+        "ai": "Thank you. Why are you here?",
+        "tr": "Teşekkürler. Geliş amacınız nedir?",
+        "expect": [
+          "holiday",
+          "vacation",
+          "tourist"
+        ],
+        "say": "I'm here on holiday."
+      },
+      {
+        "ai": "How long will you stay?",
+        "tr": "Ne kadar kalacaksınız?",
+        "expect": [
+          "ten",
+          "day",
+          "week"
+        ],
+        "say": "Ten days."
+      },
+      {
+        "ai": "Where will you stay?",
+        "tr": "Nerede kalacaksınız?",
+        "expect": [
+          "hotel",
+          "ubud",
+          "stay"
+        ],
+        "say": "I'm staying at a hotel in Ubud."
+      },
+      {
+        "ai": "Is this your first time in Indonesia?",
+        "tr": "Endonezya'ya ilk gelişiniz mi?",
+        "expect": [
+          "yes",
+          "first",
+          "no"
+        ],
+        "say": "Yes, my first time."
+      },
+      {
+        "ai": "Okay. Look at the camera, please.",
+        "tr": "Tamam. Kameraya bakın lütfen.",
+        "expect": [
+          "okay",
+          "yes",
+          "sure"
+        ],
+        "say": "Okay."
+      },
+      {
+        "ai": "Welcome to Bali! Enjoy your holiday.",
+        "tr": "Bali'ye hoş geldiniz! İyi tatiller.",
+        "expect": [
+          "thank"
+        ],
+        "say": "Thank you very much!"
+      },
+      {
+        "ai": "You're welcome. Next, please!",
+        "tr": "Rica ederim. Sıradaki lütfen!",
+        "expect": [
+          "goodbye",
+          "bye",
+          "thank"
+        ],
+        "say": "Goodbye!"
+      },
+      {
+        "ai": "(At baggage claim) Excuse me — is this your suitcase?",
+        "tr": "(Bagaj alanında) Affedersiniz — bu sizin valiziniz mi?",
+        "expect": [
+          "yes",
+          "my suitcase",
+          "thank"
+        ],
+        "say": "Yes, that's my suitcase. Thank you!"
+      },
+      {
+        "ai": "You're welcome. Where are you going now?",
+        "tr": "Rica ederim. Şimdi nereye gidiyorsunuz?",
+        "expect": [
+          "hotel",
+          "ubud"
+        ],
+        "say": "To my hotel in Ubud."
+      },
+      {
+        "ai": "Take the official taxi. The taxi stand is on the left.",
+        "tr": "Resmi taksiye binin. Taksi durağı solda.",
+        "expect": [
+          "thank",
+          "okay",
+          "left"
+        ],
+        "say": "Thank you very much!"
+      },
+      {
+        "ai": "(At the taxi stand) Hello! Where are you going?",
+        "tr": "(Taksi durağında) Merhaba! Nereye gidiyorsunuz?",
+        "expect": [
+          "ubud",
+          "hotel"
+        ],
+        "say": "To Ubud, please."
+      },
+      {
+        "ai": "Okay! Do you have big bags?",
+        "tr": "Tamam! Büyük çantanız var mı?",
+        "expect": [
+          "one",
+          "suitcase",
+          "bag",
+          "yes"
+        ],
+        "say": "Yes, one suitcase and one bag."
+      },
+      {
+        "ai": "No problem! Welcome to Bali. Let's go!",
+        "tr": "Sorun değil! Bali'ye hoş geldiniz. Gidelim!",
+        "expect": [
+          "thank",
+          "let",
+          "go"
+        ],
+        "say": "Thank you! Let's go!"
+      }
     ]
   },
   "quiz": {
     "situations": [
       {
         "q": "Memur 'Why are you here?' diye sordu. Ne dersin?",
-        "options": ["I'm here on holiday.", "The menu, please.", "Where is the taxi?", "This is my bag."]
+        "options": [
+          "I'm here on holiday.",
+          "The menu, please.",
+          "Where is the taxi?",
+          "This is my bag."
+        ]
       },
       {
         "q": "Uçağının kapısını arıyorsun. Ne sorarsın?",
-        "options": ["Where is gate seven?", "Here is my passport.", "I'm going to Ubud.", "Nice to meet you."]
+        "options": [
+          "Where is gate seven?",
+          "Here is my passport.",
+          "I'm going to Ubud.",
+          "Nice to meet you."
+        ]
       },
       {
         "q": "Memur 'How long will you stay?' diye sordu. Ne dersin?",
-        "options": ["Ten days.", "My name is Hakan.", "Yes, please.", "The bag is big."]
+        "options": [
+          "Ten days.",
+          "My name is Hakan.",
+          "Yes, please.",
+          "The bag is big."
+        ]
       }
     ],
     "listening": [
       {
         "audio": "Passport, please.",
         "q": "Ne duydun? Anlamını seç.",
-        "options": ["Pasaportunuz, lütfen.", "Biletiniz nerede?", "Hoş geldiniz.", "Kapı yedi numara."]
+        "options": [
+          "Pasaportunuz, lütfen.",
+          "Biletiniz nerede?",
+          "Hoş geldiniz.",
+          "Kapı yedi numara."
+        ]
       },
       {
         "audio": "Where are you going?",
         "q": "Soruya uygun cevabı seç.",
-        "options": ["I'm going to Ubud.", "I'm fine, thank you.", "Two bags, please.", "Here is my seat."]
+        "options": [
+          "I'm going to Ubud.",
+          "I'm fine, thank you.",
+          "Two bags, please.",
+          "Here is my seat."
+        ]
       }
     ]
   }

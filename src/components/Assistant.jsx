@@ -1,41 +1,42 @@
-import { useEffect, useRef, useState } from 'react'
-import { getDay } from '../content'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { getDay, allWords } from '../content'
 import { useApp, getDayState, ensureDay, recomputeDay } from '../lib/store'
 import { speak, stopSpeaking } from '../lib/tts'
 import { startListening, sttSupported } from '../lib/stt'
 import { chatReply, buildSystemPrompt } from '../lib/claude'
 import { compareSentence, normalize } from '../lib/similarity'
+import { sample } from '../lib/quizGen'
 import { fireConfetti } from '../lib/confetti'
 
 const TARGET_SEC = 600
 // claude.ai üzerinde yayınlanan sürümde dış API çağrıları güvenlik nedeniyle engellidir
 const IS_PUBLISHED = /claude(usercontent)?\.(ai|com)$/.test(window.location.hostname)
 
-const PRAISES = ['Great!', 'Very good!', 'Perfect!', 'Nice!', 'Well done!']
+const PRAISES = ['Great!', 'Very good!', 'Perfect!', 'Nice!', 'Well done!', 'Excellent!']
 
 function fmt(sec) {
   return `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`
 }
 
-// Yerleşik (ücretsiz) senaryo motoru: beklenen kalıplardan biri geçiyorsa ya da
-// söylenen cümle model cümleye yeterince benziyorsa bir sonraki adıma geçer.
+const hasWord = (rawText, phrase) => {
+  const padded = ` ${normalize(rawText)} `
+  const n = normalize(phrase)
+  return n.includes(' ') ? padded.includes(n) : padded.includes(` ${n} `)
+}
+
+// Sadece tek başına "help"/"yardım" yazılırsa yardım isteğidir —
+// "Help me, please!" gibi cümleler normal cevap sayılır.
+const isHelpRequest = (t) => /^\s*(help|yardim|yardım)[.!?]*\s*$/i.test(t)
+
+// --- Tur 1: senaryo motoru ---
 function runScriptTurn(script, idx, rawText) {
   const step = script[idx]
-  const low = rawText.toLowerCase()
-  if (/(^|\W)(help|yardim|yardım)(\W|$)/.test(low)) {
-    return {
-      display: `🇹🇷 “${step.tr}”\n\n${step.ai}`,
-      speakText: step.ai,
-      next: idx,
-    }
+  if (isHelpRequest(rawText)) {
+    return { display: `🇹🇷 “${step.tr}”\n\n${step.ai}`, speakText: step.ai, next: idx }
   }
-  const padded = ` ${normalize(rawText)} `
   const matched =
-    step.expect.some((p) => {
-      const n = normalize(p)
-      return n.includes(' ') ? padded.includes(n) : padded.includes(` ${n} `)
-    }) || compareSentence(step.say, rawText).score >= 0.55
-
+    step.expect.some((p) => hasWord(rawText, p)) ||
+    compareSentence(step.say, rawText).score >= 0.55
   if (!matched) {
     return {
       display: `You can say: “${step.say}” — try it! 🎯`,
@@ -55,6 +56,42 @@ function runScriptTurn(script, idx, rawText) {
   }
 }
 
+// --- Tur 2: kelime koçu — örneği göster, kullanıcı kendi cümlesini kursun ---
+const wordPrompt = (w) => `Make a sentence with “${w.en}”. Example: “${w.ex}”`
+
+function runWordTurn(word, rawText, tries) {
+  const wordCount = normalize(rawText).split(' ').filter(Boolean).length
+  const used = hasWord(rawText, word.en)
+  if (isHelpRequest(rawText)) {
+    return {
+      display: `💡 Example: “${word.ex}” — you can repeat it, or make your own!`,
+      speakText: word.ex,
+      advance: false,
+      tries,
+    }
+  }
+  if (used && (wordCount >= 3 || tries >= 1)) {
+    return { advance: true }
+  }
+  if (used) {
+    return {
+      display: `Good start! Now a little longer sentence, please. Example: “${word.ex}”`,
+      speakText: `Good start! A longer sentence, please.`,
+      advance: false,
+      tries: tries + 1,
+    }
+  }
+  if (tries >= 2) {
+    return { advance: true, skipped: true }
+  }
+  return {
+    display: `Use the word “${word.en}”. Example: “${word.ex}” — try again!`,
+    speakText: `Use the word ${word.en}. For example: ${word.ex}`,
+    advance: false,
+    tries: tries + 1,
+  }
+}
+
 export default function Assistant({ day, onBack }) {
   const { state, update } = useApp()
   const content = getDay(day)
@@ -71,7 +108,17 @@ export default function Assistant({ day, onBack }) {
   const [listening, setListening] = useState(false)
   const [err, setErr] = useState('')
   const [secs, setSecs] = useState(st.talkSec)
+  const [phase, setPhase] = useState('script') // 'script' | 'words'
   const [stepIdx, setStepIdx] = useState(0)
+  const [wordIdx, setWordIdx] = useState(0)
+  const triesRef = useRef(0)
+
+  // 2. tur için kelime destesi (örneği olan kelimeler)
+  const coachWords = useMemo(() => {
+    const pool = (content.words.length ? content.words : allWords).filter((w) => w.ex)
+    return sample(pool, Math.min(12, pool.length))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [day])
 
   const recRef = useRef(null)
   const scrollRef = useRef(null)
@@ -129,9 +176,28 @@ export default function Assistant({ day, onBack }) {
 
   const start = () => {
     setStarted(true)
+    setPhase('script')
     setStepIdx(0)
+    setWordIdx(0)
+    triesRef.current = 0
     setMessages([{ role: 'assistant', text: firstLine }])
     speak(firstLine, rate)
+  }
+
+  const enterWordsPhase = (out) => {
+    out.push({
+      role: 'sys',
+      text: '🎉 1. tur bitti! 2. TUR: Şimdi günün kelimeleriyle KENDİ cümlelerini kur. Örneği dinle, sonra kendi cümleni söyle.',
+    })
+    out.push({ role: 'assistant', text: wordPrompt(coachWords[0]) })
+  }
+
+  const backToScript = (out) => {
+    out.push({
+      role: 'sys',
+      text: '🏁 Kelime turu da bitti! Senaryo baştan başlıyor — bu kez ipucusuz dene, süre saymaya devam ediyor.',
+    })
+    out.push({ role: 'assistant', text: script[0].ai })
   }
 
   const send = async (rawText) => {
@@ -140,26 +206,57 @@ export default function Assistant({ day, onBack }) {
     setErr('')
     setInput('')
 
-    // --- Ücretsiz yerleşik mod: yanıt yerelden, internet gerekmez ---
+    // --- Ücretsiz yerleşik mod ---
     if (mode === 'script') {
       if (!script.length) {
         setErr('Bu senaryo için yerleşik diyalog bulunamadı.')
         return
       }
-      const turn = runScriptTurn(script, stepIdx, text)
-      setMessages((m) => {
-        const out = [...m, { role: 'user', text }, { role: 'assistant', text: turn.display }]
-        if (turn.finished) {
-          out.push({
-            role: 'sys',
-            text: '🎉 Senaryoyu bitirdin! Baştan alıyoruz — süre saymaya devam ediyor.',
-          })
-          out.push({ role: 'assistant', text: script[0].ai })
+      if (phase === 'script') {
+        const turn = runScriptTurn(script, stepIdx, text)
+        const out = [{ role: 'user', text }, { role: 'assistant', text: turn.display }]
+        let speakText = turn.speakText
+        if (turn.finished && coachWords.length) {
+          enterWordsPhase(out)
+          setPhase('words')
+          setWordIdx(0)
+          triesRef.current = 0
+          speakText = `${turn.speakText} Now let's use today's words! ${wordPrompt(coachWords[0])}`
+        } else if (turn.finished) {
+          backToScript(out)
         }
-        return out
-      })
-      setStepIdx(turn.next)
-      speak(turn.finished ? `${turn.speakText} That was great! Again: ${script[0].ai}` : turn.speakText, rate)
+        setMessages((m) => [...m, ...out])
+        setStepIdx(turn.next)
+        speak(speakText, rate)
+      } else {
+        // kelime koçu turu
+        const word = coachWords[wordIdx]
+        const turn = runWordTurn(word, text, triesRef.current)
+        const out = [{ role: 'user', text }]
+        if (turn.advance) {
+          triesRef.current = 0
+          const praise = turn.skipped ? "Okay, let's continue!" : PRAISES[wordIdx % PRAISES.length]
+          const nextIdx = wordIdx + 1
+          if (nextIdx >= coachWords.length) {
+            out.push({ role: 'assistant', text: `${praise} 🎉 You used ${coachWords.length} words!` })
+            backToScript(out)
+            setPhase('script')
+            setStepIdx(0)
+            setWordIdx(0)
+            speak(`${praise} Amazing! Let's do the scenario again. ${script[0].ai}`, rate)
+          } else {
+            const nextPrompt = wordPrompt(coachWords[nextIdx])
+            out.push({ role: 'assistant', text: `${praise} ${nextPrompt}` })
+            setWordIdx(nextIdx)
+            speak(`${praise} ${nextPrompt}`, rate)
+          }
+        } else {
+          triesRef.current = turn.tries
+          out.push({ role: 'assistant', text: turn.display })
+          speak(turn.speakText, rate)
+        }
+        setMessages((m) => [...m, ...out])
+      }
       return
     }
 
@@ -213,10 +310,16 @@ export default function Assistant({ day, onBack }) {
 
   const lastAi = [...messages].reverse().find((m) => m.role === 'assistant')
   const curStep = script[stepIdx]
+  const curWord = coachWords[wordIdx]
 
   const showHelp = () => {
     if (mode === 'claude') {
       send('help')
+      return
+    }
+    if (phase === 'words' && curWord) {
+      setMessages((m) => [...m, { role: 'sys', text: `💡 Örnek: “${curWord.ex}” — aynısını da söyleyebilirsin.` }])
+      speak(curWord.ex, rate)
       return
     }
     if (!curStep) return
@@ -225,6 +328,11 @@ export default function Assistant({ day, onBack }) {
   }
 
   const showHint = () => {
+    if (phase === 'words' && curWord) {
+      setMessages((m) => [...m, { role: 'sys', text: `💡 Örnek: “${curWord.ex}”` }])
+      speak(curWord.ex, rate)
+      return
+    }
     if (!curStep) return
     setMessages((m) => [...m, { role: 'sys', text: `💡 Şöyle diyebilirsin: “${curStep.say}”` }])
     speak(curStep.say, rate)
@@ -253,9 +361,9 @@ export default function Assistant({ day, onBack }) {
             <p className="desc">🎯 Hedefin: {scenario.goalTr}</p>
             {mode === 'script' ? (
               <p className="desc">
-                🎁 <b>Ücretsiz yerleşik mod:</b> Karşındaki rolü uygulama oynar — API anahtarı ve
-                internet gerekmez. Takılırsan 💡 ipucu butonu söylemen gerekeni gösterir, 🆘 son
-                cümlenin Türkçesini verir.
+                🎁 <b>Ücretsiz yerleşik mod, 2 turlu:</b> Önce senaryoyu oyna ({script.length} replik) —
+                sonra günün kelimeleriyle <b>kendi cümlelerini</b> kur. Takılırsan 💡 örneği gösterir,
+                🆘 Türkçesini verir. İnternet ve API anahtarı gerekmez.
               </p>
             ) : (
               <p className="desc">
@@ -308,12 +416,14 @@ export default function Assistant({ day, onBack }) {
       {started && (
         <>
           <div style={{ display: 'flex', gap: 8, padding: '0 16px 6px' }}>
-            <button className="btn ghost" style={{ padding: 9, fontSize: 13.5 }} onClick={showHelp}>
-              🆘 Türkçesi
-            </button>
+            {!(mode === 'script' && phase === 'words') && (
+              <button className="btn ghost" style={{ padding: 9, fontSize: 13.5 }} onClick={showHelp}>
+                🆘 Türkçesi
+              </button>
+            )}
             {mode === 'script' ? (
               <button className="btn ghost" style={{ padding: 9, fontSize: 13.5 }} onClick={showHint}>
-                💡 Ne diyeyim?
+                💡 {phase === 'words' ? 'Örneği Göster' : 'Ne diyeyim?'}
               </button>
             ) : (
               <button

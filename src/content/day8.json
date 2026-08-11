@@ -3,21 +3,81 @@
   "title": "Acil Durumlar",
   "emoji": "🆘",
   "words": [
-    { "en": "doctor", "v": "🧑‍⚕️" },
-    { "en": "hospital", "v": "🏥" },
-    { "en": "pharmacy", "v": "💊" },
-    { "en": "sick", "v": "🤒" },
-    { "en": "pain", "v": "🤕" },
-    { "en": "stomach ache", "v": "🤢" },
-    { "en": "fever", "v": "🌡️" },
-    { "en": "sunburn", "v": "🥵" },
-    { "en": "police", "v": "👮" },
-    { "en": "lost", "v": "🔍" },
-    { "en": "phone", "v": "📱" },
-    { "en": "wallet", "v": "👛" },
-    { "en": "mosquito", "v": "🦟" },
-    { "en": "emergency", "v": "🚨" },
-    { "en": "danger", "v": "⚠️" }
+    {
+      "en": "doctor",
+      "v": "🧑‍⚕️",
+      "ex": "I need a doctor."
+    },
+    {
+      "en": "hospital",
+      "v": "🏥",
+      "ex": "Where is the hospital?"
+    },
+    {
+      "en": "pharmacy",
+      "v": "💊",
+      "ex": "Where is the pharmacy?"
+    },
+    {
+      "en": "sick",
+      "v": "🤒",
+      "ex": "I'm sick."
+    },
+    {
+      "en": "pain",
+      "v": "🤕",
+      "ex": "I have pain here."
+    },
+    {
+      "en": "stomach ache",
+      "v": "🤢",
+      "ex": "I have a stomach ache."
+    },
+    {
+      "en": "fever",
+      "v": "🌡️",
+      "ex": "I have a fever."
+    },
+    {
+      "en": "sunburn",
+      "v": "🥵",
+      "ex": "I have a sunburn."
+    },
+    {
+      "en": "police",
+      "v": "👮",
+      "ex": "Call the police, please!"
+    },
+    {
+      "en": "lost",
+      "v": "🔍",
+      "ex": "I lost my passport."
+    },
+    {
+      "en": "phone",
+      "v": "📱",
+      "ex": "My phone is not working."
+    },
+    {
+      "en": "wallet",
+      "v": "👛",
+      "ex": "I lost my wallet."
+    },
+    {
+      "en": "mosquito",
+      "v": "🦟",
+      "ex": "Too many mosquitoes here!"
+    },
+    {
+      "en": "emergency",
+      "v": "🚨",
+      "ex": "It's an emergency!"
+    },
+    {
+      "en": "danger",
+      "v": "⚠️",
+      "ex": "It's dangerous!"
+    }
   ],
   "sentences": [
     "Help me, please!",
@@ -38,41 +98,181 @@
     "situationTr": "Miden bozuldu ve hafif ateşin var. Eczaneye (apotek) ilaç almaya gittin.",
     "goalTr": "Şikayetini anlat (mide, ateş), ilaç iste ve nasıl kullanacağını sor.",
     "script": [
-      { "ai": "Hello. Can I help you?", "tr": "Merhaba. Yardımcı olabilir miyim?", "expect": ["sick", "help", "medicine", "yes"], "say": "Yes, I'm sick." },
-      { "ai": "Oh no. What is the problem?", "tr": "Geçmiş olsun. Sorununuz nedir?", "expect": ["stomach", "hurt"], "say": "My stomach hurts." },
-      { "ai": "Do you have a fever too?", "tr": "Ateşiniz de var mı?", "expect": ["yes", "little", "fever", "no"], "say": "Yes, a little fever." },
-      { "ai": "Okay. This medicine is good for your stomach.", "tr": "Tamam. Bu ilaç mideniz için iyi.", "expect": ["how", "take", "when"], "say": "How do I take it?" },
-      { "ai": "Two times a day, after food.", "tr": "Günde iki kez, yemekten sonra.", "expect": ["okay", "thank", "how much"], "say": "Okay, thank you. How much is it?" },
-      { "ai": "40,000 rupiah, please.", "tr": "40.000 rupiah lütfen.", "expect": ["here", "card", "okay", "you are"], "say": "Here you are." },
-      { "ai": "Thank you. Drink a lot of water, okay?", "tr": "Teşekkürler. Bol su için, tamam mı?", "expect": ["okay", "yes", "thank", "i will"], "say": "Okay, I will. Thank you!" },
-      { "ai": "Get well soon! Goodbye!", "tr": "Geçmiş olsun! İyi günler!", "expect": ["thank", "goodbye", "bye"], "say": "Thank you! Goodbye!" }
+      {
+        "ai": "Hello. Can I help you?",
+        "tr": "Merhaba. Yardımcı olabilir miyim?",
+        "expect": [
+          "sick",
+          "help",
+          "yes"
+        ],
+        "say": "Yes, I'm sick."
+      },
+      {
+        "ai": "Oh no. What is the problem?",
+        "tr": "Geçmiş olsun. Sorununuz nedir?",
+        "expect": [
+          "stomach",
+          "hurt"
+        ],
+        "say": "My stomach hurts."
+      },
+      {
+        "ai": "Do you have a fever too?",
+        "tr": "Ateşiniz de var mı?",
+        "expect": [
+          "yes",
+          "little",
+          "fever",
+          "no"
+        ],
+        "say": "Yes, a little fever."
+      },
+      {
+        "ai": "Okay. This medicine is good for your stomach.",
+        "tr": "Tamam. Bu ilaç mideniz için iyi.",
+        "expect": [
+          "how",
+          "take",
+          "when"
+        ],
+        "say": "How do I take it?"
+      },
+      {
+        "ai": "Two times a day, after food.",
+        "tr": "Günde iki kez, yemekten sonra.",
+        "expect": [
+          "okay",
+          "thank",
+          "how much"
+        ],
+        "say": "Okay, thank you. How much is it?"
+      },
+      {
+        "ai": "40,000 rupiah, please.",
+        "tr": "40.000 rupiah lütfen.",
+        "expect": [
+          "here",
+          "card",
+          "you are"
+        ],
+        "say": "Here you are."
+      },
+      {
+        "ai": "Thank you. Do you need anything else? Mosquito spray?",
+        "tr": "Teşekkürler. Başka bir şey lazım mı? Sivrisinek spreyi?",
+        "expect": [
+          "mosquito",
+          "yes",
+          "spray",
+          "please"
+        ],
+        "say": "Yes, mosquito spray, please."
+      },
+      {
+        "ai": "Here. Use it in the evening.",
+        "tr": "Buyurun. Akşamları kullanın.",
+        "expect": [
+          "okay",
+          "thank",
+          "evening"
+        ],
+        "say": "Okay, thank you."
+      },
+      {
+        "ai": "And drink a lot of water, okay?",
+        "tr": "Ve bol su için, tamam mı?",
+        "expect": [
+          "okay",
+          "yes",
+          "i will",
+          "water"
+        ],
+        "say": "Okay, I will."
+      },
+      {
+        "ai": "If the fever is big tomorrow, go to a doctor.",
+        "tr": "Yarın ateşiniz yükselirse doktora gidin.",
+        "expect": [
+          "okay",
+          "doctor",
+          "i will",
+          "go"
+        ],
+        "say": "Okay, I will go to a doctor."
+      },
+      {
+        "ai": "And no beer today, my friend!",
+        "tr": "Ve bugün bira yok dostum!",
+        "expect": [
+          "okay",
+          "no beer",
+          "haha"
+        ],
+        "say": "Okay, no beer today!"
+      },
+      {
+        "ai": "Get well soon! Goodbye!",
+        "tr": "Geçmiş olsun! İyi günler!",
+        "expect": [
+          "thank",
+          "goodbye",
+          "bye"
+        ],
+        "say": "Thank you! Goodbye!"
+      }
     ]
   },
   "quiz": {
     "situations": [
       {
         "q": "Karnın çok ağrıyor. Eczacıya ne dersin?",
-        "options": ["My stomach hurts.", "I lost my phone.", "Call the police, please.", "Where is the beach?"]
+        "options": [
+          "My stomach hurts.",
+          "I lost my phone.",
+          "Call the police, please.",
+          "Where is the beach?"
+        ]
       },
       {
         "q": "Telefonun kayboldu. Ne dersin?",
-        "options": ["I lost my phone.", "I have a fever.", "I need a doctor.", "It's delicious!"]
+        "options": [
+          "I lost my phone.",
+          "I have a fever.",
+          "I need a doctor.",
+          "It's delicious!"
+        ]
       },
       {
         "q": "Eczane arıyorsun. Ne sorarsın?",
-        "options": ["Where is the pharmacy?", "Where is the pool?", "How much is this?", "What time is it?"]
+        "options": [
+          "Where is the pharmacy?",
+          "Where is the pool?",
+          "How much is this?",
+          "What time is it?"
+        ]
       }
     ],
     "listening": [
       {
         "audio": "Are you okay?",
         "q": "Soruya uygun cevabı seç.",
-        "options": ["I'm sick.", "I'll take it.", "Two tickets, please.", "Turn left."]
+        "options": [
+          "I'm sick.",
+          "I'll take it.",
+          "Two tickets, please.",
+          "Turn left."
+        ]
       },
       {
         "audio": "Take this medicine two times a day.",
         "q": "Ne duydun? Anlamını seç.",
-        "options": ["Bu ilacı günde iki kez al.", "Bu ilacı yemekten önce al.", "Doktora git.", "İki gün dinlen."]
+        "options": [
+          "Bu ilacı günde iki kez al.",
+          "Bu ilacı yemekten önce al.",
+          "Doktora git.",
+          "İki gün dinlen."
+        ]
       }
     ]
   }

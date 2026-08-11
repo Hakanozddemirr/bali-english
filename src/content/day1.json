@@ -3,28 +3,116 @@
   "title": "Selamlaşma & Sayılar",
   "emoji": "👋",
   "words": [
-    { "en": "hello", "v": "👋" },
-    { "en": "goodbye", "v": "🙋" },
-    { "en": "yes", "v": "✅" },
-    { "en": "no", "v": "❌" },
-    { "en": "please", "v": "🥺" },
-    { "en": "thank you", "v": "🙏" },
-    { "en": "sorry", "v": "😔" },
-    { "en": "name", "v": "📛" },
-    { "en": "friend", "v": "🧑‍🤝‍🧑" },
-    { "en": "water", "v": "💧" },
-    { "en": "toilet", "v": "🚻" },
-    { "en": "help", "v": "🆘" },
-    { "en": "one", "v": "1" },
-    { "en": "two", "v": "2" },
-    { "en": "three", "v": "3" },
-    { "en": "four", "v": "4" },
-    { "en": "five", "v": "5" },
-    { "en": "six", "v": "6" },
-    { "en": "seven", "v": "7" },
-    { "en": "eight", "v": "8" },
-    { "en": "nine", "v": "9" },
-    { "en": "ten", "v": "10" }
+    {
+      "en": "hello",
+      "v": "👋",
+      "ex": "Hello! How are you?"
+    },
+    {
+      "en": "goodbye",
+      "v": "🙋",
+      "ex": "Goodbye! See you later!"
+    },
+    {
+      "en": "yes",
+      "v": "✅",
+      "ex": "Yes, please."
+    },
+    {
+      "en": "no",
+      "v": "❌",
+      "ex": "No, thank you."
+    },
+    {
+      "en": "please",
+      "v": "🥺",
+      "ex": "One water, please."
+    },
+    {
+      "en": "thank you",
+      "v": "🙏",
+      "ex": "Thank you very much!"
+    },
+    {
+      "en": "sorry",
+      "v": "😔",
+      "ex": "Sorry, I don't understand."
+    },
+    {
+      "en": "name",
+      "v": "📛",
+      "ex": "My name is Hakan."
+    },
+    {
+      "en": "friend",
+      "v": "🧑‍🤝‍🧑",
+      "ex": "This is my friend."
+    },
+    {
+      "en": "water",
+      "v": "💧",
+      "ex": "Water, please."
+    },
+    {
+      "en": "toilet",
+      "v": "🚻",
+      "ex": "Where is the toilet?"
+    },
+    {
+      "en": "help",
+      "v": "🆘",
+      "ex": "Help me, please!"
+    },
+    {
+      "en": "one",
+      "v": "1",
+      "ex": "One ticket, please."
+    },
+    {
+      "en": "two",
+      "v": "2",
+      "ex": "Two coffees, please."
+    },
+    {
+      "en": "three",
+      "v": "3",
+      "ex": "Three days in Ubud."
+    },
+    {
+      "en": "four",
+      "v": "4",
+      "ex": "A table for four, please."
+    },
+    {
+      "en": "five",
+      "v": "5",
+      "ex": "My room is number five."
+    },
+    {
+      "en": "six",
+      "v": "6",
+      "ex": "We go at six."
+    },
+    {
+      "en": "seven",
+      "v": "7",
+      "ex": "Where is gate seven?"
+    },
+    {
+      "en": "eight",
+      "v": "8",
+      "ex": "Breakfast is at eight."
+    },
+    {
+      "en": "nine",
+      "v": "9",
+      "ex": "The tour starts at nine."
+    },
+    {
+      "en": "ten",
+      "v": "10",
+      "ex": "I'm here for ten days."
+    }
   ],
   "sentences": [
     "Hello!",
@@ -45,41 +133,216 @@
     "situationTr": "Otelin havuz başındasın. Yan şezlongdaki gezgin seninle sohbet başlatıyor.",
     "goalTr": "Selamlaş, adını söyle, nasıl olduğunu söyle ve karşındakine de sor.",
     "script": [
-      { "ai": "Hello! What's your name?", "tr": "Merhaba! Senin adın ne?", "expect": ["my name", "i am", "i'm", "hakan"], "say": "My name is Hakan." },
-      { "ai": "Nice to meet you! How are you?", "tr": "Memnun oldum! Nasılsın?", "expect": ["fine", "good", "great", "okay", "not bad"], "say": "I'm fine, thank you." },
-      { "ai": "I'm happy you are fine! Where are you from?", "tr": "İyi olmana sevindim! Nerelisin?", "expect": ["turkey", "from"], "say": "I'm from Turkey." },
-      { "ai": "Turkey! Very nice. Is this your first time in Bali?", "tr": "Türkiye! Çok güzel. Bali'ye ilk gelişin mi?", "expect": ["yes", "first", "no"], "say": "Yes, it's my first time." },
-      { "ai": "Welcome! Do you want some water?", "tr": "Hoş geldin! Su ister misin?", "expect": ["yes", "please", "no thank"], "say": "Yes, please." },
-      { "ai": "Here you are! How many days are you in Bali?", "tr": "Buyur! Bali'de kaç gün kalacaksın?", "expect": ["ten", "day", "week"], "say": "Ten days." },
-      { "ai": "Ten days, perfect! The pool is very nice today.", "tr": "On gün, harika! Havuz bugün çok güzel.", "expect": ["yes", "nice", "beautiful", "good", "very"], "say": "Yes, very nice!" },
-      { "ai": "I will swim now. See you later!", "tr": "Ben yüzmeye gidiyorum. Sonra görüşürüz!", "expect": ["goodbye", "bye", "see you", "later"], "say": "Goodbye! See you later!" }
+      {
+        "ai": "Hello! What's your name?",
+        "tr": "Merhaba! Senin adın ne?",
+        "expect": [
+          "my name",
+          "i am",
+          "i'm",
+          "hakan"
+        ],
+        "say": "My name is Hakan."
+      },
+      {
+        "ai": "Nice to meet you! How are you?",
+        "tr": "Memnun oldum! Nasılsın?",
+        "expect": [
+          "fine",
+          "good",
+          "great",
+          "okay",
+          "not bad"
+        ],
+        "say": "I'm fine, thank you."
+      },
+      {
+        "ai": "I'm happy you are fine! Where are you from?",
+        "tr": "İyi olmana sevindim! Nerelisin?",
+        "expect": [
+          "turkey",
+          "from"
+        ],
+        "say": "I'm from Turkey."
+      },
+      {
+        "ai": "Turkey! Very nice. Is this your first time in Bali?",
+        "tr": "Türkiye! Çok güzel. Bali'ye ilk gelişin mi?",
+        "expect": [
+          "yes",
+          "first",
+          "no"
+        ],
+        "say": "Yes, it's my first time."
+      },
+      {
+        "ai": "Welcome! Do you want some water?",
+        "tr": "Hoş geldin! Su ister misin?",
+        "expect": [
+          "yes",
+          "please",
+          "no thank"
+        ],
+        "say": "Yes, please."
+      },
+      {
+        "ai": "Here you are! How many days are you in Bali?",
+        "tr": "Buyur! Bali'de kaç gün kalacaksın?",
+        "expect": [
+          "ten",
+          "day",
+          "week"
+        ],
+        "say": "Ten days."
+      },
+      {
+        "ai": "Ten days, perfect! The pool is very nice today.",
+        "tr": "On gün, harika! Havuz bugün çok güzel.",
+        "expect": [
+          "yes",
+          "nice",
+          "beautiful",
+          "very"
+        ],
+        "say": "Yes, very nice!"
+      },
+      {
+        "ai": "I will swim now. See you later!",
+        "tr": "Ben yüzmeye gidiyorum. Sonra görüşürüz!",
+        "expect": [
+          "see you",
+          "later",
+          "bye"
+        ],
+        "say": "See you later!"
+      },
+      {
+        "ai": "(Later) Hello again! The water is great!",
+        "tr": "(Daha sonra) Yine merhaba! Su harika!",
+        "expect": [
+          "hello",
+          "hi",
+          "again"
+        ],
+        "say": "Hello again!"
+      },
+      {
+        "ai": "Are you here with your family?",
+        "tr": "Ailenle mi buradasın?",
+        "expect": [
+          "no",
+          "friend",
+          "yes",
+          "alone",
+          "family"
+        ],
+        "say": "No, I'm here with a friend."
+      },
+      {
+        "ai": "Nice! What's your friend's name?",
+        "tr": "Güzel! Arkadaşının adı ne?",
+        "expect": [
+          "name is",
+          "his",
+          "her"
+        ],
+        "say": "His name is Ali."
+      },
+      {
+        "ai": "Do you want a fresh coconut? It's free at the pool!",
+        "tr": "Taze hindistan cevizi ister misin? Havuzda ücretsiz!",
+        "expect": [
+          "yes",
+          "please",
+          "thank"
+        ],
+        "say": "Yes, please. Thank you!"
+      },
+      {
+        "ai": "Here you are! Do you like the water?",
+        "tr": "Buyur! Suyu sevdin mi?",
+        "expect": [
+          "yes",
+          "like",
+          "love",
+          "very"
+        ],
+        "say": "Yes, I like it very much."
+      },
+      {
+        "ai": "Me too! Tonight there is music at the bar. Will you come?",
+        "tr": "Ben de! Bu akşam barda müzik var. Gelir misin?",
+        "expect": [
+          "yes",
+          "okay",
+          "see you",
+          "come"
+        ],
+        "say": "Yes! See you tonight!"
+      },
+      {
+        "ai": "Great! It starts at eight. Goodbye!",
+        "tr": "Harika! Sekizde başlıyor. Görüşürüz!",
+        "expect": [
+          "eight",
+          "okay",
+          "goodbye",
+          "see you"
+        ],
+        "say": "Okay, at eight. Goodbye!"
+      }
     ]
   },
   "quiz": {
     "situations": [
       {
         "q": "Garson sana su getirdi. Ne dersin?",
-        "options": ["Thank you.", "Goodbye!", "One, two, three.", "Where is the toilet?"]
+        "options": [
+          "Thank you.",
+          "Goodbye!",
+          "One, two, three.",
+          "Where is the toilet?"
+        ]
       },
       {
         "q": "Tuvaleti bulamıyorsun. Ne sorarsın?",
-        "options": ["Where is the toilet?", "My name is Hakan.", "I'm fine, thank you.", "Yes, please."]
+        "options": [
+          "Where is the toilet?",
+          "My name is Hakan.",
+          "I'm fine, thank you.",
+          "Yes, please."
+        ]
       },
       {
         "q": "Biri sana 'How are you?' diye sordu. Ne dersin?",
-        "options": ["I'm fine, thank you.", "Goodbye!", "Three, please.", "Sorry!"]
+        "options": [
+          "I'm fine, thank you.",
+          "Goodbye!",
+          "Three, please.",
+          "Sorry!"
+        ]
       }
     ],
     "listening": [
       {
         "audio": "Nice to meet you.",
         "q": "Ne duydun? Anlamını seç.",
-        "options": ["Tanıştığımıza memnun oldum.", "Nasılsın?", "Günaydın.", "Görüşürüz."]
+        "options": [
+          "Tanıştığımıza memnun oldum.",
+          "Nasılsın?",
+          "Günaydın.",
+          "Görüşürüz."
+        ]
       },
       {
         "audio": "How are you?",
         "q": "Soruya uygun cevabı seç.",
-        "options": ["I'm fine, thank you.", "My name is Hakan.", "Goodbye!", "Three, please."]
+        "options": [
+          "I'm fine, thank you.",
+          "My name is Hakan.",
+          "Goodbye!",
+          "Three, please."
+        ]
       }
     ]
   }

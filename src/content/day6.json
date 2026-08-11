@@ -3,26 +3,106 @@
   "title": "Alışveriş & Pazarlık",
   "emoji": "🛍️",
   "words": [
-    { "en": "shop", "v": "🏪" },
-    { "en": "t-shirt", "v": "👕" },
-    { "en": "dress", "v": "👗" },
-    { "en": "shoes", "v": "👟" },
-    { "en": "hat", "v": "👒" },
-    { "en": "cheap", "v": "🪙" },
-    { "en": "expensive", "v": "💎" },
-    { "en": "big", "v": "🐘" },
-    { "en": "small", "v": "🐭" },
-    { "en": "red", "v": "🔴" },
-    { "en": "blue", "v": "🔵" },
-    { "en": "white", "v": "⚪" },
-    { "en": "black", "v": "⚫" },
-    { "en": "money", "v": "💵" },
-    { "en": "card", "v": "💳" },
-    { "en": "discount", "v": "💸" },
-    { "en": "twenty", "v": "20" },
-    { "en": "fifty", "v": "50" },
-    { "en": "hundred", "v": "100" },
-    { "en": "thousand", "v": "1000" }
+    {
+      "en": "shop",
+      "v": "🏪",
+      "ex": "The shop is open."
+    },
+    {
+      "en": "t-shirt",
+      "v": "👕",
+      "ex": "How much is this t-shirt?"
+    },
+    {
+      "en": "dress",
+      "v": "👗",
+      "ex": "This dress is beautiful."
+    },
+    {
+      "en": "shoes",
+      "v": "👟",
+      "ex": "These shoes are too small."
+    },
+    {
+      "en": "hat",
+      "v": "👒",
+      "ex": "How much is the hat?"
+    },
+    {
+      "en": "cheap",
+      "v": "🪙",
+      "ex": "Very cheap, my friend!"
+    },
+    {
+      "en": "expensive",
+      "v": "💎",
+      "ex": "That's too expensive!"
+    },
+    {
+      "en": "big",
+      "v": "🐘",
+      "ex": "A big size, please."
+    },
+    {
+      "en": "small",
+      "v": "🐭",
+      "ex": "It's too small."
+    },
+    {
+      "en": "red",
+      "v": "🔴",
+      "ex": "The red one, please."
+    },
+    {
+      "en": "blue",
+      "v": "🔵",
+      "ex": "Do you have this in blue?"
+    },
+    {
+      "en": "white",
+      "v": "⚪",
+      "ex": "In white, please."
+    },
+    {
+      "en": "black",
+      "v": "⚫",
+      "ex": "The black one, please."
+    },
+    {
+      "en": "money",
+      "v": "💵",
+      "ex": "Here is the money."
+    },
+    {
+      "en": "card",
+      "v": "💳",
+      "ex": "Can I pay by card?"
+    },
+    {
+      "en": "discount",
+      "v": "💸",
+      "ex": "Can you give me a discount?"
+    },
+    {
+      "en": "twenty",
+      "v": "20",
+      "ex": "Twenty thousand, okay?"
+    },
+    {
+      "en": "fifty",
+      "v": "50",
+      "ex": "Fifty thousand, okay?"
+    },
+    {
+      "en": "hundred",
+      "v": "100",
+      "ex": "One hundred thousand? No!"
+    },
+    {
+      "en": "thousand",
+      "v": "1000",
+      "ex": "Eighty thousand rupiah."
+    }
   ],
   "sentences": [
     "How much is this?",
@@ -42,41 +122,175 @@
     "situationTr": "Ubud pazarındasın. Satıcı sana tişört ve hediyelik satmaya çalışıyor.",
     "goalTr": "Fiyat sor, pahalı de, indirim iste ve bir fiyatta anlaşıp ürünü al.",
     "script": [
-      { "ai": "Hello! Come, come! Very cheap for you!", "tr": "Merhaba! Gelin gelin! Size çok ucuz!", "expect": ["how much", "t-shirt", "this"], "say": "How much is this t-shirt?" },
-      { "ai": "This t-shirt? 200,000 rupiah. Best quality!", "tr": "Bu tişört mü? 200.000 rupiah. En iyi kalite!", "expect": ["expensive", "too"], "say": "That's too expensive!" },
-      { "ai": "Okay, for you special price: 150,000!", "tr": "Tamam, size özel fiyat: 150.000!", "expect": ["discount", "give me"], "say": "Can you give me a discount?" },
-      { "ai": "Hmm... okay, 120,000. Last price!", "tr": "Hmm... tamam, 120.000. Son fiyat!", "expect": ["fifty", "thousand", "okay?"], "say": "Fifty thousand, okay?" },
-      { "ai": "Fifty?! No no... okay okay, 80,000. Final price!", "tr": "Elli mi?! Yok yok... tamam tamam, 80.000. Kesin son fiyat!", "expect": ["okay", "take", "deal", "yes"], "say": "Okay! I'll take it." },
-      { "ai": "Good! Do you want blue or red?", "tr": "Güzel! Mavi mi kırmızı mı istersiniz?", "expect": ["blue", "red", "black", "white"], "say": "Blue, please." },
-      { "ai": "Blue, nice! Cash or card?", "tr": "Mavi, güzel! Nakit mi kart mı?", "expect": ["card", "cash", "pay"], "say": "Can I pay by card?" },
-      { "ai": "Card is okay! Thank you my friend!", "tr": "Kart olur! Teşekkürler dostum!", "expect": ["thank", "goodbye"], "say": "Thank you! Goodbye!" }
+      {
+        "ai": "Hello! Come, come! Very cheap for you!",
+        "tr": "Merhaba! Gelin gelin! Size çok ucuz!",
+        "expect": [
+          "how much",
+          "t-shirt",
+          "this"
+        ],
+        "say": "How much is this t-shirt?"
+      },
+      {
+        "ai": "This t-shirt? 200,000 rupiah. Best quality!",
+        "tr": "Bu tişört mü? 200.000 rupiah. En iyi kalite!",
+        "expect": [
+          "expensive",
+          "too"
+        ],
+        "say": "That's too expensive!"
+      },
+      {
+        "ai": "Okay, for you special price: 150,000!",
+        "tr": "Tamam, size özel fiyat: 150.000!",
+        "expect": [
+          "discount",
+          "give me"
+        ],
+        "say": "Can you give me a discount?"
+      },
+      {
+        "ai": "Hmm... okay, 120,000. Last price!",
+        "tr": "Hmm... tamam, 120.000. Son fiyat!",
+        "expect": [
+          "fifty",
+          "thousand"
+        ],
+        "say": "Fifty thousand, okay?"
+      },
+      {
+        "ai": "Fifty?! No no... okay okay, 80,000. Final price!",
+        "tr": "Elli mi?! Yok yok... tamam tamam, 80.000. Kesin son fiyat!",
+        "expect": [
+          "okay",
+          "take",
+          "deal",
+          "yes"
+        ],
+        "say": "Okay! I'll take it."
+      },
+      {
+        "ai": "Good! Do you want blue or red?",
+        "tr": "Güzel! Mavi mi kırmızı mı istersiniz?",
+        "expect": [
+          "blue",
+          "red",
+          "black",
+          "white"
+        ],
+        "say": "Blue, please."
+      },
+      {
+        "ai": "Blue, nice! You want one more? Two t-shirts only 140,000!",
+        "tr": "Mavi, güzel! Bir tane daha? İki tişört sadece 140.000!",
+        "expect": [
+          "no",
+          "just one",
+          "thank"
+        ],
+        "say": "No, thank you. Just one."
+      },
+      {
+        "ai": "Okay okay. A hat too? Very good for the sun!",
+        "tr": "Peki peki. Şapka da? Güneş için çok iyi!",
+        "expect": [
+          "how much",
+          "hat"
+        ],
+        "say": "How much is the hat?"
+      },
+      {
+        "ai": "For you, only 60,000!",
+        "tr": "Size özel, sadece 60.000!",
+        "expect": [
+          "forty",
+          "thousand",
+          "expensive"
+        ],
+        "say": "Forty thousand, okay?"
+      },
+      {
+        "ai": "Hmm... okay, 50,000. Deal?",
+        "tr": "Hmm... tamam, 50.000. Anlaştık mı?",
+        "expect": [
+          "deal",
+          "okay",
+          "take"
+        ],
+        "say": "Okay, deal! I'll take it."
+      },
+      {
+        "ai": "Great! Cash or card?",
+        "tr": "Harika! Nakit mi kart mı?",
+        "expect": [
+          "card",
+          "cash",
+          "pay"
+        ],
+        "say": "Can I pay by card?"
+      },
+      {
+        "ai": "Card is okay! Thank you my friend!",
+        "tr": "Kart olur! Teşekkürler dostum!",
+        "expect": [
+          "thank",
+          "goodbye"
+        ],
+        "say": "Thank you! Goodbye!"
+      }
     ]
   },
   "quiz": {
     "situations": [
       {
         "q": "Fiyat çok yüksek, indirim istiyorsun. Ne dersin?",
-        "options": ["Can you give me a discount?", "I'll take it.", "Do you have a big size?", "Can I pay by card?"]
+        "options": [
+          "Can you give me a discount?",
+          "I'll take it.",
+          "Do you have a big size?",
+          "Can I pay by card?"
+        ]
       },
       {
         "q": "Sadece bakıyorsun, satıcı ısrar ediyor. Ne dersin?",
-        "options": ["I'm just looking, thank you.", "Fifty thousand, okay?", "How much is this?", "That's too expensive."]
+        "options": [
+          "I'm just looking, thank you.",
+          "Fifty thousand, okay?",
+          "How much is this?",
+          "That's too expensive."
+        ]
       },
       {
         "q": "Pazarlık bitti, ürünü almaya karar verdin. Ne dersin?",
-        "options": ["I'll take it.", "I'm just looking.", "Do you have this in blue?", "Where is the taxi?"]
+        "options": [
+          "I'll take it.",
+          "I'm just looking.",
+          "Do you have this in blue?",
+          "Where is the taxi?"
+        ]
       }
     ],
     "listening": [
       {
         "audio": "How much is this?",
         "q": "Ne duydun? Anlamını seç.",
-        "options": ["Bu ne kadar?", "Bu çok güzel.", "Bunu alıyorum.", "İndirim var mı?"]
+        "options": [
+          "Bu ne kadar?",
+          "Bu çok güzel.",
+          "Bunu alıyorum.",
+          "İndirim var mı?"
+        ]
       },
       {
         "audio": "Two hundred thousand.",
         "q": "Satıcı hangi fiyatı söyledi?",
-        "options": ["200.000", "2.000", "100.000", "20.000"]
+        "options": [
+          "200.000",
+          "2.000",
+          "100.000",
+          "20.000"
+        ]
       }
     ]
   }

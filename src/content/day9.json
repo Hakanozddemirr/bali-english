@@ -3,21 +3,81 @@
   "title": "Sosyalleşme",
   "emoji": "🍹",
   "words": [
-    { "en": "turkey", "v": "🇹🇷" },
-    { "en": "country", "v": "🌍" },
-    { "en": "photo", "v": "📷" },
-    { "en": "music", "v": "🎵" },
-    { "en": "dance", "v": "💃" },
-    { "en": "party", "v": "🎉" },
-    { "en": "beautiful", "v": "🌺" },
-    { "en": "funny", "v": "😂" },
-    { "en": "married", "v": "💍" },
-    { "en": "job", "v": "💼" },
-    { "en": "sunset", "v": "🌇" },
-    { "en": "drink", "v": "🍹" },
-    { "en": "smile", "v": "😄" },
-    { "en": "love", "v": "❤️" },
-    { "en": "together", "v": "🤝" }
+    {
+      "en": "turkey",
+      "v": "🇹🇷",
+      "ex": "I'm from Turkey."
+    },
+    {
+      "en": "country",
+      "v": "🌍",
+      "ex": "What country are you from?"
+    },
+    {
+      "en": "photo",
+      "v": "📷",
+      "ex": "Can you take a photo, please?"
+    },
+    {
+      "en": "music",
+      "v": "🎵",
+      "ex": "I love this music!"
+    },
+    {
+      "en": "dance",
+      "v": "💃",
+      "ex": "Let's dance!"
+    },
+    {
+      "en": "party",
+      "v": "🎉",
+      "ex": "There is a party tonight."
+    },
+    {
+      "en": "beautiful",
+      "v": "🌺",
+      "ex": "The sunset is very beautiful."
+    },
+    {
+      "en": "funny",
+      "v": "😂",
+      "ex": "You are very funny!"
+    },
+    {
+      "en": "married",
+      "v": "💍",
+      "ex": "Are you married?"
+    },
+    {
+      "en": "job",
+      "v": "💼",
+      "ex": "What's your job?"
+    },
+    {
+      "en": "sunset",
+      "v": "🌇",
+      "ex": "Look at the sunset!"
+    },
+    {
+      "en": "drink",
+      "v": "🍹",
+      "ex": "Let's have a drink!"
+    },
+    {
+      "en": "smile",
+      "v": "😄",
+      "ex": "Big smile, please!"
+    },
+    {
+      "en": "love",
+      "v": "❤️",
+      "ex": "I love Bali!"
+    },
+    {
+      "en": "together",
+      "v": "🤝",
+      "ex": "Let's go together!"
+    }
   ],
   "sentences": [
     "Where are you from?",
@@ -38,43 +98,195 @@
     "situationTr": "Gün batımında bir plaj barındasın. Yanındaki gezgin sohbet başlatıyor.",
     "goalTr": "Nereli olduğunu söyle, Bali hakkında konuş, karşındakine sorular sor ve fotoğraf iste.",
     "script": [
-      { "ai": "Hi! Beautiful sunset, right?", "tr": "Selam! Gün batımı çok güzel, değil mi?", "expect": ["yes", "beautiful", "very", "nice"], "say": "Yes, very beautiful!" },
-      { "ai": "Where are you from?", "tr": "Nerelisin?", "expect": ["turkey", "from"], "say": "I'm from Turkey." },
-      { "ai": "Turkey, cool! I'm from Canada. Is this your first time in Bali?", "tr": "Türkiye, harika! Ben Kanadalıyım. Bali'ye ilk gelişin mi?", "expect": ["yes", "first", "no"], "say": "Yes, my first time." },
-      { "ai": "Do you like Bali?", "tr": "Bali'yi sevdin mi?", "expect": ["like", "love", "very much", "yes"], "say": "I like Bali very much!" },
-      { "ai": "Me too! How long are you here?", "tr": "Ben de! Ne kadar kalıyorsun?", "expect": ["ten", "day", "week"], "say": "Ten days." },
-      { "ai": "Nice! Let's have a drink together?", "tr": "Güzel! Birlikte bir şeyler içelim mi?", "expect": ["yes", "let", "okay", "sure"], "say": "Yes, let's have a drink!" },
-      { "ai": "Cheers! Can you take a photo of me with the sunset?", "tr": "Şerefe! Gün batımıyla bir fotoğrafımı çeker misin?", "expect": ["okay", "yes", "sure"], "say": "Okay, sure!" },
-      { "ai": "Thank you! Now I take your photo. Smile!", "tr": "Teşekkürler! Şimdi ben seninkini çekiyorum. Gülümse!", "expect": ["one more", "thank", "okay"], "say": "One more, please!" },
-      { "ai": "Perfect photo! Nice talking to you!", "tr": "Harika fotoğraf! Seninle konuşmak güzeldi!", "expect": ["nice", "you too", "talking"], "say": "Nice talking to you too!" },
-      { "ai": "See you tomorrow maybe?", "tr": "Belki yarın görüşürüz?", "expect": ["see you", "yes", "tomorrow", "goodbye"], "say": "Yes, see you tomorrow!" }
+      {
+        "ai": "Hi! Beautiful sunset, right?",
+        "tr": "Selam! Gün batımı çok güzel, değil mi?",
+        "expect": [
+          "yes",
+          "beautiful",
+          "very",
+          "nice"
+        ],
+        "say": "Yes, very beautiful!"
+      },
+      {
+        "ai": "Where are you from?",
+        "tr": "Nerelisin?",
+        "expect": [
+          "turkey",
+          "from"
+        ],
+        "say": "I'm from Turkey."
+      },
+      {
+        "ai": "Turkey, cool! I'm from Canada. Is this your first time in Bali?",
+        "tr": "Türkiye, harika! Ben Kanadalıyım. Bali'ye ilk gelişin mi?",
+        "expect": [
+          "yes",
+          "first",
+          "no"
+        ],
+        "say": "Yes, my first time."
+      },
+      {
+        "ai": "Do you like Bali?",
+        "tr": "Bali'yi sevdin mi?",
+        "expect": [
+          "like",
+          "love",
+          "very much",
+          "yes"
+        ],
+        "say": "I like Bali very much!"
+      },
+      {
+        "ai": "Me too! How long are you here?",
+        "tr": "Ben de! Ne kadar kalıyorsun?",
+        "expect": [
+          "ten",
+          "day",
+          "week"
+        ],
+        "say": "Ten days."
+      },
+      {
+        "ai": "Nice! What places did you see?",
+        "tr": "Güzel! Nereleri gördün?",
+        "expect": [
+          "temple",
+          "waterfall",
+          "beach",
+          "saw",
+          "ubud"
+        ],
+        "say": "I saw the temple and the waterfall."
+      },
+      {
+        "ai": "Tomorrow go to Uluwatu — the sunset there is the best!",
+        "tr": "Yarın Uluwatu'ya git — oradaki gün batımı en iyisi!",
+        "expect": [
+          "okay",
+          "thank",
+          "maybe",
+          "tomorrow"
+        ],
+        "say": "Okay, thank you! Maybe tomorrow."
+      },
+      {
+        "ai": "Do you surf?",
+        "tr": "Sörf yapıyor musun?",
+        "expect": [
+          "no",
+          "can't",
+          "yes",
+          "little"
+        ],
+        "say": "No, I can't surf."
+      },
+      {
+        "ai": "Me neither, haha! Let's have a drink together?",
+        "tr": "Ben de yapamıyorum, haha! Birlikte bir şeyler içelim mi?",
+        "expect": [
+          "yes",
+          "let",
+          "okay",
+          "sure"
+        ],
+        "say": "Yes, let's have a drink!"
+      },
+      {
+        "ai": "Cheers! Can you take a photo of me with the sunset?",
+        "tr": "Şerefe! Gün batımıyla bir fotoğrafımı çeker misin?",
+        "expect": [
+          "okay",
+          "yes",
+          "sure"
+        ],
+        "say": "Okay, sure!"
+      },
+      {
+        "ai": "Thank you! Now I take your photo. Smile!",
+        "tr": "Teşekkürler! Şimdi ben seninkini çekiyorum. Gülümse!",
+        "expect": [
+          "one more",
+          "thank",
+          "okay"
+        ],
+        "say": "One more, please!"
+      },
+      {
+        "ai": "Perfect photo! Nice talking to you!",
+        "tr": "Harika fotoğraf! Seninle konuşmak güzeldi!",
+        "expect": [
+          "nice",
+          "you too",
+          "talking"
+        ],
+        "say": "Nice talking to you too!"
+      },
+      {
+        "ai": "See you tomorrow maybe?",
+        "tr": "Belki yarın görüşürüz?",
+        "expect": [
+          "see you",
+          "yes",
+          "tomorrow",
+          "goodbye"
+        ],
+        "say": "Yes, see you tomorrow!"
+      }
     ]
   },
   "quiz": {
     "situations": [
       {
         "q": "Birinin nereli olduğunu merak ediyorsun. Ne sorarsın?",
-        "options": ["Where are you from?", "What's your job?", "How much is this?", "Are you okay?"]
+        "options": [
+          "Where are you from?",
+          "What's your job?",
+          "How much is this?",
+          "Are you okay?"
+        ]
       },
       {
         "q": "Birinden fotoğrafını çekmesini istiyorsun. Ne dersin?",
-        "options": ["Can you take a photo, please?", "Let's have a drink.", "One more, please.", "See you tomorrow!"]
+        "options": [
+          "Can you take a photo, please?",
+          "Let's have a drink.",
+          "One more, please.",
+          "See you tomorrow!"
+        ]
       },
       {
         "q": "Sohbet bitti, vedalaşıyorsun. Ne dersin?",
-        "options": ["Nice talking to you.", "I'm from Turkey.", "What's your job?", "Help me, please!"]
+        "options": [
+          "Nice talking to you.",
+          "I'm from Turkey.",
+          "What's your job?",
+          "Help me, please!"
+        ]
       }
     ],
     "listening": [
       {
         "audio": "Where are you from?",
         "q": "Soruya uygun cevabı seç.",
-        "options": ["I'm from Turkey.", "I'm fine, thank you.", "At nine.", "Two, please."]
+        "options": [
+          "I'm from Turkey.",
+          "I'm fine, thank you.",
+          "At nine.",
+          "Two, please."
+        ]
       },
       {
         "audio": "How long are you in Bali?",
         "q": "Soruya uygun cevabı seç.",
-        "options": ["Ten days.", "Very beautiful.", "By card.", "I can't swim."]
+        "options": [
+          "Ten days.",
+          "Very beautiful.",
+          "By card.",
+          "I can't swim."
+        ]
       }
     ]
   }

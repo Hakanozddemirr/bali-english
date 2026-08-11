@@ -22,47 +22,225 @@
     "situationTr": "Uzun senaryo: Havalimanından taksiye bin, otele check-in yap, akşam restoranda yemek ye. Karşındaki sırayla şoförü, resepsiyonisti ve garsonu oynayacak.",
     "goalTr": "Bir günü baştan sona İngilizce yönet: pazarlık yap, check-in yap, sipariş ver, hesabı iste.",
     "script": [
-      { "ai": "Hello boss! Airport taxi? Where are you going?", "tr": "Merhaba patron! Havalimanı taksisi? Nereye gidiyorsunuz?", "expect": ["hotel", "ubud", "to"], "say": "To my hotel in Ubud, please." },
-      { "ai": "Ubud! 400,000 rupiah, okay?", "tr": "Ubud! 400.000 rupiah, olur mu?", "expect": ["expensive", "meter", "too"], "say": "That's too expensive! Use the meter, please." },
-      { "ai": "Okay okay, meter is on! Welcome to Bali!", "tr": "Tamam tamam, taksimetre açık! Bali'ye hoş geldiniz!", "expect": ["thank"], "say": "Thank you!" },
-      { "ai": "(At the hotel) Good afternoon! Do you have a reservation?", "tr": "(Otelde) İyi günler! Rezervasyonunuz var mı?", "expect": ["yes", "reservation", "have"], "say": "Yes, I have a reservation." },
-      { "ai": "Your name, please?", "tr": "İsminiz lütfen?", "expect": ["my name", "hakan", "i'm", "i am"], "say": "My name is Hakan." },
-      { "ai": "Welcome! Here is your key — room five.", "tr": "Hoş geldiniz! İşte anahtarınız — beş numaralı oda.", "expect": ["thank", "wifi", "password"], "say": "Thank you. What is the wifi password?" },
-      { "ai": "The password is HOLIDAY123.", "tr": "Şifre: HOLIDAY123.", "expect": ["thank"], "say": "Thank you very much!" },
-      { "ai": "(At the restaurant, evening) Good evening! What would you like to eat?", "tr": "(Akşam restoranda) İyi akşamlar! Ne yemek istersiniz?", "expect": ["noodle", "rice", "chicken", "fish", "want"], "say": "I want fried noodles, please." },
-      { "ai": "Good! And to drink?", "tr": "Güzel! İçecek olarak?", "expect": ["juice", "water", "beer", "coffee", "tea"], "say": "One orange juice, please." },
-      { "ai": "Spicy or not spicy?", "tr": "Acılı mı, acısız mı?", "expect": ["not", "no spicy", "spicy"], "say": "Not spicy, please." },
-      { "ai": "Here is your food. Enjoy!", "tr": "Buyurun yemeğiniz. Afiyet olsun!", "expect": ["thank"], "say": "Thank you!" },
-      { "ai": "Is everything good?", "tr": "Her şey yolunda mı?", "expect": ["delicious", "good", "yes"], "say": "Yes, it's delicious!" },
-      { "ai": "Great! Anything else?", "tr": "Harika! Başka bir şey?", "expect": ["bill", "no"], "say": "No, thank you. The bill, please." },
-      { "ai": "100,000 rupiah, please. ... Thank you! Good night!", "tr": "100.000 rupiah lütfen. ... Teşekkürler! İyi geceler!", "expect": ["good night", "thank", "goodbye"], "say": "Thank you! Good night!" }
+      {
+        "ai": "Hello boss! Airport taxi? Where are you going?",
+        "tr": "Merhaba patron! Havalimanı taksisi? Nereye gidiyorsunuz?",
+        "expect": [
+          "hotel",
+          "ubud",
+          "to"
+        ],
+        "say": "To my hotel in Ubud, please."
+      },
+      {
+        "ai": "Ubud! 400,000 rupiah, okay?",
+        "tr": "Ubud! 400.000 rupiah, olur mu?",
+        "expect": [
+          "expensive",
+          "meter",
+          "too"
+        ],
+        "say": "That's too expensive! Use the meter, please."
+      },
+      {
+        "ai": "Okay okay, meter is on! Welcome to Bali!",
+        "tr": "Tamam tamam, taksimetre açık! Bali'ye hoş geldiniz!",
+        "expect": [
+          "thank"
+        ],
+        "say": "Thank you!"
+      },
+      {
+        "ai": "(At the hotel) Good afternoon! Do you have a reservation?",
+        "tr": "(Otelde) İyi günler! Rezervasyonunuz var mı?",
+        "expect": [
+          "yes",
+          "reservation",
+          "have"
+        ],
+        "say": "Yes, I have a reservation."
+      },
+      {
+        "ai": "Your name, please?",
+        "tr": "İsminiz lütfen?",
+        "expect": [
+          "my name",
+          "hakan",
+          "i'm",
+          "i am"
+        ],
+        "say": "My name is Hakan."
+      },
+      {
+        "ai": "Welcome! Here is your key — room five.",
+        "tr": "Hoş geldiniz! İşte anahtarınız — beş numaralı oda.",
+        "expect": [
+          "thank",
+          "wifi",
+          "password"
+        ],
+        "say": "Thank you. What is the wifi password?"
+      },
+      {
+        "ai": "The password is HOLIDAY123.",
+        "tr": "Şifre: HOLIDAY123.",
+        "expect": [
+          "thank"
+        ],
+        "say": "Thank you very much!"
+      },
+      {
+        "ai": "(At the restaurant, evening) Good evening! What would you like to eat?",
+        "tr": "(Akşam restoranda) İyi akşamlar! Ne yemek istersiniz?",
+        "expect": [
+          "noodle",
+          "rice",
+          "chicken",
+          "fish",
+          "want"
+        ],
+        "say": "I want fried noodles, please."
+      },
+      {
+        "ai": "Good! And to drink?",
+        "tr": "Güzel! İçecek olarak?",
+        "expect": [
+          "juice",
+          "water",
+          "beer",
+          "coffee",
+          "tea"
+        ],
+        "say": "One orange juice, please."
+      },
+      {
+        "ai": "Spicy or not spicy?",
+        "tr": "Acılı mı, acısız mı?",
+        "expect": [
+          "not",
+          "no spicy",
+          "spicy"
+        ],
+        "say": "Not spicy, please."
+      },
+      {
+        "ai": "Here is your food. Enjoy!",
+        "tr": "Buyurun yemeğiniz. Afiyet olsun!",
+        "expect": [
+          "thank"
+        ],
+        "say": "Thank you!"
+      },
+      {
+        "ai": "Is everything good?",
+        "tr": "Her şey yolunda mı?",
+        "expect": [
+          "delicious",
+          "good",
+          "yes"
+        ],
+        "say": "Yes, it's delicious!"
+      },
+      {
+        "ai": "Great! Anything else?",
+        "tr": "Harika! Başka bir şey?",
+        "expect": [
+          "bill",
+          "no"
+        ],
+        "say": "No, thank you. The bill, please."
+      },
+      {
+        "ai": "100,000 rupiah, please.",
+        "tr": "100.000 rupiah lütfen.",
+        "expect": [
+          "here",
+          "card",
+          "you are"
+        ],
+        "say": "Here you are. Thank you!"
+      },
+      {
+        "ai": "(Night market, after dinner) Hello! T-shirt? Very cheap!",
+        "tr": "(Akşam pazarında) Merhaba! Tişört? Çok ucuz!",
+        "expect": [
+          "how much",
+          "t-shirt"
+        ],
+        "say": "How much is this t-shirt?"
+      },
+      {
+        "ai": "100,000 — best quality!",
+        "tr": "100.000 — en iyi kalite!",
+        "expect": [
+          "fifty",
+          "expensive",
+          "thousand"
+        ],
+        "say": "Fifty thousand, okay?"
+      },
+      {
+        "ai": "Okay okay, deal! Thank you! Good night!",
+        "tr": "Tamam tamam, anlaştık! Teşekkürler! İyi geceler!",
+        "expect": [
+          "thank",
+          "good night",
+          "goodbye"
+        ],
+        "say": "Thank you! Good night!"
+      }
     ]
   },
   "quiz": {
     "situations": [
       {
         "q": "Havalimanında memur 'Why are you here?' dedi. Ne dersin?",
-        "options": ["I'm here on holiday.", "The bill, please.", "Turn left.", "I'll take it."]
+        "options": [
+          "I'm here on holiday.",
+          "The bill, please.",
+          "Turn left.",
+          "I'll take it."
+        ]
       },
       {
         "q": "Restoranda yemek acıydı, su istiyorsun. Ne dersin?",
-        "options": ["Water, please.", "The menu, please.", "Goodbye!", "I'm just looking."]
+        "options": [
+          "Water, please.",
+          "The menu, please.",
+          "Goodbye!",
+          "I'm just looking."
+        ]
       },
       {
         "q": "Kendini kötü hissediyorsun, yardım lazım. Ne dersin?",
-        "options": ["I need a doctor.", "One more, please.", "See you tomorrow!", "Use the meter, please."]
+        "options": [
+          "I need a doctor.",
+          "One more, please.",
+          "See you tomorrow!",
+          "Use the meter, please."
+        ]
       }
     ],
     "listening": [
       {
         "audio": "Do you have a reservation?",
         "q": "Soruya uygun cevabı seç.",
-        "options": ["Yes, I have a reservation.", "No ice, please.", "Fifty thousand, okay?", "I can't swim well."]
+        "options": [
+          "Yes, I have a reservation.",
+          "No ice, please.",
+          "Fifty thousand, okay?",
+          "I can't swim well."
+        ]
       },
       {
         "audio": "One hundred thousand.",
         "q": "Hangi fiyatı duydun?",
-        "options": ["100.000", "1.000", "10.000", "50.000"]
+        "options": [
+          "100.000",
+          "1.000",
+          "10.000",
+          "50.000"
+        ]
       }
     ]
   }

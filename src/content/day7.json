@@ -3,22 +3,86 @@
   "title": "Plaj & Aktiviteler",
   "emoji": "🏝️",
   "words": [
-    { "en": "beach", "v": "🏖️" },
-    { "en": "sea", "v": "🌊" },
-    { "en": "sun", "v": "☀️" },
-    { "en": "sunscreen", "v": "🧴" },
-    { "en": "swim", "v": "🏊" },
-    { "en": "surf", "v": "🏄" },
-    { "en": "boat", "v": "🚤" },
-    { "en": "tour", "v": "🧭" },
-    { "en": "temple", "v": "🛕" },
-    { "en": "waterfall", "v": "🏞️" },
-    { "en": "monkey", "v": "🐒" },
-    { "en": "rain", "v": "🌧️" },
-    { "en": "cloud", "v": "☁️" },
-    { "en": "time", "v": "⏰" },
-    { "en": "today", "v": "📅" },
-    { "en": "tomorrow", "v": "🌅" }
+    {
+      "en": "beach",
+      "v": "🏖️",
+      "ex": "The beach is very beautiful."
+    },
+    {
+      "en": "sea",
+      "v": "🌊",
+      "ex": "The sea is warm."
+    },
+    {
+      "en": "sun",
+      "v": "☀️",
+      "ex": "The sun is very hot."
+    },
+    {
+      "en": "sunscreen",
+      "v": "🧴",
+      "ex": "I need sunscreen."
+    },
+    {
+      "en": "swim",
+      "v": "🏊",
+      "ex": "I can't swim well."
+    },
+    {
+      "en": "surf",
+      "v": "🏄",
+      "ex": "I want to surf!"
+    },
+    {
+      "en": "boat",
+      "v": "🚤",
+      "ex": "We go by boat."
+    },
+    {
+      "en": "tour",
+      "v": "🧭",
+      "ex": "I want to book a tour."
+    },
+    {
+      "en": "temple",
+      "v": "🛕",
+      "ex": "The temple is beautiful."
+    },
+    {
+      "en": "waterfall",
+      "v": "🏞️",
+      "ex": "Let's go to the waterfall!"
+    },
+    {
+      "en": "monkey",
+      "v": "🐒",
+      "ex": "Look! A monkey!"
+    },
+    {
+      "en": "rain",
+      "v": "🌧️",
+      "ex": "Will it rain tomorrow?"
+    },
+    {
+      "en": "cloud",
+      "v": "☁️",
+      "ex": "Too many clouds today."
+    },
+    {
+      "en": "time",
+      "v": "⏰",
+      "ex": "What time is it?"
+    },
+    {
+      "en": "today",
+      "v": "📅",
+      "ex": "Today is very hot."
+    },
+    {
+      "en": "tomorrow",
+      "v": "🌅",
+      "ex": "See you tomorrow!"
+    }
   ],
   "sentences": [
     "What time is it?",
@@ -38,41 +102,190 @@
     "situationTr": "Plajda yürürken bir tur satıcısı sana şelale ve tapınak turu satmaya çalışıyor.",
     "goalTr": "Turun saatini, fiyatını ve süresini sor; yarın için iki kişilik yer ayırt.",
     "script": [
-      { "ai": "Hello my friend! You want a tour? Very good price!", "tr": "Merhaba dostum! Tur ister misiniz? Çok iyi fiyat!", "expect": ["what tour", "which", "waterfall", "temple", "tour do you"], "say": "What tour do you have?" },
-      { "ai": "Waterfall and temple tour! Very beautiful!", "tr": "Şelale ve tapınak turu! Çok güzel!", "expect": ["how much", "price", "ticket"], "say": "How much is the ticket?" },
-      { "ai": "Only 400,000 rupiah for one person!", "tr": "Kişi başı sadece 400.000 rupiah!", "expect": ["expensive", "too", "discount"], "say": "That's too expensive!" },
-      { "ai": "Okay, for two people: 600,000 total. Good?", "tr": "Tamam, iki kişi toplam 600.000. İyi mi?", "expect": ["okay", "what time", "start", "yes"], "say": "Okay. What time does the tour start?" },
-      { "ai": "The tour starts at nine in the morning.", "tr": "Tur sabah dokuzda başlıyor.", "expect": ["far", "long", "is it"], "say": "Is it far?" },
-      { "ai": "One hour by car. Very easy!", "tr": "Arabayla bir saat. Çok kolay!", "expect": ["book", "tomorrow", "want"], "say": "I want to book for tomorrow." },
-      { "ai": "Perfect! Two tickets for tomorrow at nine.", "tr": "Harika! Yarın saat dokuz için iki bilet.", "expect": ["thank", "rain"], "say": "Thank you! Will it rain tomorrow?" },
-      { "ai": "No rain tomorrow — sun all day!", "tr": "Yarın yağmur yok — bütün gün güneş!", "expect": ["great", "thank", "see you"], "say": "Great! See you tomorrow!" }
+      {
+        "ai": "Hello my friend! You want a tour? Very good price!",
+        "tr": "Merhaba dostum! Tur ister misiniz? Çok iyi fiyat!",
+        "expect": [
+          "what tour",
+          "which",
+          "waterfall",
+          "temple",
+          "tour do you"
+        ],
+        "say": "What tour do you have?"
+      },
+      {
+        "ai": "Waterfall and temple tour! Very beautiful!",
+        "tr": "Şelale ve tapınak turu! Çok güzel!",
+        "expect": [
+          "how much",
+          "price",
+          "ticket"
+        ],
+        "say": "How much is the ticket?"
+      },
+      {
+        "ai": "Only 400,000 rupiah for one person!",
+        "tr": "Kişi başı sadece 400.000 rupiah!",
+        "expect": [
+          "expensive",
+          "too",
+          "discount"
+        ],
+        "say": "That's too expensive!"
+      },
+      {
+        "ai": "Okay, for two people: 600,000 total. Good?",
+        "tr": "Tamam, iki kişi toplam 600.000. İyi mi?",
+        "expect": [
+          "okay",
+          "what time",
+          "start",
+          "yes"
+        ],
+        "say": "Okay. What time does the tour start?"
+      },
+      {
+        "ai": "The tour starts at nine in the morning.",
+        "tr": "Tur sabah dokuzda başlıyor.",
+        "expect": [
+          "far",
+          "long",
+          "is it"
+        ],
+        "say": "Is it far?"
+      },
+      {
+        "ai": "One hour by car. Very easy!",
+        "tr": "Arabayla bir saat. Çok kolay!",
+        "expect": [
+          "book",
+          "tomorrow",
+          "want"
+        ],
+        "say": "I want to book for tomorrow."
+      },
+      {
+        "ai": "Perfect! Two tickets for tomorrow at nine.",
+        "tr": "Harika! Yarın dokuz için iki bilet.",
+        "expect": [
+          "thank",
+          "rain"
+        ],
+        "say": "Thank you! Will it rain tomorrow?"
+      },
+      {
+        "ai": "No rain tomorrow — sun all day!",
+        "tr": "Yarın yağmur yok — bütün gün güneş!",
+        "expect": [
+          "great",
+          "thank"
+        ],
+        "say": "Great! Thank you!"
+      },
+      {
+        "ai": "Bring water and sunscreen, okay?",
+        "tr": "Su ve güneş kremi getirin, tamam mı?",
+        "expect": [
+          "okay",
+          "sunscreen",
+          "bring",
+          "will"
+        ],
+        "say": "Okay, I will bring sunscreen."
+      },
+      {
+        "ai": "Where is your hotel? We pick you up.",
+        "tr": "Oteliniz nerede? Sizi alırız.",
+        "expect": [
+          "ubud",
+          "hotel"
+        ],
+        "say": "My hotel is in Ubud."
+      },
+      {
+        "ai": "Perfect. We come at eight thirty.",
+        "tr": "Mükemmel. Sekiz buçukta geliriz.",
+        "expect": [
+          "okay",
+          "eight",
+          "thirty"
+        ],
+        "say": "Okay, at eight thirty."
+      },
+      {
+        "ai": "Do you want lunch with the tour? Only 10,000 more.",
+        "tr": "Turla birlikte öğle yemeği ister misiniz? Sadece 10.000 daha.",
+        "expect": [
+          "yes",
+          "okay",
+          "lunch",
+          "no"
+        ],
+        "say": "Yes, okay. Lunch too, please."
+      },
+      {
+        "ai": "Great! See you tomorrow at eight thirty!",
+        "tr": "Harika! Yarın sekiz buçukta görüşürüz!",
+        "expect": [
+          "see you",
+          "tomorrow",
+          "thank"
+        ],
+        "say": "Thank you! See you tomorrow!"
+      }
     ]
   },
   "quiz": {
     "situations": [
       {
         "q": "Saati öğrenmek istiyorsun. Ne sorarsın?",
-        "options": ["What time is it?", "Is it far?", "How much is the ticket?", "Will it rain tomorrow?"]
+        "options": [
+          "What time is it?",
+          "Is it far?",
+          "How much is the ticket?",
+          "Will it rain tomorrow?"
+        ]
       },
       {
         "q": "Yarın için tur ayırtmak istiyorsun. Ne dersin?",
-        "options": ["I want to book a tour for tomorrow.", "The beach is very beautiful.", "I can't swim well.", "What time is it?"]
+        "options": [
+          "I want to book a tour for tomorrow.",
+          "The beach is very beautiful.",
+          "I can't swim well.",
+          "What time is it?"
+        ]
       },
       {
         "q": "Satıcı 'How many people?' diye sordu. Ne dersin?",
-        "options": ["Two, please.", "At eight.", "Very beautiful.", "No rain."]
+        "options": [
+          "Two, please.",
+          "At eight.",
+          "Very beautiful.",
+          "No rain."
+        ]
       }
     ],
     "listening": [
       {
         "audio": "The tour starts at nine.",
         "q": "Tur saat kaçta başlıyor?",
-        "options": ["9", "5", "12", "2"]
+        "options": [
+          "9",
+          "5",
+          "12",
+          "2"
+        ]
       },
       {
         "audio": "Will it rain tomorrow?",
         "q": "Ne duydun? Anlamını seç.",
-        "options": ["Yarın yağmur yağacak mı?", "Yarın deniz sıcak mı?", "Tur yarın mı?", "Bugün hava güzel mi?"]
+        "options": [
+          "Yarın yağmur yağacak mı?",
+          "Yarın deniz sıcak mı?",
+          "Tur yarın mı?",
+          "Bugün hava güzel mi?"
+        ]
       }
     ]
   }

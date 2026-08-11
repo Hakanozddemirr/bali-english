@@ -3,22 +3,86 @@
   "title": "Ulaşım & Scooter",
   "emoji": "🛵",
   "words": [
-    { "en": "scooter", "v": "🛵" },
-    { "en": "helmet", "v": "⛑️" },
-    { "en": "car", "v": "🚗" },
-    { "en": "road", "v": "🛣️" },
-    { "en": "map", "v": "🗺️" },
-    { "en": "left", "v": "⬅️" },
-    { "en": "right", "v": "➡️" },
-    { "en": "straight", "v": "⬆️" },
-    { "en": "here", "v": "📍" },
-    { "en": "stop", "v": "🛑" },
-    { "en": "slow", "v": "🐢" },
-    { "en": "fast", "v": "🐆" },
-    { "en": "petrol", "v": "⛽" },
-    { "en": "traffic", "v": "🚦" },
-    { "en": "meter", "v": "⏱️" },
-    { "en": "price", "v": "🏷️" }
+    {
+      "en": "scooter",
+      "v": "🛵",
+      "ex": "I want to rent a scooter."
+    },
+    {
+      "en": "helmet",
+      "v": "⛑️",
+      "ex": "Two helmets, please."
+    },
+    {
+      "en": "car",
+      "v": "🚗",
+      "ex": "We go by car."
+    },
+    {
+      "en": "road",
+      "v": "🛣️",
+      "ex": "This road is very bad."
+    },
+    {
+      "en": "map",
+      "v": "🗺️",
+      "ex": "Look at the map."
+    },
+    {
+      "en": "left",
+      "v": "⬅️",
+      "ex": "Turn left."
+    },
+    {
+      "en": "right",
+      "v": "➡️",
+      "ex": "Turn right."
+    },
+    {
+      "en": "straight",
+      "v": "⬆️",
+      "ex": "Go straight."
+    },
+    {
+      "en": "here",
+      "v": "📍",
+      "ex": "Stop here, please."
+    },
+    {
+      "en": "stop",
+      "v": "🛑",
+      "ex": "Stop, please!"
+    },
+    {
+      "en": "slow",
+      "v": "🐢",
+      "ex": "Slow down, please."
+    },
+    {
+      "en": "fast",
+      "v": "🐆",
+      "ex": "Too fast! Slow, please."
+    },
+    {
+      "en": "petrol",
+      "v": "⛽",
+      "ex": "I need petrol."
+    },
+    {
+      "en": "traffic",
+      "v": "🚦",
+      "ex": "The traffic is very bad."
+    },
+    {
+      "en": "meter",
+      "v": "⏱️",
+      "ex": "Use the meter, please."
+    },
+    {
+      "en": "price",
+      "v": "🏷️",
+      "ex": "What is the price?"
+    }
   ],
   "sentences": [
     "How much to Seminyak?",
@@ -39,42 +103,187 @@
     "situationTr": "Taksiye biniyorsun. Şoför önce yüksek fiyat söylüyor, pazarlık etmen gerekiyor.",
     "goalTr": "Nereye gideceğini söyle, fiyat sor, pazarlık yap ve yol tarifi ver (sağ/sol/dur).",
     "script": [
-      { "ai": "Hello boss! Taxi? Where are you going?", "tr": "Merhaba patron! Taksi? Nereye gidiyorsunuz?", "expect": ["seminyak", "beach", "hotel", "to"], "say": "To Seminyak, please." },
-      { "ai": "Seminyak! 300,000 rupiah, okay?", "tr": "Seminyak! 300.000 rupiah, olur mu?", "expect": ["expensive", "too", "no"], "say": "That's too expensive!" },
-      { "ai": "Okay okay... 200,000. Good price!", "tr": "Tamam tamam... 200.000. İyi fiyat!", "expect": ["meter", "use"], "say": "Use the meter, please." },
-      { "ai": "Okay, meter is on! Get in, please.", "tr": "Tamam, taksimetre açık! Binin lütfen.", "expect": ["thank", "okay"], "say": "Thank you." },
-      { "ai": "Music okay for you?", "tr": "Müzik açsam olur mu?", "expect": ["yes", "okay", "no"], "say": "Yes, okay!" },
-      { "ai": "Where are you from, boss?", "tr": "Nerelisiniz patron?", "expect": ["turkey", "from"], "say": "I'm from Turkey." },
-      { "ai": "Turkey, nice! ... Okay, Seminyak beach is near now.", "tr": "Türkiye, güzel! ... Seminyak plajı yaklaştı.", "expect": ["stop", "here"], "say": "Stop here, please." },
-      { "ai": "Here? Okay! 80,000 rupiah on the meter.", "tr": "Burada mı? Tamam! Taksimetrede 80.000 rupiah yazıyor.", "expect": ["here", "thank", "money", "you are"], "say": "Here you are. Thank you!" },
-      { "ai": "Thank you boss! Enjoy the beach!", "tr": "Sağ olun patron! Plajın tadını çıkarın!", "expect": ["goodbye", "bye", "thank"], "say": "Goodbye!" }
+      {
+        "ai": "Hello boss! Taxi? Where are you going?",
+        "tr": "Merhaba patron! Taksi? Nereye gidiyorsunuz?",
+        "expect": [
+          "seminyak",
+          "beach",
+          "hotel",
+          "to"
+        ],
+        "say": "To Seminyak, please."
+      },
+      {
+        "ai": "Seminyak! 300,000 rupiah, okay?",
+        "tr": "Seminyak! 300.000 rupiah, olur mu?",
+        "expect": [
+          "expensive",
+          "too",
+          "no"
+        ],
+        "say": "That's too expensive!"
+      },
+      {
+        "ai": "Okay okay... 200,000. Good price!",
+        "tr": "Tamam tamam... 200.000. İyi fiyat!",
+        "expect": [
+          "meter",
+          "use"
+        ],
+        "say": "Use the meter, please."
+      },
+      {
+        "ai": "Okay, meter is on! Get in, please.",
+        "tr": "Tamam, taksimetre açık! Binin lütfen.",
+        "expect": [
+          "thank",
+          "okay"
+        ],
+        "say": "Thank you."
+      },
+      {
+        "ai": "Music okay for you?",
+        "tr": "Müzik açsam olur mu?",
+        "expect": [
+          "yes",
+          "okay",
+          "no"
+        ],
+        "say": "Yes, okay!"
+      },
+      {
+        "ai": "Where are you from, boss?",
+        "tr": "Nerelisiniz patron?",
+        "expect": [
+          "turkey",
+          "from"
+        ],
+        "say": "I'm from Turkey."
+      },
+      {
+        "ai": "Turkey, nice! Oh — big traffic now. Sorry boss.",
+        "tr": "Türkiye, güzel! Ah — şimdi trafik yoğun. Kusura bakmayın patron.",
+        "expect": [
+          "no problem",
+          "okay",
+          "slow"
+        ],
+        "say": "No problem. Slow is okay."
+      },
+      {
+        "ai": "Do you want to stop for water?",
+        "tr": "Su almak için duralım mı?",
+        "expect": [
+          "no",
+          "yes",
+          "thank",
+          "okay"
+        ],
+        "say": "No, thank you. I'm okay."
+      },
+      {
+        "ai": "Okay. Seminyak in five minutes.",
+        "tr": "Tamam. Seminyak'a beş dakika.",
+        "expect": [
+          "okay",
+          "thank",
+          "five"
+        ],
+        "say": "Okay, thank you!"
+      },
+      {
+        "ai": "The beach is near now.",
+        "tr": "Plaj yaklaştı.",
+        "expect": [
+          "stop",
+          "here"
+        ],
+        "say": "Stop here, please."
+      },
+      {
+        "ai": "Here? Okay! 80,000 rupiah on the meter.",
+        "tr": "Burada mı? Tamam! Taksimetrede 80.000 rupiah.",
+        "expect": [
+          "here",
+          "thank",
+          "you are"
+        ],
+        "say": "Here you are. Thank you!"
+      },
+      {
+        "ai": "Thank you boss! You want my number? Tomorrow I drive you all day!",
+        "tr": "Sağ olun patron! Numaramı ister misiniz? Yarın bütün gün sizi gezdiririm!",
+        "expect": [
+          "yes",
+          "okay",
+          "no",
+          "thank"
+        ],
+        "say": "Yes, okay! Thank you!"
+      },
+      {
+        "ai": "Call me anytime! Enjoy the beach!",
+        "tr": "İstediğiniz zaman arayın! Plajın tadını çıkarın!",
+        "expect": [
+          "goodbye",
+          "bye",
+          "see you"
+        ],
+        "say": "Goodbye! See you!"
+      }
     ]
   },
   "quiz": {
     "situations": [
       {
         "q": "Şoför çok yüksek fiyat söyledi. Ne dersin?",
-        "options": ["That's too expensive.", "Stop here, please.", "Go straight.", "It's delicious!"]
+        "options": [
+          "That's too expensive.",
+          "Stop here, please.",
+          "Go straight.",
+          "It's delicious!"
+        ]
       },
       {
         "q": "Gideceğin yere geldin, inmek istiyorsun. Ne dersin?",
-        "options": ["Stop here, please.", "Turn left.", "How much for one day?", "Use the meter, please."]
+        "options": [
+          "Stop here, please.",
+          "Turn left.",
+          "How much for one day?",
+          "Use the meter, please."
+        ]
       },
       {
         "q": "Scooter kiralamak istiyorsun. Dükkanda ne dersin?",
-        "options": ["I want to rent a scooter.", "Slow down, please.", "Where is the taxi?", "The bill, please."]
+        "options": [
+          "I want to rent a scooter.",
+          "Slow down, please.",
+          "Where is the taxi?",
+          "The bill, please."
+        ]
       }
     ],
     "listening": [
       {
         "audio": "Turn right.",
         "q": "Ne duydun? Anlamını seç.",
-        "options": ["Sağa dön.", "Sola dön.", "Düz git.", "Burada dur."]
+        "options": [
+          "Sağa dön.",
+          "Sola dön.",
+          "Düz git.",
+          "Burada dur."
+        ]
       },
       {
         "audio": "Where are you going?",
         "q": "Soruya uygun cevabı seç.",
-        "options": ["To the hotel, please.", "Ten days.", "No ice, please.", "I have a reservation."]
+        "options": [
+          "To the hotel, please.",
+          "Ten days.",
+          "No ice, please.",
+          "I have a reservation."
+        ]
       }
     ]
   }

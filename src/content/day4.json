@@ -3,23 +3,91 @@
   "title": "Restoran & Kafe",
   "emoji": "🍽️",
   "words": [
-    { "en": "menu", "v": "📋" },
-    { "en": "coffee", "v": "☕" },
-    { "en": "tea", "v": "🍵" },
-    { "en": "juice", "v": "🧃" },
-    { "en": "beer", "v": "🍺" },
-    { "en": "rice", "v": "🍚" },
-    { "en": "noodles", "v": "🍜" },
-    { "en": "chicken", "v": "🍗" },
-    { "en": "fish", "v": "🐟" },
-    { "en": "meat", "v": "🥩" },
-    { "en": "egg", "v": "🥚" },
-    { "en": "fruit", "v": "🍉" },
-    { "en": "banana", "v": "🍌" },
-    { "en": "spicy", "v": "🌶️" },
-    { "en": "ice", "v": "🧊" },
-    { "en": "bill", "v": "🧾" },
-    { "en": "delicious", "v": "😋" }
+    {
+      "en": "menu",
+      "v": "📋",
+      "ex": "The menu, please."
+    },
+    {
+      "en": "coffee",
+      "v": "☕",
+      "ex": "One coffee, please."
+    },
+    {
+      "en": "tea",
+      "v": "🍵",
+      "ex": "Two teas, please."
+    },
+    {
+      "en": "juice",
+      "v": "🧃",
+      "ex": "One orange juice, please."
+    },
+    {
+      "en": "beer",
+      "v": "🍺",
+      "ex": "A cold beer, please."
+    },
+    {
+      "en": "rice",
+      "v": "🍚",
+      "ex": "I want fried rice."
+    },
+    {
+      "en": "noodles",
+      "v": "🍜",
+      "ex": "Fried noodles, please."
+    },
+    {
+      "en": "chicken",
+      "v": "🍗",
+      "ex": "Chicken with rice, please."
+    },
+    {
+      "en": "fish",
+      "v": "🐟",
+      "ex": "I want fish, please."
+    },
+    {
+      "en": "meat",
+      "v": "🥩",
+      "ex": "I don't eat meat."
+    },
+    {
+      "en": "egg",
+      "v": "🥚",
+      "ex": "Two eggs, please."
+    },
+    {
+      "en": "fruit",
+      "v": "🍉",
+      "ex": "I want fresh fruit."
+    },
+    {
+      "en": "banana",
+      "v": "🍌",
+      "ex": "One banana, please."
+    },
+    {
+      "en": "spicy",
+      "v": "🌶️",
+      "ex": "Not spicy, please."
+    },
+    {
+      "en": "ice",
+      "v": "🧊",
+      "ex": "No ice, please."
+    },
+    {
+      "en": "bill",
+      "v": "🧾",
+      "ex": "The bill, please."
+    },
+    {
+      "en": "delicious",
+      "v": "😋",
+      "ex": "It's delicious!"
+    }
   ],
   "sentences": [
     "A table for two, please.",
@@ -40,42 +108,207 @@
     "situationTr": "Bir Bali restoranındasın (warung). Garson siparişini almaya geldi.",
     "goalTr": "İçecek ve yemek siparişi ver, acı olmasın de, sonunda hesabı iste.",
     "script": [
-      { "ai": "Hello! Welcome! What would you like to drink?", "tr": "Merhaba! Hoş geldiniz! Ne içmek istersiniz?", "expect": ["coffee", "tea", "juice", "water", "beer"], "say": "One coffee, please." },
-      { "ai": "Good! And what would you like to eat?", "tr": "Güzel! Yemek olarak ne alırsınız?", "expect": ["rice", "fried", "noodle", "chicken", "fish"], "say": "I want fried rice." },
-      { "ai": "Good choice! Spicy or not spicy?", "tr": "İyi seçim! Acılı mı, acısız mı?", "expect": ["not spicy", "no spicy", "spicy"], "say": "Not spicy, please." },
-      { "ai": "Okay, not spicy. Anything else?", "tr": "Tamam, acısız. Başka bir şey?", "expect": ["no", "that is all", "thank"], "say": "No, thank you." },
-      { "ai": "Here is your food. Enjoy!", "tr": "Buyurun yemeğiniz. Afiyet olsun!", "expect": ["thank"], "say": "Thank you!" },
-      { "ai": "Is the food good?", "tr": "Yemek güzel mi?", "expect": ["delicious", "good", "yes", "very"], "say": "It's delicious!" },
-      { "ai": "I'm happy! Do you want anything else?", "tr": "Sevindim! Başka bir şey ister misiniz?", "expect": ["no", "bill", "check"], "say": "No, thank you. The bill, please." },
-      { "ai": "Of course. 60,000 rupiah, please.", "tr": "Tabii. 60.000 rupiah lütfen.", "expect": ["card", "pay", "here"], "say": "Can I pay by card?" },
-      { "ai": "Yes, card is okay! Thank you. Come again!", "tr": "Evet, kart olur! Teşekkürler. Yine bekleriz!", "expect": ["thank", "goodbye", "bye"], "say": "Thank you! Goodbye!" }
+      {
+        "ai": "Hello! Welcome! What would you like to drink?",
+        "tr": "Merhaba! Hoş geldiniz! Ne içmek istersiniz?",
+        "expect": [
+          "coffee",
+          "tea",
+          "juice",
+          "water",
+          "beer"
+        ],
+        "say": "One coffee, please."
+      },
+      {
+        "ai": "Good! And what would you like to eat?",
+        "tr": "Güzel! Yemek olarak ne alırsınız?",
+        "expect": [
+          "rice",
+          "fried",
+          "noodle",
+          "chicken",
+          "fish"
+        ],
+        "say": "I want fried rice."
+      },
+      {
+        "ai": "Good choice! Spicy or not spicy?",
+        "tr": "İyi seçim! Acılı mı, acısız mı?",
+        "expect": [
+          "not spicy",
+          "no spicy",
+          "spicy"
+        ],
+        "say": "Not spicy, please."
+      },
+      {
+        "ai": "Okay, not spicy. Anything else?",
+        "tr": "Tamam, acısız. Başka bir şey?",
+        "expect": [
+          "no",
+          "thank"
+        ],
+        "say": "No, thank you."
+      },
+      {
+        "ai": "Here is your food. Enjoy!",
+        "tr": "Buyurun yemeğiniz. Afiyet olsun!",
+        "expect": [
+          "thank"
+        ],
+        "say": "Thank you!"
+      },
+      {
+        "ai": "Is the food good?",
+        "tr": "Yemek güzel mi?",
+        "expect": [
+          "delicious",
+          "good",
+          "yes",
+          "very"
+        ],
+        "say": "It's delicious!"
+      },
+      {
+        "ai": "I'm happy! Do you want dessert? We have fried banana!",
+        "tr": "Sevindim! Tatlı ister misiniz? Kızarmış muzumuz var!",
+        "expect": [
+          "yes",
+          "banana",
+          "please"
+        ],
+        "say": "Yes! Fried banana, please."
+      },
+      {
+        "ai": "With ice cream?",
+        "tr": "Dondurmalı olsun mu?",
+        "expect": [
+          "yes",
+          "please",
+          "no"
+        ],
+        "say": "Yes, please!"
+      },
+      {
+        "ai": "Where are you from, my friend?",
+        "tr": "Nerelisiniz dostum?",
+        "expect": [
+          "turkey",
+          "from"
+        ],
+        "say": "I'm from Turkey."
+      },
+      {
+        "ai": "Turkey! Is the food spicy in Turkey?",
+        "tr": "Türkiye! Türkiye'de yemekler acılı mı?",
+        "expect": [
+          "yes",
+          "little",
+          "no",
+          "spicy"
+        ],
+        "say": "Yes, a little spicy."
+      },
+      {
+        "ai": "Haha! Here is your dessert. Enjoy!",
+        "tr": "Haha! Buyurun tatlınız. Afiyet olsun!",
+        "expect": [
+          "thank"
+        ],
+        "say": "Thank you!"
+      },
+      {
+        "ai": "Was everything good today?",
+        "tr": "Bugün her şey güzel miydi?",
+        "expect": [
+          "yes",
+          "delicious",
+          "good",
+          "everything"
+        ],
+        "say": "Yes, everything was delicious!"
+      },
+      {
+        "ai": "Thank you! Anything else?",
+        "tr": "Teşekkürler! Başka bir şey?",
+        "expect": [
+          "bill",
+          "no"
+        ],
+        "say": "No, thank you. The bill, please."
+      },
+      {
+        "ai": "Of course. 85,000 rupiah, please.",
+        "tr": "Tabii. 85.000 rupiah lütfen.",
+        "expect": [
+          "card",
+          "pay"
+        ],
+        "say": "Can I pay by card?"
+      },
+      {
+        "ai": "Yes, card is okay! Thank you. Come again!",
+        "tr": "Evet, kart olur! Teşekkürler. Yine bekleriz!",
+        "expect": [
+          "thank",
+          "goodbye",
+          "bye"
+        ],
+        "say": "Thank you! Goodbye!"
+      }
     ]
   },
   "quiz": {
     "situations": [
       {
         "q": "Yemeği bitirdin, ödemek istiyorsun. Ne dersin?",
-        "options": ["The bill, please.", "The menu, please.", "It's delicious!", "A table for two, please."]
+        "options": [
+          "The bill, please.",
+          "The menu, please.",
+          "It's delicious!",
+          "A table for two, please."
+        ]
       },
       {
         "q": "Acı yiyemiyorsun. Sipariş verirken ne dersin?",
-        "options": ["Not spicy, please.", "No ice, please.", "One beer, please.", "I want fried rice."]
+        "options": [
+          "Not spicy, please.",
+          "No ice, please.",
+          "One beer, please.",
+          "I want fried rice."
+        ]
       },
       {
         "q": "Garson 'Anything to drink?' diye sordu. Ne dersin?",
-        "options": ["One coffee, please.", "The bill, please.", "I'm allergic to nuts.", "A table for two."]
+        "options": [
+          "One coffee, please.",
+          "The bill, please.",
+          "I'm allergic to nuts.",
+          "A table for two."
+        ]
       }
     ],
     "listening": [
       {
         "audio": "Do you want ice?",
         "q": "Soruya uygun cevabı seç.",
-        "options": ["No ice, please.", "Not spicy, please.", "The bill, please.", "One tea, please."]
+        "options": [
+          "No ice, please.",
+          "Not spicy, please.",
+          "The bill, please.",
+          "One tea, please."
+        ]
       },
       {
         "audio": "It's very spicy.",
         "q": "Ne duydun? Anlamını seç.",
-        "options": ["Çok acı.", "Çok lezzetli.", "Çok soğuk.", "Çok pahalı."]
+        "options": [
+          "Çok acı.",
+          "Çok lezzetli.",
+          "Çok soğuk.",
+          "Çok pahalı."
+        ]
       }
     ]
   }

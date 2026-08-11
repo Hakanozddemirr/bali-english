@@ -127,6 +127,7 @@ input, select { font: inherit; color: inherit; }
 .opt:has(img.photo) { padding: 7px; }
 .flash-card .visual.textual { font-size: 72px; font-weight: 800; color: var(--accent2); }
 .flash-card .word { font-size: 32px; font-weight: 800; }
+.flash-card .ex { font-size: 16.5px; color: var(--accent); font-weight: 600; }
 .flash-card .hint { font-size: 13.5px; color: var(--ink-soft); }
 .speaker { font-size: 26px; }
 

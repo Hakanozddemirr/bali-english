@@ -84,15 +84,19 @@ function LearnMode({ day, content, rate, onFinish }) {
       <div className="progress" style={{ marginBottom: 14 }}>
         <i style={{ width: `${(seenCount / content.words.length) * 100}%` }} />
       </div>
-      <button className="flash-card" onClick={() => speak(card.en, rate)}>
+      <button
+        className="flash-card"
+        onClick={() => speak(card.ex ? `${card.en}. ${card.ex}` : card.en, rate)}
+      >
         {card.img ? (
           <img className="photo" src={card.img} alt="" />
         ) : (
           <span className={`visual ${isTextVisual(card.v) ? 'textual' : ''}`}>{card.v}</span>
         )}
         <span className="word">{card.en}</span>
+        {card.ex && <span className="ex">“{card.ex}”</span>}
         <span className="speaker">🔊</span>
-        <span className="hint">Karta dokun, tekrar dinle — sonra yüksek sesle söyle</span>
+        <span className="hint">Karta dokun: kelime + örnek cümleyi dinle, yüksek sesle tekrar et</span>
       </button>
       <div className="btn-row">
         {idx > 0 && (

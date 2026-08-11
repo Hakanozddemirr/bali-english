@@ -3,21 +3,81 @@
   "title": "Otel",
   "emoji": "🏨",
   "words": [
-    { "en": "reception", "v": "🛎️" },
-    { "en": "key", "v": "🔑" },
-    { "en": "room", "v": "🚪" },
-    { "en": "shower", "v": "🚿" },
-    { "en": "soap", "v": "🧼" },
-    { "en": "breakfast", "v": "🍳" },
-    { "en": "pool", "v": "🏊" },
-    { "en": "wifi", "v": "📶" },
-    { "en": "password", "v": "🔐" },
-    { "en": "air conditioning", "v": "❄️" },
-    { "en": "hot", "v": "🔥" },
-    { "en": "cold", "v": "🧊" },
-    { "en": "clean", "v": "✨" },
-    { "en": "broken", "v": "🛠️" },
-    { "en": "light", "v": "💡" }
+    {
+      "en": "reception",
+      "v": "🛎️",
+      "ex": "Ask at the reception."
+    },
+    {
+      "en": "key",
+      "v": "🔑",
+      "ex": "The key, please."
+    },
+    {
+      "en": "room",
+      "v": "🚪",
+      "ex": "My room is very nice."
+    },
+    {
+      "en": "shower",
+      "v": "🚿",
+      "ex": "The shower is broken."
+    },
+    {
+      "en": "soap",
+      "v": "🧼",
+      "ex": "There is no soap."
+    },
+    {
+      "en": "breakfast",
+      "v": "🍳",
+      "ex": "What time is breakfast?"
+    },
+    {
+      "en": "pool",
+      "v": "🏊",
+      "ex": "The pool is beautiful."
+    },
+    {
+      "en": "wifi",
+      "v": "📶",
+      "ex": "The wifi is not working."
+    },
+    {
+      "en": "password",
+      "v": "🔐",
+      "ex": "What is the password?"
+    },
+    {
+      "en": "air conditioning",
+      "v": "❄️",
+      "ex": "The air conditioning is broken."
+    },
+    {
+      "en": "hot",
+      "v": "🔥",
+      "ex": "The water is too hot."
+    },
+    {
+      "en": "cold",
+      "v": "🧊",
+      "ex": "The water is cold."
+    },
+    {
+      "en": "clean",
+      "v": "✨",
+      "ex": "My room is not clean."
+    },
+    {
+      "en": "broken",
+      "v": "🛠️",
+      "ex": "The light is broken."
+    },
+    {
+      "en": "light",
+      "v": "💡",
+      "ex": "The light is not working."
+    }
   ],
   "sentences": [
     "I have a reservation.",
@@ -37,41 +97,197 @@
     "situationTr": "Oteline vardın. Resepsiyonda check-in yapıyorsun.",
     "goalTr": "Rezervasyonun olduğunu söyle, kahvaltı saatini ve wifi şifresini sor.",
     "script": [
-      { "ai": "Good afternoon! Welcome. Do you have a reservation?", "tr": "İyi günler! Hoş geldiniz. Rezervasyonunuz var mı?", "expect": ["yes", "reservation", "have"], "say": "Yes, I have a reservation." },
-      { "ai": "What is your name, please?", "tr": "İsminiz lütfen?", "expect": ["my name", "hakan", "i am", "i'm"], "say": "My name is Hakan." },
-      { "ai": "Ah yes — ten nights. Your passport, please.", "tr": "Evet — on gece. Pasaportunuz lütfen.", "expect": ["here", "passport"], "say": "Here you are." },
-      { "ai": "Thank you. Your room is number seven.", "tr": "Teşekkürler. Odanız yedi numara.", "expect": ["thank", "seven", "okay"], "say": "Thank you." },
-      { "ai": "Do you have any questions?", "tr": "Sorunuz var mı?", "expect": ["wifi", "password", "yes"], "say": "Yes — what is the wifi password?" },
-      { "ai": "The wifi password is BALI2026.", "tr": "Wifi şifresi: BALI2026.", "expect": ["thank", "breakfast", "what time"], "say": "Thank you. What time is breakfast?" },
-      { "ai": "Breakfast is at eight, near the pool.", "tr": "Kahvaltı saat sekizde, havuzun yanında.", "expect": ["thank", "okay", "great"], "say": "Thank you very much!" },
-      { "ai": "Here is your key. Enjoy your stay!", "tr": "İşte anahtarınız. İyi konaklamalar!", "expect": ["thank", "goodbye"], "say": "Thank you! Goodbye." }
+      {
+        "ai": "Good afternoon! Welcome. Do you have a reservation?",
+        "tr": "İyi günler! Hoş geldiniz. Rezervasyonunuz var mı?",
+        "expect": [
+          "yes",
+          "reservation",
+          "have"
+        ],
+        "say": "Yes, I have a reservation."
+      },
+      {
+        "ai": "What is your name, please?",
+        "tr": "İsminiz lütfen?",
+        "expect": [
+          "my name",
+          "hakan",
+          "i am",
+          "i'm"
+        ],
+        "say": "My name is Hakan."
+      },
+      {
+        "ai": "Ah yes — ten nights. Your passport, please.",
+        "tr": "Evet — on gece. Pasaportunuz lütfen.",
+        "expect": [
+          "here",
+          "passport"
+        ],
+        "say": "Here you are."
+      },
+      {
+        "ai": "Thank you. Your room is number seven.",
+        "tr": "Teşekkürler. Odanız yedi numara.",
+        "expect": [
+          "thank",
+          "seven",
+          "okay"
+        ],
+        "say": "Thank you."
+      },
+      {
+        "ai": "Do you have any questions?",
+        "tr": "Sorunuz var mı?",
+        "expect": [
+          "wifi",
+          "password",
+          "yes"
+        ],
+        "say": "Yes — what is the wifi password?"
+      },
+      {
+        "ai": "The wifi password is BALI2026.",
+        "tr": "Wifi şifresi: BALI2026.",
+        "expect": [
+          "thank",
+          "breakfast",
+          "what time"
+        ],
+        "say": "Thank you. What time is breakfast?"
+      },
+      {
+        "ai": "Breakfast is at eight, near the pool.",
+        "tr": "Kahvaltı saat sekizde, havuzun yanında.",
+        "expect": [
+          "thank",
+          "okay",
+          "great"
+        ],
+        "say": "Thank you very much!"
+      },
+      {
+        "ai": "Here is your key. Enjoy your stay!",
+        "tr": "İşte anahtarınız. İyi konaklamalar!",
+        "expect": [
+          "thank",
+          "goodbye"
+        ],
+        "say": "Thank you! Goodbye."
+      },
+      {
+        "ai": "(The room phone rings) Hello, reception here. Is everything okay with your room?",
+        "tr": "(Oda telefonu çalıyor) Merhaba, resepsiyon. Odanızda her şey yolunda mı?",
+        "expect": [
+          "no",
+          "broken",
+          "air",
+          "problem"
+        ],
+        "say": "No — the air conditioning is broken."
+      },
+      {
+        "ai": "Oh, sorry! We will send someone now. Anything else?",
+        "tr": "Kusura bakmayın! Hemen birini gönderiyoruz. Başka bir şey?",
+        "expect": [
+          "towel",
+          "yes",
+          "please"
+        ],
+        "say": "Yes, a towel, please."
+      },
+      {
+        "ai": "Of course, two towels. Is the wifi working?",
+        "tr": "Tabii, iki havlu. Wifi çalışıyor mu?",
+        "expect": [
+          "yes",
+          "working",
+          "no"
+        ],
+        "say": "Yes, the wifi is working."
+      },
+      {
+        "ai": "Good! The pool is open until ten tonight.",
+        "tr": "Güzel! Havuz bu akşam ona kadar açık.",
+        "expect": [
+          "thank",
+          "okay",
+          "ten"
+        ],
+        "say": "Thank you!"
+      },
+      {
+        "ai": "Do you want a taxi for tomorrow?",
+        "tr": "Yarın için taksi ister misiniz?",
+        "expect": [
+          "yes",
+          "morning",
+          "please"
+        ],
+        "say": "Yes, for tomorrow morning, please."
+      },
+      {
+        "ai": "What time?",
+        "tr": "Saat kaçta?",
+        "expect": [
+          "nine",
+          "at"
+        ],
+        "say": "At nine, please. Thank you!"
+      }
     ]
   },
   "quiz": {
     "situations": [
       {
         "q": "Wifi şifresini öğrenmek istiyorsun. Ne sorarsın?",
-        "options": ["What is the wifi password?", "The water is cold.", "Check-out, please.", "Where is gate seven?"]
+        "options": [
+          "What is the wifi password?",
+          "The water is cold.",
+          "Check-out, please.",
+          "Where is gate seven?"
+        ]
       },
       {
         "q": "Odandaki klima çalışmıyor. Resepsiyona ne dersin?",
-        "options": ["The air conditioning is broken.", "I have a reservation.", "What time is breakfast?", "The pool is clean."]
+        "options": [
+          "The air conditioning is broken.",
+          "I have a reservation.",
+          "What time is breakfast?",
+          "The pool is clean."
+        ]
       },
       {
         "q": "Resepsiyonist 'How many nights?' diye sordu. Ne dersin?",
-        "options": ["Ten nights.", "Hot water, please.", "I'm going to Ubud.", "The key, thank you."]
+        "options": [
+          "Ten nights.",
+          "Hot water, please.",
+          "I'm going to Ubud.",
+          "The key, thank you."
+        ]
       }
     ],
     "listening": [
       {
         "audio": "What time is breakfast?",
         "q": "Soruya uygun cevabı seç.",
-        "options": ["At eight.", "Blue, please.", "Two bags.", "Turn left."]
+        "options": [
+          "At eight.",
+          "Blue, please.",
+          "Two bags.",
+          "Turn left."
+        ]
       },
       {
         "audio": "Here is your key.",
         "q": "Ne duydun? Anlamını seç.",
-        "options": ["İşte anahtarınız.", "Odanız hazır değil.", "Kahvaltı saat sekizde.", "Havuz kapalı."]
+        "options": [
+          "İşte anahtarınız.",
+          "Odanız hazır değil.",
+          "Kahvaltı saat sekizde.",
+          "Havuz kapalı."
+        ]
       }
     ]
   }
