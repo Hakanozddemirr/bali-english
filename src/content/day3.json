@@ -9,24 +9,64 @@
       "ex": "Ask at the reception."
     },
     {
-      "en": "key",
-      "v": "🔑",
-      "ex": "The key, please."
+      "en": "towel",
+      "v": "🧖",
+      "ex": "Can I have two towels, please?"
     },
     {
-      "en": "room",
-      "v": "🚪",
-      "ex": "My room is very nice."
+      "en": "pillow",
+      "v": "🛌",
+      "ex": "An extra pillow, please."
     },
     {
-      "en": "shower",
-      "v": "🚿",
-      "ex": "The shower is broken."
+      "en": "blanket",
+      "v": "🧣",
+      "ex": "Can I have a blanket?"
     },
     {
-      "en": "soap",
-      "v": "🧼",
-      "ex": "There is no soap."
+      "en": "elevator",
+      "v": "🛗",
+      "ex": "The elevator is broken."
+    },
+    {
+      "en": "stairs",
+      "v": "🪜",
+      "ex": "The stairs are on the left."
+    },
+    {
+      "en": "floor",
+      "v": "🏢",
+      "ex": "Which floor is breakfast on?"
+    },
+    {
+      "en": "balcony",
+      "v": "🌇",
+      "ex": "My room has a balcony."
+    },
+    {
+      "en": "view",
+      "v": "🌄",
+      "ex": "The view is amazing!"
+    },
+    {
+      "en": "safe",
+      "v": "🔐",
+      "ex": "The safe is not working."
+    },
+    {
+      "en": "laundry",
+      "v": "🧺",
+      "ex": "Is there laundry service?"
+    },
+    {
+      "en": "noisy",
+      "v": "📢",
+      "ex": "My room is very noisy."
+    },
+    {
+      "en": "quiet",
+      "v": "🤫",
+      "ex": "Do you have a quiet room?"
     },
     {
       "en": "breakfast",
@@ -34,61 +74,31 @@
       "ex": "What time is breakfast?"
     },
     {
-      "en": "pool",
-      "v": "🏊",
-      "ex": "The pool is beautiful."
-    },
-    {
-      "en": "wifi",
-      "v": "📶",
-      "ex": "The wifi is not working."
-    },
-    {
-      "en": "password",
-      "v": "🔐",
-      "ex": "What is the password?"
-    },
-    {
       "en": "air conditioning",
       "v": "❄️",
-      "ex": "The air conditioning is broken."
-    },
-    {
-      "en": "hot",
-      "v": "🔥",
-      "ex": "The water is too hot."
-    },
-    {
-      "en": "cold",
-      "v": "🧊",
-      "ex": "The water is cold."
-    },
-    {
-      "en": "clean",
-      "v": "✨",
-      "ex": "My room is not clean."
+      "ex": "The air conditioning is too cold."
     },
     {
       "en": "broken",
       "v": "🛠️",
-      "ex": "The light is broken."
+      "ex": "The shower is broken."
     },
     {
-      "en": "light",
-      "v": "💡",
-      "ex": "The light is not working."
+      "en": "key",
+      "v": "🔑",
+      "ex": "The key, please."
     }
   ],
   "sentences": [
-    "I have a reservation.",
-    "Check-in, please.",
-    "What time is breakfast?",
-    "What is the wifi password?",
-    "Can I have a towel, please?",
-    "The air conditioning is broken.",
-    "The water is cold.",
-    "My room is not clean.",
-    "Check-out, please."
+    "Can I have two towels, please?",
+    "The safe is not working.",
+    "My room is very noisy.",
+    "Do you have a quiet room?",
+    "The elevator is broken.",
+    "Which floor is breakfast on?",
+    "Can I have an extra pillow, please?",
+    "The air conditioning is too cold.",
+    "Is there laundry service?"
   ],
   "scenario": {
     "title": "Otele Giriş",

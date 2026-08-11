@@ -4,34 +4,54 @@
   "emoji": "🆘",
   "words": [
     {
-      "en": "doctor",
-      "v": "🧑‍⚕️",
-      "ex": "I need a doctor."
-    },
-    {
-      "en": "hospital",
-      "v": "🏥",
-      "ex": "Where is the hospital?"
-    },
-    {
       "en": "pharmacy",
       "v": "💊",
       "ex": "Where is the pharmacy?"
     },
     {
+      "en": "medicine",
+      "v": "🩹",
+      "ex": "I need medicine for my stomach."
+    },
+    {
+      "en": "bandage",
+      "v": "🩹",
+      "ex": "I need a bandage."
+    },
+    {
+      "en": "blood",
+      "v": "🩸",
+      "ex": "There is blood."
+    },
+    {
+      "en": "dizzy",
+      "v": "😵‍💫",
+      "ex": "I feel dizzy."
+    },
+    {
+      "en": "vomit",
+      "v": "🤮",
+      "ex": "I was vomiting all night."
+    },
+    {
+      "en": "diarrhea",
+      "v": "🚽",
+      "ex": "I have diarrhea."
+    },
+    {
+      "en": "ambulance",
+      "v": "🚑",
+      "ex": "Call an ambulance, please!"
+    },
+    {
+      "en": "embassy",
+      "v": "🏛️",
+      "ex": "Where is the Turkish embassy?"
+    },
+    {
       "en": "sick",
       "v": "🤒",
       "ex": "I'm sick."
-    },
-    {
-      "en": "pain",
-      "v": "🤕",
-      "ex": "I have pain here."
-    },
-    {
-      "en": "stomach ache",
-      "v": "🤢",
-      "ex": "I have a stomach ache."
     },
     {
       "en": "fever",
@@ -44,19 +64,19 @@
       "ex": "I have a sunburn."
     },
     {
-      "en": "police",
-      "v": "👮",
-      "ex": "Call the police, please!"
+      "en": "pain",
+      "v": "🤕",
+      "ex": "I have pain here."
+    },
+    {
+      "en": "stomach ache",
+      "v": "🤢",
+      "ex": "I have a stomach ache."
     },
     {
       "en": "lost",
       "v": "🔍",
       "ex": "I lost my passport."
-    },
-    {
-      "en": "phone",
-      "v": "📱",
-      "ex": "My phone is not working."
     },
     {
       "en": "wallet",
@@ -67,29 +87,19 @@
       "en": "mosquito",
       "v": "🦟",
       "ex": "Too many mosquitoes here!"
-    },
-    {
-      "en": "emergency",
-      "v": "🚨",
-      "ex": "It's an emergency!"
-    },
-    {
-      "en": "danger",
-      "v": "⚠️",
-      "ex": "It's dangerous!"
     }
   ],
   "sentences": [
-    "Help me, please!",
-    "I need a doctor.",
-    "Where is the pharmacy?",
-    "I'm sick.",
+    "I need medicine for my stomach.",
+    "I feel dizzy.",
+    "I was vomiting all night.",
+    "I have diarrhea.",
+    "I need a bandage.",
+    "Call an ambulance, please!",
+    "Where is the Turkish embassy?",
+    "I have a sunburn.",
     "My stomach hurts.",
-    "I have a fever.",
-    "I lost my passport.",
-    "I lost my phone.",
-    "Call the police, please.",
-    "It's an emergency!"
+    "I'm sick."
   ],
   "scenario": {
     "title": "Eczanede",

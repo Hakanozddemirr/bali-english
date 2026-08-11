@@ -4,44 +4,64 @@
   "emoji": "🏝️",
   "words": [
     {
-      "en": "beach",
-      "v": "🏖️",
-      "ex": "The beach is very beautiful."
-    },
-    {
-      "en": "sea",
+      "en": "wave",
       "v": "🌊",
-      "ex": "The sea is warm."
+      "ex": "The waves are very big today."
     },
     {
-      "en": "sun",
-      "v": "☀️",
-      "ex": "The sun is very hot."
+      "en": "snorkeling",
+      "v": "🤿",
+      "ex": "I want to try snorkeling."
     },
     {
-      "en": "sunscreen",
-      "v": "🧴",
-      "ex": "I need sunscreen."
+      "en": "diving",
+      "v": "🐠",
+      "ex": "Diving is beautiful here."
     },
     {
-      "en": "swim",
-      "v": "🏊",
-      "ex": "I can't swim well."
+      "en": "life jacket",
+      "v": "🦺",
+      "ex": "Do I need a life jacket?"
+    },
+    {
+      "en": "jellyfish",
+      "v": "🎐",
+      "ex": "Are there jellyfish in the water?"
+    },
+    {
+      "en": "coral",
+      "v": "🪸",
+      "ex": "Don't touch the coral."
+    },
+    {
+      "en": "turtle",
+      "v": "🐢",
+      "ex": "I saw a sea turtle!"
+    },
+    {
+      "en": "volcano",
+      "v": "🌋",
+      "ex": "We hiked up the volcano."
+    },
+    {
+      "en": "rice terrace",
+      "v": "🌾",
+      "ex": "The rice terraces are amazing."
+    },
+    {
+      "en": "hike",
+      "v": "🥾",
+      "ex": "Let's hike tomorrow morning."
+    },
+    {
+      "en": "crowded",
+      "v": "👥",
+      "ex": "It's very crowded today."
     },
     {
       "en": "surf",
       "v": "🏄",
       "ex": "I want to surf!"
-    },
-    {
-      "en": "boat",
-      "v": "🚤",
-      "ex": "We go by boat."
-    },
-    {
-      "en": "tour",
-      "v": "🧭",
-      "ex": "I want to book a tour."
     },
     {
       "en": "temple",
@@ -54,6 +74,16 @@
       "ex": "Let's go to the waterfall!"
     },
     {
+      "en": "sunscreen",
+      "v": "🧴",
+      "ex": "I need sunscreen."
+    },
+    {
+      "en": "tour",
+      "v": "🧭",
+      "ex": "I want to book a tour."
+    },
+    {
       "en": "monkey",
       "v": "🐒",
       "ex": "Look! A monkey!"
@@ -62,38 +92,19 @@
       "en": "rain",
       "v": "🌧️",
       "ex": "Will it rain tomorrow?"
-    },
-    {
-      "en": "cloud",
-      "v": "☁️",
-      "ex": "Too many clouds today."
-    },
-    {
-      "en": "time",
-      "v": "⏰",
-      "ex": "What time is it?"
-    },
-    {
-      "en": "today",
-      "v": "📅",
-      "ex": "Today is very hot."
-    },
-    {
-      "en": "tomorrow",
-      "v": "🌅",
-      "ex": "See you tomorrow!"
     }
   ],
   "sentences": [
-    "What time is it?",
-    "What time does the tour start?",
-    "I want to book a tour for tomorrow.",
-    "How much is the ticket?",
-    "Is it far?",
-    "Will it rain tomorrow?",
-    "The beach is very beautiful.",
-    "I can't swim well.",
-    "Two tickets, please."
+    "The waves are very big today.",
+    "I want to try snorkeling.",
+    "Is it safe to swim here?",
+    "Are there jellyfish in the water?",
+    "Don't touch the coral.",
+    "I saw a sea turtle!",
+    "We hiked up the volcano.",
+    "The rice terraces are amazing.",
+    "Do I need a life jacket?",
+    "It's very crowded today."
   ],
   "scenario": {
     "title": "Tur Satın Alma",

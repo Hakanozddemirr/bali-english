@@ -4,24 +4,59 @@
   "emoji": "🍹",
   "words": [
     {
+      "en": "single",
+      "v": "🧍",
+      "ex": "Are you single?"
+    },
+    {
+      "en": "girlfriend",
+      "v": "💑",
+      "ex": "I'm here with my girlfriend."
+    },
+    {
+      "en": "children",
+      "v": "👶",
+      "ex": "Do you have children?"
+    },
+    {
+      "en": "student",
+      "v": "🎓",
+      "ex": "I'm still a student."
+    },
+    {
+      "en": "football",
+      "v": "⚽",
+      "ex": "Do you like football?"
+    },
+    {
+      "en": "language",
+      "v": "🗣️",
+      "ex": "What languages do you speak?"
+    },
+    {
+      "en": "join",
+      "v": "🤝",
+      "ex": "Can I join you?"
+    },
+    {
+      "en": "cheers",
+      "v": "🥂",
+      "ex": "Cheers! To Bali!"
+    },
+    {
+      "en": "hobby",
+      "v": "🎨",
+      "ex": "What's your hobby?"
+    },
+    {
+      "en": "favorite",
+      "v": "💖",
+      "ex": "What's your favorite place in Bali?"
+    },
+    {
       "en": "turkey",
       "v": "🇹🇷",
       "ex": "I'm from Turkey."
-    },
-    {
-      "en": "country",
-      "v": "🌍",
-      "ex": "What country are you from?"
-    },
-    {
-      "en": "photo",
-      "v": "📷",
-      "ex": "Can you take a photo, please?"
-    },
-    {
-      "en": "music",
-      "v": "🎵",
-      "ex": "I love this music!"
     },
     {
       "en": "dance",
@@ -29,9 +64,14 @@
       "ex": "Let's dance!"
     },
     {
-      "en": "party",
-      "v": "🎉",
-      "ex": "There is a party tonight."
+      "en": "married",
+      "v": "💍",
+      "ex": "Are you married?"
+    },
+    {
+      "en": "sunset",
+      "v": "🌇",
+      "ex": "Look at the sunset!"
     },
     {
       "en": "beautiful",
@@ -44,51 +84,21 @@
       "ex": "You are very funny!"
     },
     {
-      "en": "married",
-      "v": "💍",
-      "ex": "Are you married?"
-    },
-    {
       "en": "job",
       "v": "💼",
       "ex": "What's your job?"
-    },
-    {
-      "en": "sunset",
-      "v": "🌇",
-      "ex": "Look at the sunset!"
-    },
-    {
-      "en": "drink",
-      "v": "🍹",
-      "ex": "Let's have a drink!"
-    },
-    {
-      "en": "smile",
-      "v": "😄",
-      "ex": "Big smile, please!"
-    },
-    {
-      "en": "love",
-      "v": "❤️",
-      "ex": "I love Bali!"
-    },
-    {
-      "en": "together",
-      "v": "🤝",
-      "ex": "Let's go together!"
     }
   ],
   "sentences": [
-    "Where are you from?",
-    "I'm from Turkey.",
-    "This is my first time in Bali.",
-    "I like Bali very much.",
-    "Can you take a photo, please?",
-    "One more, please.",
-    "What's your job?",
-    "Let's have a drink.",
-    "See you tomorrow!",
+    "Are you traveling alone?",
+    "Do you have children?",
+    "I'm here with my girlfriend.",
+    "What's your favorite place in Bali?",
+    "Do you like football?",
+    "What languages do you speak?",
+    "Cheers! To Bali!",
+    "Can I join you?",
+    "Sorry, my English is not good — yet!",
     "Nice talking to you."
   ],
   "scenario": {

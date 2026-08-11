@@ -123,11 +123,13 @@ function MatchMode({ day, content, rate, isReview }) {
     const newIds = content.words.map((w) => w.id)
     let ids
     if (isReview) {
-      ids = hardestCardIds(state, 15)
+      // içerik güncellenince eski SRS kayıtlarında kalmış kartları ele
+      ids = hardestCardIds(state, 15).filter((id) => allCards[id])
       if (ids.length === 0) ids = sample(allWords, 15).map((w) => w.id)
       ids = ids.slice(0, 20)
     } else {
-      const reviews = sample(dueReviewIds(state, newIds), 8)
+      const due = dueReviewIds(state, newIds).filter((id) => allCards[id])
+      const reviews = sample(due, 8)
       ids = [...newIds, ...reviews]
     }
     return shuffle(ids)

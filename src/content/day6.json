@@ -4,69 +4,49 @@
   "emoji": "🛍️",
   "words": [
     {
-      "en": "shop",
-      "v": "🏪",
-      "ex": "The shop is open."
+      "en": "market",
+      "v": "🧺",
+      "ex": "Where is the souvenir market?"
     },
     {
-      "en": "t-shirt",
-      "v": "👕",
-      "ex": "How much is this t-shirt?"
+      "en": "souvenir",
+      "v": "🎁",
+      "ex": "This souvenir is for my family."
     },
     {
-      "en": "dress",
-      "v": "👗",
-      "ex": "This dress is beautiful."
+      "en": "sarong",
+      "v": "🥻",
+      "ex": "How much is this sarong?"
     },
     {
-      "en": "shoes",
-      "v": "👟",
-      "ex": "These shoes are too small."
+      "en": "size",
+      "v": "📏",
+      "ex": "Do you have a bigger size?"
+    },
+    {
+      "en": "change",
+      "v": "🪙",
+      "ex": "You gave me the wrong change."
+    },
+    {
+      "en": "quality",
+      "v": "⭐",
+      "ex": "The quality is very good."
+    },
+    {
+      "en": "handmade",
+      "v": "🤲",
+      "ex": "Is this handmade?"
+    },
+    {
+      "en": "silver",
+      "v": "🥈",
+      "ex": "Is this real silver?"
     },
     {
       "en": "hat",
       "v": "👒",
       "ex": "How much is the hat?"
-    },
-    {
-      "en": "cheap",
-      "v": "🪙",
-      "ex": "Very cheap, my friend!"
-    },
-    {
-      "en": "expensive",
-      "v": "💎",
-      "ex": "That's too expensive!"
-    },
-    {
-      "en": "big",
-      "v": "🐘",
-      "ex": "A big size, please."
-    },
-    {
-      "en": "small",
-      "v": "🐭",
-      "ex": "It's too small."
-    },
-    {
-      "en": "red",
-      "v": "🔴",
-      "ex": "The red one, please."
-    },
-    {
-      "en": "blue",
-      "v": "🔵",
-      "ex": "Do you have this in blue?"
-    },
-    {
-      "en": "white",
-      "v": "⚪",
-      "ex": "In white, please."
-    },
-    {
-      "en": "black",
-      "v": "⚫",
-      "ex": "The black one, please."
     },
     {
       "en": "money",
@@ -77,6 +57,11 @@
       "en": "card",
       "v": "💳",
       "ex": "Can I pay by card?"
+    },
+    {
+      "en": "expensive",
+      "v": "💎",
+      "ex": "That's too expensive!"
     },
     {
       "en": "discount",
@@ -101,19 +86,19 @@
     {
       "en": "thousand",
       "v": "1000",
-      "ex": "Eighty thousand rupiah."
+      "ex": "Eighty thousand, final price."
     }
   ],
   "sentences": [
-    "How much is this?",
-    "That's too expensive.",
-    "Can you give me a discount?",
-    "Fifty thousand, okay?",
-    "Do you have a big size?",
-    "Do you have this in blue?",
-    "I'm just looking, thank you.",
-    "I'll take it.",
-    "Can I pay by card?"
+    "Where is the souvenir market?",
+    "How much is this sarong?",
+    "Do you have a bigger size?",
+    "Is this handmade?",
+    "Is this real silver?",
+    "The quality is very good.",
+    "You gave me the wrong change.",
+    "Eighty thousand, final price.",
+    "Can you give me a discount?"
   ],
   "scenario": {
     "title": "Pazarda Pazarlık",

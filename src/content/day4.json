@@ -4,69 +4,79 @@
   "emoji": "🍽️",
   "words": [
     {
-      "en": "menu",
-      "v": "📋",
-      "ex": "The menu, please."
+      "en": "fork",
+      "v": "🍴",
+      "ex": "A fork, please."
     },
     {
-      "en": "coffee",
-      "v": "☕",
-      "ex": "One coffee, please."
+      "en": "spoon",
+      "v": "🥄",
+      "ex": "A spoon for the soup, please."
     },
     {
-      "en": "tea",
-      "v": "🍵",
-      "ex": "Two teas, please."
+      "en": "knife",
+      "v": "🔪",
+      "ex": "Can I have a knife?"
     },
     {
-      "en": "juice",
-      "v": "🧃",
-      "ex": "One orange juice, please."
+      "en": "plate",
+      "v": "🍽️",
+      "ex": "One more plate, please."
     },
     {
-      "en": "beer",
-      "v": "🍺",
-      "ex": "A cold beer, please."
+      "en": "glass",
+      "v": "🥛",
+      "ex": "A glass of water, please."
     },
     {
-      "en": "rice",
-      "v": "🍚",
-      "ex": "I want fried rice."
+      "en": "salt",
+      "v": "🧂",
+      "ex": "No salt, please."
     },
     {
-      "en": "noodles",
-      "v": "🍜",
-      "ex": "Fried noodles, please."
+      "en": "sugar",
+      "v": "🍬",
+      "ex": "No sugar, please."
     },
     {
-      "en": "chicken",
-      "v": "🍗",
-      "ex": "Chicken with rice, please."
+      "en": "vegetarian",
+      "v": "🥦",
+      "ex": "I'm vegetarian."
     },
     {
-      "en": "fish",
-      "v": "🐟",
-      "ex": "I want fish, please."
+      "en": "allergy",
+      "v": "🤧",
+      "ex": "I have a nut allergy."
     },
     {
-      "en": "meat",
-      "v": "🥩",
-      "ex": "I don't eat meat."
+      "en": "peanut",
+      "v": "🥜",
+      "ex": "I'm allergic to peanuts."
     },
     {
-      "en": "egg",
-      "v": "🥚",
-      "ex": "Two eggs, please."
+      "en": "seafood",
+      "v": "🦐",
+      "ex": "Is there seafood in this?"
     },
     {
-      "en": "fruit",
-      "v": "🍉",
-      "ex": "I want fresh fruit."
+      "en": "squid",
+      "v": "🦑",
+      "ex": "Grilled squid, please."
     },
     {
-      "en": "banana",
-      "v": "🍌",
-      "ex": "One banana, please."
+      "en": "grilled",
+      "v": "🔥",
+      "ex": "Grilled fish, please."
+    },
+    {
+      "en": "sweet",
+      "v": "🍭",
+      "ex": "It's too sweet for me."
+    },
+    {
+      "en": "takeaway",
+      "v": "🥡",
+      "ex": "Can I take it away?"
     },
     {
       "en": "spicy",
@@ -90,16 +100,16 @@
     }
   ],
   "sentences": [
-    "A table for two, please.",
-    "The menu, please.",
-    "I want fried rice.",
-    "One coffee, please.",
-    "Not spicy, please.",
-    "I'm allergic to nuts.",
-    "No ice, please.",
-    "It's delicious!",
-    "The bill, please.",
-    "Can I pay by card?"
+    "A fork and a spoon, please.",
+    "I'm vegetarian.",
+    "I'm allergic to peanuts.",
+    "Is there seafood in this?",
+    "No sugar, please.",
+    "Grilled fish, please.",
+    "Can I take it away?",
+    "One more plate, please.",
+    "It's too sweet for me.",
+    "Not spicy, please."
   ],
   "scenario": {
     "title": "Restoranda Sipariş",

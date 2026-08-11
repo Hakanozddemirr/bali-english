@@ -4,127 +4,127 @@
   "emoji": "👋",
   "words": [
     {
-      "en": "hello",
-      "v": "👋",
-      "ex": "Hello! How are you?"
-    },
-    {
-      "en": "goodbye",
+      "en": "excuse me",
       "v": "🙋",
-      "ex": "Goodbye! See you later!"
+      "ex": "Excuse me, can you help me?"
     },
     {
-      "en": "yes",
-      "v": "✅",
-      "ex": "Yes, please."
+      "en": "welcome",
+      "v": "🫶",
+      "ex": "Welcome to Bali!"
     },
     {
-      "en": "no",
-      "v": "❌",
-      "ex": "No, thank you."
+      "en": "of course",
+      "v": "👌",
+      "ex": "Of course, no problem!"
     },
     {
-      "en": "please",
-      "v": "🥺",
-      "ex": "One water, please."
+      "en": "maybe",
+      "v": "🤷",
+      "ex": "Maybe tomorrow."
     },
     {
-      "en": "thank you",
-      "v": "🙏",
-      "ex": "Thank you very much!"
+      "en": "again",
+      "v": "🔁",
+      "ex": "One more time — again, please."
     },
     {
-      "en": "sorry",
-      "v": "😔",
-      "ex": "Sorry, I don't understand."
+      "en": "slowly",
+      "v": "🐌",
+      "ex": "Speak slowly, please."
     },
     {
-      "en": "name",
-      "v": "📛",
-      "ex": "My name is Hakan."
+      "en": "understand",
+      "v": "💡",
+      "ex": "I don't understand."
     },
     {
-      "en": "friend",
-      "v": "🧑‍🤝‍🧑",
-      "ex": "This is my friend."
+      "en": "repeat",
+      "v": "🔂",
+      "ex": "Can you repeat, please?"
     },
     {
-      "en": "water",
-      "v": "💧",
-      "ex": "Water, please."
+      "en": "speak",
+      "v": "💬",
+      "ex": "Do you speak English?"
     },
     {
-      "en": "toilet",
-      "v": "🚻",
-      "ex": "Where is the toilet?"
+      "en": "hungry",
+      "v": "🍽️",
+      "ex": "I'm very hungry."
     },
     {
-      "en": "help",
-      "v": "🆘",
-      "ex": "Help me, please!"
+      "en": "thirsty",
+      "v": "🥤",
+      "ex": "I'm thirsty."
     },
     {
-      "en": "one",
-      "v": "1",
-      "ex": "One ticket, please."
+      "en": "tired",
+      "v": "😴",
+      "ex": "I'm tired today."
     },
     {
-      "en": "two",
-      "v": "2",
-      "ex": "Two coffees, please."
+      "en": "happy",
+      "v": "😊",
+      "ex": "I'm so happy!"
     },
     {
-      "en": "three",
-      "v": "3",
-      "ex": "Three days in Ubud."
+      "en": "eleven",
+      "v": "11",
+      "ex": "Room eleven, please."
     },
     {
-      "en": "four",
-      "v": "4",
-      "ex": "A table for four, please."
+      "en": "twelve",
+      "v": "12",
+      "ex": "It's twelve o'clock."
     },
     {
-      "en": "five",
-      "v": "5",
-      "ex": "My room is number five."
+      "en": "thirteen",
+      "v": "13",
+      "ex": "Thirteen people."
     },
     {
-      "en": "six",
-      "v": "6",
-      "ex": "We go at six."
+      "en": "fourteen",
+      "v": "14",
+      "ex": "Gate fourteen."
     },
     {
-      "en": "seven",
-      "v": "7",
-      "ex": "Where is gate seven?"
+      "en": "fifteen",
+      "v": "15",
+      "ex": "Fifteen minutes, please."
     },
     {
-      "en": "eight",
-      "v": "8",
-      "ex": "Breakfast is at eight."
+      "en": "sixteen",
+      "v": "16",
+      "ex": "Sixteen thousand rupiah."
     },
     {
-      "en": "nine",
-      "v": "9",
-      "ex": "The tour starts at nine."
+      "en": "seventeen",
+      "v": "17",
+      "ex": "Seventeen kilometers."
     },
     {
-      "en": "ten",
-      "v": "10",
-      "ex": "I'm here for ten days."
+      "en": "eighteen",
+      "v": "18",
+      "ex": "Eighteen thousand rupiah."
+    },
+    {
+      "en": "nineteen",
+      "v": "19",
+      "ex": "Nineteen minutes."
     }
   ],
   "sentences": [
-    "Hello!",
-    "Good morning!",
-    "My name is Hakan.",
     "Nice to meet you.",
-    "How are you?",
-    "I'm fine, thank you.",
-    "Yes, please.",
-    "No, thank you.",
+    "Excuse me, can you help me?",
+    "Can you speak slowly, please?",
+    "Can you repeat, please?",
     "I don't understand.",
-    "Where is the toilet?"
+    "I'm very hungry.",
+    "I'm tired today.",
+    "Maybe tomorrow.",
+    "Of course, no problem!",
+    "See you again!"
   ],
   "scenario": {
     "title": "Tanışma",

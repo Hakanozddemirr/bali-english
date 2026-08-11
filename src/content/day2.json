@@ -4,34 +4,34 @@
   "emoji": "🛫",
   "words": [
     {
-      "en": "airport",
-      "v": "🛫",
-      "ex": "The airport is very big."
-    },
-    {
-      "en": "plane",
+      "en": "flight",
       "v": "✈️",
-      "ex": "The plane is late."
+      "ex": "My flight is at nine."
     },
     {
-      "en": "passport",
-      "v": "🛂",
-      "ex": "Here is my passport."
+      "en": "departure",
+      "v": "🛫",
+      "ex": "Where is the departure gate?"
     },
     {
-      "en": "ticket",
-      "v": "🎫",
-      "ex": "Here is my ticket."
+      "en": "arrival",
+      "v": "🛬",
+      "ex": "The arrival hall is there."
     },
     {
-      "en": "suitcase",
+      "en": "delayed",
+      "v": "⏳",
+      "ex": "My flight is delayed."
+    },
+    {
+      "en": "luggage",
       "v": "🧳",
-      "ex": "This is my suitcase."
+      "ex": "My luggage is lost."
     },
     {
-      "en": "bag",
-      "v": "🎒",
-      "ex": "I have one bag."
+      "en": "boarding pass",
+      "v": "🎫",
+      "ex": "Here is my boarding pass."
     },
     {
       "en": "gate",
@@ -49,46 +49,46 @@
       "ex": "A window seat, please."
     },
     {
-      "en": "taxi",
-      "v": "🚕",
-      "ex": "Where is the taxi?"
+      "en": "customs",
+      "v": "🛂",
+      "ex": "Is this the queue for customs?"
     },
     {
-      "en": "bus",
-      "v": "🚌",
-      "ex": "I go by bus."
+      "en": "security",
+      "v": "🛃",
+      "ex": "Security check, please."
     },
     {
-      "en": "hotel",
-      "v": "🏨",
-      "ex": "My hotel is in Ubud."
+      "en": "queue",
+      "v": "🧍🧍🧍",
+      "ex": "Is this the queue?"
     },
     {
-      "en": "holiday",
-      "v": "🌴",
-      "ex": "I'm here on holiday."
+      "en": "exchange",
+      "v": "💱",
+      "ex": "Where is the money exchange?"
     },
     {
-      "en": "week",
-      "v": "🗓️",
-      "ex": "I'm staying one week."
+      "en": "cart",
+      "v": "🛒",
+      "ex": "I need a baggage cart."
     },
     {
-      "en": "family",
-      "v": "👨‍👩‍👧‍👦",
-      "ex": "This is my family."
+      "en": "late",
+      "v": "⏰",
+      "ex": "The plane is late."
     }
   ],
   "sentences": [
-    "I'm here on holiday.",
-    "I'm staying for ten days.",
-    "Here is my passport.",
-    "Where is gate seven?",
-    "This is my bag.",
-    "Where is the taxi?",
-    "I'm going to Ubud.",
-    "Can you help me, please?",
-    "I don't speak English well."
+    "Where is the departure gate?",
+    "My flight is delayed.",
+    "Is this the queue for customs?",
+    "My luggage is lost.",
+    "Here is my boarding pass.",
+    "Where is the money exchange?",
+    "I need a baggage cart.",
+    "The plane is late.",
+    "I'm here on holiday."
   ],
   "scenario": {
     "title": "Pasaport Kontrolü",

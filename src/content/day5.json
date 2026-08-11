@@ -14,54 +14,9 @@
       "ex": "Two helmets, please."
     },
     {
-      "en": "car",
-      "v": "🚗",
-      "ex": "We go by car."
-    },
-    {
-      "en": "road",
-      "v": "🛣️",
-      "ex": "This road is very bad."
-    },
-    {
-      "en": "map",
-      "v": "🗺️",
-      "ex": "Look at the map."
-    },
-    {
-      "en": "left",
-      "v": "⬅️",
-      "ex": "Turn left."
-    },
-    {
-      "en": "right",
-      "v": "➡️",
-      "ex": "Turn right."
-    },
-    {
-      "en": "straight",
-      "v": "⬆️",
-      "ex": "Go straight."
-    },
-    {
-      "en": "here",
-      "v": "📍",
-      "ex": "Stop here, please."
-    },
-    {
-      "en": "stop",
-      "v": "🛑",
-      "ex": "Stop, please!"
-    },
-    {
-      "en": "slow",
-      "v": "🐢",
-      "ex": "Slow down, please."
-    },
-    {
-      "en": "fast",
-      "v": "🐆",
-      "ex": "Too fast! Slow, please."
+      "en": "license",
+      "v": "🪪",
+      "ex": "Here is my driving license."
     },
     {
       "en": "petrol",
@@ -69,32 +24,71 @@
       "ex": "I need petrol."
     },
     {
-      "en": "traffic",
-      "v": "🚦",
-      "ex": "The traffic is very bad."
-    },
-    {
       "en": "meter",
       "v": "⏱️",
       "ex": "Use the meter, please."
     },
     {
+      "en": "traffic",
+      "v": "🚦",
+      "ex": "The traffic is very bad."
+    },
+    {
+      "en": "accident",
+      "v": "💥",
+      "ex": "There was a small accident."
+    },
+    {
+      "en": "flat tire",
+      "v": "🛞",
+      "ex": "The tire is flat."
+    },
+    {
+      "en": "brakes",
+      "v": "🛑",
+      "ex": "The brakes are not working."
+    },
+    {
+      "en": "parking",
+      "v": "🅿️",
+      "ex": "Where can I park?"
+    },
+    {
+      "en": "bridge",
+      "v": "🌉",
+      "ex": "Cross the bridge."
+    },
+    {
+      "en": "roundabout",
+      "v": "🔄",
+      "ex": "Turn left at the roundabout."
+    },
+    {
+      "en": "rent",
+      "v": "📝",
+      "ex": "How much is the rent for one day?"
+    },
+    {
       "en": "price",
       "v": "🏷️",
       "ex": "What is the price?"
+    },
+    {
+      "en": "road",
+      "v": "🛣️",
+      "ex": "This road is very bad."
     }
   ],
   "sentences": [
-    "How much to Seminyak?",
-    "That's too expensive.",
-    "Use the meter, please.",
-    "Turn left.",
-    "Turn right.",
-    "Go straight.",
-    "Stop here, please.",
-    "I want to rent a scooter.",
-    "How much for one day?",
-    "Slow down, please."
+    "I want to rent a scooter for three days.",
+    "Do you need my driving license?",
+    "The tire is flat.",
+    "The brakes are not working.",
+    "Where can I park?",
+    "Turn left at the roundabout.",
+    "How much is the deposit?",
+    "There was a small accident.",
+    "Use the meter, please."
   ],
   "scenario": {
     "title": "Taksi Pazarlığı",
