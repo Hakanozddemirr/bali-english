@@ -1,304 +1,430 @@
 {
-  "day": 3,
-  "title": "Otel",
-  "emoji": "🏨",
-  "words": [
-    {
-      "en": "reception",
-      "v": "🛎️",
-      "ex": "Ask at the reception."
-    },
-    {
-      "en": "towel",
-      "v": "🧖",
-      "ex": "Can I have two towels, please?"
-    },
-    {
-      "en": "pillow",
-      "v": "🛌",
-      "ex": "An extra pillow, please."
-    },
-    {
-      "en": "blanket",
-      "v": "🧣",
-      "ex": "Can I have a blanket?"
-    },
-    {
-      "en": "elevator",
-      "v": "🛗",
-      "ex": "The elevator is broken."
-    },
-    {
-      "en": "stairs",
-      "v": "🪜",
-      "ex": "The stairs are on the left."
-    },
-    {
-      "en": "floor",
-      "v": "🏢",
-      "ex": "Which floor is breakfast on?"
-    },
-    {
-      "en": "balcony",
-      "v": "🌇",
-      "ex": "My room has a balcony."
-    },
-    {
-      "en": "view",
-      "v": "🌄",
-      "ex": "The view is amazing!"
-    },
-    {
-      "en": "safe",
-      "v": "🔐",
-      "ex": "The safe is not working."
-    },
-    {
-      "en": "laundry",
-      "v": "🧺",
-      "ex": "Is there laundry service?"
-    },
-    {
-      "en": "noisy",
-      "v": "📢",
-      "ex": "My room is very noisy."
-    },
-    {
-      "en": "quiet",
-      "v": "🤫",
-      "ex": "Do you have a quiet room?"
-    },
-    {
-      "en": "breakfast",
-      "v": "🍳",
-      "ex": "What time is breakfast?"
-    },
-    {
-      "en": "air conditioning",
-      "v": "❄️",
-      "ex": "The air conditioning is too cold."
-    },
-    {
-      "en": "broken",
-      "v": "🛠️",
-      "ex": "The shower is broken."
-    },
-    {
-      "en": "key",
-      "v": "🔑",
-      "ex": "The key, please."
-    }
-  ],
-  "sentences": [
-    "Can I have two towels, please?",
-    "The safe is not working.",
-    "My room is very noisy.",
-    "Do you have a quiet room?",
-    "The elevator is broken.",
-    "Which floor is breakfast on?",
-    "Can I have an extra pillow, please?",
-    "The air conditioning is too cold.",
-    "Is there laundry service?"
-  ],
-  "scenario": {
-    "title": "Otele Giriş",
-    "role": "a friendly hotel receptionist in Ubud, Bali",
-    "firstLine": "Good afternoon! Welcome. Do you have a reservation?",
-    "situationTr": "Oteline vardın. Resepsiyonda check-in yapıyorsun.",
-    "goalTr": "Rezervasyonun olduğunu söyle, kahvaltı saatini ve wifi şifresini sor.",
-    "script": [
-      {
-        "ai": "Good afternoon! Welcome. Do you have a reservation?",
-        "tr": "İyi günler! Hoş geldiniz. Rezervasyonunuz var mı?",
-        "expect": [
-          "yes",
-          "reservation",
-          "have"
-        ],
-        "say": "Yes, I have a reservation."
-      },
-      {
-        "ai": "What is your name, please?",
-        "tr": "İsminiz lütfen?",
-        "expect": [
-          "my name",
-          "hakan",
-          "i am",
-          "i'm"
-        ],
-        "say": "My name is Hakan."
-      },
-      {
-        "ai": "Ah yes — ten nights. Your passport, please.",
-        "tr": "Evet — on gece. Pasaportunuz lütfen.",
-        "expect": [
-          "here",
-          "passport"
-        ],
-        "say": "Here you are."
-      },
-      {
-        "ai": "Thank you. Your room is number seven.",
-        "tr": "Teşekkürler. Odanız yedi numara.",
-        "expect": [
-          "thank",
-          "seven",
-          "okay"
-        ],
-        "say": "Thank you."
-      },
-      {
-        "ai": "Do you have any questions?",
-        "tr": "Sorunuz var mı?",
-        "expect": [
-          "wifi",
-          "password",
-          "yes"
-        ],
-        "say": "Yes — what is the wifi password?"
-      },
-      {
-        "ai": "The wifi password is BALI2026.",
-        "tr": "Wifi şifresi: BALI2026.",
-        "expect": [
-          "thank",
-          "breakfast",
-          "what time"
-        ],
-        "say": "Thank you. What time is breakfast?"
-      },
-      {
-        "ai": "Breakfast is at eight, near the pool.",
-        "tr": "Kahvaltı saat sekizde, havuzun yanında.",
-        "expect": [
-          "thank",
-          "okay",
-          "great"
-        ],
-        "say": "Thank you very much!"
-      },
-      {
-        "ai": "Here is your key. Enjoy your stay!",
-        "tr": "İşte anahtarınız. İyi konaklamalar!",
-        "expect": [
-          "thank",
-          "goodbye"
-        ],
-        "say": "Thank you! Goodbye."
-      },
-      {
-        "ai": "(The room phone rings) Hello, reception here. Is everything okay with your room?",
-        "tr": "(Oda telefonu çalıyor) Merhaba, resepsiyon. Odanızda her şey yolunda mı?",
-        "expect": [
-          "no",
-          "broken",
-          "air",
-          "problem"
-        ],
-        "say": "No — the air conditioning is broken."
-      },
-      {
-        "ai": "Oh, sorry! We will send someone now. Anything else?",
-        "tr": "Kusura bakmayın! Hemen birini gönderiyoruz. Başka bir şey?",
-        "expect": [
-          "towel",
-          "yes",
-          "please"
-        ],
-        "say": "Yes, a towel, please."
-      },
-      {
-        "ai": "Of course, two towels. Is the wifi working?",
-        "tr": "Tabii, iki havlu. Wifi çalışıyor mu?",
-        "expect": [
-          "yes",
-          "working",
-          "no"
-        ],
-        "say": "Yes, the wifi is working."
-      },
-      {
-        "ai": "Good! The pool is open until ten tonight.",
-        "tr": "Güzel! Havuz bu akşam ona kadar açık.",
-        "expect": [
-          "thank",
-          "okay",
-          "ten"
-        ],
-        "say": "Thank you!"
-      },
-      {
-        "ai": "Do you want a taxi for tomorrow?",
-        "tr": "Yarın için taksi ister misiniz?",
-        "expect": [
-          "yes",
-          "morning",
-          "please"
-        ],
-        "say": "Yes, for tomorrow morning, please."
-      },
-      {
-        "ai": "What time?",
-        "tr": "Saat kaçta?",
-        "expect": [
-          "nine",
-          "at"
-        ],
-        "say": "At nine, please. Thank you!"
-      }
-    ]
+ "day": 3,
+ "title": "Sohbeti Sürdürmek",
+ "emoji": "🔄",
+ "goalTr": "Sadece cevap verme — KARŞIYI KONUŞTUR. Tepki + takip sorusu = sohbetin motoru.",
+ "chunks": [
+  {
+   "en": "How come?",
+   "tr": "Nasıl yani? / Neden ki?",
+   "use": "Sebep sorar — 'why'dan daha doğal.",
+   "ex": "I'm leaving early. — How come?"
   },
-  "quiz": {
-    "situations": [
-      {
-        "q": "Wifi şifresini öğrenmek istiyorsun. Ne sorarsın?",
-        "options": [
-          "What is the wifi password?",
-          "The water is cold.",
-          "Check-out, please.",
-          "Where is gate seven?"
-        ]
-      },
-      {
-        "q": "Odandaki klima çalışmıyor. Resepsiyona ne dersin?",
-        "options": [
-          "The air conditioning is broken.",
-          "I have a reservation.",
-          "What time is breakfast?",
-          "The pool is clean."
-        ]
-      },
-      {
-        "q": "Resepsiyonist 'How many nights?' diye sordu. Ne dersin?",
-        "options": [
-          "Ten nights.",
-          "Hot water, please.",
-          "I'm going to Ubud.",
-          "The key, thank you."
-        ]
-      }
-    ],
-    "listening": [
-      {
-        "audio": "What time is breakfast?",
-        "q": "Soruya uygun cevabı seç.",
-        "options": [
-          "At eight.",
-          "Blue, please.",
-          "Two bags.",
-          "Turn left."
-        ]
-      },
-      {
-        "audio": "Here is your key.",
-        "q": "Ne duydun? Anlamını seç.",
-        "options": [
-          "İşte anahtarınız.",
-          "Odanız hazır değil.",
-          "Kahvaltı saat sekizde.",
-          "Havuz kapalı."
-        ]
-      }
-    ]
+  {
+   "en": "What was that like?",
+   "tr": "Nasıl bir şeydi?",
+   "use": "Deneyim sorusu — hikâye anlattırır.",
+   "ex": "I lived in Japan. — What was that like?"
+  },
+  {
+   "en": "Did you enjoy it?",
+   "tr": "Beğendin mi?",
+   "basic": true
+  },
+  {
+   "en": "Would you recommend it?",
+   "tr": "Tavsiye eder misin?"
+  },
+  {
+   "en": "Was it worth it?",
+   "tr": "Değer miydi?",
+   "use": "'worth' kalıbı — fiyat/çaba sonrası."
+  },
+  {
+   "en": "How long were you there?",
+   "tr": "Orada ne kadar kaldın?"
+  },
+  {
+   "en": "Who did you go with?",
+   "tr": "Kiminle gittin?"
+  },
+  {
+   "en": "What made you choose Bali?",
+   "tr": "Bali'yi seçmene ne sebep oldu?"
+  },
+  {
+   "en": "What do you like about it?",
+   "tr": "Nesini seviyorsun?"
+  },
+  {
+   "en": "What's been your favorite place so far?",
+   "tr": "Şu ana kadar en sevdiğin yer neresi?",
+   "use": "EN kullanışlı takip sorusu — ezberle!"
+  },
+  {
+   "en": "What's next after Bali?",
+   "tr": "Bali'den sonra sırada ne var?"
+  },
+  {
+   "en": "Have you been anywhere else in Indonesia?",
+   "tr": "Endonezya'da başka yere gittin mi?"
+  },
+  {
+   "en": "What happened?",
+   "tr": "Ne oldu?",
+   "basic": true
+  },
+  {
+   "en": "And then what happened?",
+   "tr": "Peki sonra ne oldu?",
+   "use": "Hikâyeyi devam ettirir — anlatan kişi buna bayılır."
+  },
+  {
+   "en": "That's amazing.",
+   "tr": "Bu harika.",
+   "basic": true
+  },
+  {
+   "en": "That's rough.",
+   "tr": "Zor durummuş. / Üzücü.",
+   "use": "Kötü habere empati tepkisi.",
+   "ex": "I lost my luggage. — That's rough."
+  },
+  {
+   "en": "I've heard good things about it.",
+   "tr": "Hakkında iyi şeyler duydum.",
+   "use": "Bilmediğin yer önerilince kullan."
+  },
+  {
+   "en": "Tell me more.",
+   "tr": "Anlatsana. / Devamı?",
+   "use": "İlgini gösterir."
+  },
+  {
+   "en": "Wait, seriously?",
+   "tr": "Dur, ciddi misin?",
+   "use": "Şaşırtıcı detayda araya gir."
+  },
+  {
+   "en": "Good question.",
+   "tr": "İyi soru.",
+   "use": "Düşünürken zaman kazandırır — donmayı önler."
   }
+ ],
+ "quick": [
+  {
+   "q": "What's been your favorite place so far?",
+   "sample": "Probably Ubud — the rice terraces are unreal."
+  },
+  {
+   "q": "What's next after Bali?",
+   "sample": "Back home, unfortunately! But maybe Thailand next year."
+  },
+  {
+   "q": "Would you recommend your hotel?",
+   "sample": "Yeah, definitely. It's quiet and the staff are great."
+  },
+  {
+   "q": "What made you choose Bali?",
+   "sample": "Honestly? The photos. And everyone said it's amazing."
+  },
+  {
+   "q": "Have you been anywhere else in Asia?",
+   "sample": "Not yet — this is my first time in Asia."
+  },
+  {
+   "q": "What did you do yesterday?",
+   "sample": "I went to a waterfall. It was totally worth it."
+  },
+  {
+   "q": "How was your day?",
+   "sample": "Really good! Busy, but good."
+  },
+  {
+   "q": "Did you enjoy the beach?",
+   "sample": "Yeah, loved it. The waves were huge though."
+  },
+  {
+   "q": "Who are you traveling with?",
+   "sample": "Just a friend from back home."
+  },
+  {
+   "q": "How come you're up so early?",
+   "sample": "Jet lag, honestly. My body has no idea what time it is."
+  }
+ ],
+ "social": [
+  {
+   "type": "react",
+   "stmt": "I got food poisoning on my second day.",
+   "samples": [
+    "Oh no, that's rough! Are you okay now?",
+    "That's terrible. What did you eat?"
+   ]
+  },
+  {
+   "type": "react",
+   "stmt": "We saw dolphins this morning at sunrise.",
+   "samples": [
+    "No way! Where was that?",
+    "That's amazing. Was it a tour or just luck?"
+   ]
+  },
+  {
+   "type": "react",
+   "stmt": "My flight got cancelled twice.",
+   "samples": [
+    "Seriously? That's so annoying. What did you do?",
+    "Twice? That's rough. Did you get a refund?"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "I've been traveling around Asia for three months.",
+   "samples": [
+    "That's amazing. Which country has been your favorite so far?",
+    "Three months! What's next after this?",
+    "How do you afford it, if you don't mind me asking?"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "I spent a week in the Gili Islands.",
+   "samples": [
+    "What was that like?",
+    "Would you recommend it?",
+    "Which island did you stay on?"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "I'm thinking of moving here, honestly.",
+   "samples": [
+    "Wait, seriously? What would you do for work?",
+    "How come? What do you love about it?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "Bali is way cheaper than my country.",
+   "samples": [
+    "Same here! Everything feels cheap to me too. What's been your best find so far?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "I've been learning Indonesian.",
+   "samples": [
+    "That's cool! I only know 'terima kasih'. Is it hard to learn?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "The sunsets here are unreal.",
+   "samples": [
+    "Right? I saw one yesterday at the beach. Have you been to Uluwatu for sunset?"
+   ]
+  },
+  {
+   "type": "story",
+   "stmt": "Şu ana kadarki Bali maceranı 30 saniyede anlat — ne yaptın, ne gördün, en iyi anı neydi?",
+   "samples": [
+    "So far I've...",
+    "The best part was...",
+    "At first I..., then...",
+    "Honestly, my favorite thing was..."
+   ]
+  }
+ ],
+ "grammar": {
+  "title": "Takip soruları: How long / What...like / Who...with",
+  "intro": [
+   {
+    "pattern": "How long were you...?",
+    "ex": "How long were you there?"
+   },
+   {
+    "pattern": "What was it like?",
+    "ex": "What was the retreat like?"
+   },
+   {
+    "pattern": "Who did you go with?",
+    "ex": "Who did you go with?"
+   },
+   {
+    "pattern": "Would you...? / Was it...?",
+    "ex": "Would you recommend it? / Was it worth it?"
+   }
+  ],
+  "drills": [
+   {
+    "tr": "Orada ne kadar kaldın?",
+    "keys": [
+     [
+      "how",
+      "long",
+      "were",
+      "you"
+     ],
+     [
+      "how",
+      "long",
+      "did",
+      "you",
+      "stay"
+     ]
+    ],
+    "best": "How long were you there?"
+   },
+   {
+    "tr": "Nasıl bir şeydi?",
+    "keys": [
+     [
+      "what",
+      "was",
+      "it",
+      "like"
+     ]
+    ],
+    "best": "What was it like?"
+   },
+   {
+    "tr": "Kiminle gittin?",
+    "keys": [
+     [
+      "who",
+      "did",
+      "you",
+      "go",
+      "with"
+     ]
+    ],
+    "best": "Who did you go with?"
+   },
+   {
+    "tr": "Tavsiye eder misin?",
+    "keys": [
+     [
+      "would",
+      "you",
+      "recommend"
+     ]
+    ],
+    "best": "Would you recommend it?"
+   },
+   {
+    "tr": "Peki sonra ne oldu?",
+    "keys": [
+     [
+      "then",
+      "what",
+      "happened"
+     ],
+     [
+      "what",
+      "happened",
+      "next"
+     ]
+    ],
+    "best": "And then what happened?"
+   }
+  ]
+ },
+ "listening": [
+  {
+   "audio": "Which country has been your favorite so far?",
+   "q": "Ne soruyor?",
+   "options": [
+    "Şu ana kadar en sevdiği ülkeyi",
+    "Hangi ülkeye gideceğini",
+    "En sevdiği yemeği",
+    "Kaç ülke gezdiğini"
+   ]
+  },
+  {
+   "audio": "Honestly, it was totally worth it.",
+   "q": "Ne diyor?",
+   "options": [
+    "Kesinlikle değdiğini",
+    "Hiç değmediğini",
+    "Çok pahalı olduğunu",
+    "Emin olmadığını"
+   ]
+  }
+ ],
+ "scenario": {
+  "title": "Plajda Hikâye Dinleme",
+  "situationTr": "Plaj yürüyüşünde bir gezginle sohbet koyulaştı. O anlatmayı seviyor — senin işin doğru tepkiler ve takip sorularıyla onu KONUŞTURMAK.",
+  "goalTr": "Her cevabında: kısa tepki (No way! / That's amazing) + takip sorusu. 'Nice.' deyip susmak YASAK.",
+  "personas": [
+   {
+    "name": "Tom",
+    "from": "Canada",
+    "days": "three weeks",
+    "fav": "Mount Batur",
+    "next": "Komodo",
+    "story": "hiked Mount Batur for the sunrise last week"
+   },
+   {
+    "name": "Mia",
+    "from": "Sweden",
+    "days": "two months",
+    "fav": "Sidemen",
+    "next": "Vietnam",
+    "story": "did a three-day silent retreat in Ubud"
+   },
+   {
+    "name": "Alex",
+    "from": "the US",
+    "days": "a month",
+    "fav": "Uluwatu",
+    "next": "Australia",
+    "story": "crashed a scooter in Canggu on day two"
+   }
+  ],
+  "beats": [
+   {
+    "ai": "The water's so warm today, right? By the way, I'm {name}.",
+    "tr": "Su bugün çok sıcak, değil mi? Bu arada ben {name}.",
+    "sample": "Right? I'm Hakan. Nice to meet you!"
+   },
+   {
+    "ai": "So how long have you been in Bali? I've been here {days} now.",
+    "tr": "Ee, ne zamandır Bali'desin? Ben {days} oldu.",
+    "sample": "Just a few days. {days}? That's awesome!"
+   },
+   {
+    "ai": "Yeah, actually — I {story}. Craziest thing I've done here.",
+    "tr": "Evet, hatta — {story}. Burada yaptığım en çılgın şey.",
+    "need": [
+     "no way",
+     "what",
+     "like",
+     "seriously",
+     "how"
+    ],
+    "sample": "No way! What was that like?"
+   },
+   {
+    "ai": "Honestly? Unforgettable. Hard, but unforgettable.",
+    "tr": "Açıkçası? Unutulmaz. Zordu ama unutulmazdı.",
+    "sample": "That's amazing. Was it worth it?"
+   },
+   {
+    "ai": "Totally worth it. You should do it before you leave.",
+    "tr": "Kesinlikle değdi. Sen de gitmeden yapmalısın.",
+    "sample": "I've heard good things about it. Who did you go with?"
+   },
+   {
+    "ai": "Just some people from my hostel. We're still hanging out, actually.",
+    "tr": "Hosteldeki birkaç kişiyle. Hâlâ takılıyoruz aslında.",
+    "sample": "That's cool! Have you been anywhere else in Indonesia?"
+   },
+   {
+    "ai": "Not yet — but I'm heading to {next} next. Pretty excited.",
+    "tr": "Henüz değil — ama sırada {next} var. Baya heyecanlıyım.",
+    "sample": "Oh nice! How long will you be there?"
+   },
+   {
+    "ai": "About a week, I think. Anyway — what about you? What's been the highlight of your trip so far?",
+    "tr": "Sanırım bir hafta. Neyse — ya sen? Senin gezinin en iyi anı neydi?",
+    "sample": "Honestly, probably the sunset yesterday. It was unreal."
+   },
+   {
+    "ai": "Nice! Okay, I'm gonna jump in the water. Catch you around!",
+    "tr": "Güzel! Tamam, ben suya giriyorum. Görüşürüz!",
+    "sample": "Enjoy! Nice talking to you, {name}!"
+   }
+  ]
+ }
 }

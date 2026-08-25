@@ -1,349 +1,439 @@
 {
-  "day": 1,
-  "title": "Selamlaşma & Sayılar",
-  "emoji": "👋",
-  "words": [
-    {
-      "en": "excuse me",
-      "v": "🙋",
-      "ex": "Excuse me, can you help me?"
-    },
-    {
-      "en": "welcome",
-      "v": "🫶",
-      "ex": "Welcome to Bali!"
-    },
-    {
-      "en": "of course",
-      "v": "👌",
-      "ex": "Of course, no problem!"
-    },
-    {
-      "en": "maybe",
-      "v": "🤷",
-      "ex": "Maybe tomorrow."
-    },
-    {
-      "en": "again",
-      "v": "🔁",
-      "ex": "One more time — again, please."
-    },
-    {
-      "en": "slowly",
-      "v": "🐌",
-      "ex": "Speak slowly, please."
-    },
-    {
-      "en": "understand",
-      "v": "💡",
-      "ex": "I don't understand."
-    },
-    {
-      "en": "repeat",
-      "v": "🔂",
-      "ex": "Can you repeat, please?"
-    },
-    {
-      "en": "speak",
-      "v": "💬",
-      "ex": "Do you speak English?"
-    },
-    {
-      "en": "hungry",
-      "v": "🍽️",
-      "ex": "I'm very hungry."
-    },
-    {
-      "en": "thirsty",
-      "v": "🥤",
-      "ex": "I'm thirsty."
-    },
-    {
-      "en": "tired",
-      "v": "😴",
-      "ex": "I'm tired today."
-    },
-    {
-      "en": "happy",
-      "v": "😊",
-      "ex": "I'm so happy!"
-    },
-    {
-      "en": "eleven",
-      "v": "11",
-      "ex": "Room eleven, please."
-    },
-    {
-      "en": "twelve",
-      "v": "12",
-      "ex": "It's twelve o'clock."
-    },
-    {
-      "en": "thirteen",
-      "v": "13",
-      "ex": "Thirteen people."
-    },
-    {
-      "en": "fourteen",
-      "v": "14",
-      "ex": "Gate fourteen."
-    },
-    {
-      "en": "fifteen",
-      "v": "15",
-      "ex": "Fifteen minutes, please."
-    },
-    {
-      "en": "sixteen",
-      "v": "16",
-      "ex": "Sixteen thousand rupiah."
-    },
-    {
-      "en": "seventeen",
-      "v": "17",
-      "ex": "Seventeen kilometers."
-    },
-    {
-      "en": "eighteen",
-      "v": "18",
-      "ex": "Eighteen thousand rupiah."
-    },
-    {
-      "en": "nineteen",
-      "v": "19",
-      "ex": "Nineteen minutes."
-    }
-  ],
-  "sentences": [
-    "Nice to meet you.",
-    "Excuse me, can you help me?",
-    "Can you speak slowly, please?",
-    "Can you repeat, please?",
-    "I don't understand.",
-    "I'm very hungry.",
-    "I'm tired today.",
-    "Maybe tomorrow.",
-    "Of course, no problem!",
-    "See you again!"
-  ],
-  "scenario": {
-    "title": "Tanışma",
-    "role": "a friendly Australian traveler relaxing by the hotel pool in Bali",
-    "firstLine": "Hello! What's your name?",
-    "situationTr": "Otelin havuz başındasın. Yan şezlongdaki gezgin seninle sohbet başlatıyor.",
-    "goalTr": "Selamlaş, adını söyle, nasıl olduğunu söyle ve karşındakine de sor.",
-    "script": [
-      {
-        "ai": "Hello! What's your name?",
-        "tr": "Merhaba! Senin adın ne?",
-        "expect": [
-          "my name",
-          "i am",
-          "i'm",
-          "hakan"
-        ],
-        "say": "My name is Hakan."
-      },
-      {
-        "ai": "Nice to meet you! How are you?",
-        "tr": "Memnun oldum! Nasılsın?",
-        "expect": [
-          "fine",
-          "good",
-          "great",
-          "okay",
-          "not bad"
-        ],
-        "say": "I'm fine, thank you."
-      },
-      {
-        "ai": "I'm happy you are fine! Where are you from?",
-        "tr": "İyi olmana sevindim! Nerelisin?",
-        "expect": [
-          "turkey",
-          "from"
-        ],
-        "say": "I'm from Turkey."
-      },
-      {
-        "ai": "Turkey! Very nice. Is this your first time in Bali?",
-        "tr": "Türkiye! Çok güzel. Bali'ye ilk gelişin mi?",
-        "expect": [
-          "yes",
-          "first",
-          "no"
-        ],
-        "say": "Yes, it's my first time."
-      },
-      {
-        "ai": "Welcome! Do you want some water?",
-        "tr": "Hoş geldin! Su ister misin?",
-        "expect": [
-          "yes",
-          "please",
-          "no thank"
-        ],
-        "say": "Yes, please."
-      },
-      {
-        "ai": "Here you are! How many days are you in Bali?",
-        "tr": "Buyur! Bali'de kaç gün kalacaksın?",
-        "expect": [
-          "ten",
-          "day",
-          "week"
-        ],
-        "say": "Ten days."
-      },
-      {
-        "ai": "Ten days, perfect! The pool is very nice today.",
-        "tr": "On gün, harika! Havuz bugün çok güzel.",
-        "expect": [
-          "yes",
-          "nice",
-          "beautiful",
-          "very"
-        ],
-        "say": "Yes, very nice!"
-      },
-      {
-        "ai": "I will swim now. See you later!",
-        "tr": "Ben yüzmeye gidiyorum. Sonra görüşürüz!",
-        "expect": [
-          "see you",
-          "later",
-          "bye"
-        ],
-        "say": "See you later!"
-      },
-      {
-        "ai": "(Later) Hello again! The water is great!",
-        "tr": "(Daha sonra) Yine merhaba! Su harika!",
-        "expect": [
-          "hello",
-          "hi",
-          "again"
-        ],
-        "say": "Hello again!"
-      },
-      {
-        "ai": "Are you here with your family?",
-        "tr": "Ailenle mi buradasın?",
-        "expect": [
-          "no",
-          "friend",
-          "yes",
-          "alone",
-          "family"
-        ],
-        "say": "No, I'm here with a friend."
-      },
-      {
-        "ai": "Nice! What's your friend's name?",
-        "tr": "Güzel! Arkadaşının adı ne?",
-        "expect": [
-          "name is",
-          "his",
-          "her"
-        ],
-        "say": "His name is Ali."
-      },
-      {
-        "ai": "Do you want a fresh coconut? It's free at the pool!",
-        "tr": "Taze hindistan cevizi ister misin? Havuzda ücretsiz!",
-        "expect": [
-          "yes",
-          "please",
-          "thank"
-        ],
-        "say": "Yes, please. Thank you!"
-      },
-      {
-        "ai": "Here you are! Do you like the water?",
-        "tr": "Buyur! Suyu sevdin mi?",
-        "expect": [
-          "yes",
-          "like",
-          "love",
-          "very"
-        ],
-        "say": "Yes, I like it very much."
-      },
-      {
-        "ai": "Me too! Tonight there is music at the bar. Will you come?",
-        "tr": "Ben de! Bu akşam barda müzik var. Gelir misin?",
-        "expect": [
-          "yes",
-          "okay",
-          "see you",
-          "come"
-        ],
-        "say": "Yes! See you tonight!"
-      },
-      {
-        "ai": "Great! It starts at eight. Goodbye!",
-        "tr": "Harika! Sekizde başlıyor. Görüşürüz!",
-        "expect": [
-          "eight",
-          "okay",
-          "goodbye",
-          "see you"
-        ],
-        "say": "Okay, at eight. Goodbye!"
-      }
-    ]
+ "day": 1,
+ "title": "Sohbet Hayatta Kalma",
+ "emoji": "💬",
+ "goalTr": "Sohbet başlat, hızlı tepki ver, anlamadığında kurtar — asla donma. Ana beceri: AÇ → TEPKİ VER → SORU SOR.",
+ "chunks": [
+  {
+   "en": "How's it going?",
+   "tr": "Nasıl gidiyor?",
+   "use": "Selamlaşma — 'How are you?'un doğal hali. Kısa cevap: 'Pretty good, you?'",
+   "ex": "How's it going? — Pretty good! You?",
+   "basic": true
   },
-  "quiz": {
-    "situations": [
-      {
-        "q": "Garson sana su getirdi. Ne dersin?",
-        "options": [
-          "Thank you.",
-          "Goodbye!",
-          "One, two, three.",
-          "Where is the toilet?"
-        ]
-      },
-      {
-        "q": "Tuvaleti bulamıyorsun. Ne sorarsın?",
-        "options": [
-          "Where is the toilet?",
-          "My name is Hakan.",
-          "I'm fine, thank you.",
-          "Yes, please."
-        ]
-      },
-      {
-        "q": "Biri sana 'How are you?' diye sordu. Ne dersin?",
-        "options": [
-          "I'm fine, thank you.",
-          "Goodbye!",
-          "Three, please.",
-          "Sorry!"
-        ]
-      }
-    ],
-    "listening": [
-      {
-        "audio": "Nice to meet you.",
-        "q": "Ne duydun? Anlamını seç.",
-        "options": [
-          "Tanıştığımıza memnun oldum.",
-          "Nasılsın?",
-          "Günaydın.",
-          "Görüşürüz."
-        ]
-      },
-      {
-        "audio": "How are you?",
-        "q": "Soruya uygun cevabı seç.",
-        "options": [
-          "I'm fine, thank you.",
-          "My name is Hakan.",
-          "Goodbye!",
-          "Three, please."
-        ]
-      }
-    ]
+  {
+   "en": "Pretty good.",
+   "tr": "Fena değil, iyi.",
+   "use": "'How's it going?' sorusunun standart cevabı.",
+   "basic": true
+  },
+  {
+   "en": "How are you finding Bali?",
+   "tr": "Bali'yi nasıl buluyorsun?",
+   "use": "'find' burada 'bulmak' değil 'nasıl geliyor' demek.",
+   "ex": "How are you finding Bali so far? — I love it, honestly."
+  },
+  {
+   "en": "What brings you to Bali?",
+   "tr": "Bali'ye gelme sebebin ne?",
+   "use": "Çok yaygın tanışma sorusu.",
+   "ex": "What brings you to Bali? — Mostly a holiday."
+  },
+  {
+   "en": "How long are you here for?",
+   "tr": "Ne kadar kalacaksın?",
+   "ex": "How long are you here for? — About a week."
+  },
+  {
+   "en": "Is this your first time here?",
+   "tr": "Buraya ilk gelişin mi?",
+   "basic": true
+  },
+  {
+   "en": "What have you done so far?",
+   "tr": "Şu ana kadar neler yaptın?",
+   "use": "'so far' = şu ana kadar — çok sık kullanılır."
+  },
+  {
+   "en": "What are you up to today?",
+   "tr": "Bugün ne yapıyorsun?",
+   "use": "'up to' = yapmak (günlük konuşma). Cevap: 'Not much, probably the beach.'"
+  },
+  {
+   "en": "Where are you staying?",
+   "tr": "Nerede kalıyorsun?",
+   "basic": true
+  },
+  {
+   "en": "No way!",
+   "tr": "Yok artık! / Ciddi misin!",
+   "use": "Şaşırma tepkisi — hikâye dinlerken kullan.",
+   "ex": "I slept at the airport. — No way! What happened?"
+  },
+  {
+   "en": "That's crazy.",
+   "tr": "İnanılmaz / Çılgınca bir şey.",
+   "use": "Şaşırtıcı bir şeye tepki."
+  },
+  {
+   "en": "Sounds good.",
+   "tr": "İyi fikir / Bana uyar.",
+   "use": "Plan önerisine olumlu tepki.",
+   "basic": true
+  },
+  {
+   "en": "Fair enough.",
+   "tr": "Mantıklı / Anlaşılır.",
+   "use": "Katılmasan da anladığını gösterir.",
+   "ex": "I don't drink. — Fair enough."
+  },
+  {
+   "en": "Same here.",
+   "tr": "Ben de / Bende de öyle.",
+   "use": "Olumlu cümleye katılma.",
+   "ex": "I'm exhausted today. — Same here."
+  },
+  {
+   "en": "Me neither.",
+   "tr": "Ben de (değilim/yapmam).",
+   "use": "OLUMSUZ cümleye katılma.",
+   "ex": "I've never surfed. — Me neither."
+  },
+  {
+   "en": "I know what you mean.",
+   "tr": "Ne demek istediğini anlıyorum.",
+   "use": "Empati tepkisi — sohbeti yumuşatır."
+  },
+  {
+   "en": "What about you?",
+   "tr": "Ya sen?",
+   "use": "Her cevabın sonuna ekle — sohbeti geri paslar.",
+   "basic": true
+  },
+  {
+   "en": "Sorry, I didn't catch that.",
+   "tr": "Pardon, anlayamadım.",
+   "use": "KURTARMA — panik yok, herkes kullanır.",
+   "ex": "Sorry, I didn't catch that. — No worries, I said..."
+  },
+  {
+   "en": "Could you say that again?",
+   "tr": "Tekrar söyler misin?",
+   "use": "Kurtarma — tekrar istetir.",
+   "basic": true
+  },
+  {
+   "en": "Could you speak a little slower?",
+   "tr": "Biraz daha yavaş konuşur musun?",
+   "use": "Kurtarma — utanma, gezginler alışıktır."
+  },
+  {
+   "en": "How do you say ___ in English?",
+   "tr": "___ İngilizce nasıl denir?",
+   "use": "Kelime bilmediğinde sor — sohbet kopmaz.",
+   "ex": "How do you say 'kumsal' in English? — Beach!"
+  },
+  {
+   "en": "I know what I mean, I just don't know the word.",
+   "tr": "Ne demek istediğimi biliyorum ama kelimeyi bilmiyorum.",
+   "use": "Kurtarma — insanlar sana yardım eder, sohbet devam eder."
   }
+ ],
+ "quick": [
+  {
+   "q": "Where are you from?",
+   "sample": "I'm from Turkey — from Istanbul, actually."
+  },
+  {
+   "q": "How's it going?",
+   "sample": "Pretty good! A bit tired, but good. You?"
+  },
+  {
+   "q": "Is this your first time in Bali?",
+   "sample": "Yeah, first time. I just got here."
+  },
+  {
+   "q": "How long are you here for?",
+   "sample": "About a week. What about you?"
+  },
+  {
+   "q": "Where are you staying?",
+   "sample": "In Ubud, near the center."
+  },
+  {
+   "q": "What are you up to today?",
+   "sample": "Not much — probably the beach later."
+  },
+  {
+   "q": "How are you finding Bali so far?",
+   "sample": "I love it so far. It's really relaxed."
+  },
+  {
+   "q": "What brings you to Bali?",
+   "sample": "Mostly a holiday — and to meet people."
+  },
+  {
+   "q": "What have you done so far?",
+   "sample": "Honestly, I've just been walking around."
+  },
+  {
+   "q": "Sorry, what was your name again?",
+   "sample": "It's Hakan. And yours?"
+  }
+ ],
+ "social": [
+  {
+   "type": "react",
+   "stmt": "I missed my flight and had to sleep at the airport.",
+   "samples": [
+    "No way! What happened?",
+    "That's rough. How long were you stuck there?",
+    "Seriously? That sounds terrible."
+   ]
+  },
+  {
+   "type": "react",
+   "stmt": "I've been traveling for six months.",
+   "samples": [
+    "That's amazing! Where have you been?",
+    "Six months? That's crazy. Don't you miss home?"
+   ]
+  },
+  {
+   "type": "react",
+   "stmt": "This is my fifth time in Bali.",
+   "samples": [
+    "Wow, you must really love it here.",
+    "Fifth time? What keeps bringing you back?"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "I'm from Australia.",
+   "samples": [
+    "Oh nice — what part of Australia?",
+    "Cool! Is this close to home for you?",
+    "How long have you been traveling?"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "I work as a photographer.",
+   "samples": [
+    "Oh cool — what do you usually shoot?",
+    "How did you get into that?",
+    "Do you travel a lot for work?"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "I just got back from Thailand.",
+   "samples": [
+    "Nice! How was it?",
+    "How long were you there?",
+    "Would you recommend it?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "I've been in Bali for two weeks.",
+   "samples": [
+    "Nice! I just got here. What's been your favorite place so far?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "We're going to a beach club later.",
+   "samples": [
+    "Oh cool! I haven't been to one yet. Which one are you going to?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "The traffic here is crazy.",
+   "samples": [
+    "Haha, yeah. I noticed that today. Is it always like this?"
+   ]
+  }
+ ],
+ "grammar": {
+  "title": "Soru kalıpları: Do / Are / Have / Did",
+  "intro": [
+   {
+    "pattern": "Do you...?",
+    "ex": "Do you surf? (genel / alışkanlık)"
+   },
+   {
+    "pattern": "Are you...?",
+    "ex": "Are you here alone? (durum)"
+   },
+   {
+    "pattern": "Have you...?",
+    "ex": "Have you been to Uluwatu? (deneyim — hiç)"
+   },
+   {
+    "pattern": "Did you...?",
+    "ex": "Did you go out last night? (geçmiş, belirli zaman)"
+   }
+  ],
+  "drills": [
+   {
+    "tr": "Burada yalnız mısın?",
+    "keys": [
+     [
+      "are",
+      "you",
+      "alone"
+     ]
+    ],
+    "best": "Are you here alone?"
+   },
+   {
+    "tr": "Hiç Uluwatu'ya gittin mi?",
+    "keys": [
+     [
+      "have",
+      "you",
+      "been",
+      "uluwatu"
+     ]
+    ],
+    "best": "Have you been to Uluwatu?"
+   },
+   {
+    "tr": "Sörf yapıyor musun?",
+    "keys": [
+     [
+      "do",
+      "you",
+      "surf"
+     ]
+    ],
+    "best": "Do you surf?"
+   },
+   {
+    "tr": "Dün gece dışarı çıktın mı?",
+    "keys": [
+     [
+      "did",
+      "you",
+      "go",
+      "out"
+     ]
+    ],
+    "best": "Did you go out last night?"
+   },
+   {
+    "tr": "Bali'yi seviyor musun?",
+    "keys": [
+     [
+      "do",
+      "you",
+      "like",
+      "bali"
+     ]
+    ],
+    "best": "Do you like Bali?"
+   }
+  ]
+ },
+ "listening": [
+  {
+   "audio": "What've you been up to today?",
+   "q": "Ne soruyor?",
+   "options": [
+    "Bugün neler yaptın?",
+    "Yarın ne yapacaksın?",
+    "Nerede kalıyorsun?",
+    "Nereden geliyorsun?"
+   ]
+  },
+  {
+   "audio": "Sorry, I didn't quite catch that.",
+   "q": "Ne diyor?",
+   "options": [
+    "Anlayamadım, tekrar eder misin?",
+    "Otobüse yetişemedim.",
+    "Seni duyduğuma sevindim.",
+    "Onu yakalayamadım, kaçtı."
+   ]
+  }
+ ],
+ "scenario": {
+  "title": "Kahvaltıda Tanışma",
+  "situationTr": "Otel kahvaltısında yalnız oturuyorsun. Bir gezgin masana geliyor. Amaç: donmadan sohbeti karşılıklı akıtmak.",
+  "goalTr": "Aç → tepki ver → soru sor. Her cevabının sonuna bir soru eklemeye çalış.",
+  "personas": [
+   {
+    "name": "Jake",
+    "from": "Australia",
+    "days": "two weeks",
+    "fav": "Uluwatu",
+    "next": "Lombok",
+    "doing": "learning to surf"
+   },
+   {
+    "name": "Emma",
+    "from": "the UK",
+    "days": "five days",
+    "fav": "Ubud",
+    "next": "the Gili Islands",
+    "doing": "mostly relaxing and reading"
+   },
+   {
+    "name": "Lena",
+    "from": "Germany",
+    "days": "about a month",
+    "fav": "Canggu",
+    "next": "Thailand",
+    "doing": "working online in cafés"
+   }
+  ],
+  "beats": [
+   {
+    "ai": "Hey! Mind if I sit here? I'm {name}, by the way.",
+    "tr": "Selam! Buraya oturabilir miyim? Bu arada ben {name}.",
+    "sample": "Sure, go ahead! I'm Hakan. Nice to meet you."
+   },
+   {
+    "ai": "Nice to meet you! So where are you from?",
+    "tr": "Memnun oldum! Ee, nerelisin?",
+    "need": [
+     "turkey",
+     "from"
+    ],
+    "sample": "I'm from Turkey. What about you?"
+   },
+   {
+    "ai": "I'm from {from}. Is this your first time in Bali?",
+    "tr": "Ben {from}'lıyım. Bali'ye ilk gelişin mi?",
+    "sample": "Yeah, I just got here. You?"
+   },
+   {
+    "ai": "I've been here for {days} already. Time flies, honestly.",
+    "tr": "Ben {days} oldu buradayım. Zaman uçuyor cidden.",
+    "sample": "No way! What have you been doing?"
+   },
+   {
+    "ai": "Mostly {doing}. So what brings you to Bali?",
+    "tr": "Çoğunlukla {doing}. Peki seni Bali'ye getiren ne?",
+    "sample": "Mostly a holiday — and I wanted to meet people."
+   },
+   {
+    "ai": "Nice. How are you finding it so far?",
+    "tr": "Güzel. Şu ana kadar nasıl buldun?",
+    "sample": "I love it so far. It's really relaxed."
+   },
+   {
+    "ai": "Right? Have you been anywhere yet, or did you just get in?",
+    "tr": "Değil mi? Bir yere gittin mi, yoksa yeni mi geldin?",
+    "sample": "Just got in, honestly. Any recommendations?"
+   },
+   {
+    "ai": "You have to check out {fav}. Easily my favorite spot so far.",
+    "tr": "{fav}'a mutlaka git. Açık ara favorim.",
+    "sample": "Oh nice, I've heard good things about it. Is it far?"
+   },
+   {
+    "ai": "Not too far. I'm actually heading to {next} after Bali.",
+    "tr": "Çok uzak değil. Ben Bali'den sonra {next}'e geçiyorum.",
+    "sample": "That sounds amazing. How long are you here for?"
+   },
+   {
+    "ai": "A few more days. Anyway, I'm gonna grab more coffee. Catch you later?",
+    "tr": "Birkaç gün daha. Neyse, ben kahve tazeleyeceğim. Sonra görüşür müyüz?",
+    "sample": "Sure! Nice talking to you, {name}."
+   }
+  ]
+ }
 }

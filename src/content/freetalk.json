@@ -1,0 +1,209 @@
+{
+ "personas": [
+  {
+   "name": "Jake",
+   "from": "Australia",
+   "days": "two weeks",
+   "fav": "Uluwatu",
+   "next": "Lombok",
+   "doing": "learning to surf"
+  },
+  {
+   "name": "Emma",
+   "from": "the UK",
+   "days": "five days",
+   "fav": "Ubud",
+   "next": "the Gili Islands",
+   "doing": "yoga every morning"
+  },
+  {
+   "name": "Tyler",
+   "from": "the US",
+   "days": "a month",
+   "fav": "Canggu",
+   "next": "Vietnam",
+   "doing": "working from cafés"
+  },
+  {
+   "name": "Lena",
+   "from": "Germany",
+   "days": "three weeks",
+   "fav": "Sidemen",
+   "next": "Thailand",
+   "doing": "motorbiking around the island"
+  },
+  {
+   "name": "Sophie",
+   "from": "France",
+   "days": "ten days",
+   "fav": "Nusa Penida",
+   "next": "Singapore",
+   "doing": "diving trips"
+  },
+  {
+   "name": "Marco",
+   "from": "Italy",
+   "days": "a week",
+   "fav": "Seminyak",
+   "next": "Java",
+   "doing": "mostly eating, honestly"
+  },
+  {
+   "name": "Anna",
+   "from": "the Netherlands",
+   "days": "two months",
+   "fav": "Amed",
+   "next": "the Philippines",
+   "doing": "freediving lessons"
+  },
+  {
+   "name": "Yuki",
+   "from": "Japan",
+   "days": "four days",
+   "fav": "Ubud",
+   "next": "Australia",
+   "doing": "photographing temples"
+  }
+ ],
+ "contexts": [
+  {
+   "id": "beachbar",
+   "title": "Plaj Barı",
+   "emoji": "🍹",
+   "settingEn": "a relaxed beach bar at sunset in Canggu",
+   "situationTr": "Gün batımında plaj barındasın; yanındaki gezginle sohbet."
+  },
+  {
+   "id": "breakfast",
+   "title": "Otel Kahvaltısı",
+   "emoji": "🍳",
+   "settingEn": "the breakfast area of a guesthouse in Ubud",
+   "situationTr": "Kahvaltıda masana biri oturdu."
+  },
+  {
+   "id": "cafe",
+   "title": "Kafe",
+   "emoji": "☕",
+   "settingEn": "a busy café with good coffee in Canggu",
+   "situationTr": "Kalabalık bir kafede yan masayla muhabbet."
+  },
+  {
+   "id": "cowork",
+   "title": "Coworking",
+   "emoji": "💻",
+   "settingEn": "a coworking space full of digital nomads",
+   "situationTr": "Coworking alanında mola sohbeti."
+  },
+  {
+   "id": "beach",
+   "title": "Plaj",
+   "emoji": "🏖️",
+   "settingEn": "a quiet beach in the afternoon",
+   "situationTr": "Plajda yürürken biriyle sohbet başladı."
+  },
+  {
+   "id": "tour",
+   "title": "Tur Grubu",
+   "emoji": "🚐",
+   "settingEn": "a shared van on a waterfall day-tour",
+   "situationTr": "Tur minibüsünde yanındaki kişiyle tanışma."
+  },
+  {
+   "id": "nightout",
+   "title": "Gece Dışarısı",
+   "emoji": "🌙",
+   "settingEn": "a lively night market with live music",
+   "situationTr": "Gece pazarında yeni insanlarla takılıyorsun."
+  },
+  {
+   "id": "waiting",
+   "title": "Beklerken",
+   "emoji": "⏳",
+   "settingEn": "waiting in line for a popular warung",
+   "situationTr": "Sırada beklerken öndeki gezginle sohbet."
+  },
+  {
+   "id": "random",
+   "title": "Rastgele Gezgin",
+   "emoji": "🎒",
+   "settingEn": "a chance meeting at a viewpoint",
+   "situationTr": "Manzara noktasında denk geldiğin biri."
+  },
+  {
+   "id": "plans",
+   "title": "Bali Planları",
+   "emoji": "🗺️",
+   "settingEn": "planning trips with another traveler at the hostel",
+   "situationTr": "Bali planlarını konuşup ortak plan kurma."
+  },
+  {
+   "id": "stories",
+   "title": "Seyahat Hikâyeleri",
+   "emoji": "📖",
+   "settingEn": "swapping travel stories over fresh coconuts",
+   "situationTr": "Hindistan cevizi eşliğinde seyahat hikâyeleri."
+  }
+ ],
+ "beats": [
+  {
+   "ai": "Hey! How's it going? I'm {name}, by the way.",
+   "tr": "Selam! Nasıl gidiyor? Bu arada ben {name}.",
+   "sample": "Pretty good! I'm Hakan. Nice to meet you."
+  },
+  {
+   "ai": "So where are you from originally?",
+   "tr": "Ee, aslen nerelisin?",
+   "sample": "I'm from Turkey. What about you?"
+  },
+  {
+   "ai": "I'm from {from}! Been here {days} now. How about you — how long are you here for?",
+   "tr": "Ben {from}'lıyım! {days} oldu buradayım. Sen ne kadar kalacaksın?",
+   "sample": "About a week. {days}? Nice — what have you been up to?"
+  },
+  {
+   "ai": "Mostly {doing}. What have you done so far?",
+   "tr": "Çoğunlukla {doing}. Sen şu ana kadar ne yaptın?",
+   "sample": "Honestly, beaches and food mostly. It's been great."
+  },
+  {
+   "ai": "Haha, that's the way to do it. Have you been to {fav} yet?",
+   "tr": "Haha, doğrusu da bu. {fav}'a gittin mi?",
+   "sample": "Not yet! I've heard good things. Is it worth it?"
+  },
+  {
+   "ai": "Totally worth it. So what do you do back home?",
+   "tr": "Kesinlikle değer. Peki memlekette ne iş yapıyorsun?",
+   "sample": "I run a small business. What about you?"
+  },
+  {
+   "ai": "Nice! I'm taking a break from work, honestly. So — craziest thing that's happened to you here?",
+   "tr": "Güzel! Ben açıkçası işten mola verdim. Ee — burada başına gelen en çılgın şey?",
+   "sample": "So basically... (kısa bir hikâye anlat!)"
+  },
+  {
+   "ai": "Haha, no way! Classic Bali. What's the plan for the rest of your trip?",
+   "tr": "Haha, yok artık! Klasik Bali. Gezinin kalanı için plan ne?",
+   "sample": "I'm thinking of doing a boat trip. And you?"
+  },
+  {
+   "ai": "I'm heading to {next} after this. You should come to {fav} with us tomorrow though!",
+   "tr": "Ben buradan sonra {next}'e geçiyorum. Ama yarın bizimle {fav}'a gelsene!",
+   "sample": "I'm down! What time are you guys going?"
+  },
+  {
+   "ai": "Around nine-ish. I'll add you on WhatsApp, yeah?",
+   "tr": "Dokuz gibi. Seni WhatsApp'a ekleyeyim mi?",
+   "sample": "Sounds good — here's my number."
+  },
+  {
+   "ai": "Sweet. Anyway, I should get going — but see you tomorrow, yeah?",
+   "tr": "Süper. Neyse, benim çıkmam lazım — yarın görüşürüz, tamam mı?",
+   "sample": "See you tomorrow! Nice talking to you, {name}!"
+  },
+  {
+   "ai": "You too, mate! Have a good one!",
+   "tr": "Ben de memnun oldum! İyi günler!",
+   "sample": "You too! Catch you later."
+  }
+ ]
+}

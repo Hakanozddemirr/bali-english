@@ -1,284 +1,471 @@
 {
-  "day": 5,
-  "title": "Ulaşım & Scooter",
-  "emoji": "🛵",
-  "words": [
-    {
-      "en": "scooter",
-      "v": "🛵",
-      "ex": "I want to rent a scooter."
-    },
-    {
-      "en": "helmet",
-      "v": "⛑️",
-      "ex": "Two helmets, please."
-    },
-    {
-      "en": "license",
-      "v": "🪪",
-      "ex": "Here is my driving license."
-    },
-    {
-      "en": "petrol",
-      "v": "⛽",
-      "ex": "I need petrol."
-    },
-    {
-      "en": "meter",
-      "v": "⏱️",
-      "ex": "Use the meter, please."
-    },
-    {
-      "en": "traffic",
-      "v": "🚦",
-      "ex": "The traffic is very bad."
-    },
-    {
-      "en": "accident",
-      "v": "💥",
-      "ex": "There was a small accident."
-    },
-    {
-      "en": "flat tire",
-      "v": "🛞",
-      "ex": "The tire is flat."
-    },
-    {
-      "en": "brakes",
-      "v": "🛑",
-      "ex": "The brakes are not working."
-    },
-    {
-      "en": "parking",
-      "v": "🅿️",
-      "ex": "Where can I park?"
-    },
-    {
-      "en": "bridge",
-      "v": "🌉",
-      "ex": "Cross the bridge."
-    },
-    {
-      "en": "roundabout",
-      "v": "🔄",
-      "ex": "Turn left at the roundabout."
-    },
-    {
-      "en": "rent",
-      "v": "📝",
-      "ex": "How much is the rent for one day?"
-    },
-    {
-      "en": "price",
-      "v": "🏷️",
-      "ex": "What is the price?"
-    },
-    {
-      "en": "road",
-      "v": "🛣️",
-      "ex": "This road is very bad."
-    }
-  ],
-  "sentences": [
-    "I want to rent a scooter for three days.",
-    "Do you need my driving license?",
-    "The tire is flat.",
-    "The brakes are not working.",
-    "Where can I park?",
-    "Turn left at the roundabout.",
-    "How much is the deposit?",
-    "There was a small accident.",
-    "Use the meter, please."
-  ],
-  "scenario": {
-    "title": "Taksi Pazarlığı",
-    "role": "a talkative Balinese taxi driver who first offers a high price but accepts a fair one",
-    "firstLine": "Hello boss! Taxi? Where are you going?",
-    "situationTr": "Taksiye biniyorsun. Şoför önce yüksek fiyat söylüyor, pazarlık etmen gerekiyor.",
-    "goalTr": "Nereye gideceğini söyle, fiyat sor, pazarlık yap ve yol tarifi ver (sağ/sol/dur).",
-    "script": [
-      {
-        "ai": "Hello boss! Taxi? Where are you going?",
-        "tr": "Merhaba patron! Taksi? Nereye gidiyorsunuz?",
-        "expect": [
-          "seminyak",
-          "beach",
-          "hotel",
-          "to"
-        ],
-        "say": "To Seminyak, please."
-      },
-      {
-        "ai": "Seminyak! 300,000 rupiah, okay?",
-        "tr": "Seminyak! 300.000 rupiah, olur mu?",
-        "expect": [
-          "expensive",
-          "too",
-          "no"
-        ],
-        "say": "That's too expensive!"
-      },
-      {
-        "ai": "Okay okay... 200,000. Good price!",
-        "tr": "Tamam tamam... 200.000. İyi fiyat!",
-        "expect": [
-          "meter",
-          "use"
-        ],
-        "say": "Use the meter, please."
-      },
-      {
-        "ai": "Okay, meter is on! Get in, please.",
-        "tr": "Tamam, taksimetre açık! Binin lütfen.",
-        "expect": [
-          "thank",
-          "okay"
-        ],
-        "say": "Thank you."
-      },
-      {
-        "ai": "Music okay for you?",
-        "tr": "Müzik açsam olur mu?",
-        "expect": [
-          "yes",
-          "okay",
-          "no"
-        ],
-        "say": "Yes, okay!"
-      },
-      {
-        "ai": "Where are you from, boss?",
-        "tr": "Nerelisiniz patron?",
-        "expect": [
-          "turkey",
-          "from"
-        ],
-        "say": "I'm from Turkey."
-      },
-      {
-        "ai": "Turkey, nice! Oh — big traffic now. Sorry boss.",
-        "tr": "Türkiye, güzel! Ah — şimdi trafik yoğun. Kusura bakmayın patron.",
-        "expect": [
-          "no problem",
-          "okay",
-          "slow"
-        ],
-        "say": "No problem. Slow is okay."
-      },
-      {
-        "ai": "Do you want to stop for water?",
-        "tr": "Su almak için duralım mı?",
-        "expect": [
-          "no",
-          "yes",
-          "thank",
-          "okay"
-        ],
-        "say": "No, thank you. I'm okay."
-      },
-      {
-        "ai": "Okay. Seminyak in five minutes.",
-        "tr": "Tamam. Seminyak'a beş dakika.",
-        "expect": [
-          "okay",
-          "thank",
-          "five"
-        ],
-        "say": "Okay, thank you!"
-      },
-      {
-        "ai": "The beach is near now.",
-        "tr": "Plaj yaklaştı.",
-        "expect": [
-          "stop",
-          "here"
-        ],
-        "say": "Stop here, please."
-      },
-      {
-        "ai": "Here? Okay! 80,000 rupiah on the meter.",
-        "tr": "Burada mı? Tamam! Taksimetrede 80.000 rupiah.",
-        "expect": [
-          "here",
-          "thank",
-          "you are"
-        ],
-        "say": "Here you are. Thank you!"
-      },
-      {
-        "ai": "Thank you boss! You want my number? Tomorrow I drive you all day!",
-        "tr": "Sağ olun patron! Numaramı ister misiniz? Yarın bütün gün sizi gezdiririm!",
-        "expect": [
-          "yes",
-          "okay",
-          "no",
-          "thank"
-        ],
-        "say": "Yes, okay! Thank you!"
-      },
-      {
-        "ai": "Call me anytime! Enjoy the beach!",
-        "tr": "İstediğiniz zaman arayın! Plajın tadını çıkarın!",
-        "expect": [
-          "goodbye",
-          "bye",
-          "see you"
-        ],
-        "say": "Goodbye! See you!"
-      }
-    ]
+ "day": 5,
+ "title": "Doğal Konuşma & Hikâye",
+ "emoji": "🎙️",
+ "goalTr": "Robot gibi konuşmayı bırak: dolgu kelimeleri, fikir kalıpları ve hikâye bağlaçlarıyla doğal konuş.",
+ "chunks": [
+  {
+   "en": "actually",
+   "tr": "aslında",
+   "use": "Bilgi eklerken veya düzeltirken.",
+   "ex": "Actually, this is my first time in Bali."
   },
-  "quiz": {
-    "situations": [
-      {
-        "q": "Şoför çok yüksek fiyat söyledi. Ne dersin?",
-        "options": [
-          "That's too expensive.",
-          "Stop here, please.",
-          "Go straight.",
-          "It's delicious!"
-        ]
-      },
-      {
-        "q": "Gideceğin yere geldin, inmek istiyorsun. Ne dersin?",
-        "options": [
-          "Stop here, please.",
-          "Turn left.",
-          "How much for one day?",
-          "Use the meter, please."
-        ]
-      },
-      {
-        "q": "Scooter kiralamak istiyorsun. Dükkanda ne dersin?",
-        "options": [
-          "I want to rent a scooter.",
-          "Slow down, please.",
-          "Where is the taxi?",
-          "The bill, please."
-        ]
-      }
-    ],
-    "listening": [
-      {
-        "audio": "Turn right.",
-        "q": "Ne duydun? Anlamını seç.",
-        "options": [
-          "Sağa dön.",
-          "Sola dön.",
-          "Düz git.",
-          "Burada dur."
-        ]
-      },
-      {
-        "audio": "Where are you going?",
-        "q": "Soruya uygun cevabı seç.",
-        "options": [
-          "To the hotel, please.",
-          "Ten days.",
-          "No ice, please.",
-          "I have a reservation."
-        ]
-      }
-    ]
+  {
+   "en": "honestly",
+   "tr": "açıkçası",
+   "use": "Samimi görüş verirken cümle başında.",
+   "ex": "Honestly, I didn't love Kuta."
+  },
+  {
+   "en": "basically",
+   "tr": "yani, özetle",
+   "use": "Özetlerken: 'So basically...'",
+   "ex": "So basically, we got completely lost."
+  },
+  {
+   "en": "apparently",
+   "tr": "söylenene göre / meğerse",
+   "use": "Duyduğun bilgiyi aktarırken.",
+   "ex": "Apparently there's a ceremony tonight."
+  },
+  {
+   "en": "I guess",
+   "tr": "sanırım / herhalde",
+   "use": "Emin olmadığında yumuşatır.",
+   "ex": "I guess it depends on the traffic."
+  },
+  {
+   "en": "I mean",
+   "tr": "yani",
+   "use": "Düşünürken / açıklarken zaman kazandırır.",
+   "ex": "I mean, it's expensive, but it's worth it."
+  },
+  {
+   "en": "kind of",
+   "tr": "biraz / bir nevi",
+   "use": "Yumuşatıcı: 'kinda' diye söylenir.",
+   "ex": "I'm kind of tired today."
+  },
+  {
+   "en": "pretty much",
+   "tr": "aşağı yukarı / hemen hemen",
+   "use": "'Evet, öyle sayılır' demenin doğal yolu.",
+   "ex": "Did you see everything? — Pretty much."
+  },
+  {
+   "en": "to be honest",
+   "tr": "dürüst olmak gerekirse",
+   "use": "Cümle sonunda da olur: '..., to be honest.'",
+   "ex": "I'm not really into clubs, to be honest."
+  },
+  {
+   "en": "by the way",
+   "tr": "bu arada",
+   "use": "Konu değiştirirken.",
+   "ex": "By the way, what's your name?"
+  },
+  {
+   "en": "anyway",
+   "tr": "neyse",
+   "use": "Konuyu toparlar veya kapatır.",
+   "ex": "Anyway, I should get going."
+  },
+  {
+   "en": "at least",
+   "tr": "en azından",
+   "use": "Kötü durumda teselli.",
+   "ex": "It rained all day — but at least it was warm."
+  },
+  {
+   "en": "I feel like ___.",
+   "tr": "Bana ___ gibi geliyor.",
+   "use": "Fikir vermenin yumuşak yolu.",
+   "ex": "I feel like Ubud is more relaxed than Canggu."
+  },
+  {
+   "en": "Personally, ___.",
+   "tr": "Şahsen ___.",
+   "use": "Kendi görüşünü işaretler."
+  },
+  {
+   "en": "I'm not really into ___.",
+   "tr": "___'e pek meraklı değilim.",
+   "use": "Kibar 'sevmiyorum'.",
+   "ex": "I'm not really into partying."
+  },
+  {
+   "en": "I'd rather ___.",
+   "tr": "___'i tercih ederim.",
+   "use": "İki seçenekten tercihte.",
+   "ex": "I'd rather stay by the beach."
+  },
+  {
+   "en": "It depends.",
+   "tr": "Duruma göre değişir.",
+   "use": "Kararsız kalınca — çok kullanışlı.",
+   "basic": true
+  },
+  {
+   "en": "It's totally worth it.",
+   "tr": "Kesinlikle değer.",
+   "use": "Tavsiye ederken."
+  },
+  {
+   "en": "It's not really worth it.",
+   "tr": "Pek değmez."
+  },
+  {
+   "en": "The best thing about it is ___.",
+   "tr": "En iyi yanı ___."
+  },
+  {
+   "en": "The only problem is ___.",
+   "tr": "Tek sorun ___."
+  },
+  {
+   "en": "I ended up ___.",
+   "tr": "Sonunda ___ oldum/yaptım.",
+   "use": "Hikâyenin beklenmedik sonu. -ing alır.",
+   "ex": "I ended up staying there all day."
+  },
+  {
+   "en": "Turns out ___.",
+   "tr": "Meğerse ___.",
+   "use": "Sürpriz gerçek ortaya çıkınca.",
+   "ex": "Turns out the beach was closed."
+  },
+  {
+   "en": "The funny thing is ___.",
+   "tr": "İşin komik yanı ___.",
+   "use": "Hikâyenin can alıcı kısmından önce."
+  },
+  {
+   "en": "I was like, ___.",
+   "tr": "Ben de dedim ki ___ / şok oldum.",
+   "use": "Hikâyede kendi tepkini aktarırken.",
+   "ex": "I was like, 'No way, this can't be happening.'"
   }
+ ],
+ "quick": [
+  {
+   "q": "Do you like the food here?",
+   "sample": "Honestly, I love it. Especially the nasi goreng."
+  },
+  {
+   "q": "Beach or mountains?",
+   "sample": "Good question. Probably beach — but I love both."
+  },
+  {
+   "q": "What do you think of Canggu?",
+   "sample": "It's cool, but kind of crowded, to be honest."
+  },
+  {
+   "q": "Do you prefer quiet places or parties?",
+   "sample": "I'm more into quiet places, honestly."
+  },
+  {
+   "q": "Is Bali what you expected?",
+   "sample": "Pretty much! Greener than I expected, actually."
+  },
+  {
+   "q": "What's the best thing about your country?",
+   "sample": "The food, definitely. And the coastline."
+  },
+  {
+   "q": "What's one thing you don't like here?",
+   "sample": "The traffic, I guess. It's kind of crazy."
+  },
+  {
+   "q": "Would you live here?",
+   "sample": "I feel like I could, honestly. At least for a year."
+  },
+  {
+   "q": "What's your favorite food so far?",
+   "sample": "Mie goreng, pretty much every day."
+  },
+  {
+   "q": "Was the waterfall worth it?",
+   "sample": "Totally worth it. The only problem is the stairs!"
+  }
+ ],
+ "social": [
+  {
+   "type": "react",
+   "stmt": "I rode a scooter in the rain for two hours.",
+   "samples": [
+    "Oh no, that sounds miserable! Did you get soaked?",
+    "Haha, welcome to Bali! Was it scary?"
+   ]
+  },
+  {
+   "type": "react",
+   "stmt": "Apparently there's a ceremony in the village tonight.",
+   "samples": [
+    "Oh really? Can tourists go?",
+    "That sounds interesting. How did you hear about it?"
+   ]
+  },
+  {
+   "type": "react",
+   "stmt": "I paid double the price because I forgot to bargain.",
+   "samples": [
+    "Haha, we've all been there. At least you know for next time!",
+    "Classic! How much was it?"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "The funny thing is, we got completely lost.",
+   "samples": [
+    "Haha, no way. How did you find your way back?",
+    "And then what happened?"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "I ended up staying an extra week.",
+   "samples": [
+    "Wait, seriously? What made you stay?",
+    "That's amazing. Was it worth it?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "I'm not really into beach clubs.",
+   "samples": [
+    "Fair enough! Me neither, honestly. I'd rather find a quiet beach. Do you know any?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "I feel like Ubud is better than Canggu.",
+   "samples": [
+    "I know what you mean. I liked Ubud too. What's the best thing about it for you?"
+   ]
+  },
+  {
+   "type": "story",
+   "stmt": "Komik veya ters giden bir seyahat anını 30 saniyede anlat. Bağlaçları kullan: At first... / Then... / Turns out... / In the end...",
+   "samples": [
+    "So basically...",
+    "At first everything was fine, then...",
+    "Turns out...",
+    "I ended up...",
+    "The funny thing is..."
+   ]
+  },
+  {
+   "type": "story",
+   "stmt": "Bali'ye gelmeye nasıl karar verdiğini kısa bir hikâye gibi anlat.",
+   "samples": [
+    "Honestly, at first I was thinking of...",
+    "Then a friend told me...",
+    "I ended up booking it in, like, two days."
+   ]
+  }
+ ],
+ "grammar": {
+  "title": "Tercih & görüş: I'd rather / more into / It depends",
+  "intro": [
+   {
+    "pattern": "I'd rather ...",
+    "ex": "I'd rather go to the beach today. (tercih)"
+   },
+   {
+    "pattern": "I'm more into ...",
+    "ex": "I'm more into quiet places. (eğilim)"
+   },
+   {
+    "pattern": "I'm not really into ...",
+    "ex": "I'm not really into clubs. (kibar ret)"
+   },
+   {
+    "pattern": "It depends (on ...)",
+    "ex": "It depends on the weather."
+   }
+  ],
+  "drills": [
+   {
+    "tr": "Açıkçası kulüplere pek meraklı değilim.",
+    "keys": [
+     [
+      "not",
+      "really",
+      "into",
+      "club"
+     ]
+    ],
+    "best": "I'm not really into clubs, to be honest."
+   },
+   {
+    "tr": "Ben daha çok sakin yerleri severim.",
+    "keys": [
+     [
+      "more",
+      "into",
+      "quiet"
+     ],
+     [
+      "prefer",
+      "quiet"
+     ]
+    ],
+    "best": "I'm more into quiet places."
+   },
+   {
+    "tr": "Bugün plajda kalmayı tercih ederim.",
+    "keys": [
+     [
+      "rather",
+      "stay",
+      "beach"
+     ],
+     [
+      "rather",
+      "go",
+      "beach"
+     ]
+    ],
+    "best": "I'd rather stay at the beach today."
+   },
+   {
+    "tr": "Duruma göre değişir.",
+    "keys": [
+     [
+      "it",
+      "depends"
+     ]
+    ],
+    "best": "It depends."
+   },
+   {
+    "tr": "Bence kesinlikle değer.",
+    "keys": [
+     [
+      "totally",
+      "worth"
+     ],
+     [
+      "definitely",
+      "worth"
+     ],
+     [
+      "think",
+      "worth"
+     ]
+    ],
+    "best": "I think it's totally worth it."
+   }
+  ]
+ },
+ "listening": [
+  {
+   "audio": "Honestly, it wasn't really worth it.",
+   "q": "Ne diyor?",
+   "options": [
+    "Açıkçası pek değmemiş",
+    "Kesinlikle değermiş",
+    "Fiyatı bilmiyormuş",
+    "Tekrar gidecekmiş"
+   ]
+  },
+  {
+   "audio": "I ended up staying there all day.",
+   "q": "Ne diyor?",
+   "options": [
+    "Sonunda bütün gün orada kalmış",
+    "Oraya hiç gidememiş",
+    "Her gün oraya gidiyormuş",
+    "Günün sonunda ayrılmış"
+   ]
+  }
+ ],
+ "scenario": {
+  "title": "Gün Batımı Hikâyeleri",
+  "situationTr": "Plaj barında gün batımı. Yanındaki gezgin başından geçen bir olayı anlatıyor — sen de kendi hikâyeni anlatacaksın.",
+  "goalTr": "Tepki ver, takip sorusu sor, SONRA kendi hikâyeni bağlaçlarla anlat (at first / turns out / I ended up).",
+  "personas": [
+   {
+    "name": "Charlie",
+    "from": "the UK",
+    "days": "a month",
+    "fav": "Nusa Penida",
+    "next": "the Philippines",
+    "story": "my wallet fell into the ocean on a boat trip",
+    "detail": "a local fisherman actually found it the next day"
+   },
+   {
+    "name": "Maya",
+    "from": "Brazil",
+    "days": "two weeks",
+    "fav": "Ubud",
+    "next": "Thailand",
+    "story": "a monkey stole my sunglasses at the temple",
+    "detail": "I had to trade a banana to get them back"
+   },
+   {
+    "name": "Finn",
+    "from": "Ireland",
+    "days": "ten days",
+    "fav": "Canggu",
+    "next": "Vietnam",
+    "story": "our scooter ran out of petrol in the middle of nowhere",
+    "detail": "a family invited us for dinner while we waited"
+   }
+  ],
+  "beats": [
+   {
+    "ai": "This sunset is unreal, right? I'm {name}, by the way.",
+    "tr": "Bu gün batımı inanılmaz, değil mi? Bu arada ben {name}.",
+    "sample": "Right? It's amazing. I'm Hakan."
+   },
+   {
+    "ai": "So you'll never believe what happened to me this week — {story}.",
+    "tr": "Bu hafta başıma geleni asla tahmin edemezsin — {story}.",
+    "need": [
+     "no way",
+     "seriously",
+     "what",
+     "happened",
+     "how"
+    ],
+    "sample": "No way! Seriously? What happened?"
+   },
+   {
+    "ai": "I know, right?! And the funny thing is — {detail}.",
+    "tr": "Aynen öyle! İşin komik yanı — {detail}.",
+    "sample": "Haha, that's crazy! That would only happen in Bali."
+   },
+   {
+    "ai": "Honestly, it's a good story now. Anyway — has anything crazy happened to you here yet?",
+    "tr": "Açıkçası artık iyi bir hikâye oldu. Neyse — senin başına çılgın bir şey geldi mi?",
+    "sample": "Actually, yes! So basically... (kendi hikâyeni anlat!)"
+   },
+   {
+    "ai": "Haha, no way! And then what happened?",
+    "tr": "Haha, yok artık! Peki sonra ne oldu?",
+    "sample": "In the end, it worked out fine. I ended up laughing about it."
+   },
+   {
+    "ai": "That's brilliant. So how are you finding Bali overall?",
+    "tr": "Harikaymış. Peki genel olarak Bali nasıl gidiyor?",
+    "sample": "Honestly, I love it. I feel like it's exactly what I needed."
+   },
+   {
+    "ai": "Same here. Kuta's a bit much for me though, to be honest.",
+    "tr": "Bende de öyle. Ama Kuta bana biraz fazla geldi açıkçası.",
+    "sample": "I know what you mean. I'd rather stay around here."
+   },
+   {
+    "ai": "Exactly. Anyway, I'm gonna grab another drink — you want one?",
+    "tr": "Aynen. Neyse, ben bir içecek daha alacağım — sen ister misin?",
+    "sample": "Sure, why not! Thanks!"
+   },
+   {
+    "ai": "Coming right up. Cheers to Bali, yeah?",
+    "tr": "Hemen geliyor. Bali'ye içelim, ha?",
+    "sample": "Cheers! To Bali!"
+   }
+  ]
+ }
 }

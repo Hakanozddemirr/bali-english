@@ -1,282 +1,427 @@
 {
-  "day": 6,
-  "title": "Alışveriş & Pazarlık",
-  "emoji": "🛍️",
-  "words": [
-    {
-      "en": "market",
-      "v": "🧺",
-      "ex": "Where is the souvenir market?"
-    },
-    {
-      "en": "souvenir",
-      "v": "🎁",
-      "ex": "This souvenir is for my family."
-    },
-    {
-      "en": "sarong",
-      "v": "🥻",
-      "ex": "How much is this sarong?"
-    },
-    {
-      "en": "size",
-      "v": "📏",
-      "ex": "Do you have a bigger size?"
-    },
-    {
-      "en": "change",
-      "v": "🪙",
-      "ex": "You gave me the wrong change."
-    },
-    {
-      "en": "quality",
-      "v": "⭐",
-      "ex": "The quality is very good."
-    },
-    {
-      "en": "handmade",
-      "v": "🤲",
-      "ex": "Is this handmade?"
-    },
-    {
-      "en": "silver",
-      "v": "🥈",
-      "ex": "Is this real silver?"
-    },
-    {
-      "en": "hat",
-      "v": "👒",
-      "ex": "How much is the hat?"
-    },
-    {
-      "en": "money",
-      "v": "💵",
-      "ex": "Here is the money."
-    },
-    {
-      "en": "card",
-      "v": "💳",
-      "ex": "Can I pay by card?"
-    },
-    {
-      "en": "expensive",
-      "v": "💎",
-      "ex": "That's too expensive!"
-    },
-    {
-      "en": "discount",
-      "v": "💸",
-      "ex": "Can you give me a discount?"
-    },
-    {
-      "en": "twenty",
-      "v": "20",
-      "ex": "Twenty thousand, okay?"
-    },
-    {
-      "en": "fifty",
-      "v": "50",
-      "ex": "Fifty thousand, okay?"
-    },
-    {
-      "en": "hundred",
-      "v": "100",
-      "ex": "One hundred thousand? No!"
-    },
-    {
-      "en": "thousand",
-      "v": "1000",
-      "ex": "Eighty thousand, final price."
-    }
-  ],
-  "sentences": [
-    "Where is the souvenir market?",
-    "How much is this sarong?",
-    "Do you have a bigger size?",
-    "Is this handmade?",
-    "Is this real silver?",
-    "The quality is very good.",
-    "You gave me the wrong change.",
-    "Eighty thousand, final price.",
-    "Can you give me a discount?"
-  ],
-  "scenario": {
-    "title": "Pazarda Pazarlık",
-    "role": "an energetic souvenir seller at Ubud Art Market who starts with high prices but enjoys bargaining",
-    "firstLine": "Hello! Come, come! Very cheap for you!",
-    "situationTr": "Ubud pazarındasın. Satıcı sana tişört ve hediyelik satmaya çalışıyor.",
-    "goalTr": "Fiyat sor, pahalı de, indirim iste ve bir fiyatta anlaşıp ürünü al.",
-    "script": [
-      {
-        "ai": "Hello! Come, come! Very cheap for you!",
-        "tr": "Merhaba! Gelin gelin! Size çok ucuz!",
-        "expect": [
-          "how much",
-          "t-shirt",
-          "this"
-        ],
-        "say": "How much is this t-shirt?"
-      },
-      {
-        "ai": "This t-shirt? 200,000 rupiah. Best quality!",
-        "tr": "Bu tişört mü? 200.000 rupiah. En iyi kalite!",
-        "expect": [
-          "expensive",
-          "too"
-        ],
-        "say": "That's too expensive!"
-      },
-      {
-        "ai": "Okay, for you special price: 150,000!",
-        "tr": "Tamam, size özel fiyat: 150.000!",
-        "expect": [
-          "discount",
-          "give me"
-        ],
-        "say": "Can you give me a discount?"
-      },
-      {
-        "ai": "Hmm... okay, 120,000. Last price!",
-        "tr": "Hmm... tamam, 120.000. Son fiyat!",
-        "expect": [
-          "fifty",
-          "thousand"
-        ],
-        "say": "Fifty thousand, okay?"
-      },
-      {
-        "ai": "Fifty?! No no... okay okay, 80,000. Final price!",
-        "tr": "Elli mi?! Yok yok... tamam tamam, 80.000. Kesin son fiyat!",
-        "expect": [
-          "okay",
-          "take",
-          "deal",
-          "yes"
-        ],
-        "say": "Okay! I'll take it."
-      },
-      {
-        "ai": "Good! Do you want blue or red?",
-        "tr": "Güzel! Mavi mi kırmızı mı istersiniz?",
-        "expect": [
-          "blue",
-          "red",
-          "black",
-          "white"
-        ],
-        "say": "Blue, please."
-      },
-      {
-        "ai": "Blue, nice! You want one more? Two t-shirts only 140,000!",
-        "tr": "Mavi, güzel! Bir tane daha? İki tişört sadece 140.000!",
-        "expect": [
-          "no",
-          "just one",
-          "thank"
-        ],
-        "say": "No, thank you. Just one."
-      },
-      {
-        "ai": "Okay okay. A hat too? Very good for the sun!",
-        "tr": "Peki peki. Şapka da? Güneş için çok iyi!",
-        "expect": [
-          "how much",
-          "hat"
-        ],
-        "say": "How much is the hat?"
-      },
-      {
-        "ai": "For you, only 60,000!",
-        "tr": "Size özel, sadece 60.000!",
-        "expect": [
-          "forty",
-          "thousand",
-          "expensive"
-        ],
-        "say": "Forty thousand, okay?"
-      },
-      {
-        "ai": "Hmm... okay, 50,000. Deal?",
-        "tr": "Hmm... tamam, 50.000. Anlaştık mı?",
-        "expect": [
-          "deal",
-          "okay",
-          "take"
-        ],
-        "say": "Okay, deal! I'll take it."
-      },
-      {
-        "ai": "Great! Cash or card?",
-        "tr": "Harika! Nakit mi kart mı?",
-        "expect": [
-          "card",
-          "cash",
-          "pay"
-        ],
-        "say": "Can I pay by card?"
-      },
-      {
-        "ai": "Card is okay! Thank you my friend!",
-        "tr": "Kart olur! Teşekkürler dostum!",
-        "expect": [
-          "thank",
-          "goodbye"
-        ],
-        "say": "Thank you! Goodbye!"
-      }
-    ]
+ "day": 6,
+ "title": "Pratik Bali İngilizcesi",
+ "emoji": "🛵",
+ "goalTr": "Restoran, ulaşım, aktivite, konaklama ve sorunlar — hepsi kibar ve doğal kalıplarla, tek günde.",
+ "chunks": [
+  {
+   "en": "Could we get a table for two?",
+   "tr": "İki kişilik masa alabilir miyiz?",
+   "use": "'Could' = kibar istek standardı."
   },
-  "quiz": {
-    "situations": [
-      {
-        "q": "Fiyat çok yüksek, indirim istiyorsun. Ne dersin?",
-        "options": [
-          "Can you give me a discount?",
-          "I'll take it.",
-          "Do you have a big size?",
-          "Can I pay by card?"
-        ]
-      },
-      {
-        "q": "Sadece bakıyorsun, satıcı ısrar ediyor. Ne dersin?",
-        "options": [
-          "I'm just looking, thank you.",
-          "Fifty thousand, okay?",
-          "How much is this?",
-          "That's too expensive."
-        ]
-      },
-      {
-        "q": "Pazarlık bitti, ürünü almaya karar verdin. Ne dersin?",
-        "options": [
-          "I'll take it.",
-          "I'm just looking.",
-          "Do you have this in blue?",
-          "Where is the taxi?"
-        ]
-      }
-    ],
-    "listening": [
-      {
-        "audio": "How much is this?",
-        "q": "Ne duydun? Anlamını seç.",
-        "options": [
-          "Bu ne kadar?",
-          "Bu çok güzel.",
-          "Bunu alıyorum.",
-          "İndirim var mı?"
-        ]
-      },
-      {
-        "audio": "Two hundred thousand.",
-        "q": "Satıcı hangi fiyatı söyledi?",
-        "options": [
-          "200.000",
-          "2.000",
-          "100.000",
-          "20.000"
-        ]
-      }
-    ]
+  {
+   "en": "What would you recommend?",
+   "tr": "Ne tavsiye edersiniz?",
+   "use": "Restoranda + turda + her yerde çalışır."
+  },
+  {
+   "en": "What's in this?",
+   "tr": "Bunun içinde ne var?",
+   "use": "Alerji/merak — menüyü gösterip sor."
+  },
+  {
+   "en": "Could I get this without ___?",
+   "tr": "Bunu ___'siz alabilir miyim?",
+   "use": "without peanuts / without ice / without chili."
+  },
+  {
+   "en": "Is this spicy?",
+   "tr": "Bu acılı mı?",
+   "basic": true
+  },
+  {
+   "en": "Could we get the bill?",
+   "tr": "Hesabı alabilir miyiz?"
+  },
+  {
+   "en": "Can we split the bill?",
+   "tr": "Hesabı bölebilir miyiz?",
+   "use": "Grup yemeğinin vazgeçilmezi."
+  },
+  {
+   "en": "Do you take card?",
+   "tr": "Kart geçiyor mu?",
+   "basic": true
+  },
+  {
+   "en": "How much would it be to Canggu?",
+   "tr": "Canggu'ya ne kadar tutar?",
+   "use": "'would it be' pazarlık öncesi kibar soru."
+  },
+  {
+   "en": "How long does it take?",
+   "tr": "Ne kadar sürer?"
+  },
+  {
+   "en": "Could you drop me off here?",
+   "tr": "Beni burada bırakabilir misiniz?",
+   "use": "'drop off' = bırakmak."
+  },
+  {
+   "en": "Is it far from here?",
+   "tr": "Buraya uzak mı?",
+   "basic": true
+  },
+  {
+   "en": "Is there much traffic?",
+   "tr": "Trafik yoğun mu?"
+  },
+  {
+   "en": "How much is it per person?",
+   "tr": "Kişi başı ne kadar?"
+  },
+  {
+   "en": "What's included?",
+   "tr": "Neler dahil?",
+   "use": "Tur/aktivite pazarlığında kritik."
+  },
+  {
+   "en": "What time does it start?",
+   "tr": "Kaçta başlıyor?",
+   "basic": true
+  },
+  {
+   "en": "Do we need to book in advance?",
+   "tr": "Önceden rezervasyon gerekiyor mu?",
+   "use": "'in advance' = önceden."
+  },
+  {
+   "en": "Is it beginner-friendly?",
+   "tr": "Yeni başlayanlara uygun mu?",
+   "use": "Sörf/dalış/yoga için."
+  },
+  {
+   "en": "I think there's been a mistake.",
+   "tr": "Sanırım bir yanlışlık oldu.",
+   "use": "Kavga etmeden sorun bildirme."
+  },
+  {
+   "en": "I ordered ___, not ___.",
+   "tr": "Ben ___ sipariş ettim, ___ değil."
+  },
+  {
+   "en": "I don't feel very well.",
+   "tr": "Kendimi pek iyi hissetmiyorum."
+  },
+  {
+   "en": "Is breakfast included?",
+   "tr": "Kahvaltı dahil mi?"
+  },
+  {
+   "en": "What time is check-out?",
+   "tr": "Çıkış saati kaç?"
+  },
+  {
+   "en": "The Wi-Fi isn't working.",
+   "tr": "Wi-Fi çalışmıyor.",
+   "use": "'isn't working' = bozuk/çalışmıyor kalıbı — her şeye uyar."
   }
+ ],
+ "quick": [
+  {
+   "q": "What would you recommend here?",
+   "sample": "Hmm, what's popular? I like chicken and seafood."
+  },
+  {
+   "q": "Is it far from here?",
+   "sample": "Not really — maybe ten minutes by scooter."
+  },
+  {
+   "q": "How much is it per person?",
+   "sample": "It says 300k per person, including lunch."
+  },
+  {
+   "q": "Do we need to book in advance?",
+   "sample": "Probably, yeah. It gets busy at sunset."
+  },
+  {
+   "q": "What time does the tour start?",
+   "sample": "At nine, but they pick us up at eight thirty."
+  },
+  {
+   "q": "Could we get the bill?",
+   "sample": "Yes — and can we split it, please?"
+  },
+  {
+   "q": "Is breakfast included?",
+   "sample": "Yeah, until ten thirty, by the pool."
+  },
+  {
+   "q": "How long does it take to Uluwatu?",
+   "sample": "About an hour, depending on traffic."
+  },
+  {
+   "q": "Do you take card?",
+   "sample": "I hope so — I don't have much cash on me."
+  },
+  {
+   "q": "Could I get this without ice?",
+   "sample": "Sure — actually, could I also get extra lime?"
+  }
+ ],
+ "social": [
+  {
+   "type": "react",
+   "stmt": "That'll be 500,000 rupiah.",
+   "samples": [
+    "Hmm, I think there's been a mistake — we only ordered two dishes.",
+    "Could we check the bill? That seems a bit high."
+   ]
+  },
+  {
+   "type": "react",
+   "stmt": "The sunrise tour starts at 4 AM.",
+   "samples": [
+    "4 AM? That's early! Is it worth it?",
+    "Okay — do they pick us up from the hotel?"
+   ]
+  },
+  {
+   "type": "react",
+   "stmt": "Sorry, the kitchen is closing in ten minutes.",
+   "samples": [
+    "No problem — could we order quickly then? Two nasi gorengs?",
+    "Ah okay — is there anywhere still open nearby?"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "This warung is famous for its babi guling.",
+   "samples": [
+    "Oh interesting — what's in it?",
+    "What would you recommend for someone who doesn't eat pork?"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "You can rent a board just over there.",
+   "samples": [
+    "Nice — how much is it per hour?",
+    "Is it beginner-friendly around here?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "There's a great sunset spot near here.",
+   "samples": [
+    "Oh nice! Is it far from here? Maybe we could walk."
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "The waterfall tour includes lunch and entrance fees.",
+   "samples": [
+    "Sounds good! How much is it per person? And what time does it start?"
+   ]
+  }
+ ],
+ "grammar": {
+  "title": "Kibar istekler: Could I / Could we / Would you mind",
+  "intro": [
+   {
+    "pattern": "Could I ...?",
+    "ex": "Could I get this without ice? (kendim için)"
+   },
+   {
+    "pattern": "Could we ...?",
+    "ex": "Could we get the bill? (grup için)"
+   },
+   {
+    "pattern": "Could you ...?",
+    "ex": "Could you drop me off here? (karşıdan istek)"
+   },
+   {
+    "pattern": "Would you mind ...?",
+    "ex": "Would you mind taking a photo of us? (+ -ing)"
+   }
+  ],
+  "drills": [
+   {
+    "tr": "Hesabı alabilir miyiz?",
+    "keys": [
+     [
+      "could",
+      "we",
+      "get",
+      "bill"
+     ],
+     [
+      "can",
+      "we",
+      "get",
+      "bill"
+     ]
+    ],
+    "best": "Could we get the bill?"
+   },
+   {
+    "tr": "Bunu fıstıksız alabilir miyim?",
+    "keys": [
+     [
+      "without",
+      "peanut"
+     ]
+    ],
+    "best": "Could I get this without peanuts?"
+   },
+   {
+    "tr": "Beni burada bırakabilir misiniz?",
+    "keys": [
+     [
+      "drop",
+      "me",
+      "off"
+     ]
+    ],
+    "best": "Could you drop me off here?"
+   },
+   {
+    "tr": "Hesabı bölebilir miyiz?",
+    "keys": [
+     [
+      "split",
+      "the",
+      "bill"
+     ],
+     [
+      "split",
+      "it"
+     ]
+    ],
+    "best": "Can we split the bill?"
+   },
+   {
+    "tr": "Fotoğrafımızı çeker misiniz?",
+    "keys": [
+     [
+      "would",
+      "you",
+      "mind",
+      "taking"
+     ],
+     [
+      "could",
+      "you",
+      "take",
+      "photo"
+     ]
+    ],
+    "best": "Would you mind taking a photo of us?"
+   }
+  ]
+ },
+ "listening": [
+  {
+   "audio": "What's included in the price?",
+   "q": "Ne soruyor?",
+   "options": [
+    "Fiyata nelerin dahil olduğunu",
+    "Fiyatın neden arttığını",
+    "İndirim olup olmadığını",
+    "Fiyatı kimin belirlediğini"
+   ]
+  },
+  {
+   "audio": "Could you drop me off just past the bridge?",
+   "q": "Ne istiyor?",
+   "options": [
+    "Köprüyü geçince bırakılmayı",
+    "Köprüden önce durmayı",
+    "Köprüde beklemeyi",
+    "Köprünün fotoğrafını"
+   ]
+  }
+ ],
+ "scenario": {
+  "title": "Arkadaşlarla Akşam Yemeği",
+  "situationTr": "Yeni arkadaşlarınla warungda akşam yemeği. Hem garsonla ilgilen (sipariş, alerji, hesap) hem masadaki sohbete katıl.",
+  "goalTr": "İki işi aynı anda yürüt: kibar isteklerle sipariş yönet + arkadaşlarla doğal sohbet.",
+  "personas": [
+   {
+    "name": "Zoe",
+    "from": "Australia",
+    "days": "two weeks",
+    "fav": "Uluwatu",
+    "next": "Lombok",
+    "dish": "the grilled fish",
+    "waiter": "Wayan"
+   },
+   {
+    "name": "Liam",
+    "from": "Ireland",
+    "days": "a week",
+    "fav": "Canggu",
+    "next": "the Gilis",
+    "dish": "babi guling",
+    "waiter": "Made"
+   },
+   {
+    "name": "Sophie",
+    "from": "France",
+    "days": "three weeks",
+    "fav": "Sidemen",
+    "next": "Vietnam",
+    "dish": "the curry",
+    "waiter": "Ketut"
+   }
+  ],
+  "beats": [
+   {
+    "ai": "({waiter}, the waiter) Good evening! Table for how many?",
+    "tr": "({waiter}, garson) İyi akşamlar! Kaç kişilik masa?",
+    "sample": "Good evening! Could we get a table for three?"
+   },
+   {
+    "ai": "({name}) This place looks great. Have you eaten here before?",
+    "tr": "({name}) Burası harika görünüyor. Daha önce burada yedin mi?",
+    "sample": "No, first time! But I've heard good things about it."
+   },
+   {
+    "ai": "({waiter}) Are you ready to order? Our special today is {dish}.",
+    "tr": "({waiter}) Sipariş vermeye hazır mısınız? Bugünün spesiyali {dish}.",
+    "need": [
+     "recommend",
+     "what",
+     "spicy",
+     "without"
+    ],
+    "sample": "What would you recommend? And is it spicy?"
+   },
+   {
+    "ai": "({waiter}) A little spicy. I can make it mild if you like.",
+    "tr": "({waiter}) Biraz acılı. İsterseniz az acılı yapabilirim.",
+    "sample": "Yes please — and could I get it without peanuts? I'm allergic."
+   },
+   {
+    "ai": "({waiter}) No problem at all. And to drink?",
+    "tr": "({waiter}) Hiç sorun değil. İçecek olarak?",
+    "sample": "A young coconut, please. Guys, what are you having?"
+   },
+   {
+    "ai": "({name}) Same for me! So — how was your day? What did you get up to?",
+    "tr": "({name}) Bana da aynısından! Ee — günün nasıldı? Neler yaptın?",
+    "sample": "Really good! I ended up at a waterfall. Totally worth it."
+   },
+   {
+    "ai": "({name}) Nice! We should all do a tour together before you leave.",
+    "tr": "({name}) Güzel! Sen gitmeden hep beraber bir tur yapmalıyız.",
+    "sample": "I'm down! Do we need to book in advance?"
+   },
+   {
+    "ai": "({name}) Probably. I'll check tonight and text you. Oh, the food's here!",
+    "tr": "({name}) Muhtemelen. Bu akşam bakıp yazarım. Oo, yemekler geldi!",
+    "sample": "Amazing. Okay, this looks incredible."
+   },
+   {
+    "ai": "({waiter}, later) How was everything?",
+    "tr": "({waiter}, sonra) Her şey nasıldı?",
+    "sample": "Delicious, thank you! Could we get the bill? And can we split it?"
+   },
+   {
+    "ai": "({waiter}) Of course. Card or cash?",
+    "tr": "({waiter}) Tabii. Kart mı nakit mi?",
+    "sample": "Card for me, please. Thanks so much!"
+   }
+  ]
+ }
 }

@@ -1,303 +1,560 @@
 {
-  "day": 7,
-  "title": "Plaj & Aktiviteler",
-  "emoji": "🏝️",
-  "words": [
-    {
-      "en": "wave",
-      "v": "🌊",
-      "ex": "The waves are very big today."
-    },
-    {
-      "en": "snorkeling",
-      "v": "🤿",
-      "ex": "I want to try snorkeling."
-    },
-    {
-      "en": "diving",
-      "v": "🐠",
-      "ex": "Diving is beautiful here."
-    },
-    {
-      "en": "life jacket",
-      "v": "🦺",
-      "ex": "Do I need a life jacket?"
-    },
-    {
-      "en": "jellyfish",
-      "v": "🎐",
-      "ex": "Are there jellyfish in the water?"
-    },
-    {
-      "en": "coral",
-      "v": "🪸",
-      "ex": "Don't touch the coral."
-    },
-    {
-      "en": "turtle",
-      "v": "🐢",
-      "ex": "I saw a sea turtle!"
-    },
-    {
-      "en": "volcano",
-      "v": "🌋",
-      "ex": "We hiked up the volcano."
-    },
-    {
-      "en": "rice terrace",
-      "v": "🌾",
-      "ex": "The rice terraces are amazing."
-    },
-    {
-      "en": "hike",
-      "v": "🥾",
-      "ex": "Let's hike tomorrow morning."
-    },
-    {
-      "en": "crowded",
-      "v": "👥",
-      "ex": "It's very crowded today."
-    },
-    {
-      "en": "surf",
-      "v": "🏄",
-      "ex": "I want to surf!"
-    },
-    {
-      "en": "temple",
-      "v": "🛕",
-      "ex": "The temple is beautiful."
-    },
-    {
-      "en": "waterfall",
-      "v": "🏞️",
-      "ex": "Let's go to the waterfall!"
-    },
-    {
-      "en": "sunscreen",
-      "v": "🧴",
-      "ex": "I need sunscreen."
-    },
-    {
-      "en": "tour",
-      "v": "🧭",
-      "ex": "I want to book a tour."
-    },
-    {
-      "en": "monkey",
-      "v": "🐒",
-      "ex": "Look! A monkey!"
-    },
-    {
-      "en": "rain",
-      "v": "🌧️",
-      "ex": "Will it rain tomorrow?"
-    }
-  ],
-  "sentences": [
-    "The waves are very big today.",
-    "I want to try snorkeling.",
-    "Is it safe to swim here?",
-    "Are there jellyfish in the water?",
-    "Don't touch the coral.",
-    "I saw a sea turtle!",
-    "We hiked up the volcano.",
-    "The rice terraces are amazing.",
-    "Do I need a life jacket?",
-    "It's very crowded today."
-  ],
-  "scenario": {
-    "title": "Tur Satın Alma",
-    "role": "a friendly tour seller on the beach offering waterfall and temple tours",
-    "firstLine": "Hello my friend! You want a tour? Very good price!",
-    "situationTr": "Plajda yürürken bir tur satıcısı sana şelale ve tapınak turu satmaya çalışıyor.",
-    "goalTr": "Turun saatini, fiyatını ve süresini sor; yarın için iki kişilik yer ayırt.",
-    "script": [
-      {
-        "ai": "Hello my friend! You want a tour? Very good price!",
-        "tr": "Merhaba dostum! Tur ister misiniz? Çok iyi fiyat!",
-        "expect": [
-          "what tour",
-          "which",
-          "waterfall",
-          "temple",
-          "tour do you"
-        ],
-        "say": "What tour do you have?"
-      },
-      {
-        "ai": "Waterfall and temple tour! Very beautiful!",
-        "tr": "Şelale ve tapınak turu! Çok güzel!",
-        "expect": [
-          "how much",
-          "price",
-          "ticket"
-        ],
-        "say": "How much is the ticket?"
-      },
-      {
-        "ai": "Only 400,000 rupiah for one person!",
-        "tr": "Kişi başı sadece 400.000 rupiah!",
-        "expect": [
-          "expensive",
-          "too",
-          "discount"
-        ],
-        "say": "That's too expensive!"
-      },
-      {
-        "ai": "Okay, for two people: 600,000 total. Good?",
-        "tr": "Tamam, iki kişi toplam 600.000. İyi mi?",
-        "expect": [
-          "okay",
-          "what time",
-          "start",
-          "yes"
-        ],
-        "say": "Okay. What time does the tour start?"
-      },
-      {
-        "ai": "The tour starts at nine in the morning.",
-        "tr": "Tur sabah dokuzda başlıyor.",
-        "expect": [
-          "far",
-          "long",
-          "is it"
-        ],
-        "say": "Is it far?"
-      },
-      {
-        "ai": "One hour by car. Very easy!",
-        "tr": "Arabayla bir saat. Çok kolay!",
-        "expect": [
-          "book",
-          "tomorrow",
-          "want"
-        ],
-        "say": "I want to book for tomorrow."
-      },
-      {
-        "ai": "Perfect! Two tickets for tomorrow at nine.",
-        "tr": "Harika! Yarın dokuz için iki bilet.",
-        "expect": [
-          "thank",
-          "rain"
-        ],
-        "say": "Thank you! Will it rain tomorrow?"
-      },
-      {
-        "ai": "No rain tomorrow — sun all day!",
-        "tr": "Yarın yağmur yok — bütün gün güneş!",
-        "expect": [
-          "great",
-          "thank"
-        ],
-        "say": "Great! Thank you!"
-      },
-      {
-        "ai": "Bring water and sunscreen, okay?",
-        "tr": "Su ve güneş kremi getirin, tamam mı?",
-        "expect": [
-          "okay",
-          "sunscreen",
-          "bring",
-          "will"
-        ],
-        "say": "Okay, I will bring sunscreen."
-      },
-      {
-        "ai": "Where is your hotel? We pick you up.",
-        "tr": "Oteliniz nerede? Sizi alırız.",
-        "expect": [
-          "ubud",
-          "hotel"
-        ],
-        "say": "My hotel is in Ubud."
-      },
-      {
-        "ai": "Perfect. We come at eight thirty.",
-        "tr": "Mükemmel. Sekiz buçukta geliriz.",
-        "expect": [
-          "okay",
-          "eight",
-          "thirty"
-        ],
-        "say": "Okay, at eight thirty."
-      },
-      {
-        "ai": "Do you want lunch with the tour? Only 10,000 more.",
-        "tr": "Turla birlikte öğle yemeği ister misiniz? Sadece 10.000 daha.",
-        "expect": [
-          "yes",
-          "okay",
-          "lunch",
-          "no"
-        ],
-        "say": "Yes, okay. Lunch too, please."
-      },
-      {
-        "ai": "Great! See you tomorrow at eight thirty!",
-        "tr": "Harika! Yarın sekiz buçukta görüşürüz!",
-        "expect": [
-          "see you",
-          "tomorrow",
-          "thank"
-        ],
-        "say": "Thank you! See you tomorrow!"
-      }
-    ]
+ "day": 7,
+ "title": "Bali Simülasyon Günü",
+ "emoji": "🎬",
+ "goalTr": "Yeni içerik yok — bugün sınav günü. 9 gerçekçi mini senaryo + 10 dakikalık serbest konuşma. Bali'ye hazır mısın, görelim!",
+ "chunks": [],
+ "quick": [
+  {
+   "q": "So, what's your story? What brings you to Bali?",
+   "sample": "I'm from Turkey — came here to relax and meet people."
   },
-  "quiz": {
-    "situations": [
-      {
-        "q": "Saati öğrenmek istiyorsun. Ne sorarsın?",
-        "options": [
-          "What time is it?",
-          "Is it far?",
-          "How much is the ticket?",
-          "Will it rain tomorrow?"
-        ]
-      },
-      {
-        "q": "Yarın için tur ayırtmak istiyorsun. Ne dersin?",
-        "options": [
-          "I want to book a tour for tomorrow.",
-          "The beach is very beautiful.",
-          "I can't swim well.",
-          "What time is it?"
-        ]
-      },
-      {
-        "q": "Satıcı 'How many people?' diye sordu. Ne dersin?",
-        "options": [
-          "Two, please.",
-          "At eight.",
-          "Very beautiful.",
-          "No rain."
-        ]
-      }
-    ],
-    "listening": [
-      {
-        "audio": "The tour starts at nine.",
-        "q": "Tur saat kaçta başlıyor?",
-        "options": [
-          "9",
-          "5",
-          "12",
-          "2"
-        ]
-      },
-      {
-        "audio": "Will it rain tomorrow?",
-        "q": "Ne duydun? Anlamını seç.",
-        "options": [
-          "Yarın yağmur yağacak mı?",
-          "Yarın deniz sıcak mı?",
-          "Tur yarın mı?",
-          "Bugün hava güzel mi?"
-        ]
-      }
-    ]
+  {
+   "q": "How's Bali been treating you?",
+   "sample": "Honestly, amazing. I don't want to leave."
+  },
+  {
+   "q": "You guys doing anything for sunset?",
+   "sample": "Not yet — I'm up for anything. What are you thinking?"
+  },
+  {
+   "q": "Wait, where did you say you were from?",
+   "sample": "Turkey! Istanbul, actually. Have you been?"
+  },
+  {
+   "q": "What's been the highlight of your trip?",
+   "sample": "Probably the sunrise hike. Totally worth the 4 AM start."
+  },
+  {
+   "q": "Would you come back to Bali?",
+   "sample": "In a heartbeat. I feel like a week isn't enough."
   }
+ ],
+ "social": [
+  {
+   "type": "react",
+   "stmt": "I've been living in Bali for two years now.",
+   "samples": [
+    "Wait, seriously? What made you stay?",
+    "Two years! What do you do here?"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "I'm heading to the Gili Islands tomorrow.",
+   "samples": [
+    "Nice! How long are you going for?",
+    "I've heard good things! Which island?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "This is my last night in Bali.",
+   "samples": [
+    "No way! Then let's make it a good one. What do you want to do?"
+   ]
+  },
+  {
+   "type": "story",
+   "stmt": "FİNAL: Bali gezini 45 saniyede anlat — geliş, en iyi an, ters giden bir şey, ve sıradaki plan.",
+   "samples": [
+    "So basically, I came here to...",
+    "The highlight was definitely...",
+    "At one point... but it worked out.",
+    "Next, I'm thinking of..."
+   ]
+  }
+ ],
+ "grammar": {
+  "title": "Hızlı tekrar: en kritik 5 kalıp",
+  "intro": [
+   {
+    "pattern": "Have you...? / Did you...?",
+    "ex": "Have you been...? / Did you go...?"
+   },
+   {
+    "pattern": "I'm thinking of... / I might...",
+    "ex": "Planlar"
+   },
+   {
+    "pattern": "Could we...?",
+    "ex": "Kibar istek"
+   },
+   {
+    "pattern": "Mind if I...?",
+    "ex": "Katılma"
+   }
+  ],
+  "drills": [
+   {
+    "tr": "Size katılmamda sakınca var mı?",
+    "keys": [
+     [
+      "mind",
+      "if",
+      "i",
+      "join"
+     ],
+     [
+      "can",
+      "i",
+      "join"
+     ]
+    ],
+    "best": "Mind if I join you guys?"
+   },
+   {
+    "tr": "Şu ana kadar en sevdiğin yer neresi?",
+    "keys": [
+     [
+      "favorite",
+      "place",
+      "so",
+      "far"
+     ],
+     [
+      "favourite",
+      "place"
+     ]
+    ],
+    "best": "What's been your favorite place so far?"
+   },
+   {
+    "tr": "Yarın için planınız var mı?",
+    "keys": [
+     [
+      "any",
+      "plans",
+      "tomorrow"
+     ],
+     [
+      "do",
+      "you",
+      "have",
+      "plans"
+     ]
+    ],
+    "best": "Do you have any plans for tomorrow?"
+   },
+   {
+    "tr": "Biraz yavaş konuşur musun?",
+    "keys": [
+     [
+      "speak",
+      "slower"
+     ],
+     [
+      "little",
+      "slower"
+     ]
+    ],
+    "best": "Could you speak a little slower?"
+   },
+   {
+    "tr": "Hesabı bölebilir miyiz?",
+    "keys": [
+     [
+      "split",
+      "the",
+      "bill"
+     ]
+    ],
+    "best": "Can we split the bill?"
+   }
+  ]
+ },
+ "listening": [
+  {
+   "audio": "What've you guys been up to today? Anything good?",
+   "q": "Ne soruyor?",
+   "options": [
+    "Bugün neler yaptıklarını",
+    "Yarın ne yapacaklarını",
+    "Nereye taşındıklarını",
+    "Neden yorgun olduklarını"
+   ]
+  },
+  {
+   "audio": "We're thinking of heading there tomorrow, wanna join?",
+   "q": "Ne diyor?",
+   "options": [
+    "Yarın oraya gitmeyi düşünüyorlar, katılmak ister misin",
+    "Yarın oradan ayrılıyorlar",
+    "Dün oraya gitmişler",
+    "Orayı önermiyorlar"
+   ]
+  }
+ ],
+ "sims": [
+  {
+   "id": "sim1",
+   "title": "1 · Kahvaltıda Tanışma",
+   "situationTr": "Yeni biri, sıfırdan tanışma — bu kez ipuçsuz dene.",
+   "persona": {
+    "name": "Ben",
+    "from": "New Zealand",
+    "days": "a few days",
+    "fav": "Uluwatu",
+    "next": "Java"
+   },
+   "beats": [
+    {
+     "ai": "Morning! Mind if I grab this seat? I'm {name}.",
+     "tr": "Günaydın! Şuraya oturabilir miyim? Ben {name}.",
+     "sample": "Sure! I'm Hakan. Nice to meet you."
+    },
+    {
+     "ai": "So where are you from? And how long are you here for?",
+     "tr": "Ee, nerelisin? Ne kadar kalacaksın?",
+     "sample": "I'm from Turkey — here for a week. You?"
+    },
+    {
+     "ai": "Nice! I'm from {from}. Been here {days}. What have you done so far?",
+     "tr": "Güzel! Ben {from}'lıyım. {days} oldu. Şu ana kadar ne yaptın?",
+     "sample": "Mostly beaches and cafés, honestly. Any tips?"
+    },
+    {
+     "ai": "Go to {fav} — trust me. Anyway, gotta run. Catch you around!",
+     "tr": "{fav}'a git — güven bana. Neyse, kaçmam lazım. Görüşürüz!",
+     "sample": "Will do! Nice talking to you!"
+    }
+   ]
+  },
+  {
+   "id": "sim2",
+   "title": "2 · Kafede Sohbet",
+   "situationTr": "Kafede yan masadaki gezginle işten ve hobilerden konuş.",
+   "persona": {
+    "name": "Clara",
+    "from": "Germany",
+    "days": "two weeks",
+    "fav": "Sidemen",
+    "next": "Flores"
+   },
+   "beats": [
+    {
+     "ai": "Is the Wi-Fi working for you? Mine keeps dropping. I'm {name}, by the way.",
+     "tr": "Sende Wi-Fi çalışıyor mu? Benimki kopup duruyor. Bu arada ben {name}.",
+     "sample": "Same here, honestly! I'm Hakan."
+    },
+    {
+     "ai": "Are you working from here too? What do you do?",
+     "tr": "Sen de buradan mı çalışıyorsun? Ne iş yapıyorsun?",
+     "sample": "I run a small business back home. What about you?"
+    },
+    {
+     "ai": "I'm a designer. So what are you into outside of work?",
+     "tr": "Ben tasarımcıyım. İş dışında nelere meraklısın?",
+     "sample": "I'm into photography — and I've been getting into surfing."
+    },
+    {
+     "ai": "Oh nice! How long have you been doing photography?",
+     "tr": "Süper! Ne zamandır fotoğrafçılıkla uğraşıyorsun?",
+     "sample": "A few years now. Mostly street photography."
+    },
+    {
+     "ai": "Cool. Well, back to work for me. Good luck with the waves!",
+     "tr": "Harika. Eh, ben işe döneyim. Dalgalarda bol şans!",
+     "sample": "Thanks! Enjoy your work. See you around!"
+    }
+   ]
+  },
+  {
+   "id": "sim3",
+   "title": "3 · Plajda Gruba Katılma",
+   "situationTr": "Plajda voleybol oynayan bir grup var. Katıl.",
+   "persona": {
+    "name": "Josh",
+    "from": "the US",
+    "days": "a week",
+    "fav": "Canggu",
+    "next": "Lombok"
+   },
+   "beats": [
+    {
+     "ai": "(Top ayağına geldi) Oh — thanks, man! You wanna join? We need one more.",
+     "tr": "(Top ayağına geldi) Oo — sağ ol dostum! Katılmak ister misin? Bir kişi lazım.",
+     "sample": "Sure, I'm down! I'm Hakan, by the way."
+    },
+    {
+     "ai": "Sweet! I'm {name}. You any good, or...?",
+     "tr": "Süper! Ben {name}. İyi misindir, yoksa...?",
+     "sample": "Haha, kind of. I'll try my best!"
+    },
+    {
+     "ai": "(Maç sonrası) Good game, man! We're grabbing drinks after. You in?",
+     "tr": "(Maç sonrası) İyi oyundu! Sonra içecek alacağız. Var mısın?",
+     "sample": "Definitely! Where are you guys heading?"
+    },
+    {
+     "ai": "Just the bar over there. First round's on me!",
+     "tr": "Şuradaki bara. İlk içecekler benden!",
+     "sample": "Sounds good to me. Let's go!"
+    }
+   ]
+  },
+  {
+   "id": "sim4",
+   "title": "4 · Gün Batımı Barı",
+   "situationTr": "Bar, gün batımı, yeni biri — hikâye anlat, hikâye dinle.",
+   "persona": {
+    "name": "Nina",
+    "from": "Sweden",
+    "days": "a month",
+    "fav": "Nusa Penida",
+    "next": "Australia",
+    "story": "I swam with manta rays yesterday"
+   },
+   "beats": [
+    {
+     "ai": "Best seat in the house, right? I'm {name}.",
+     "tr": "En iyi manzara burası, değil mi? Ben {name}.",
+     "sample": "Absolutely. I'm Hakan. Cheers!"
+    },
+    {
+     "ai": "Guess what — {story}! Still can't believe it.",
+     "tr": "İnanmayacaksın — {story}! Hâlâ inanamıyorum.",
+     "sample": "No way! What was that like?"
+    },
+    {
+     "ai": "Magical, honestly. Have you done anything like that here?",
+     "tr": "Büyülüydü açıkçası. Sen burada öyle bir şey yaptın mı?",
+     "sample": "Not yet — but now I really want to. Was it expensive?"
+    },
+    {
+     "ai": "Worth every rupiah. You should go before you leave!",
+     "tr": "Her rupiah'ına değer. Gitmeden mutlaka yap!",
+     "sample": "I might do that, actually. Thanks for the tip!"
+    }
+   ]
+  },
+  {
+   "id": "sim5",
+   "title": "5 · Plana Katılma",
+   "situationTr": "Grup bir yere gidiyor — dahil ol, detayları netleştir.",
+   "persona": {
+    "name": "Aoife",
+    "from": "Ireland",
+    "days": "five days",
+    "fav": "Uluwatu",
+    "next": "Bangkok",
+    "plan": "a night market",
+    "time": "seven"
+   },
+   "beats": [
+    {
+     "ai": "Hey! A few of us are checking out {plan} tonight. You should come!",
+     "tr": "Hey! Birkaç kişi bu akşam {plan}'a gidiyoruz. Sen de gel!",
+     "sample": "I'm down! What time are you going?"
+    },
+    {
+     "ai": "Around {time}. We'll probably grab food there too.",
+     "tr": "{time} civarı. Muhtemelen orada yemek de yeriz.",
+     "sample": "Perfect. Where should we meet?"
+    },
+    {
+     "ai": "Lobby at {time}? I'll add you to the WhatsApp group.",
+     "tr": "{time}'de lobi? Seni WhatsApp grubuna ekleyeyim.",
+     "sample": "Sounds good — here's my number."
+    },
+    {
+     "ai": "Done. See you at {time}!",
+     "tr": "Tamamdır. {time}'de görüşürüz!",
+     "sample": "See you then! Let me know if the plan changes."
+    }
+   ]
+  },
+  {
+   "id": "sim6",
+   "title": "6 · Geçmiş Seyahatler",
+   "situationTr": "Seyahat geçmişinden konuş — went/been farkına dikkat.",
+   "persona": {
+    "name": "Diego",
+    "from": "Spain",
+    "days": "three weeks",
+    "fav": "Ubud",
+    "next": "Japan"
+   },
+   "beats": [
+    {
+     "ai": "So is this your first big trip, or have you traveled much before?",
+     "tr": "Bu ilk büyük seyahatin mi, yoksa daha önce çok gezdin mi?",
+     "sample": "I've traveled around Europe before — but this is my first time in Asia."
+    },
+    {
+     "ai": "Nice! Where in Europe? I'm from {from}, so I'm curious.",
+     "tr": "Güzel! Avrupa'da nereler? Ben {from}'lıyım, merak ettim.",
+     "sample": "I went to Italy and Greece last year. Loved both!"
+    },
+    {
+     "ai": "Did you enjoy it? What was your favorite?",
+     "tr": "Beğendin mi? Favorin neresiydi?",
+     "sample": "Honestly, the food in Italy. It was totally worth it."
+    },
+    {
+     "ai": "Haha, fair enough! After Bali, you should try Japan. I'm heading there next.",
+     "tr": "Haha, anlaşılır! Bali'den sonra Japonya'yı dene. Ben oraya gidiyorum.",
+     "sample": "It's on my list! What made you choose Japan?"
+    }
+   ]
+  },
+  {
+   "id": "sim7",
+   "title": "7 · Yarının Planı",
+   "situationTr": "Yarın için ortak plan kur — öneri yap, saat ve buluşma ayarla.",
+   "persona": {
+    "name": "Ella",
+    "from": "the UK",
+    "days": "a week",
+    "fav": "Canggu",
+    "next": "the Gilis",
+    "plan": "the Tegalalang rice terraces"
+   },
+   "beats": [
+    {
+     "ai": "So what's the plan for tomorrow? Got anything booked?",
+     "tr": "Ee, yarının planı ne? Ayarladığın bir şey var mı?",
+     "sample": "Nothing yet — I'm thinking of going to {plan}. Wanna come?"
+    },
+    {
+     "ai": "Ooh, I'm up for that! How long does it take to get there?",
+     "tr": "Oo, ben varım! Oraya gitmek ne kadar sürüyor?",
+     "sample": "About an hour, I think. We could share a driver."
+    },
+    {
+     "ai": "Smart. What time should we leave?",
+     "tr": "Mantıklı. Kaçta çıkalım?",
+     "sample": "Early — maybe eight? Before it gets hot and crowded."
+    },
+    {
+     "ai": "Deal. I'll book the driver if you find a good lunch spot.",
+     "tr": "Anlaştık. Sen iyi bir öğlen mekânı bulursan ben şoförü ayarlarım.",
+     "sample": "Deal! I'll ask the hotel for a recommendation."
+    }
+   ]
+  },
+  {
+   "id": "sim8",
+   "title": "8 · Yemek + Sohbet",
+   "situationTr": "Garsonla sipariş, arkadaşlarla muhabbet — aynı anda.",
+   "persona": {
+    "name": "Tom",
+    "from": "Canada",
+    "days": "three weeks",
+    "fav": "Mount Batur",
+    "next": "Komodo",
+    "waiter": "Putu"
+   },
+   "beats": [
+    {
+     "ai": "({waiter}) Good evening! Ready to order?",
+     "tr": "({waiter}) İyi akşamlar! Sipariş hazır mı?",
+     "sample": "Almost! What would you recommend? Nothing too spicy."
+    },
+    {
+     "ai": "({waiter}) The grilled chicken is very popular. Mild but tasty.",
+     "tr": "({waiter}) Izgara tavuk çok seviliyor. Az acılı ama lezzetli.",
+     "sample": "Perfect, I'll take that. And a coconut, please."
+    },
+    {
+     "ai": "({name}) Good choice! So — best thing you've eaten in Bali so far?",
+     "tr": "({name}) İyi seçim! Ee — Bali'de yediğin en iyi şey ne?",
+     "sample": "Good question! Probably mie goreng. What about you?"
+    },
+    {
+     "ai": "({name}) The babi guling in Ubud. Life-changing, honestly.",
+     "tr": "({name}) Ubud'daki babi guling. Hayat değiştirici cidden.",
+     "sample": "Haha, that good? Fair enough — I'll have to try it."
+    },
+    {
+     "ai": "({waiter}) Anything else for you guys?",
+     "tr": "({waiter}) Başka bir şey ister misiniz?",
+     "sample": "Just the bill when you're ready — and can we split it?"
+    }
+   ]
+  },
+  {
+   "id": "sim9",
+   "title": "9 · Hızlı Konuşan Gezgin ⚡",
+   "situationTr": "Bu kişi HIZLI konuşuyor. Görevin: panik yapmadan kurtarma kalıplarını kullan (Sorry, what was that? / Could you slow down?).",
+   "persona": {
+    "name": "Ryan",
+    "from": "Australia",
+    "days": "two days",
+    "fav": "Uluwatu",
+    "next": "Lombok"
+   },
+   "fast": true,
+   "beats": [
+    {
+     "ai": "Heymate how's it going just got in yesterday absolutely knackered but keen for a surf you been out yet or what?",
+     "tr": "(Hızlı) Selam dostum nasıl gidiyor dün geldim çok yorgunum ama sörfe hazırım sen çıktın mı hiç?",
+     "sample": "Whoa — sorry, could you slow down a little? My English is still warming up!"
+    },
+    {
+     "ai": "Haha my bad! I said — I got here yesterday. Have you been surfing yet?",
+     "tr": "Haha pardon! Dedim ki — dün geldim. Sen hiç sörfe çıktın mı?",
+     "sample": "No worries! Not yet — I want to try a beginner lesson."
+    },
+    {
+     "ai": "Sweet, there's a spot down south, cheap lessons, mellow waves, wanna check it out tomorrow maybe?",
+     "tr": "(Hızlı) Güneyde bir yer var, ucuz ders, sakin dalgalar, yarın bakalım mı?",
+     "sample": "Sorry, what was that about tomorrow?"
+    },
+    {
+     "ai": "I said — do you want to check out a surf spot tomorrow? Beginner-friendly!",
+     "tr": "Dedim ki — yarın sörf noktasına bakmak ister misin? Yeni başlayanlara uygun!",
+     "sample": "Ohh, got it! Yeah, I'm down. What time?"
+    },
+    {
+     "ai": "Early-ish, like seven? I'll ping you the details on WhatsApp.",
+     "tr": "Erkence, yedi gibi? Detayları WhatsApp'tan atarım.",
+     "sample": "Sounds good. Send me the location!"
+    }
+   ]
+  }
+ ],
+ "scenario": {
+  "title": "10 · Final: Serbest Konuşma",
+  "situationTr": "10 dakikalık tamamen serbest sohbet — Free Talk ekranını kullan (Realistic modu öneririz). Bu senin bitirme sınavın!",
+  "goalTr": "Aç, tepki ver, sor, hikâye anlat, plan yap, doğal kapat. Hepsi bir arada.",
+  "personas": [
+   {
+    "name": "Sam",
+    "from": "Australia",
+    "days": "two weeks",
+    "fav": "Uluwatu",
+    "next": "Lombok"
+   },
+   {
+    "name": "Julia",
+    "from": "Austria",
+    "days": "a month",
+    "fav": "Sidemen",
+    "next": "Thailand"
+   }
+  ],
+  "beats": [
+   {
+    "ai": "Hey! You look familiar — were you at the beach bar yesterday? I'm {name}.",
+    "tr": "Hey! Tanıdık geldin — dün plaj barında mıydın? Ben {name}.",
+    "sample": "Maybe! I was there for sunset. I'm Hakan!"
+   },
+   {
+    "ai": "I knew it! So how's the trip going? Give me the full story.",
+    "tr": "Biliyordum! Ee, gezi nasıl gidiyor? Baştan anlat.",
+    "sample": "(Serbest — gezini anlat, sorular sor, plan yap!)"
+   },
+   {
+    "ai": "That's awesome. Hey, a bunch of us are doing a boat day tomorrow — you should come!",
+    "tr": "Harika. Baksana, yarın tekne turu yapıyoruz — sen de gel!",
+    "sample": "I'm down! What's included? And what time?"
+   },
+   {
+    "ai": "Snorkeling, lunch, the works. Eight AM from the harbor. It's gonna be great!",
+    "tr": "Şnorkel, öğle yemeği, her şey. Sabah 8, limandan. Harika olacak!",
+    "sample": "Perfect. Add me to the group — I'll be there!"
+   }
+  ]
+ }
 }

@@ -1,51 +1,67 @@
-import { days } from '../content'
-import { useApp, getDayState, countStreak, daysUntilTrip } from '../lib/store'
+import { days, TOTAL_DAYS } from '../content'
+import { useApp, getDayState, daysUntilTrip, activeDayNum, readiness } from '../lib/store'
 
-function taskFractions(content, st) {
-  const isReview = content.words.length === 0
-  const total = content.words.length || 1
-  const fCards = st.cardsDone
-    ? 1
-    : isReview
-      ? st.matchDone ? 1 : 0
-      : (st.seen.length / total) * 0.6 + (st.matchDone ? 0.4 : 0)
-  const fTalk = st.talkDone ? 1 : Math.min(1, st.talkSec / 600)
-  const fQuiz = st.quizDone ? 1 : st.quizBest / 10
-  return [fCards, fTalk, fQuiz]
-}
-
-export default function Home({ onOpenDay }) {
+export default function Home({ onOpenDay, onCalib }) {
   const { state } = useApp()
-  const streak = countStreak(state)
   const left = daysUntilTrip(state)
   const doneCount = days.filter((d) => getDayState(state, d.day).done).length
-  const activeDay = (days.find((d) => !getDayState(state, d.day).done) || days[days.length - 1]).day
+  const active = activeDayNum(state, TOTAL_DAYS)
+  const r = readiness(state, TOTAL_DAYS)
+  const showCalib = !state.calib.done && !state.calib.skipped
 
   return (
     <div className="screen">
       <header className="hero">
         <h1>Bali English 🌴</h1>
-        <div className="sub">10 günde derdini anlatacak kadar İngilizce</div>
+        <div className="sub">7 günlük sosyal akıcılık sprinti — hedef: gerçek sohbet</div>
         <div className="stats">
-          <div className="stat">
-            <div className="big">🔥 {streak}</div>
-            <div className="lbl">gün zinciri</div>
-          </div>
           <div className="stat">
             <div className="big">🛫 {left >= 0 ? left : 0}</div>
             <div className="lbl">Bali'ye kalan gün</div>
           </div>
           <div className="stat">
-            <div className="big">✅ {doneCount}/10</div>
+            <div className="big">✅ {doneCount}/7</div>
             <div className="lbl">tamamlanan gün</div>
+          </div>
+          <div className="stat">
+            <div className="big">🗣️ {state.stats.speak}</div>
+            <div className="lbl">konuşma denemesi</div>
           </div>
         </div>
       </header>
 
+      {showCalib && (
+        <button className="day-card active" onClick={onCalib}>
+          <span className="emoji">🎯</span>
+          <span className="info">
+            <span className="t">Hızlı Seviye Ayarı (3 dk)</span>
+            <span className="s">Zaten bildiklerini işaretle — kolay kartlarla vakit kaybetme.</span>
+          </span>
+          <span className="check">›</span>
+        </button>
+      )}
+
+      <div className="ready-panel">
+        <div className="section-title" style={{ margin: '0 0 8px' }}>Bali'ye Hazırlık (pratik tahmin)</div>
+        {[['Konuşma', r.speak], ['Dinleme', r.listening], ['Sosyal sohbet', r.social], ['Pratik İngilizce', r.practical]].map(
+          ([lbl, v]) => (
+            <div className="ready-row" key={lbl}>
+              <span className="lbl">{lbl}</span>
+              <span className="bar"><i style={{ width: `${v}%` }} /></span>
+              <span className="val">%{v}</span>
+            </div>
+          ),
+        )}
+      </div>
+
       {days.map((d) => {
         const st = getDayState(state, d.day)
-        const fr = taskFractions(d, st)
-        const isActive = d.day === activeDay && !st.done
+        const isActive = d.day === active && !st.done
+        const fr = [
+          st.chunksDone ? 1 : (st.seen.length / Math.max(1, d.chunks.length)) * 0.7 + (st.drillDone ? 0.3 : 0),
+          st.talkDone ? 1 : Math.min(1, st.talkSec / 600),
+          st.quizDone ? 1 : st.quizBest / 10,
+        ]
         return (
           <button
             key={d.day}
@@ -55,16 +71,10 @@ export default function Home({ onOpenDay }) {
             <span className="emoji">{d.emoji}</span>
             <span className="info">
               <span className="t">Gün {d.day} · {d.title}</span>
-              <span className="s">
-                {st.done
-                  ? 'Tamamlandı — harikasın!'
-                  : isActive
-                    ? 'Bugünün görevi — hadi başla!'
-                    : `${d.words.length || 'Tekrar'} ${d.words.length ? 'yeni kelime' : 'günü'} · konuşma · sınav`}
-              </span>
+              <span className="s">{st.done ? 'Tamamlandı — bir adım daha yaklaştın!' : d.goalTr}</span>
               <span className="task-dots">
                 {fr.map((f, i) => (
-                  <span key={i} className="dot"><i style={{ width: `${f * 100}%` }} /></span>
+                  <span key={i} className="dot"><i style={{ width: `${Math.round(f * 100)}%` }} /></span>
                 ))}
               </span>
             </span>

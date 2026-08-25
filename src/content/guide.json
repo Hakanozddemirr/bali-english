@@ -1,96 +1,592 @@
 {
-  "categories": [
+ "categories": [
+  {
+   "title": "Söze Başlama",
+   "emoji": "👋",
+   "phrases": [
     {
-      "title": "Selamlaşma",
-      "emoji": "👋",
-      "phrases": [
-        { "en": "Hello!", "tr": "Merhaba!" },
-        { "en": "Good morning!", "tr": "Günaydın!" },
-        { "en": "Thank you.", "tr": "Teşekkür ederim." },
-        { "en": "You're welcome.", "tr": "Rica ederim." },
-        { "en": "Excuse me.", "tr": "Affedersiniz. / Bakar mısınız?" },
-        { "en": "I'm sorry.", "tr": "Özür dilerim." },
-        { "en": "I don't understand.", "tr": "Anlamıyorum." }
-      ]
+     "en": "Hey! Mind if I sit here?",
+     "tr": "Selam! Buraya oturabilir miyim?"
     },
     {
-      "title": "Havalimanı",
-      "emoji": "🛫",
-      "phrases": [
-        { "en": "I'm here on holiday.", "tr": "Tatil için buradayım." },
-        { "en": "I'm staying for ten days.", "tr": "On gün kalacağım." },
-        { "en": "Here is my passport.", "tr": "İşte pasaportum." },
-        { "en": "Where is my gate?", "tr": "Kapım (uçuş kapısı) nerede?" },
-        { "en": "This is my bag.", "tr": "Bu benim çantam." },
-        { "en": "Where is the taxi?", "tr": "Taksi nerede?" }
-      ]
+     "en": "How's it going?",
+     "tr": "Nasıl gidiyor?"
     },
     {
-      "title": "Otel",
-      "emoji": "🏨",
-      "phrases": [
-        { "en": "I have a reservation.", "tr": "Rezervasyonum var." },
-        { "en": "What is the wifi password?", "tr": "Wifi şifresi nedir?" },
-        { "en": "What time is breakfast?", "tr": "Kahvaltı saat kaçta?" },
-        { "en": "Can I have a towel, please?", "tr": "Bir havlu alabilir miyim lütfen?" },
-        { "en": "The air conditioning is broken.", "tr": "Klima bozuk." },
-        { "en": "Can you clean my room, please?", "tr": "Odamı temizler misiniz lütfen?" },
-        { "en": "Check-out, please.", "tr": "Çıkış yapmak istiyorum lütfen." }
-      ]
+     "en": "Where are you from?",
+     "tr": "Nerelisin?"
     },
     {
-      "title": "Restoran",
-      "emoji": "🍽️",
-      "phrases": [
-        { "en": "A table for two, please.", "tr": "İki kişilik masa lütfen." },
-        { "en": "The menu, please.", "tr": "Menü lütfen." },
-        { "en": "I want fried rice.", "tr": "Kızarmış pilav (nasi goreng) istiyorum." },
-        { "en": "One coffee, please.", "tr": "Bir kahve lütfen." },
-        { "en": "Not spicy, please.", "tr": "Acısız olsun lütfen." },
-        { "en": "I'm allergic to nuts.", "tr": "Kuruyemişe alerjim var." },
-        { "en": "The bill, please.", "tr": "Hesap lütfen." },
-        { "en": "Can I pay by card?", "tr": "Kartla ödeyebilir miyim?" }
-      ]
+     "en": "Is this your first time in Bali?",
+     "tr": "Bali'ye ilk gelişin mi?"
     },
     {
-      "title": "Ulaşım & Pazarlık",
-      "emoji": "🛵",
-      "phrases": [
-        { "en": "How much to the beach?", "tr": "Plaja ne kadar (tutar)?" },
-        { "en": "Use the meter, please.", "tr": "Taksimetreyi açar mısınız lütfen?" },
-        { "en": "Turn left.", "tr": "Sola dön." },
-        { "en": "Turn right.", "tr": "Sağa dön." },
-        { "en": "Stop here, please.", "tr": "Burada dur lütfen." },
-        { "en": "That's too expensive.", "tr": "Bu çok pahalı." },
-        { "en": "Can you give me a discount?", "tr": "İndirim yapar mısınız?" },
-        { "en": "Fifty thousand, okay?", "tr": "Elli bin, tamam mı?" }
-      ]
+     "en": "How long are you here for?",
+     "tr": "Ne kadar kalacaksın?"
     },
     {
-      "title": "Acil Durum",
-      "emoji": "🆘",
-      "phrases": [
-        { "en": "Help me, please!", "tr": "Yardım edin lütfen!" },
-        { "en": "I need a doctor.", "tr": "Doktora ihtiyacım var." },
-        { "en": "Where is the pharmacy?", "tr": "Eczane nerede? (Bali'de: apotek)" },
-        { "en": "I'm sick.", "tr": "Hastayım." },
-        { "en": "My stomach hurts.", "tr": "Karnım ağrıyor." },
-        { "en": "I lost my passport.", "tr": "Pasaportumu kaybettim." },
-        { "en": "Call the police, please.", "tr": "Polisi arayın lütfen." },
-        { "en": "It's an emergency!", "tr": "Bu acil bir durum!" }
-      ]
+     "en": "How are you finding Bali?",
+     "tr": "Bali'yi nasıl buluyorsun?"
     },
     {
-      "title": "Sayılar & Para",
-      "emoji": "💵",
-      "phrases": [
-        { "en": "One, two, three, four, five.", "tr": "Bir, iki, üç, dört, beş." },
-        { "en": "Six, seven, eight, nine, ten.", "tr": "Altı, yedi, sekiz, dokuz, on." },
-        { "en": "Twenty. Fifty.", "tr": "Yirmi. Elli." },
-        { "en": "One hundred thousand.", "tr": "Yüz bin. (≈ 100 bin Rupiah)" },
-        { "en": "How much is this?", "tr": "Bu ne kadar?" },
-        { "en": "Do you have change?", "tr": "Bozuk paranız var mı?" }
-      ]
+     "en": "What brings you to Bali?",
+     "tr": "Bali'ye gelme sebebin ne?"
+    },
+    {
+     "en": "Have you been here long?",
+     "tr": "Uzun zamandır burada mısın?"
+    },
+    {
+     "en": "Beautiful spot, right?",
+     "tr": "Harika bir yer, değil mi?"
+    },
+    {
+     "en": "I like your board — do you surf a lot?",
+     "tr": "Tahtan güzelmiş — çok sörf yapar mısın?"
     }
-  ]
+   ]
+  },
+  {
+   "title": "Tepkiler",
+   "emoji": "⚡",
+   "phrases": [
+    {
+     "en": "No way!",
+     "tr": "Yok artık!"
+    },
+    {
+     "en": "Seriously?",
+     "tr": "Ciddi misin?"
+    },
+    {
+     "en": "That's amazing.",
+     "tr": "Bu harika."
+    },
+    {
+     "en": "That's crazy.",
+     "tr": "İnanılmaz."
+    },
+    {
+     "en": "That's rough.",
+     "tr": "Zor durummuş."
+    },
+    {
+     "en": "Fair enough.",
+     "tr": "Mantıklı / Anlaşılır."
+    },
+    {
+     "en": "Same here.",
+     "tr": "Ben de öyle."
+    },
+    {
+     "en": "Me too.",
+     "tr": "Ben de."
+    },
+    {
+     "en": "Me neither.",
+     "tr": "Ben de (değilim)."
+    },
+    {
+     "en": "Sounds good.",
+     "tr": "İyi fikir."
+    },
+    {
+     "en": "I know what you mean.",
+     "tr": "Ne demek istediğini anlıyorum."
+    },
+    {
+     "en": "Pretty much.",
+     "tr": "Aşağı yukarı öyle."
+    }
+   ]
+  },
+  {
+   "title": "Takip Soruları",
+   "emoji": "🔄",
+   "phrases": [
+    {
+     "en": "What was that like?",
+     "tr": "Nasıl bir şeydi?"
+    },
+    {
+     "en": "How come?",
+     "tr": "Nasıl yani / neden?"
+    },
+    {
+     "en": "Was it worth it?",
+     "tr": "Değer miydi?"
+    },
+    {
+     "en": "Would you recommend it?",
+     "tr": "Tavsiye eder misin?"
+    },
+    {
+     "en": "How long were you there?",
+     "tr": "Orada ne kadar kaldın?"
+    },
+    {
+     "en": "Who did you go with?",
+     "tr": "Kiminle gittin?"
+    },
+    {
+     "en": "And then what happened?",
+     "tr": "Peki sonra ne oldu?"
+    },
+    {
+     "en": "What's been your favorite place so far?",
+     "tr": "Şu ana kadar en sevdiğin yer?"
+    },
+    {
+     "en": "What's next after Bali?",
+     "tr": "Bali'den sonra sırada ne var?"
+    },
+    {
+     "en": "How did you get into that?",
+     "tr": "Buna nasıl merak sardın?"
+    }
+   ]
+  },
+  {
+   "title": "Plan Yapma",
+   "emoji": "🗓️",
+   "phrases": [
+    {
+     "en": "What are you doing tonight?",
+     "tr": "Bu akşam ne yapıyorsun?"
+    },
+    {
+     "en": "Do you have any plans for tomorrow?",
+     "tr": "Yarın planın var mı?"
+    },
+    {
+     "en": "Wanna grab a drink later?",
+     "tr": "Sonra bir şeyler içelim mi?"
+    },
+    {
+     "en": "Where should we meet?",
+     "tr": "Nerede buluşalım?"
+    },
+    {
+     "en": "What time works for you?",
+     "tr": "Sana kaç uyar?"
+    },
+    {
+     "en": "I'm down.",
+     "tr": "Varım!"
+    },
+    {
+     "en": "Maybe — I'll let you know.",
+     "tr": "Belki — haber veririm."
+    },
+    {
+     "en": "I might join later.",
+     "tr": "Belki sonra katılırım."
+    },
+    {
+     "en": "Sounds good to me.",
+     "tr": "Bana uyar."
+    },
+    {
+     "en": "I can't tonight — maybe tomorrow?",
+     "tr": "Bu akşam olmaz — yarın olur mu?"
+    }
+   ]
+  },
+  {
+   "title": "Gruba Katılma",
+   "emoji": "🙌",
+   "phrases": [
+    {
+     "en": "Mind if I join?",
+     "tr": "Katılabilir miyim?"
+    },
+    {
+     "en": "Can I join you guys?",
+     "tr": "Size katılabilir miyim?"
+    },
+    {
+     "en": "Are you guys heading somewhere?",
+     "tr": "Bir yere mi gidiyorsunuz?"
+    },
+    {
+     "en": "Room for one more?",
+     "tr": "Bir kişilik yer var mı?"
+    },
+    {
+     "en": "What are you guys up to?",
+     "tr": "Ne yapıyorsunuz?"
+    },
+    {
+     "en": "Do you mind if I tag along?",
+     "tr": "Ben de takılsam sorun olur mu?"
+    }
+   ]
+  },
+  {
+   "title": "WhatsApp / Instagram",
+   "emoji": "📱",
+   "phrases": [
+    {
+     "en": "What's your Instagram?",
+     "tr": "Instagram'ın ne?"
+    },
+    {
+     "en": "Are you on WhatsApp?",
+     "tr": "WhatsApp'ta var mısın?"
+    },
+    {
+     "en": "Let me add you.",
+     "tr": "Seni ekleyeyim."
+    },
+    {
+     "en": "Send me the location.",
+     "tr": "Konumu at."
+    },
+    {
+     "en": "I'm on my way.",
+     "tr": "Yoldayım."
+    },
+    {
+     "en": "I'll be there in 10.",
+     "tr": "10 dakikaya oradayım."
+    },
+    {
+     "en": "Running a little late.",
+     "tr": "Biraz gecikiyorum."
+    },
+    {
+     "en": "We just got here — where are you guys?",
+     "tr": "Yeni geldik — siz neredesiniz?"
+    },
+    {
+     "en": "Are you still coming?",
+     "tr": "Hâlâ geliyor musun?"
+    },
+    {
+     "en": "Let me know!",
+     "tr": "Haber ver!"
+    }
+   ]
+  },
+  {
+   "title": "Kafe & Restoran",
+   "emoji": "🍽️",
+   "phrases": [
+    {
+     "en": "Could we get a table for two?",
+     "tr": "İki kişilik masa alabilir miyiz?"
+    },
+    {
+     "en": "What would you recommend?",
+     "tr": "Ne önerirsiniz?"
+    },
+    {
+     "en": "What's in this?",
+     "tr": "Bunun içinde ne var?"
+    },
+    {
+     "en": "Could I get this without peanuts?",
+     "tr": "Bunu fıstıksız alabilir miyim?"
+    },
+    {
+     "en": "Is this spicy?",
+     "tr": "Bu acılı mı?"
+    },
+    {
+     "en": "Not too spicy, please.",
+     "tr": "Çok acılı olmasın lütfen."
+    },
+    {
+     "en": "Could we get the bill?",
+     "tr": "Hesabı alabilir miyiz?"
+    },
+    {
+     "en": "Can we split the bill?",
+     "tr": "Hesabı bölebilir miyiz?"
+    },
+    {
+     "en": "Do you take card?",
+     "tr": "Kart geçiyor mu?"
+    },
+    {
+     "en": "Could we get two more of these?",
+     "tr": "Bundan iki tane daha alabilir miyiz?"
+    },
+    {
+     "en": "It was delicious, thank you!",
+     "tr": "Çok lezzetliydi, teşekkürler!"
+    },
+    {
+     "en": "Keep the change.",
+     "tr": "Üstü kalsın."
+    }
+   ]
+  },
+  {
+   "title": "Ulaşım",
+   "emoji": "🛵",
+   "phrases": [
+    {
+     "en": "How much would it be to Canggu?",
+     "tr": "Canggu'ya ne kadar tutar?"
+    },
+    {
+     "en": "How long does it take?",
+     "tr": "Ne kadar sürer?"
+    },
+    {
+     "en": "Is there much traffic?",
+     "tr": "Trafik yoğun mu?"
+    },
+    {
+     "en": "Could you drop me off here?",
+     "tr": "Beni burada bırakır mısınız?"
+    },
+    {
+     "en": "Can you send me the location?",
+     "tr": "Konumu gönderir misin?"
+    },
+    {
+     "en": "Is it far from here?",
+     "tr": "Buraya uzak mı?"
+    },
+    {
+     "en": "Could you wait five minutes?",
+     "tr": "Beş dakika bekler misiniz?"
+    },
+    {
+     "en": "Just here is fine, thanks.",
+     "tr": "Şurası iyi, teşekkürler."
+    }
+   ]
+  },
+  {
+   "title": "Aktiviteler",
+   "emoji": "🏄",
+   "phrases": [
+    {
+     "en": "How much is it per person?",
+     "tr": "Kişi başı ne kadar?"
+    },
+    {
+     "en": "What's included?",
+     "tr": "Neler dahil?"
+    },
+    {
+     "en": "What time does it start?",
+     "tr": "Kaçta başlıyor?"
+    },
+    {
+     "en": "How long does it take?",
+     "tr": "Ne kadar sürüyor?"
+    },
+    {
+     "en": "Do we need to book in advance?",
+     "tr": "Önceden rezervasyon gerekli mi?"
+    },
+    {
+     "en": "Is it beginner-friendly?",
+     "tr": "Yeni başlayana uygun mu?"
+    },
+    {
+     "en": "Can we pay there?",
+     "tr": "Orada ödeyebilir miyiz?"
+    },
+    {
+     "en": "Is it safe for swimming?",
+     "tr": "Yüzmek için güvenli mi?"
+    }
+   ]
+  },
+  {
+   "title": "Konaklama",
+   "emoji": "🏨",
+   "phrases": [
+    {
+     "en": "Is breakfast included?",
+     "tr": "Kahvaltı dahil mi?"
+    },
+    {
+     "en": "What time is check-out?",
+     "tr": "Çıkış saati kaç?"
+    },
+    {
+     "en": "Could I get another towel?",
+     "tr": "Bir havlu daha alabilir miyim?"
+    },
+    {
+     "en": "The Wi-Fi isn't working.",
+     "tr": "Wi-Fi çalışmıyor."
+    },
+    {
+     "en": "The air conditioning isn't working.",
+     "tr": "Klima çalışmıyor."
+    },
+    {
+     "en": "Could I leave my bag here after check-out?",
+     "tr": "Çıkıştan sonra çantamı bırakabilir miyim?"
+    },
+    {
+     "en": "Do you have a quieter room?",
+     "tr": "Daha sessiz bir odanız var mı?"
+    }
+   ]
+  },
+  {
+   "title": "Sorunlar",
+   "emoji": "⚠️",
+   "phrases": [
+    {
+     "en": "I think there's been a mistake.",
+     "tr": "Sanırım bir yanlışlık oldu."
+    },
+    {
+     "en": "I ordered this, not that.",
+     "tr": "Ben bunu sipariş ettim, onu değil."
+    },
+    {
+     "en": "I can't find my phone.",
+     "tr": "Telefonumu bulamıyorum."
+    },
+    {
+     "en": "I lost my wallet.",
+     "tr": "Cüzdanımı kaybettim."
+    },
+    {
+     "en": "I don't feel very well.",
+     "tr": "Kendimi pek iyi hissetmiyorum."
+    },
+    {
+     "en": "I need a pharmacy.",
+     "tr": "Eczane lazım."
+    },
+    {
+     "en": "My scooter won't start.",
+     "tr": "Scooter'ım çalışmıyor."
+    },
+    {
+     "en": "Could you help me with something?",
+     "tr": "Bana bir konuda yardım eder misiniz?"
+    }
+   ]
+  },
+  {
+   "title": "Acil Durum",
+   "emoji": "🆘",
+   "phrases": [
+    {
+     "en": "Help me, please!",
+     "tr": "Yardım edin lütfen!"
+    },
+    {
+     "en": "I need a doctor.",
+     "tr": "Doktora ihtiyacım var."
+    },
+    {
+     "en": "Call an ambulance, please!",
+     "tr": "Ambulans çağırın lütfen!"
+    },
+    {
+     "en": "Where is the nearest hospital?",
+     "tr": "En yakın hastane nerede?"
+    },
+    {
+     "en": "My stomach really hurts.",
+     "tr": "Karnım çok ağrıyor."
+    },
+    {
+     "en": "I lost my passport.",
+     "tr": "Pasaportumu kaybettim."
+    },
+    {
+     "en": "Call the police, please.",
+     "tr": "Polisi arayın lütfen."
+    },
+    {
+     "en": "It's an emergency.",
+     "tr": "Bu acil bir durum."
+    }
+   ]
+  },
+  {
+   "title": "Sohbet Kurtarma",
+   "emoji": "🛟",
+   "phrases": [
+    {
+     "en": "Sorry, I didn't catch that.",
+     "tr": "Pardon, anlayamadım."
+    },
+    {
+     "en": "Could you say that again?",
+     "tr": "Tekrar söyler misin?"
+    },
+    {
+     "en": "Could you speak a little slower?",
+     "tr": "Biraz yavaş konuşur musun?"
+    },
+    {
+     "en": "What do you mean?",
+     "tr": "Ne demek istiyorsun?"
+    },
+    {
+     "en": "How do you say ___ in English?",
+     "tr": "___ İngilizce nasıl denir?"
+    },
+    {
+     "en": "Sorry, my English is still warming up!",
+     "tr": "Pardon, İngilizcem daha ısınıyor!"
+    },
+    {
+     "en": "Give me a second to think.",
+     "tr": "Bir saniye düşüneyim."
+    },
+    {
+     "en": "What was that word again?",
+     "tr": "O kelime neydi?"
+    }
+   ]
+  },
+  {
+   "title": "Vedalaşma",
+   "emoji": "👋",
+   "phrases": [
+    {
+     "en": "Nice talking to you!",
+     "tr": "Seninle konuşmak güzeldi!"
+    },
+    {
+     "en": "It was nice meeting you.",
+     "tr": "Tanıştığımıza memnun oldum."
+    },
+    {
+     "en": "I'm gonna grab another drink.",
+     "tr": "Ben bir içecek daha alacağım."
+    },
+    {
+     "en": "I'll catch you later.",
+     "tr": "Sonra görüşürüz."
+    },
+    {
+     "en": "See you around!",
+     "tr": "Görüşürüz!"
+    },
+    {
+     "en": "Maybe I'll see you there.",
+     "tr": "Belki orada görüşürüz."
+    },
+    {
+     "en": "Let's keep in touch.",
+     "tr": "İrtibatta kalalım."
+    },
+    {
+     "en": "Have a good one!",
+     "tr": "İyi günler/geceler!"
+    },
+    {
+     "en": "Enjoy the rest of your trip!",
+     "tr": "Gezinin kalanının tadını çıkar!"
+    }
+   ]
+  }
+ ]
 }

@@ -1,291 +1,424 @@
 {
-  "day": 2,
-  "title": "Havalimanı",
-  "emoji": "🛫",
-  "words": [
-    {
-      "en": "flight",
-      "v": "✈️",
-      "ex": "My flight is at nine."
-    },
-    {
-      "en": "departure",
-      "v": "🛫",
-      "ex": "Where is the departure gate?"
-    },
-    {
-      "en": "arrival",
-      "v": "🛬",
-      "ex": "The arrival hall is there."
-    },
-    {
-      "en": "delayed",
-      "v": "⏳",
-      "ex": "My flight is delayed."
-    },
-    {
-      "en": "luggage",
-      "v": "🧳",
-      "ex": "My luggage is lost."
-    },
-    {
-      "en": "boarding pass",
-      "v": "🎫",
-      "ex": "Here is my boarding pass."
-    },
-    {
-      "en": "gate",
-      "v": "🚪",
-      "ex": "Where is gate seven?"
-    },
-    {
-      "en": "seat",
-      "v": "💺",
-      "ex": "This is my seat."
-    },
-    {
-      "en": "window",
-      "v": "🪟",
-      "ex": "A window seat, please."
-    },
-    {
-      "en": "customs",
-      "v": "🛂",
-      "ex": "Is this the queue for customs?"
-    },
-    {
-      "en": "security",
-      "v": "🛃",
-      "ex": "Security check, please."
-    },
-    {
-      "en": "queue",
-      "v": "🧍🧍🧍",
-      "ex": "Is this the queue?"
-    },
-    {
-      "en": "exchange",
-      "v": "💱",
-      "ex": "Where is the money exchange?"
-    },
-    {
-      "en": "cart",
-      "v": "🛒",
-      "ex": "I need a baggage cart."
-    },
-    {
-      "en": "late",
-      "v": "⏰",
-      "ex": "The plane is late."
-    }
-  ],
-  "sentences": [
-    "Where is the departure gate?",
-    "My flight is delayed.",
-    "Is this the queue for customs?",
-    "My luggage is lost.",
-    "Here is my boarding pass.",
-    "Where is the money exchange?",
-    "I need a baggage cart.",
-    "The plane is late.",
-    "I'm here on holiday."
-  ],
-  "scenario": {
-    "title": "Pasaport Kontrolü",
-    "role": "a polite immigration officer at Bali airport passport control",
-    "firstLine": "Good morning. Passport, please.",
-    "situationTr": "Bali havalimanına yeni indin. Pasaport kontrolündesin, memur sana sorular soruyor.",
-    "goalTr": "Pasaportunu ver, neden geldiğini ve kaç gün kalacağını söyle.",
-    "script": [
-      {
-        "ai": "Good morning. Passport, please.",
-        "tr": "Günaydın. Pasaportunuz lütfen.",
-        "expect": [
-          "here",
-          "passport"
-        ],
-        "say": "Here is my passport."
-      },
-      {
-        "ai": "Thank you. Why are you here?",
-        "tr": "Teşekkürler. Geliş amacınız nedir?",
-        "expect": [
-          "holiday",
-          "vacation",
-          "tourist"
-        ],
-        "say": "I'm here on holiday."
-      },
-      {
-        "ai": "How long will you stay?",
-        "tr": "Ne kadar kalacaksınız?",
-        "expect": [
-          "ten",
-          "day",
-          "week"
-        ],
-        "say": "Ten days."
-      },
-      {
-        "ai": "Where will you stay?",
-        "tr": "Nerede kalacaksınız?",
-        "expect": [
-          "hotel",
-          "ubud",
-          "stay"
-        ],
-        "say": "I'm staying at a hotel in Ubud."
-      },
-      {
-        "ai": "Is this your first time in Indonesia?",
-        "tr": "Endonezya'ya ilk gelişiniz mi?",
-        "expect": [
-          "yes",
-          "first",
-          "no"
-        ],
-        "say": "Yes, my first time."
-      },
-      {
-        "ai": "Okay. Look at the camera, please.",
-        "tr": "Tamam. Kameraya bakın lütfen.",
-        "expect": [
-          "okay",
-          "yes",
-          "sure"
-        ],
-        "say": "Okay."
-      },
-      {
-        "ai": "Welcome to Bali! Enjoy your holiday.",
-        "tr": "Bali'ye hoş geldiniz! İyi tatiller.",
-        "expect": [
-          "thank"
-        ],
-        "say": "Thank you very much!"
-      },
-      {
-        "ai": "You're welcome. Next, please!",
-        "tr": "Rica ederim. Sıradaki lütfen!",
-        "expect": [
-          "goodbye",
-          "bye",
-          "thank"
-        ],
-        "say": "Goodbye!"
-      },
-      {
-        "ai": "(At baggage claim) Excuse me — is this your suitcase?",
-        "tr": "(Bagaj alanında) Affedersiniz — bu sizin valiziniz mi?",
-        "expect": [
-          "yes",
-          "my suitcase",
-          "thank"
-        ],
-        "say": "Yes, that's my suitcase. Thank you!"
-      },
-      {
-        "ai": "You're welcome. Where are you going now?",
-        "tr": "Rica ederim. Şimdi nereye gidiyorsunuz?",
-        "expect": [
-          "hotel",
-          "ubud"
-        ],
-        "say": "To my hotel in Ubud."
-      },
-      {
-        "ai": "Take the official taxi. The taxi stand is on the left.",
-        "tr": "Resmi taksiye binin. Taksi durağı solda.",
-        "expect": [
-          "thank",
-          "okay",
-          "left"
-        ],
-        "say": "Thank you very much!"
-      },
-      {
-        "ai": "(At the taxi stand) Hello! Where are you going?",
-        "tr": "(Taksi durağında) Merhaba! Nereye gidiyorsunuz?",
-        "expect": [
-          "ubud",
-          "hotel"
-        ],
-        "say": "To Ubud, please."
-      },
-      {
-        "ai": "Okay! Do you have big bags?",
-        "tr": "Tamam! Büyük çantanız var mı?",
-        "expect": [
-          "one",
-          "suitcase",
-          "bag",
-          "yes"
-        ],
-        "say": "Yes, one suitcase and one bag."
-      },
-      {
-        "ai": "No problem! Welcome to Bali. Let's go!",
-        "tr": "Sorun değil! Bali'ye hoş geldiniz. Gidelim!",
-        "expect": [
-          "thank",
-          "let",
-          "go"
-        ],
-        "say": "Thank you! Let's go!"
-      }
-    ]
+ "day": 2,
+ "title": "Kendini Anlatmak",
+ "emoji": "🙋",
+ "goalTr": "Nereli olduğunu, işini, hobilerini KALIPLARLA anlat — tek tek kelimelerle değil. Sonra topu karşıya at.",
+ "chunks": [
+  {
+   "en": "I'm originally from ___.",
+   "tr": "Aslen ___'liyim.",
+   "use": "Şablon: yer değiştir.",
+   "ex": "I'm originally from Istanbul."
   },
-  "quiz": {
-    "situations": [
-      {
-        "q": "Memur 'Why are you here?' diye sordu. Ne dersin?",
-        "options": [
-          "I'm here on holiday.",
-          "The menu, please.",
-          "Where is the taxi?",
-          "This is my bag."
-        ]
-      },
-      {
-        "q": "Uçağının kapısını arıyorsun. Ne sorarsın?",
-        "options": [
-          "Where is gate seven?",
-          "Here is my passport.",
-          "I'm going to Ubud.",
-          "Nice to meet you."
-        ]
-      },
-      {
-        "q": "Memur 'How long will you stay?' diye sordu. Ne dersin?",
-        "options": [
-          "Ten days.",
-          "My name is Hakan.",
-          "Yes, please.",
-          "The bag is big."
-        ]
-      }
-    ],
-    "listening": [
-      {
-        "audio": "Passport, please.",
-        "q": "Ne duydun? Anlamını seç.",
-        "options": [
-          "Pasaportunuz, lütfen.",
-          "Biletiniz nerede?",
-          "Hoş geldiniz.",
-          "Kapı yedi numara."
-        ]
-      },
-      {
-        "audio": "Where are you going?",
-        "q": "Soruya uygun cevabı seç.",
-        "options": [
-          "I'm going to Ubud.",
-          "I'm fine, thank you.",
-          "Two bags, please.",
-          "Here is my seat."
-        ]
-      }
-    ]
+  {
+   "en": "I'm from ___ but I live in ___.",
+   "tr": "___'liyim ama ___'de yaşıyorum.",
+   "use": "Şablon — iki şehir."
+  },
+  {
+   "en": "I recently graduated from ___.",
+   "tr": "___'den yeni mezun oldum."
+  },
+  {
+   "en": "I run a small business.",
+   "tr": "Küçük bir işletmem var.",
+   "use": "İşini basitçe anlatmanın yolu.",
+   "ex": "I run a small business back in Turkey."
+  },
+  {
+   "en": "I work mostly on ___.",
+   "tr": "Çoğunlukla ___ üzerine çalışıyorum.",
+   "use": "Detaya girmeden iş anlatır."
+  },
+  {
+   "en": "I'm into ___.",
+   "tr": "___'e meraklıyım.",
+   "use": "Hobi anlatmanın EN doğal yolu. 'I like'tan daha havalı.",
+   "ex": "I'm into photography and football."
+  },
+  {
+   "en": "I've been getting into ___.",
+   "tr": "Son zamanlarda ___'e merak sardım.",
+   "use": "Yeni hobiler için.",
+   "ex": "I've been getting into surfing lately."
+  },
+  {
+   "en": "I've always been interested in ___.",
+   "tr": "___ hep ilgimi çekmiştir."
+  },
+  {
+   "en": "I spend a lot of time ___.",
+   "tr": "Çok vaktimi ___ yaparak geçiriyorum.",
+   "use": "-ing ile: 'I spend a lot of time taking photos.'"
+  },
+  {
+   "en": "I've been doing it for ___ years.",
+   "tr": "___ yıldır yapıyorum.",
+   "use": "Süre sorulunca."
+  },
+  {
+   "en": "I'm trying to get better at ___.",
+   "tr": "___'de daha iyi olmaya çalışıyorum.",
+   "use": "Mütevazı ve sohbet açıcı."
+  },
+  {
+   "en": "I came here mostly to relax.",
+   "tr": "Buraya çoğunlukla dinlenmeye geldim."
+  },
+  {
+   "en": "I wanted to experience something different.",
+   "tr": "Farklı bir şey deneyimlemek istedim."
+  },
+  {
+   "en": "This is actually my first time in Indonesia.",
+   "tr": "Aslında Endonezya'ya ilk gelişim.",
+   "use": "'actually' = aslında; bilgi eklerken/düzeltirken."
+  },
+  {
+   "en": "I've traveled around Europe before.",
+   "tr": "Daha önce Avrupa'yı gezdim."
+  },
+  {
+   "en": "I went to the US last year.",
+   "tr": "Geçen yıl Amerika'ya gittim.",
+   "basic": true
+  },
+  {
+   "en": "How did you get into that?",
+   "tr": "Buna nasıl merak sardın?",
+   "use": "Karşı tarafın hobisine EN iyi takip sorusu.",
+   "ex": "I'm into diving. — Oh cool, how did you get into that?"
+  },
+  {
+   "en": "How long have you been doing that?",
+   "tr": "Ne zamandır yapıyorsun?"
+  },
+  {
+   "en": "What do you do back home?",
+   "tr": "Memlekette ne iş yapıyorsun?",
+   "use": "'back home' = memlekette."
+  },
+  {
+   "en": "I'm here with a friend.",
+   "tr": "Buraya bir arkadaşımla geldim.",
+   "basic": true
   }
+ ],
+ "quick": [
+  {
+   "q": "What do you do?",
+   "sample": "I run a small business back in Turkey."
+  },
+  {
+   "q": "What are you into?",
+   "sample": "I'm into photography — and football, of course."
+  },
+  {
+   "q": "What did you study?",
+   "sample": "I studied business at university."
+  },
+  {
+   "q": "Why did you come to Bali?",
+   "sample": "I wanted to experience something different."
+  },
+  {
+   "q": "How long have you been doing your job?",
+   "sample": "I've been doing it for about five years."
+  },
+  {
+   "q": "Do you like your job?",
+   "sample": "Mostly, yeah. It's busy but I like it."
+  },
+  {
+   "q": "What do you do in your free time?",
+   "sample": "I spend a lot of time taking photos."
+  },
+  {
+   "q": "Are you traveling alone?",
+   "sample": "No, I'm here with a friend."
+  },
+  {
+   "q": "Have you traveled much before?",
+   "sample": "A bit — I've traveled around Europe before."
+  },
+  {
+   "q": "What's your city like?",
+   "sample": "Istanbul? Huge, crowded, but amazing food."
+  }
+ ],
+ "social": [
+  {
+   "type": "react",
+   "stmt": "I quit my job to travel for a year.",
+   "samples": [
+    "No way, that's brave! How's it going so far?",
+    "That's amazing. What made you decide to do it?"
+   ]
+  },
+  {
+   "type": "react",
+   "stmt": "I'm a diving instructor here.",
+   "samples": [
+    "Oh cool! How long have you been doing that?",
+    "That sounds like a dream job, honestly."
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "I'm studying medicine.",
+   "samples": [
+    "Oh wow — what year are you in?",
+    "How's that going? It sounds intense."
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "I do a bit of photography.",
+   "samples": [
+    "Nice! What do you usually shoot?",
+    "Oh cool, can I see some of your photos?"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "I'm from a small town in Norway.",
+   "samples": [
+    "What's it like there?",
+    "Nice — do you miss it when you travel?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "I've been working online while traveling.",
+   "samples": [
+    "Oh nice! I've thought about that too. What kind of work do you do?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "I love the food here.",
+   "samples": [
+    "Same here! I can't stop eating nasi goreng. What's been your favorite?"
+   ]
+  },
+  {
+   "type": "story",
+   "stmt": "Kendini 30 saniyede tanıt: nereli olduğun, işin, neye meraklı olduğun, neden Bali'ye geldiğin.",
+   "samples": [
+    "I'm originally from...",
+    "I run a... / I work mostly on...",
+    "I'm into...",
+    "I came here mostly to..."
+   ]
+  }
+ ],
+ "grammar": {
+  "title": "Deneyim anlatma: went / I've been / I've been staying",
+  "intro": [
+   {
+    "pattern": "I went ...",
+    "ex": "I went to the US last year. (belirli zaman → went)"
+   },
+   {
+    "pattern": "I've been ...",
+    "ex": "I've been to Thailand. (deneyim, zaman yok)"
+   },
+   {
+    "pattern": "I've been staying ...",
+    "ex": "I've been staying in Ubud for three days. (hâlâ sürüyor)"
+   }
+  ],
+  "drills": [
+   {
+    "tr": "Geçen yıl Amerika'ya gittim.",
+    "keys": [
+     [
+      "went",
+      "last",
+      "year"
+     ]
+    ],
+    "best": "I went to the US last year."
+   },
+   {
+    "tr": "Daha önce Avrupa'yı gezdim.",
+    "keys": [
+     [
+      "been",
+      "europe"
+     ],
+     [
+      "traveled",
+      "europe"
+     ]
+    ],
+    "best": "I've traveled around Europe before."
+   },
+   {
+    "tr": "Üç gündür Ubud'da kalıyorum.",
+    "keys": [
+     [
+      "been",
+      "staying",
+      "three"
+     ],
+     [
+      "staying",
+      "for",
+      "three"
+     ]
+    ],
+    "best": "I've been staying in Ubud for three days."
+   },
+   {
+    "tr": "Endonezya'ya hiç gelmemiştim — bu ilk.",
+    "keys": [
+     [
+      "never",
+      "been",
+      "indonesia"
+     ],
+     [
+      "first",
+      "time",
+      "indonesia"
+     ]
+    ],
+    "best": "I've never been to Indonesia before — this is my first time."
+   },
+   {
+    "tr": "Buna nasıl merak sardın?",
+    "keys": [
+     [
+      "how",
+      "did",
+      "you",
+      "get",
+      "into"
+     ]
+    ],
+    "best": "How did you get into that?"
+   }
+  ]
+ },
+ "listening": [
+  {
+   "audio": "So what do you do back home?",
+   "q": "Ne soruyor?",
+   "options": [
+    "Memleketteki işini soruyor",
+    "Eve dönüş tarihini soruyor",
+    "Evde ne yaptığını soruyor",
+    "Memleketinin neresi olduğunu soruyor"
+   ]
+  },
+  {
+   "audio": "I've been getting into photography lately.",
+   "q": "Ne diyor?",
+   "options": [
+    "Son zamanlarda fotoğrafçılığa merak sarmış",
+    "Fotoğraf makinesini kaybetmiş",
+    "Fotoğrafçılığı bırakmış",
+    "Eskiden fotoğrafçıymış"
+   ]
+  }
+ ],
+ "scenario": {
+  "title": "Kafede Sohbet",
+  "situationTr": "Canggu'da bir kafede çalışan/dinlenen bir gezginle sohbete başladınız. Konu: işler, hobiler, Bali'ye geliş sebepleri.",
+  "goalTr": "Kalıplarla kendini anlat (I'm into... / I run... / I came here to...) ve 'How did you get into that?' ile karşıyı konuştur.",
+  "personas": [
+   {
+    "name": "Sophie",
+    "from": "France",
+    "days": "three weeks",
+    "fav": "Sidemen",
+    "next": "Vietnam",
+    "doing": "graphic design work for clients",
+    "into": "yoga and surfing"
+   },
+   {
+    "name": "Marco",
+    "from": "Italy",
+    "days": "ten days",
+    "fav": "Nusa Penida",
+    "next": "Singapore",
+    "doing": "software development",
+    "into": "diving"
+   },
+   {
+    "name": "Anna",
+    "from": "the Netherlands",
+    "days": "a week",
+    "fav": "Uluwatu",
+    "next": "Australia",
+    "doing": "a bit of teaching online",
+    "into": "photography"
+   }
+  ],
+  "beats": [
+   {
+    "ai": "Is this seat taken? ... Thanks! I'm {name}. Crazy busy café today, huh?",
+    "tr": "Bu koltuk dolu mu? ... Sağ ol! Ben {name}. Kafe bugün çok kalabalık, değil mi?",
+    "sample": "No, go ahead! I'm Hakan. Yeah, it's packed!"
+   },
+   {
+    "ai": "So are you working here too, or just chilling?",
+    "tr": "Sen de mi çalışıyorsun, yoksa takılıyor musun?",
+    "sample": "Just chilling, honestly. I'm on holiday."
+   },
+   {
+    "ai": "Nice! I'm doing {doing} while traveling. What do you do back home?",
+    "tr": "Güzel! Ben seyahat ederken {doing} yapıyorum. Sen memlekette ne iş yapıyorsun?",
+    "need": [
+     "business",
+     "work",
+     "run",
+     "study"
+    ],
+    "sample": "I run a small business back in Turkey."
+   },
+   {
+    "ai": "Oh cool. How long have you been doing that?",
+    "tr": "Süper. Ne zamandır yapıyorsun?",
+    "sample": "I've been doing it for about five years."
+   },
+   {
+    "ai": "Nice. And outside work — what are you into?",
+    "tr": "Güzel. Peki iş dışında — nelere meraklısın?",
+    "need": [
+     "into",
+     "photography",
+     "football",
+     "music"
+    ],
+    "sample": "I'm into photography. And football, of course."
+   },
+   {
+    "ai": "Oh really? I'm into {into} myself. How did you get into it?",
+    "tr": "Öyle mi? Ben de {into} meraklısıyım. Sen buna nasıl merak sardın?",
+    "sample": "I started a few years ago, just with my phone."
+   },
+   {
+    "ai": "That's how it always starts, haha. So why Bali? What made you pick it?",
+    "tr": "Hep öyle başlar zaten, haha. Peki neden Bali? Ne seçtirdi?",
+    "sample": "I wanted to experience something different. And it's beautiful!"
+   },
+   {
+    "ai": "Fair enough. Have you tried the food here yet? The warungs are amazing.",
+    "tr": "Anlaşılır. Buranın yemeklerini denedin mi? Warunglar harika.",
+    "sample": "A little bit. What would you recommend?"
+   },
+   {
+    "ai": "You should try nasi campur. There's a great warung near here, actually.",
+    "tr": "Nasi campur denemelisin. Yakında harika bir warung var aslında.",
+    "sample": "Oh nice, I'm down to try it. Where is it?"
+   },
+   {
+    "ai": "Two minutes away. I'm heading there for lunch — wanna join?",
+    "tr": "İki dakika mesafede. Öğlen oraya gideceğim — gelmek ister misin?",
+    "sample": "Sure, sounds good! Let's do it."
+   }
+  ]
+ }
 }

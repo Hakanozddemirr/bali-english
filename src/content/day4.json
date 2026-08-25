@@ -1,325 +1,446 @@
 {
-  "day": 4,
-  "title": "Restoran & Kafe",
-  "emoji": "🍽️",
-  "words": [
-    {
-      "en": "fork",
-      "v": "🍴",
-      "ex": "A fork, please."
-    },
-    {
-      "en": "spoon",
-      "v": "🥄",
-      "ex": "A spoon for the soup, please."
-    },
-    {
-      "en": "knife",
-      "v": "🔪",
-      "ex": "Can I have a knife?"
-    },
-    {
-      "en": "plate",
-      "v": "🍽️",
-      "ex": "One more plate, please."
-    },
-    {
-      "en": "glass",
-      "v": "🥛",
-      "ex": "A glass of water, please."
-    },
-    {
-      "en": "salt",
-      "v": "🧂",
-      "ex": "No salt, please."
-    },
-    {
-      "en": "sugar",
-      "v": "🍬",
-      "ex": "No sugar, please."
-    },
-    {
-      "en": "vegetarian",
-      "v": "🥦",
-      "ex": "I'm vegetarian."
-    },
-    {
-      "en": "allergy",
-      "v": "🤧",
-      "ex": "I have a nut allergy."
-    },
-    {
-      "en": "peanut",
-      "v": "🥜",
-      "ex": "I'm allergic to peanuts."
-    },
-    {
-      "en": "seafood",
-      "v": "🦐",
-      "ex": "Is there seafood in this?"
-    },
-    {
-      "en": "squid",
-      "v": "🦑",
-      "ex": "Grilled squid, please."
-    },
-    {
-      "en": "grilled",
-      "v": "🔥",
-      "ex": "Grilled fish, please."
-    },
-    {
-      "en": "sweet",
-      "v": "🍭",
-      "ex": "It's too sweet for me."
-    },
-    {
-      "en": "takeaway",
-      "v": "🥡",
-      "ex": "Can I take it away?"
-    },
-    {
-      "en": "spicy",
-      "v": "🌶️",
-      "ex": "Not spicy, please."
-    },
-    {
-      "en": "ice",
-      "v": "🧊",
-      "ex": "No ice, please."
-    },
-    {
-      "en": "bill",
-      "v": "🧾",
-      "ex": "The bill, please."
-    },
-    {
-      "en": "delicious",
-      "v": "😋",
-      "ex": "It's delicious!"
-    }
-  ],
-  "sentences": [
-    "A fork and a spoon, please.",
-    "I'm vegetarian.",
-    "I'm allergic to peanuts.",
-    "Is there seafood in this?",
-    "No sugar, please.",
-    "Grilled fish, please.",
-    "Can I take it away?",
-    "One more plate, please.",
-    "It's too sweet for me.",
-    "Not spicy, please."
-  ],
-  "scenario": {
-    "title": "Restoranda Sipariş",
-    "role": "a cheerful waiter at a warung (small restaurant) in Bali",
-    "firstLine": "Hello! Welcome! What would you like to drink?",
-    "situationTr": "Bir Bali restoranındasın (warung). Garson siparişini almaya geldi.",
-    "goalTr": "İçecek ve yemek siparişi ver, acı olmasın de, sonunda hesabı iste.",
-    "script": [
-      {
-        "ai": "Hello! Welcome! What would you like to drink?",
-        "tr": "Merhaba! Hoş geldiniz! Ne içmek istersiniz?",
-        "expect": [
-          "coffee",
-          "tea",
-          "juice",
-          "water",
-          "beer"
-        ],
-        "say": "One coffee, please."
-      },
-      {
-        "ai": "Good! And what would you like to eat?",
-        "tr": "Güzel! Yemek olarak ne alırsınız?",
-        "expect": [
-          "rice",
-          "fried",
-          "noodle",
-          "chicken",
-          "fish"
-        ],
-        "say": "I want fried rice."
-      },
-      {
-        "ai": "Good choice! Spicy or not spicy?",
-        "tr": "İyi seçim! Acılı mı, acısız mı?",
-        "expect": [
-          "not spicy",
-          "no spicy",
-          "spicy"
-        ],
-        "say": "Not spicy, please."
-      },
-      {
-        "ai": "Okay, not spicy. Anything else?",
-        "tr": "Tamam, acısız. Başka bir şey?",
-        "expect": [
-          "no",
-          "thank"
-        ],
-        "say": "No, thank you."
-      },
-      {
-        "ai": "Here is your food. Enjoy!",
-        "tr": "Buyurun yemeğiniz. Afiyet olsun!",
-        "expect": [
-          "thank"
-        ],
-        "say": "Thank you!"
-      },
-      {
-        "ai": "Is the food good?",
-        "tr": "Yemek güzel mi?",
-        "expect": [
-          "delicious",
-          "good",
-          "yes",
-          "very"
-        ],
-        "say": "It's delicious!"
-      },
-      {
-        "ai": "I'm happy! Do you want dessert? We have fried banana!",
-        "tr": "Sevindim! Tatlı ister misiniz? Kızarmış muzumuz var!",
-        "expect": [
-          "yes",
-          "banana",
-          "please"
-        ],
-        "say": "Yes! Fried banana, please."
-      },
-      {
-        "ai": "With ice cream?",
-        "tr": "Dondurmalı olsun mu?",
-        "expect": [
-          "yes",
-          "please",
-          "no"
-        ],
-        "say": "Yes, please!"
-      },
-      {
-        "ai": "Where are you from, my friend?",
-        "tr": "Nerelisiniz dostum?",
-        "expect": [
-          "turkey",
-          "from"
-        ],
-        "say": "I'm from Turkey."
-      },
-      {
-        "ai": "Turkey! Is the food spicy in Turkey?",
-        "tr": "Türkiye! Türkiye'de yemekler acılı mı?",
-        "expect": [
-          "yes",
-          "little",
-          "no",
-          "spicy"
-        ],
-        "say": "Yes, a little spicy."
-      },
-      {
-        "ai": "Haha! Here is your dessert. Enjoy!",
-        "tr": "Haha! Buyurun tatlınız. Afiyet olsun!",
-        "expect": [
-          "thank"
-        ],
-        "say": "Thank you!"
-      },
-      {
-        "ai": "Was everything good today?",
-        "tr": "Bugün her şey güzel miydi?",
-        "expect": [
-          "yes",
-          "delicious",
-          "good",
-          "everything"
-        ],
-        "say": "Yes, everything was delicious!"
-      },
-      {
-        "ai": "Thank you! Anything else?",
-        "tr": "Teşekkürler! Başka bir şey?",
-        "expect": [
-          "bill",
-          "no"
-        ],
-        "say": "No, thank you. The bill, please."
-      },
-      {
-        "ai": "Of course. 85,000 rupiah, please.",
-        "tr": "Tabii. 85.000 rupiah lütfen.",
-        "expect": [
-          "card",
-          "pay"
-        ],
-        "say": "Can I pay by card?"
-      },
-      {
-        "ai": "Yes, card is okay! Thank you. Come again!",
-        "tr": "Evet, kart olur! Teşekkürler. Yine bekleriz!",
-        "expect": [
-          "thank",
-          "goodbye",
-          "bye"
-        ],
-        "say": "Thank you! Goodbye!"
-      }
-    ]
+ "day": 4,
+ "title": "Plan Yapmak & Katılmak",
+ "emoji": "📱",
+ "goalTr": "İnsanlara katıl, plan yap, Instagram/WhatsApp al, buluşma ayarla. Bali'de sosyalleşmenin pratiği.",
+ "chunks": [
+  {
+   "en": "Are you guys doing anything later?",
+   "tr": "Sonra bir şey yapıyor musunuz?",
+   "use": "'you guys' = siz (grup) — çok yaygın."
   },
-  "quiz": {
-    "situations": [
-      {
-        "q": "Yemeği bitirdin, ödemek istiyorsun. Ne dersin?",
-        "options": [
-          "The bill, please.",
-          "The menu, please.",
-          "It's delicious!",
-          "A table for two, please."
-        ]
-      },
-      {
-        "q": "Acı yiyemiyorsun. Sipariş verirken ne dersin?",
-        "options": [
-          "Not spicy, please.",
-          "No ice, please.",
-          "One beer, please.",
-          "I want fried rice."
-        ]
-      },
-      {
-        "q": "Garson 'Anything to drink?' diye sordu. Ne dersin?",
-        "options": [
-          "One coffee, please.",
-          "The bill, please.",
-          "I'm allergic to nuts.",
-          "A table for two."
-        ]
-      }
-    ],
-    "listening": [
-      {
-        "audio": "Do you want ice?",
-        "q": "Soruya uygun cevabı seç.",
-        "options": [
-          "No ice, please.",
-          "Not spicy, please.",
-          "The bill, please.",
-          "One tea, please."
-        ]
-      },
-      {
-        "audio": "It's very spicy.",
-        "q": "Ne duydun? Anlamını seç.",
-        "options": [
-          "Çok acı.",
-          "Çok lezzetli.",
-          "Çok soğuk.",
-          "Çok pahalı."
-        ]
-      }
-    ]
+  {
+   "en": "What are you doing tonight?",
+   "tr": "Bu akşam ne yapıyorsun?",
+   "basic": true
+  },
+  {
+   "en": "Do you have any plans for tomorrow?",
+   "tr": "Yarın için planın var mı?"
+  },
+  {
+   "en": "Where are you guys heading?",
+   "tr": "Nereye gidiyorsunuz?",
+   "use": "'heading' = yönelmek/gitmek."
+  },
+  {
+   "en": "Mind if I join?",
+   "tr": "Katılmamda sakınca var mı?",
+   "use": "Gruba katılmanın EN kısa yolu.",
+   "ex": "We're going to the beach. — Mind if I join?"
+  },
+  {
+   "en": "Can I join you guys?",
+   "tr": "Size katılabilir miyim?"
+  },
+  {
+   "en": "We're thinking of going to ___.",
+   "tr": "___'e gitmeyi düşünüyoruz.",
+   "use": "Plan önerme şablonu."
+  },
+  {
+   "en": "Wanna come?",
+   "tr": "Gelmek ister misin?",
+   "use": "'Do you want to' → 'Wanna' (konuşma dili)."
+  },
+  {
+   "en": "Do you want to grab a drink later?",
+   "tr": "Sonra bir şeyler içmek ister misin?",
+   "use": "'grab' = hızlıca almak/yapmak: grab a drink, grab food, grab a coffee."
+  },
+  {
+   "en": "I'm down.",
+   "tr": "Varım!",
+   "use": "Plana katılmanın en havalı yolu.",
+   "ex": "We're going surfing at 7. — I'm down!"
+  },
+  {
+   "en": "I'm up for that.",
+   "tr": "Ona varım / bana uyar."
+  },
+  {
+   "en": "Sounds good to me.",
+   "tr": "Bana uyar.",
+   "basic": true
+  },
+  {
+   "en": "Maybe, I'll let you know.",
+   "tr": "Belki — haber veririm.",
+   "use": "Kibar 'belki' — kapıyı açık bırakır."
+  },
+  {
+   "en": "I might join you later.",
+   "tr": "Belki sonra katılırım."
+  },
+  {
+   "en": "I'm not sure yet.",
+   "tr": "Henüz emin değilim.",
+   "basic": true
+  },
+  {
+   "en": "What time are you going?",
+   "tr": "Kaçta gidiyorsunuz?",
+   "basic": true
+  },
+  {
+   "en": "Where should we meet?",
+   "tr": "Nerede buluşalım?"
+  },
+  {
+   "en": "Send me the location.",
+   "tr": "Konumu at.",
+   "use": "WhatsApp klasiği."
+  },
+  {
+   "en": "What's your Instagram?",
+   "tr": "Instagram'ın ne?",
+   "use": "Bali'de numaradan çok IG sorulur."
+  },
+  {
+   "en": "Are you on WhatsApp?",
+   "tr": "WhatsApp kullanıyor musun?"
+  },
+  {
+   "en": "I'll text you later.",
+   "tr": "Sonra yazarım."
+  },
+  {
+   "en": "I'm on my way.",
+   "tr": "Yoldayım.",
+   "use": "Mesajda: 'omw' diye de yazılır."
+  },
+  {
+   "en": "Running a little late.",
+   "tr": "Biraz gecikiyorum.",
+   "use": "Mesaj klasiği — özür havası taşır."
+  },
+  {
+   "en": "Let me know.",
+   "tr": "Haber ver.",
+   "use": "Mesaj/veda sonu kalıbı.",
+   "basic": true
   }
+ ],
+ "quick": [
+  {
+   "q": "What are you doing tonight?",
+   "sample": "Probably just dinner somewhere. Why, what's up?"
+  },
+  {
+   "q": "Do you have any plans for tomorrow?",
+   "sample": "Not yet — I'm thinking of going to Uluwatu."
+  },
+  {
+   "q": "Wanna grab a drink later?",
+   "sample": "Yeah, I'm down! What time?"
+  },
+  {
+   "q": "What time should we meet?",
+   "sample": "How about seven? At the beach bar?"
+  },
+  {
+   "q": "Are you coming to the waterfall with us?",
+   "sample": "I'd love to! What time are you guys going?"
+  },
+  {
+   "q": "What's your Instagram?",
+   "sample": "It's hakan-something — here, let me type it."
+  },
+  {
+   "q": "Are you on WhatsApp?",
+   "sample": "Yeah — put your number in, I'll text you."
+  },
+  {
+   "q": "Where should we meet?",
+   "sample": "Let's meet at the beach entrance, by the big tree."
+  },
+  {
+   "q": "Can you send me the location?",
+   "sample": "Sure, I'll send it on WhatsApp right now."
+  },
+  {
+   "q": "Are you still coming tonight?",
+   "sample": "Yeah! Running a little late, but I'm coming."
+  }
+ ],
+ "social": [
+  {
+   "type": "react",
+   "stmt": "We're heading to a waterfall tomorrow, wanna come?",
+   "samples": [
+    "Yeah, I'm down! What time are you going?",
+    "I might join — I'll let you know tonight.",
+    "I'd love to, but I already have plans. Next time?"
+   ]
+  },
+  {
+   "type": "react",
+   "stmt": "There's a party at the beach club tonight.",
+   "samples": [
+    "Sounds good! Who's going?",
+    "I'm not really into clubs, to be honest. But have fun!"
+   ]
+  },
+  {
+   "type": "react",
+   "stmt": "We're leaving in ten minutes.",
+   "samples": [
+    "Okay, I'm on my way!",
+    "Ah, I might be a little late. Save me a spot!"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "We found an amazing warung yesterday.",
+   "samples": [
+    "Nice! Where is it? I'm down to try it.",
+    "Oh yeah? What did you have?"
+   ]
+  },
+  {
+   "type": "follow",
+   "stmt": "We're renting scooters tomorrow morning.",
+   "samples": [
+    "Oh cool, where are you heading?",
+    "Mind if I join? I've been wanting to explore."
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "We're doing a sunrise hike on Thursday.",
+   "samples": [
+    "That sounds amazing! I've never done one. Can I join you guys?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "We're going to Uluwatu for sunset.",
+   "samples": [
+    "Nice! I've heard good things about it. What time are you heading there?"
+   ]
+  },
+  {
+   "type": "build",
+   "stmt": "We might check out the night market later.",
+   "samples": [
+    "Oh, I'm up for that! I haven't been yet. Where should we meet?"
+   ]
+  }
+ ],
+ "grammar": {
+  "title": "Planlar: going to / thinking of / might",
+  "intro": [
+   {
+    "pattern": "I'm going to ...",
+    "ex": "I'm going to take a surf lesson. (kesin plan)"
+   },
+   {
+    "pattern": "I'm thinking of ...",
+    "ex": "I'm thinking of going to Uluwatu. (fikir aşaması)"
+   },
+   {
+    "pattern": "I might ...",
+    "ex": "I might join you later. (belki)"
+   },
+   {
+    "pattern": "Wanna ...? / Are you up for ...?",
+    "ex": "Wanna grab a drink? / Are you up for a hike?"
+   }
+  ],
+  "drills": [
+   {
+    "tr": "Yarın Uluwatu'ya gitmeyi düşünüyorum.",
+    "keys": [
+     [
+      "thinking",
+      "of",
+      "going"
+     ],
+     [
+      "thinking",
+      "of",
+      "uluwatu"
+     ]
+    ],
+    "best": "I'm thinking of going to Uluwatu tomorrow."
+   },
+   {
+    "tr": "Bu akşam çıkabilirim, emin değilim.",
+    "keys": [
+     [
+      "might",
+      "go"
+     ],
+     [
+      "might",
+      "come"
+     ],
+     [
+      "not",
+      "sure",
+      "yet"
+     ]
+    ],
+    "best": "I might go out tonight — I'm not sure yet."
+   },
+   {
+    "tr": "Yarın sabah sörf dersi alacağım.",
+    "keys": [
+     [
+      "going",
+      "to",
+      "take"
+     ],
+     [
+      "going",
+      "to",
+      "have"
+     ]
+    ],
+    "best": "I'm going to take a surf lesson tomorrow morning."
+   },
+   {
+    "tr": "Haber veririm.",
+    "keys": [
+     [
+      "let",
+      "you",
+      "know"
+     ]
+    ],
+    "best": "I'll let you know."
+   },
+   {
+    "tr": "Bir şeyler içmek ister misin?",
+    "keys": [
+     [
+      "wanna",
+      "grab"
+     ],
+     [
+      "want",
+      "to",
+      "grab"
+     ],
+     [
+      "do",
+      "you",
+      "want",
+      "drink"
+     ]
+    ],
+    "best": "Do you wanna grab a drink?"
+   }
+  ]
+ },
+ "listening": [
+  {
+   "audio": "You guys heading anywhere later?",
+   "q": "Ne soruyor?",
+   "options": [
+    "Sonra bir yere gidip gitmeyeceklerini",
+    "Nereden geldiklerini",
+    "Neden geç kaldıklarını",
+    "Yarın nerede kalacaklarını"
+   ]
+  },
+  {
+   "audio": "Maybe — I'll let you know.",
+   "q": "Ne diyor?",
+   "options": [
+    "Belki; haber verecek",
+    "Kesin geliyor",
+    "Kesin gelmiyor",
+    "Yerini bilmiyor"
+   ]
+  }
+ ],
+ "scenario": {
+  "title": "Havuz Başı + WhatsApp",
+  "situationTr": "Havuz başında bir grupla tanıştın; akşam planına dahil oluyorsun. Sohbetin ikinci yarısı WhatsApp mesajlaşması!",
+  "goalTr": "Gruba katıl (Mind if I join?), Instagram/WhatsApp al, buluşmayı mesajla netleştir (konum, saat, gecikme).",
+  "personas": [
+   {
+    "name": "Liam",
+    "from": "Ireland",
+    "days": "a week",
+    "fav": "Canggu",
+    "next": "the Gilis",
+    "plan": "a beach bar for sunset",
+    "time": "around five"
+   },
+   {
+    "name": "Zoe",
+    "from": "Australia",
+    "days": "two weeks",
+    "fav": "Uluwatu",
+    "next": "Lombok",
+    "plan": "the night market",
+    "time": "about seven"
+   },
+   {
+    "name": "Nils",
+    "from": "Denmark",
+    "days": "four days",
+    "fav": "Ubud",
+    "next": "Java",
+    "plan": "a warung dinner then some live music",
+    "time": "around six"
+   }
+  ],
+  "beats": [
+   {
+    "ai": "...and that's why {name} here can't surf anymore, haha! Oh hey, you're at the hostel too, right?",
+    "tr": "...işte bu yüzden {name} artık sörf yapamıyor, haha! Hey, sen de hostelde kalıyorsun, değil mi?",
+    "sample": "Haha, yeah I am! I'm Hakan. What happened?"
+   },
+   {
+    "ai": "Long story, haha. We're all heading to {plan} later. You should come!",
+    "tr": "Uzun hikâye, haha. Biz sonra {plan}'a gidiyoruz. Sen de gelsene!",
+    "need": [
+     "down",
+     "sounds",
+     "time",
+     "love",
+     "join"
+    ],
+    "sample": "I'm down! What time are you guys going?"
+   },
+   {
+    "ai": "{time}-ish, probably. You on WhatsApp? We have a group.",
+    "tr": "Muhtemelen {time} gibi. WhatsApp'ın var mı? Grubumuz var.",
+    "sample": "Yeah! Put your number in — or what's your Instagram?"
+   },
+   {
+    "ai": "Sweet, I'll add you to the group. Okay, see you later!",
+    "tr": "Süper, seni gruba ekliyorum. Tamam, sonra görüşürüz!",
+    "sample": "Sounds good! See you later!"
+   },
+   {
+    "ai": "(WhatsApp, 16:40) Hey! We're still going to {plan} later, right?",
+    "tr": "(WhatsApp) Selam! Sonra {plan}'a hâlâ gidiyoruz, değil mi?",
+    "sample": "Yeah! What time are you guys heading there?"
+   },
+   {
+    "ai": "(WhatsApp) {time}. Where should we meet?",
+    "tr": "(WhatsApp) {time}. Nerede buluşalım?",
+    "sample": "Meet at the hostel entrance? Or send me the location."
+   },
+   {
+    "ai": "(WhatsApp) I'll send the location. We're leaving in 15!",
+    "tr": "(WhatsApp) Konumu atıyorum. 15 dakikaya çıkıyoruz!",
+    "sample": "Okay! I might be a little late — save me a spot!"
+   },
+   {
+    "ai": "(WhatsApp) Haha no worries. See you there!",
+    "tr": "(WhatsApp) Haha sorun değil. Orada görüşürüz!",
+    "sample": "On my way!"
+   },
+   {
+    "ai": "(At the bar) Heyyy, you made it! What do you want to drink?",
+    "tr": "(Barda) Heyyy, gelebildin! Ne içersin?",
+    "sample": "Of course! Whatever you guys are having."
+   }
+  ]
+ }
 }
