@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { useApp } from '../lib/store'
+import { useApp, KEY, loadState } from '../lib/store'
+import { todayISO } from '../lib/dates'
 import { MODELS } from '../lib/claude'
 import { speak } from '../lib/tts'
 
@@ -12,10 +13,38 @@ export default function Settings() {
 
   const reset = () => {
     if (window.confirm('Tüm ilerleme (kalıplar, günler, hatalar, favoriler) silinecek. Emin misin?')) {
+      localStorage.removeItem(KEY)
       localStorage.removeItem('baliEnglish.v2')
       localStorage.removeItem('baliEnglish.v1')
       window.location.reload()
     }
+  }
+
+  // Yedek: API anahtarı dosyaya yazılmaz
+  const exportData = () => {
+    const data = { ...state, settings: { ...state.settings, apiKey: '' }, exportedAt: new Date().toISOString() }
+    const blob = new Blob([JSON.stringify(data, null, 1)], { type: 'application/json' })
+    const a = document.createElement('a')
+    a.href = URL.createObjectURL(blob)
+    a.download = `bali-english-yedek-${todayISO()}.json`
+    a.click()
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000)
+  }
+
+  const importData = (e) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    file.text().then((txt) => {
+      try {
+        const data = JSON.parse(txt)
+        if (!data.version || !data.settings) throw new Error('format')
+        if (!window.confirm('Bu yedek mevcut ilerlemenin yerine geçecek. Devam?')) return
+        data.settings.apiKey = state.settings.apiKey
+        localStorage.setItem(KEY, JSON.stringify(data))
+        loadState()
+        window.location.reload()
+      } catch { window.alert('Bu dosya geçerli bir Bali English yedeği değil.') }
+    })
   }
 
   return (
@@ -56,9 +85,9 @@ export default function Settings() {
 
       <div className="section-title">Claude Modu (isteğe bağlı)</div>
       <div className="warn-box">
-        🎁 Uygulama anahtarsız, ücretsiz ve çevrimdışı çalışır. API anahtarı girersen konuşmalar
-        Claude ile tamamen serbest hale gelir ve sohbet sonunda kişisel geri bildirim alırsın.
-        Anahtar yalnızca bu cihazda saklanır — kimseyle paylaşma.
+        🎁 Uygulama anahtarsız da çalışır. API anahtarı girersen: serbest sohbet, Lab cevaplarının akıllı kontrolü,
+        günlük/özet düzeltmesi, 41+ dersler için otomatik Lab ve haftalık puanlama açılır.
+        Anahtar yalnızca bu cihazda saklanır — kimseyle paylaşma. Anthropic Console'da anahtara <b>aylık harcama limiti</b> koy.
       </div>
       <div className="field">
         <label>Anthropic API Anahtarı</label>
@@ -77,9 +106,23 @@ export default function Settings() {
         </select>
       </div>
 
+      <div className="section-title">💾 Yedek & Koç Raporu</div>
+      <div className="warn-box">
+        İlerleme sadece bu tarayıcıda duruyor. Haftada bir <b>yedek indir</b> — tarayıcı verisi silinirse buradan geri yüklersin.
+        Aynı dosyayı Claude Code'a verirsen hatalarını ve kelimelerini <code>context/english/</code> hafızana işler.
+        (API anahtarı dosyaya yazılmaz.)
+      </div>
+      <div className="btn-row" style={{ marginBottom: 16 }}>
+        <button className="btn soft" onClick={exportData}>⬇️ Yedek indir</button>
+        <label className="btn ghost" style={{ cursor: 'pointer' }}>
+          ⬆️ Yedek yükle
+          <input type="file" accept="application/json" onChange={importData} style={{ display: 'none' }} />
+        </label>
+      </div>
+
       <div className="section-title">Seyahat</div>
       <div className="field">
-        <label>Bali'ye uçuş tarihi</label>
+        <label>Bir sonraki Bali tarihi</label>
         <input type="date" value={state.tripDate}
           onChange={(e) => e.target.value && update((st) => { st.tripDate = e.target.value })} />
       </div>
@@ -107,7 +150,7 @@ export default function Settings() {
 
       <div className="section-title">Tehlikeli Bölge</div>
       <button className="btn danger" onClick={reset}>🗑️ Tüm İlerlemeyi Sıfırla</button>
-      <p className="empty-note">Bali English v2 — 7 Günlük Sosyal Akıcılık Sprinti 🌴</p>
+      <p className="empty-note">Bali English v3 — Sabah Sistemi 🌴 (ders: Aksen Kahraman YouTube)</p>
     </div>
   )
 }

@@ -1,0 +1,1203 @@
+{
+  "31": {
+    "focusTr": "Her zaman ya da genelde yaptığın şeyler için fiilin yalın hâlini kullan. He/She/It ile fiile -s ekle; soru ve olumsuzda do/does gelir.",
+    "pattern": "I/You/We/They + V1 · He/She/It + V1-s · Do/Does ...? · don't/doesn't + V1",
+    "items": [
+      {
+        "tr": "Her sabah kahve içerim.",
+        "en": [
+          "I drink coffee every morning.",
+          "Every morning I drink coffee.",
+          "I have coffee every morning."
+        ]
+      },
+      {
+        "tr": "Online bir mağazam var.",
+        "en": [
+          "I have an online shop.",
+          "I have an online store.",
+          "I've got an online shop."
+        ]
+      },
+      {
+        "tr": "O spor salonuna gider.",
+        "en": [
+          "He goes to the gym.",
+          "She goes to the gym."
+        ],
+        "tip": "He/She ile fiile -s: go değil goes."
+      },
+      {
+        "tr": "Kahve sever misin?",
+        "en": [
+          "Do you like coffee?"
+        ]
+      },
+      {
+        "tr": "Kız kardeşim İstanbul'da yaşıyor.",
+        "en": [
+          "My sister lives in Istanbul."
+        ],
+        "tip": "Kalıcı durum: 'is living' değil, lives."
+      },
+      {
+        "tr": "Kız kardeşin nerede çalışıyor?",
+        "en": [
+          "Where does your sister work?"
+        ],
+        "tip": "He/She sorusunda does; fiil -s almaz."
+      },
+      {
+        "tr": "Müşterilerim bana genelde Instagram'dan yazar.",
+        "en": [
+          "My customers usually write to me on Instagram.",
+          "My customers usually message me on Instagram.",
+          "My customers usually text me on Instagram."
+        ],
+        "tip": "usually fiilden önce gelir."
+      },
+      {
+        "tr": "Babam kahve içmez, çay içer.",
+        "en": [
+          "My dad doesn't drink coffee, he drinks tea.",
+          "My dad doesn't drink coffee. He drinks tea.",
+          "My father doesn't drink coffee, he drinks tea.",
+          "My father does not drink coffee, he drinks tea."
+        ]
+      },
+      {
+        "tr": "Sabah erken kalkarım çünkü siparişleri kontrol ederim.",
+        "en": [
+          "I get up early in the morning because I check the orders.",
+          "I wake up early in the morning because I check the orders.",
+          "I get up early because I check the orders.",
+          "I wake up early because I check the orders."
+        ]
+      },
+      {
+        "tr": "Annem spora gitmez ama her gün yürür.",
+        "en": [
+          "My mom doesn't go to the gym but she walks every day.",
+          "My mom doesn't go to the gym, but she walks every day.",
+          "My mother doesn't go to the gym but she walks every day.",
+          "My mother does not go to the gym but she walks every day.",
+          "My mum doesn't go to the gym but she walks every day."
+        ]
+      },
+      {
+        "tr": "Bu kafe sabah yedide açılır ve çok güzel kahve yapar.",
+        "en": [
+          "This cafe opens at seven in the morning and it makes very good coffee.",
+          "This cafe opens at seven in the morning and makes very good coffee.",
+          "This cafe opens at seven a.m. and makes very good coffee.",
+          "This cafe opens at seven and it makes really good coffee."
+        ]
+      },
+      {
+        "tr": "Arkadaşım Canggu'da bir villada yaşıyor ve evden çalışıyor.",
+        "en": [
+          "My friend lives in a villa in Canggu and works from home.",
+          "My friend lives in a villa in Canggu and he works from home.",
+          "My friend lives in a villa in Canggu and she works from home."
+        ],
+        "tip": "Canggu'dan önce 'the' yok."
+      }
+    ],
+    "talk": [
+      "What do you do every morning?",
+      "What does your online shop sell?",
+      "How often do you go to the gym?"
+    ]
+  },
+  "32": {
+    "focusTr": "Şu an ya da bu aralar olan şey için am/is/are + fiil-ing kullan. 'I working' deme; am/is/are'yi asla atlama.",
+    "pattern": "I am / He is / They are + V-ing · Are you + V-ing? · I'm not + V-ing",
+    "items": [
+      {
+        "tr": "Şu an kahve içiyorum.",
+        "en": [
+          "I'm drinking coffee now.",
+          "I am drinking coffee now.",
+          "I'm drinking coffee right now.",
+          "I am drinking coffee right now."
+        ]
+      },
+      {
+        "tr": "Ne yapıyorsun?",
+        "en": [
+          "What are you doing?"
+        ]
+      },
+      {
+        "tr": "Şu an yağmur yağıyor.",
+        "en": [
+          "It's raining now.",
+          "It is raining now.",
+          "It's raining right now."
+        ]
+      },
+      {
+        "tr": "Annem yemek pişiriyor.",
+        "en": [
+          "My mom is cooking.",
+          "My mother is cooking.",
+          "My mum is cooking."
+        ],
+        "tip": "am/is/are unutma: 'My mom cooking' yanlış."
+      },
+      {
+        "tr": "Bu hafta yeni bir koleksiyon hazırlıyorum.",
+        "en": [
+          "I'm preparing a new collection this week.",
+          "I am preparing a new collection this week.",
+          "I'm working on a new collection this week.",
+          "This week I'm preparing a new collection."
+        ]
+      },
+      {
+        "tr": "Arkadaşlarım plajda sörf yapıyor.",
+        "en": [
+          "My friends are surfing at the beach.",
+          "My friends are surfing on the beach."
+        ]
+      },
+      {
+        "tr": "Şu an spor salonunda antrenman mı yapıyorsun?",
+        "en": [
+          "Are you working out at the gym now?",
+          "Are you training at the gym now?",
+          "Are you working out at the gym right now?",
+          "Are you training at the gym right now?"
+        ]
+      },
+      {
+        "tr": "Telefonuma bakmıyorum, araba sürüyorum.",
+        "en": [
+          "I'm not looking at my phone, I'm driving.",
+          "I'm not looking at my phone. I'm driving.",
+          "I am not looking at my phone, I am driving."
+        ]
+      },
+      {
+        "tr": "Şu an Canggu'da bir kafede oturuyorum ve e-postalarımı kontrol ediyorum.",
+        "en": [
+          "I'm sitting in a cafe in Canggu and I'm checking my emails.",
+          "I'm sitting in a cafe in Canggu and checking my emails.",
+          "I am sitting in a cafe in Canggu and I am checking my emails.",
+          "I'm sitting in a cafe in Canggu right now and checking my emails."
+        ],
+        "tip": "Canggu'dan önce 'the' kullanma."
+      },
+      {
+        "tr": "Bu aralar çok çalışıyorum çünkü çok sipariş alıyoruz.",
+        "en": [
+          "I'm working a lot these days because we're getting a lot of orders.",
+          "I'm working hard these days because we're getting a lot of orders.",
+          "I am working a lot these days because we are getting a lot of orders.",
+          "I'm working a lot these days because we're getting many orders."
+        ]
+      },
+      {
+        "tr": "Annen seni arıyor ama telefonunu açmıyorsun.",
+        "en": [
+          "Your mom is calling you but you're not answering your phone.",
+          "Your mom is calling you, but you're not answering your phone.",
+          "Your mom is calling you but you aren't answering your phone.",
+          "Your mother is calling you but you're not answering your phone.",
+          "Your mum is calling you but you're not answering your phone."
+        ]
+      },
+      {
+        "tr": "Arkadaşlarım şu an beach club'da dans ediyor ama ben villada uyuyorum.",
+        "en": [
+          "My friends are dancing at the beach club now but I'm sleeping at the villa.",
+          "My friends are dancing at the beach club right now but I'm sleeping at the villa.",
+          "My friends are dancing at the beach club now, but I'm sleeping in the villa.",
+          "My friends are dancing at the beach club now but I am sleeping in the villa."
+        ]
+      }
+    ],
+    "talk": [
+      "What are you doing right now?",
+      "What are you working on these days?",
+      "Where are you sitting right now?"
+    ]
+  },
+  "irr": {
+    "focusTr": "Geçmişi anlatırken bu fiiller -ed almaz, tamamen değişir: go → went, eat → ate, see → saw. 'goed, eated, buyed' yok; bu 20 fiili hazır kalıp gibi ezberle.",
+    "pattern": "I/You/He/We/They + V2 · went · ate · saw · met · bought · had · got · took · came · did · made · said · told · found · left · slept · drank · felt · paid · spent",
+    "items": [
+      {
+        "tr": "Plaja gittim.",
+        "en": [
+          "I went to the beach."
+        ],
+        "tip": "go → went; 'goed' yok."
+      },
+      {
+        "tr": "Nasi goreng yedim.",
+        "en": [
+          "I ate nasi goreng.",
+          "I had nasi goreng."
+        ]
+      },
+      {
+        "tr": "Yeni bir arkadaşla tanıştım.",
+        "en": [
+          "I met a new friend."
+        ],
+        "tip": "Tanışmak = meet → met."
+      },
+      {
+        "tr": "Garsona teşekkür ettim.",
+        "en": [
+          "I said thank you.",
+          "I said thanks.",
+          "I thanked the waiter.",
+          "I said thank you to the waiter."
+        ]
+      },
+      {
+        "tr": "İyi uyudum ve erken kalktım.",
+        "en": [
+          "I slept well and got up early.",
+          "I slept well and woke up early."
+        ]
+      },
+      {
+        "tr": "Yoga yaptım ve kahvaltı hazırladım.",
+        "en": [
+          "I did yoga and made breakfast.",
+          "I did some yoga and made breakfast."
+        ],
+        "tip": "Yoga/spor = did; yemek hazırlamak = made."
+      },
+      {
+        "tr": "Taksiye bindim ve nakit ödedim.",
+        "en": [
+          "I took a taxi and paid cash.",
+          "I took a taxi and paid in cash."
+        ],
+        "tip": "Taksiye binmek = take a taxi → took."
+      },
+      {
+        "tr": "Scooter için bir kask aldım.",
+        "en": [
+          "I bought a helmet for the scooter.",
+          "I bought a helmet for my scooter."
+        ],
+        "tip": "Satın almak = buy → bought; 'buyed' yok."
+      },
+      {
+        "tr": "Bali'de çok para harcadım ama harika vakit geçirdim.",
+        "en": [
+          "I spent a lot of money in Bali but I had a great time.",
+          "I spent a lot of money in Bali, but I had a great time.",
+          "I spent a lot of money in Bali but had a great time.",
+          "I spent a lot of money in Bali but I had a wonderful time."
+        ]
+      },
+      {
+        "tr": "Arkadaşım villaya geldi ve bana güzel bir beach club'tan bahsetti.",
+        "en": [
+          "My friend came to the villa and told me about a nice beach club.",
+          "My friend came to the villa and told me about a good beach club.",
+          "My friend came to the villa and told me about a great beach club."
+        ],
+        "tip": "Birine anlatmak = tell → told me."
+      },
+      {
+        "tr": "Telefonumu kafede unuttum ama garson onu buldu.",
+        "en": [
+          "I left my phone at the cafe but the waiter found it.",
+          "I left my phone in the cafe but the waiter found it.",
+          "I left my phone at the cafe, but the waiter found it.",
+          "I forgot my phone at the cafe but the waiter found it."
+        ],
+        "tip": "Bir yerde unutmak = leave → left."
+      },
+      {
+        "tr": "Gün batımını gördük, hindistan cevizi suyu içtik ve kendimizi çok mutlu hissettik.",
+        "en": [
+          "We saw the sunset, drank coconut water and felt very happy.",
+          "We saw the sunset, drank coconut water, and felt very happy.",
+          "We saw the sunset and drank coconut water and we felt very happy.",
+          "We saw the sunset, drank coconut water and felt really happy."
+        ]
+      }
+    ],
+    "talk": [
+      "What did you do yesterday?",
+      "What did you eat and drink in Bali?",
+      "What did you buy on your trip?"
+    ]
+  },
+  "33": {
+    "focusTr": "Geçmişi anlatırken fiili MUTLAKA geçmişe çek: like → liked, stay → stayed, go → went. Soru ve olumsuzda did gelir, fiil yalın kalır: Did you go? / I didn't go.",
+    "pattern": "I + V2 (liked, stayed, went) · Did you + V1 ...? · I didn't + V1",
+    "items": [
+      {
+        "tr": "Kulübü sevdim.",
+        "en": [
+          "I liked the club.",
+          "I loved the club."
+        ],
+        "tip": "Geçmiş: like değil liked!"
+      },
+      {
+        "tr": "Bali'ye gittin mi?",
+        "en": [
+          "Did you go to Bali?"
+        ],
+        "tip": "Did varsa fiil yalın: went değil go."
+      },
+      {
+        "tr": "Scooter kiraladım.",
+        "en": [
+          "I rented a scooter.",
+          "I hired a scooter."
+        ]
+      },
+      {
+        "tr": "Dün çalışmadım.",
+        "en": [
+          "I didn't work yesterday.",
+          "I did not work yesterday.",
+          "Yesterday I didn't work."
+        ],
+        "tip": "didn't + yalın fiil: 'didn't worked' yanlış."
+      },
+      {
+        "tr": "Canggu'da bir ay kaldım.",
+        "en": [
+          "I stayed in Canggu for a month.",
+          "I stayed in Canggu for one month.",
+          "I was in Canggu for a month.",
+          "I spent a month in Canggu."
+        ],
+        "tip": "Canggu'dan önce 'the' yok."
+      },
+      {
+        "tr": "Canggu'daki plajları beğendin mi?",
+        "en": [
+          "Did you like the beaches in Canggu?"
+        ]
+      },
+      {
+        "tr": "Dün gece kulüpte dans etmedim.",
+        "en": [
+          "I didn't dance at the club last night.",
+          "I did not dance at the club last night.",
+          "Last night I didn't dance at the club."
+        ]
+      },
+      {
+        "tr": "Geçen hafta çok sipariş aldık.",
+        "en": [
+          "We got a lot of orders last week.",
+          "We had a lot of orders last week.",
+          "Last week we got a lot of orders.",
+          "We got many orders last week."
+        ]
+      },
+      {
+        "tr": "Bali'ye gittim ve Canggu'da bir villada kaldım.",
+        "en": [
+          "I went to Bali and I stayed in a villa in Canggu.",
+          "I went to Bali and stayed in a villa in Canggu."
+        ]
+      },
+      {
+        "tr": "Dün sabah kahve içmedim çünkü çok geç kalktım.",
+        "en": [
+          "I didn't drink coffee yesterday morning because I got up very late.",
+          "I didn't drink coffee yesterday morning because I woke up very late.",
+          "I didn't have coffee yesterday morning because I got up very late.",
+          "I did not drink coffee yesterday morning because I woke up very late.",
+          "Yesterday morning I didn't drink coffee because I got up very late."
+        ]
+      },
+      {
+        "tr": "Bali'de sörf yaptın mı yoksa sadece plajda mı dinlendin?",
+        "en": [
+          "Did you surf in Bali or did you just relax on the beach?",
+          "Did you surf in Bali or just relax on the beach?",
+          "Did you go surfing in Bali or did you just relax on the beach?",
+          "Did you surf in Bali or did you just relax at the beach?"
+        ],
+        "tip": "Her iki soruda da did + yalın fiil."
+      },
+      {
+        "tr": "Müşteri tişörtü beğenmedi ama yeni bir beden gönderdik.",
+        "en": [
+          "The customer didn't like the T-shirt but we sent a new size.",
+          "The customer didn't like the T-shirt, but we sent a new size.",
+          "The customer did not like the T-shirt but we sent a new size.",
+          "The customer didn't like the T-shirt but we sent a different size."
+        ]
+      }
+    ],
+    "talk": [
+      "What did you do last weekend?",
+      "Did you like Canggu? Why?",
+      "What didn't you like about Bali?"
+    ]
+  },
+  "34": {
+    "focusTr": "Tek kelimelik cevap verme; iki fikri bağla: and (ve), but (ama), because (çünkü), so (bu yüzden), or (ya da). Her cevabı 'because' ile uzatmayı alışkanlık yap.",
+    "pattern": "Cümle + and / but / so / or / because + cümle",
+    "items": [
+      {
+        "tr": "Kahve mi çay mı?",
+        "en": [
+          "Coffee or tea?",
+          "Tea or coffee?"
+        ]
+      },
+      {
+        "tr": "Yorgunum ama mutluyum.",
+        "en": [
+          "I'm tired but happy.",
+          "I am tired but happy.",
+          "I'm tired but I'm happy.",
+          "I am tired but I am happy."
+        ]
+      },
+      {
+        "tr": "Çünkü yorgundum.",
+        "en": [
+          "Because I was tired."
+        ]
+      },
+      {
+        "tr": "Açım ve yorgunum.",
+        "en": [
+          "I'm hungry and tired.",
+          "I am hungry and tired.",
+          "I'm hungry and I'm tired."
+        ]
+      },
+      {
+        "tr": "Hava sıcaktı, bu yüzden plaja gittik.",
+        "en": [
+          "It was hot so we went to the beach.",
+          "It was hot, so we went to the beach."
+        ],
+        "tip": "so = bu yüzden; sonuç cümlesinin başına gelir."
+      },
+      {
+        "tr": "Scooter mı kiralayalım yoksa taksi mi tutalım?",
+        "en": [
+          "Shall we rent a scooter or take a taxi?",
+          "Should we rent a scooter or take a taxi?",
+          "Shall we rent a scooter or get a taxi?",
+          "Should we rent a scooter or get a taxi?"
+        ]
+      },
+      {
+        "tr": "Spora gittim çünkü stresliydim.",
+        "en": [
+          "I went to the gym because I was stressed.",
+          "I went to the gym because I was stressed out."
+        ]
+      },
+      {
+        "tr": "Bali'yi çok sevdim ama trafik kötüydü.",
+        "en": [
+          "I loved Bali but the traffic was bad.",
+          "I loved Bali, but the traffic was bad.",
+          "I really liked Bali but the traffic was bad."
+        ],
+        "tip": "Geçmiş: love değil loved."
+      },
+      {
+        "tr": "Mağazam online, bu yüzden her yerden çalışabiliyorum.",
+        "en": [
+          "My shop is online so I can work from anywhere.",
+          "My shop is online, so I can work from anywhere.",
+          "My store is online so I can work from anywhere.",
+          "My store is online, so I can work from anywhere."
+        ]
+      },
+      {
+        "tr": "Bali'ye geri dönmek istiyorum çünkü orada çok mutluydum.",
+        "en": [
+          "I want to go back to Bali because I was very happy there.",
+          "I want to go back to Bali because I was really happy there.",
+          "I want to return to Bali because I was very happy there."
+        ],
+        "tip": "İstemek + fiil = want to go."
+      },
+      {
+        "tr": "Müşteri elbiseyi beğendi ama küçüktü, bu yüzden iade etti.",
+        "en": [
+          "The customer liked the dress but it was small so she returned it.",
+          "The customer liked the dress, but it was small, so she returned it.",
+          "The customer liked the dress but it was too small so she returned it.",
+          "The customer liked the dress but it was small so he returned it."
+        ]
+      },
+      {
+        "tr": "Sabahları kahve içerim ve spora giderim ama bugün çok yorgunum.",
+        "en": [
+          "I drink coffee and go to the gym in the morning but today I'm very tired.",
+          "In the morning I drink coffee and go to the gym but today I'm very tired.",
+          "I drink coffee and go to the gym in the mornings, but today I'm very tired.",
+          "I drink coffee and go to the gym in the morning but today I am very tired."
+        ]
+      }
+    ],
+    "talk": [
+      "Why did you go to Bali?",
+      "Do you prefer the beach or the city? Why?",
+      "What was good and what was bad in Canggu?"
+    ]
+  },
+  "35": {
+    "focusTr": "Geçmişte bir anda devam eden şey için was/were + fiil-ing ('-iyordum'). Hikâyede arka planı anlatır: I was driving when you called.",
+    "pattern": "I/He/She/It was + V-ing · You/We/They were + V-ing · Were you + V-ing? · wasn't/weren't + V-ing",
+    "items": [
+      {
+        "tr": "Kahve içiyordum.",
+        "en": [
+          "I was drinking coffee.",
+          "I was having coffee."
+        ]
+      },
+      {
+        "tr": "Ne yapıyordun?",
+        "en": [
+          "What were you doing?"
+        ]
+      },
+      {
+        "tr": "Yağmur yağıyordu.",
+        "en": [
+          "It was raining."
+        ]
+      },
+      {
+        "tr": "Uyumuyordum.",
+        "en": [
+          "I wasn't sleeping.",
+          "I was not sleeping."
+        ]
+      },
+      {
+        "tr": "Saat sekizde antrenman yapıyordum.",
+        "en": [
+          "I was working out at eight o'clock.",
+          "I was working out at eight.",
+          "I was training at eight o'clock.",
+          "I was training at eight.",
+          "At eight o'clock I was working out."
+        ]
+      },
+      {
+        "tr": "Arkadaşlarım plajda sörf yapıyordu.",
+        "en": [
+          "My friends were surfing at the beach.",
+          "My friends were surfing on the beach."
+        ],
+        "tip": "They/çoğul ile were, was değil."
+      },
+      {
+        "tr": "Beni aradığında araba sürüyordum.",
+        "en": [
+          "I was driving when you called me.",
+          "I was driving when you called.",
+          "When you called me, I was driving.",
+          "When you called, I was driving."
+        ],
+        "tip": "Devam eden: was driving; kısa olay: called."
+      },
+      {
+        "tr": "Dün akşam saat dokuzda ne yapıyordun?",
+        "en": [
+          "What were you doing at nine last night?",
+          "What were you doing at nine o'clock last night?",
+          "What were you doing at nine yesterday evening?",
+          "What were you doing last night at nine?"
+        ]
+      },
+      {
+        "tr": "Canggu'da scooter sürüyordum ve aniden yağmur başladı.",
+        "en": [
+          "I was riding a scooter in Canggu and suddenly it started to rain.",
+          "I was riding a scooter in Canggu and it suddenly started to rain.",
+          "I was riding a scooter in Canggu and suddenly it started raining.",
+          "I was driving a scooter in Canggu and suddenly it started to rain."
+        ]
+      },
+      {
+        "tr": "Müşteri aradığında bir kafede çalışıyordum.",
+        "en": [
+          "I was working in a cafe when the customer called.",
+          "I was working at a cafe when the customer called.",
+          "When the customer called, I was working in a cafe.",
+          "When the customer called, I was working at a cafe."
+        ]
+      },
+      {
+        "tr": "Ben e-postalarımı kontrol ediyordum, arkadaşım da havuzda yüzüyordu.",
+        "en": [
+          "I was checking my emails and my friend was swimming in the pool.",
+          "I was checking my emails while my friend was swimming in the pool.",
+          "I was checking my emails, and my friend was swimming in the pool."
+        ]
+      },
+      {
+        "tr": "Uyumuyordum, telefonumda video izliyordum.",
+        "en": [
+          "I wasn't sleeping, I was watching videos on my phone.",
+          "I wasn't sleeping. I was watching videos on my phone.",
+          "I was not sleeping, I was watching videos on my phone.",
+          "I wasn't sleeping, I was watching a video on my phone."
+        ]
+      }
+    ],
+    "talk": [
+      "What were you doing at eight o'clock last night?",
+      "What were you doing when I called you?",
+      "What were people doing at the beach in Canggu?"
+    ]
+  },
+  "36": {
+    "focusTr": "Eskiden yapıp artık yapmadığın şeyler için used to + yalın fiil. Olumsuz ve soruda 'd' düşer: I didn't use to / Did you use to...?",
+    "pattern": "I used to + V1 · I didn't use to + V1 · Did you use to + V1?",
+    "items": [
+      {
+        "tr": "Eskiden sigara içerdim.",
+        "en": [
+          "I used to smoke."
+        ]
+      },
+      {
+        "tr": "Eskiden çay içerdim.",
+        "en": [
+          "I used to drink tea."
+        ]
+      },
+      {
+        "tr": "Eskiden futbol oynardım.",
+        "en": [
+          "I used to play football.",
+          "I used to play soccer."
+        ]
+      },
+      {
+        "tr": "Eskiden yemek yapmazdım.",
+        "en": [
+          "I didn't use to cook.",
+          "I did not use to cook.",
+          "I never used to cook."
+        ],
+        "tip": "Olumsuzda 'use to', d yok."
+      },
+      {
+        "tr": "Eskiden bir ofiste çalışırdım.",
+        "en": [
+          "I used to work in an office."
+        ]
+      },
+      {
+        "tr": "Eskiden çok fast food yerdim.",
+        "en": [
+          "I used to eat a lot of fast food.",
+          "I used to eat lots of fast food."
+        ]
+      },
+      {
+        "tr": "Eskiden spora gider miydin?",
+        "en": [
+          "Did you use to go to the gym?"
+        ],
+        "tip": "Soruda 'use to', d yok."
+      },
+      {
+        "tr": "Babam eskiden bir mağaza işletirdi.",
+        "en": [
+          "My dad used to run a shop.",
+          "My father used to run a shop.",
+          "My dad used to have a shop.",
+          "My father used to have a shop.",
+          "My dad used to run a store."
+        ]
+      },
+      {
+        "tr": "Eskiden İngilizce konuşmaktan korkardım ama şimdi deniyorum.",
+        "en": [
+          "I used to be afraid of speaking English but now I'm trying.",
+          "I used to be afraid to speak English but now I'm trying.",
+          "I used to be scared of speaking English but now I'm trying.",
+          "I used to be afraid of speaking English, but now I'm trying."
+        ]
+      },
+      {
+        "tr": "Eskiden kahve içmezdim ama şimdi her gün iki fincan içiyorum.",
+        "en": [
+          "I didn't use to drink coffee but now I drink two cups every day.",
+          "I didn't use to drink coffee, but now I drink two cups every day.",
+          "I never used to drink coffee but now I drink two cups every day.",
+          "I didn't use to drink coffee but now I drink two cups a day."
+        ]
+      },
+      {
+        "tr": "Eskiden hafta sonları arkadaşlarımla dışarı çıkardım ve geç saate kadar dans ederdik.",
+        "en": [
+          "I used to go out with my friends on weekends and we used to dance until late.",
+          "I used to go out with my friends at weekends and we used to dance until late.",
+          "On weekends I used to go out with my friends and we used to dance until late.",
+          "I used to go out with my friends on weekends and we danced until late."
+        ]
+      },
+      {
+        "tr": "Canggu eskiden küçük bir köydü ama şimdi çok kalabalık.",
+        "en": [
+          "Canggu used to be a small village but now it's very crowded.",
+          "Canggu used to be a small village, but now it's very crowded.",
+          "Canggu used to be a small village but now it is very crowded.",
+          "Canggu used to be a small village but now it's very busy."
+        ],
+        "tip": "Canggu'dan önce 'the' yok."
+      }
+    ],
+    "talk": [
+      "What did you use to do on weekends?",
+      "Did you use to go to the gym when you were younger?",
+      "What did you use to do before your online shop?"
+    ]
+  },
+  "37": {
+    "focusTr": "Sıfat ismi anlatır (a slow driver), zarf fiili anlatır (he drives slowly). Çoğu zarf = sıfat + -ly; ama good → well!",
+    "pattern": "sıfat + isim (a careful driver) · fiil + zarf (drive carefully) · good → well · fast → fast",
+    "items": [
+      {
+        "tr": "O yavaş sürer.",
+        "en": [
+          "He drives slowly.",
+          "She drives slowly."
+        ]
+      },
+      {
+        "tr": "Kahve çok sıcak.",
+        "en": [
+          "The coffee is very hot.",
+          "The coffee's very hot."
+        ]
+      },
+      {
+        "tr": "İyi uyudum.",
+        "en": [
+          "I slept well."
+        ],
+        "tip": "Fiili anlatıyor: good değil well."
+      },
+      {
+        "tr": "Lütfen sessizce konuş.",
+        "en": [
+          "Please speak quietly.",
+          "Speak quietly please.",
+          "Please talk quietly."
+        ]
+      },
+      {
+        "tr": "Paket çok hızlı geldi.",
+        "en": [
+          "The package arrived very quickly.",
+          "The package came very quickly.",
+          "The package arrived very fast.",
+          "The package came very fast."
+        ],
+        "tip": "fast hem sıfat hem zarf: 'fastly' yok."
+      },
+      {
+        "tr": "Bali'de scooter'ımı dikkatli sürüyorum.",
+        "en": [
+          "I ride my scooter carefully in Bali.",
+          "I drive my scooter carefully in Bali.",
+          "In Bali I ride my scooter carefully.",
+          "In Bali I drive my scooter carefully."
+        ]
+      },
+      {
+        "tr": "Garson çok kibar ve sakin konuştu.",
+        "en": [
+          "The waiter spoke very politely and calmly.",
+          "The waiter spoke very calmly and politely.",
+          "The waiter talked very politely and calmly."
+        ]
+      },
+      {
+        "tr": "Bu tişört çok güzel ama pahalı.",
+        "en": [
+          "This T-shirt is very nice but expensive.",
+          "This T-shirt is very nice, but it's expensive.",
+          "This T-shirt is very nice but it's expensive.",
+          "This T-shirt is very beautiful but expensive."
+        ]
+      },
+      {
+        "tr": "İngilizceyi iyi anlıyorum ama yavaş konuşuyorum.",
+        "en": [
+          "I understand English well but I speak slowly.",
+          "I understand English well, but I speak slowly.",
+          "I understand English well but speak slowly."
+        ],
+        "tip": "good değil well; slow değil slowly."
+      },
+      {
+        "tr": "Müşteri paketi hızlıca açtı ve mutlu bir şekilde gülümsedi.",
+        "en": [
+          "The customer opened the package quickly and smiled happily.",
+          "The customer quickly opened the package and smiled happily.",
+          "The customer opened the parcel quickly and smiled happily."
+        ]
+      },
+      {
+        "tr": "Canggu'da yavaş sürüyorum çünkü yollar çok dar ve kalabalık.",
+        "en": [
+          "I drive slowly in Canggu because the roads are very narrow and busy.",
+          "I ride slowly in Canggu because the roads are very narrow and busy.",
+          "I drive slowly in Canggu because the roads are very narrow and crowded.",
+          "I ride slowly in Canggu because the roads are very narrow and crowded."
+        ]
+      },
+      {
+        "tr": "Arkadaşım çok iyi bir sörfçü ve dalgaları kolayca yakalıyor.",
+        "en": [
+          "My friend is a very good surfer and catches waves easily.",
+          "My friend is a very good surfer and he catches waves easily.",
+          "My friend is a very good surfer and she catches waves easily.",
+          "My friend is a very good surfer and catches the waves easily.",
+          "My friend is a very good surfer and he catches the waves easily."
+        ]
+      }
+    ],
+    "talk": [
+      "How do people drive in Bali?",
+      "How well do you speak English?",
+      "What is your favorite cafe like?"
+    ]
+  },
+  "38": {
+    "focusTr": "-ed = sen nasıl hissediyorsun (I'm bored), -ing = şeyin kendisi nasıl (The film is boring). 'I'm boring' dersen 'ben sıkıcı biriyim' demiş olursun!",
+    "pattern": "I am bored / tired / excited / surprised · It is boring / tiring / exciting / surprising",
+    "items": [
+      {
+        "tr": "Çok sıkıldım.",
+        "en": [
+          "I'm very bored.",
+          "I am very bored.",
+          "I'm so bored."
+        ],
+        "tip": "'I'm boring' = sıkıcı biriyim demek!"
+      },
+      {
+        "tr": "Film sıkıcıydı.",
+        "en": [
+          "The movie was boring.",
+          "The film was boring."
+        ]
+      },
+      {
+        "tr": "Çok heyecanlıyım.",
+        "en": [
+          "I'm very excited.",
+          "I am very excited.",
+          "I'm so excited."
+        ]
+      },
+      {
+        "tr": "Bu iş yorucu.",
+        "en": [
+          "This job is tiring.",
+          "This work is tiring."
+        ]
+      },
+      {
+        "tr": "Bali'ye geri dönmek için heyecanlıyım.",
+        "en": [
+          "I'm excited to go back to Bali.",
+          "I am excited to go back to Bali.",
+          "I'm excited about going back to Bali."
+        ]
+      },
+      {
+        "tr": "Uzun uçuş çok yorucuydu.",
+        "en": [
+          "The long flight was very tiring.",
+          "The long flight was really tiring."
+        ]
+      },
+      {
+        "tr": "Müşterinin yorumuna şaşırdım.",
+        "en": [
+          "I was surprised by the customer's comment.",
+          "I was surprised by the customer's review.",
+          "I was surprised at the customer's comment."
+        ]
+      },
+      {
+        "tr": "Uluwatu'daki manzara inanılmazdı.",
+        "en": [
+          "The view in Uluwatu was amazing.",
+          "The view at Uluwatu was amazing.",
+          "The view in Uluwatu was incredible."
+        ]
+      },
+      {
+        "tr": "Uçuştan sonra çok yorgundum ama Canggu çok heyecan vericiydi.",
+        "en": [
+          "I was very tired after the flight but Canggu was very exciting.",
+          "I was very tired after the flight, but Canggu was very exciting.",
+          "I was really tired after the flight but Canggu was really exciting."
+        ]
+      },
+      {
+        "tr": "Ders sıkıcı değildi, aslında çok ilginçti.",
+        "en": [
+          "The lesson wasn't boring, it was actually very interesting.",
+          "The lesson wasn't boring. It was actually very interesting.",
+          "The lesson was not boring, it was actually very interesting.",
+          "The lesson wasn't boring, actually it was very interesting."
+        ]
+      },
+      {
+        "tr": "Siparişler geç kaldı ve müşteriler hayal kırıklığına uğradı.",
+        "en": [
+          "The orders were late and the customers were disappointed.",
+          "The orders were delayed and the customers were disappointed.",
+          "The orders were late, and the customers were disappointed."
+        ]
+      },
+      {
+        "tr": "Spor salonundan sonra yorgundum ama kendimi çok rahatlamış hissettim.",
+        "en": [
+          "I was tired after the gym but I felt very relaxed.",
+          "I was tired after the gym, but I felt very relaxed.",
+          "After the gym I was tired but I felt very relaxed.",
+          "I was tired after the gym but I felt really relaxed."
+        ]
+      }
+    ],
+    "talk": [
+      "What was the most exciting thing in Bali?",
+      "What makes you bored?",
+      "Are you tired after the gym?"
+    ]
+  },
+  "39": {
+    "focusTr": "Kısa sıfat + -er + than (cheaper than); uzun sıfat: more + sıfat + than (more expensive than). good → better, bad → worse.",
+    "pattern": "sıfat-er + than · more + uzun sıfat + than · better / worse than",
+    "items": [
+      {
+        "tr": "Bali daha sıcak.",
+        "en": [
+          "Bali is hotter.",
+          "Bali is warmer."
+        ]
+      },
+      {
+        "tr": "Kahve çaydan daha iyi.",
+        "en": [
+          "Coffee is better than tea."
+        ],
+        "tip": "gooder değil better."
+      },
+      {
+        "tr": "Scooter daha ucuz.",
+        "en": [
+          "A scooter is cheaper.",
+          "The scooter is cheaper.",
+          "Scooters are cheaper."
+        ]
+      },
+      {
+        "tr": "İstanbul daha kalabalık.",
+        "en": [
+          "Istanbul is more crowded.",
+          "Istanbul is busier."
+        ]
+      },
+      {
+        "tr": "Canggu İstanbul'dan daha sakin.",
+        "en": [
+          "Canggu is quieter than Istanbul.",
+          "Canggu is calmer than Istanbul.",
+          "Canggu is more relaxed than Istanbul."
+        ]
+      },
+      {
+        "tr": "Bali'de yemek İstanbul'dan daha ucuz.",
+        "en": [
+          "Food is cheaper in Bali than in Istanbul.",
+          "Food in Bali is cheaper than in Istanbul.",
+          "Food is cheaper in Bali than Istanbul."
+        ]
+      },
+      {
+        "tr": "Bu kumaş daha yumuşak ve daha rahat.",
+        "en": [
+          "This fabric is softer and more comfortable.",
+          "This material is softer and more comfortable."
+        ],
+        "tip": "Kısa: softer; uzun: more comfortable."
+      },
+      {
+        "tr": "İngilizcem geçen yıldan daha iyi.",
+        "en": [
+          "My English is better than last year.",
+          "My English is better than it was last year."
+        ]
+      },
+      {
+        "tr": "Scooter taksiden daha hızlı çünkü trafik çok yoğun.",
+        "en": [
+          "A scooter is faster than a taxi because the traffic is very heavy.",
+          "A scooter is faster than a taxi because the traffic is very bad.",
+          "A scooter is faster than a taxi because the traffic is very busy.",
+          "Scooters are faster than taxis because the traffic is very heavy."
+        ]
+      },
+      {
+        "tr": "Online mağazam bu yıl daha büyük ama iş daha zor.",
+        "en": [
+          "My online shop is bigger this year but the work is harder.",
+          "My online shop is bigger this year, but the work is harder.",
+          "My online store is bigger this year but the work is harder.",
+          "My online shop is bigger this year but the job is harder."
+        ]
+      },
+      {
+        "tr": "Villa daha pahalıydı ama otelden çok daha güzeldi.",
+        "en": [
+          "The villa was more expensive but it was much nicer than the hotel.",
+          "The villa was more expensive, but it was much nicer than the hotel.",
+          "The villa was more expensive but much nicer than the hotel.",
+          "The villa was more expensive but it was much more beautiful than the hotel."
+        ]
+      },
+      {
+        "tr": "Bu kafe diğerinden daha pahalı ama kahvesi çok daha iyi.",
+        "en": [
+          "This cafe is more expensive than the other one but its coffee is much better.",
+          "This cafe is more expensive than the other one but the coffee is much better.",
+          "This cafe is more expensive than the other one, but its coffee is much better.",
+          "This cafe is more expensive than the other cafe but the coffee is much better."
+        ]
+      }
+    ],
+    "talk": [
+      "Is Bali cheaper than Istanbul?",
+      "Which is better, Canggu or Ubud? Why?",
+      "Is your English better than last year?"
+    ]
+  },
+  "40": {
+    "focusTr": "'En ...' demek için the + sıfat-est (the cheapest) ya da the most + uzun sıfat (the most beautiful). good → the best, bad → the worst; 'the'yi unutma.",
+    "pattern": "the + sıfat-est · the most + uzun sıfat · the best / the worst · ... in Bali / of my life",
+    "items": [
+      {
+        "tr": "Bu en iyisi.",
+        "en": [
+          "This is the best.",
+          "This one is the best."
+        ]
+      },
+      {
+        "tr": "En ucuz scooter bu.",
+        "en": [
+          "This is the cheapest scooter.",
+          "This scooter is the cheapest."
+        ]
+      },
+      {
+        "tr": "Bu en iyi kahve.",
+        "en": [
+          "This is the best coffee."
+        ]
+      },
+      {
+        "tr": "En kötü gündü.",
+        "en": [
+          "It was the worst day."
+        ],
+        "tip": "bad → worse → the worst."
+      },
+      {
+        "tr": "Canggu Bali'nin en popüler yeri.",
+        "en": [
+          "Canggu is the most popular place in Bali.",
+          "Canggu is the most popular area in Bali.",
+          "Canggu is the most popular place on Bali."
+        ],
+        "tip": "Yer için 'in Bali' kullan."
+      },
+      {
+        "tr": "Bu en pahalı ceketimiz.",
+        "en": [
+          "This is our most expensive jacket."
+        ],
+        "tip": "our/my varsa 'the' kullanılmaz."
+      },
+      {
+        "tr": "Hayatımın en güzel ayıydı.",
+        "en": [
+          "It was the best month of my life.",
+          "It was the most beautiful month of my life."
+        ]
+      },
+      {
+        "tr": "Bu benim en çok satan tişörtüm.",
+        "en": [
+          "This is my best-selling T-shirt.",
+          "This is my bestselling T-shirt.",
+          "This is my best selling T-shirt.",
+          "This T-shirt is my best seller."
+        ]
+      },
+      {
+        "tr": "Bali'deki en iyi gün batımı Uluwatu'daydı ama en iyi kahve Canggu'daydı.",
+        "en": [
+          "The best sunset in Bali was in Uluwatu but the best coffee was in Canggu.",
+          "The best sunset in Bali was in Uluwatu, but the best coffee was in Canggu.",
+          "The best sunset in Bali was at Uluwatu but the best coffee was in Canggu."
+        ]
+      },
+      {
+        "tr": "Bu sokaktaki en ucuz kafe ama kahvesi en iyisi.",
+        "en": [
+          "It's the cheapest cafe on this street but its coffee is the best.",
+          "It's the cheapest cafe on this street but the coffee is the best.",
+          "It is the cheapest cafe on this street but its coffee is the best.",
+          "This is the cheapest cafe on this street but its coffee is the best.",
+          "It's the cheapest cafe on this street, but its coffee is the best."
+        ]
+      },
+      {
+        "tr": "Bali'deki en kötü şey trafikti ama en iyi şey insanlardı.",
+        "en": [
+          "The worst thing in Bali was the traffic but the best thing was the people.",
+          "The worst thing in Bali was the traffic, but the best thing was the people.",
+          "The worst thing about Bali was the traffic but the best thing was the people."
+        ]
+      },
+      {
+        "tr": "Spor salonundaki en güçlü adam değilim ama en çok ben çalışıyorum.",
+        "en": [
+          "I'm not the strongest guy at the gym but I work the hardest.",
+          "I'm not the strongest man at the gym but I work the hardest.",
+          "I'm not the strongest guy in the gym but I work the hardest.",
+          "I am not the strongest guy at the gym but I work the hardest.",
+          "I'm not the strongest guy at the gym, but I work the hardest."
+        ]
+      }
+    ],
+    "talk": [
+      "What was the best place you visited in Bali?",
+      "What is the most popular product in your shop?",
+      "What was the worst thing about your trip?"
+    ]
+  }
+}

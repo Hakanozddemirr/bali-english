@@ -1,9 +1,18 @@
 import { createContext, useCallback, useContext, useRef, useState } from 'react'
 import { todayISO, addDays } from './dates'
 import { DEFAULT_MODEL } from './claude'
+import { addCard } from './cards'
 
-const KEY = 'baliEnglish.v2'
+export const KEY = 'baliEnglish.v3'
+const V2_KEY = 'baliEnglish.v2'
 const OLD_KEY = 'baliEnglish.v1'
+
+// Eski model kimliklerini güncel karşılıklarına taşı
+const MODEL_MIGRATE = {
+  'claude-opus-5': 'claude-opus-5-5',
+  'claude-opus-4-6': 'claude-opus-5-5',
+  'claude-sonnet-5': 'claude-sonnet-5-5',
+}
 
 export const emptyDay = () => ({
   seen: [],          // öğrenme modunda görülen chunk id'leri
@@ -21,16 +30,37 @@ export const emptyDay = () => ({
   clarity: {},       // chunkId -> en iyi anlaşılabilirlik %
 })
 
+// v3: günlük sabah sistemi. v2 alanları (7 günlük sprint) arşiv olarak korunur.
+const v3Fields = () => ({
+  course: { done: {}, watched: {}, labBest: {}, skipped: {} }, // ders anahtarı bazında
+  labCache: {},  // API ile üretilmiş Yapı Laboratuvarı içerikleri
+  book: { reading: 0, puzzle: 0 }, // en son bitirilen okuma metni / bulmaca bloğu
+  cards: {},     // id -> {id,type,en,tr,ex,src,box,due,created}
+  log: {},       // 'YYYY-MM-DD' -> günlük kayıt (bkz. emptyLog)
+  journal: [],   // {date, text, fixed}
+  weekly: [],    // {date, text, feedback}
+})
+
+export const emptyLog = () => ({
+  review: false, reviewCount: 0,
+  lessons: [],   // bugün Lab'ı bitirilen dersler
+  book: false, bookParts: [],
+  talkSec: 0,
+  journal: false,
+  words: 0,      // bugün eklenen kitap kelimesi
+})
+
 function defaultState() {
   return {
-    version: 2,
+    version: 3,
+    ...v3Fields(),
     startDate: todayISO(),
     tripDate: addDays(todayISO(), 7),
     settings: {
       apiKey: '',
       model: DEFAULT_MODEL,
       rate: 0.95,
-      talkMode: 'normal', // guided | normal | realistic
+      talkMode: 'guided', // guided | normal | realistic
       accents: true,      // ABD/İngiliz/Avustralya sesleri arasında dönüşüm
     },
     srs: {},      // chunkId -> {box, due}
@@ -45,13 +75,30 @@ function defaultState() {
 
 // v1'den güvenli göç: yalnızca ayarlar taşınır; eski kelime SRS'i yeni
 // chunk müfredatıyla eşleşmediği için bilinçli olarak sıfırlanır.
+function hydrate(s) {
+  const d = defaultState()
+  const out = {
+    ...d, ...s,
+    settings: { ...d.settings, ...s.settings },
+    stats: { ...d.stats, ...s.stats },
+    course: { ...d.course, ...s.course },
+    book: { ...d.book, ...s.book },
+  }
+  out.settings.model = MODEL_MIGRATE[out.settings.model] || out.settings.model
+  out.version = 3
+  return out
+}
+
 export function loadState() {
   try {
     const raw = localStorage.getItem(KEY)
-    if (raw) {
-      const s = JSON.parse(raw)
-      const d = defaultState()
-      return { ...d, ...s, settings: { ...d.settings, ...s.settings }, stats: { ...d.stats, ...s.stats } }
+    if (raw) return hydrate(JSON.parse(raw))
+    // v2 → v3: hiçbir şey silinmez, yeni alanlar eklenir
+    const v2 = localStorage.getItem(V2_KEY)
+    if (v2) {
+      const s = hydrate(JSON.parse(v2))
+      s.settings.talkMode = 'guided'
+      return s
     }
     const old = localStorage.getItem(OLD_KEY)
     const fresh = defaultState()
@@ -59,7 +106,7 @@ export function loadState() {
       try {
         const o = JSON.parse(old)
         if (o.settings?.apiKey) fresh.settings.apiKey = o.settings.apiKey
-        if (o.settings?.model) fresh.settings.model = o.settings.model
+        if (o.settings?.model) fresh.settings.model = MODEL_MIGRATE[o.settings.model] || o.settings.model
         if (o.settings?.rate) fresh.settings.rate = Math.max(0.85, o.settings.rate)
         if (o.tripDate && o.tripDate >= todayISO()) fresh.tripDate = o.tripDate
       } catch { /* eski veri bozuksa yok say */ }
@@ -102,7 +149,9 @@ export function addMistake(state, { orig, fix, note }) {
   const dup = state.mistakes.some((m) => m.fix === fix && m.orig === orig)
   if (dup) return
   state.mistakes.unshift({ orig, fix, note: note || '', date: todayISO() })
-  state.mistakes = state.mistakes.slice(0, 40)
+  state.mistakes = state.mistakes.slice(0, 80)
+  // Hatalar tekrar destesine de girer: ön yüz yanlış cümle, arka yüz doğrusu
+  addCard(state, { type: 'mistake', en: fix, tr: '', ex: orig, src: note || '' })
 }
 
 // Aktif gün: tamamlanmamış ilk gün
@@ -128,6 +177,51 @@ export function readiness(state, totalDays) {
     ? Math.round((days.reduce((a, d) => a + (d.quizBest || 0), 0) / (totalDays * 10)) * 100)
     : 0
   return { speak, listening, social, practical: quizAvg }
+}
+
+// ---- v3: günlük kayıt ----
+export function ensureLog(state, date = todayISO()) {
+  state.log[date] = { ...emptyLog(), ...(state.log[date] || {}) }
+  return state.log[date]
+}
+
+export const getLog = (state, date = todayISO()) => ({ ...emptyLog(), ...(state.log[date] || {}) })
+
+export const MIN_TALK = 300   // minimum gün: tekrar + 5 dk konuşma
+export const FULL_TALK = 600
+
+// 'full' | 'min' | 'partial' | null
+export function dayStatus(l) {
+  if (!l) return null
+  const full = l.review && l.lessons.length > 0 && l.book && l.talkSec >= FULL_TALK && l.journal
+  if (full) return 'full'
+  if (l.review && l.talkSec >= MIN_TALK) return 'min'
+  if (l.review || l.lessons.length || l.book || l.talkSec > 0 || l.journal) return 'partial'
+  return null
+}
+
+// Seri: en az "minimum" yapılmış ardışık günler. Bugün henüz yapılmadıysa seri dünden sayılır.
+export function streak(state) {
+  let n = 0
+  let d = todayISO()
+  const ok = (iso) => ['full', 'min'].includes(dayStatus(state.log[iso] && { ...emptyLog(), ...state.log[iso] }))
+  if (!ok(d)) d = addDays(d, -1)
+  while (ok(d)) { n++; d = addDays(d, -1) }
+  return n
+}
+
+export function bestStreak(state) {
+  const dates = Object.keys(state.log).sort()
+  let best = 0, cur = 0, prev = null
+  for (const iso of dates) {
+    const good = ['full', 'min'].includes(dayStatus({ ...emptyLog(), ...state.log[iso] }))
+    if (good && prev && addDays(prev, 1) === iso) cur++
+    else cur = good ? 1 : 0
+    if (!good) cur = 0
+    best = Math.max(best, cur)
+    prev = iso
+  }
+  return best
 }
 
 const AppCtx = createContext(null)

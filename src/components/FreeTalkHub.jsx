@@ -1,7 +1,7 @@
 import { freetalk } from '../content'
 import { useApp } from '../lib/store'
 
-export default function FreeTalkHub({ onOpen }) {
+export default function FreeTalkHub({ onOpen, onSprint }) {
   const { state } = useApp()
   const hasKey = !!state.settings.apiKey
 
@@ -21,7 +21,16 @@ export default function FreeTalkHub({ onOpen }) {
           </button>
         ))}
       </div>
-      <p className="empty-note">Her açılışta farklı bir gezgin denk gelir — aynı sohbet iki kez olmaz.</p>
+      <p className="empty-note">Her açılışta farklı bir gezgin denk gelir — aynı sohbet iki kez olmaz. Serbest konuşma süresi bugünün konuşma hedefine sayılır.</p>
+      <div className="section-title">Arşiv</div>
+      <button className="day-card" onClick={onSprint}>
+        <span className="emoji">🏝️</span>
+        <span className="info">
+          <span className="t">7 Günlük Bali Sprinti</span>
+          <span className="s">İlk sürümün kalıpları, pratikleri, simülasyonları ve testleri.</span>
+        </span>
+        <span className="check">›</span>
+      </button>
     </div>
   )
 }

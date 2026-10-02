@@ -1,0 +1,344 @@
+{
+  "13": {
+    "focusTr": "İngilizcede sıra sabit: Özne + Fiil + Nesne + Yer + Zaman. Fiili Türkçedeki gibi sona atma; fiil hemen öznenin arkasından gelir.",
+    "pattern": "Özne + fiil + nesne + yer + zaman",
+    "items": [
+      {"tr": "Kahve içerim.", "en": ["I drink coffee."]},
+      {"tr": "Online kıyafet satarım.", "en": ["I sell clothes online."], "tip": "Fiil özneden hemen sonra: I sell..."},
+      {"tr": "Spor salonuna giderim.", "en": ["I go to the gym."]},
+      {"tr": "Müşterilerime yardım ederim.", "en": ["I help my customers."]},
+      {"tr": "Sabahları kahve içerim.", "en": ["I drink coffee in the morning.", "I drink coffee in the mornings.", "In the morning I drink coffee."]},
+      {"tr": "Her gün spor salonuna giderim.", "en": ["I go to the gym every day.", "Every day I go to the gym."], "tip": "Zaman en sona: every day."},
+      {"tr": "Arkadaşlarım Canggu'da yaşıyor.", "en": ["My friends live in Canggu."], "tip": "'the Canggu' değil, sadece Canggu."},
+      {"tr": "Akşamları telefonumdan siparişleri kontrol ederim.", "en": ["I check the orders on my phone in the evening.", "I check orders on my phone in the evening.", "I check the orders on my phone in the evenings.", "I check orders on my phone in the evenings.", "In the evening I check the orders on my phone."]},
+      {"tr": "Sabahları kahve içerim ve sonra spor salonuna giderim.", "en": ["I drink coffee in the morning and then I go to the gym.", "I drink coffee in the morning and then go to the gym.", "In the morning I drink coffee and then I go to the gym.", "In the morning I drink coffee and then go to the gym."]},
+      {"tr": "Bali'yi seviyorum çünkü insanlar çok sıcakkanlı.", "en": ["I love Bali because the people are very friendly.", "I love Bali because people are very friendly.", "I like Bali because the people are very friendly.", "I like Bali because people are very friendly."]},
+      {"tr": "Online kıyafet satarım ama dükkânım yok.", "en": ["I sell clothes online but I don't have a shop.", "I sell clothes online but I do not have a shop.", "I sell clothes online but I haven't got a shop.", "I sell clothes online, but I don't have a shop.", "I sell clothes online but I don't have a store."]},
+      {"tr": "Canggu'da her sabah sahilde yürürüm çünkü sakin.", "en": ["In Canggu I walk on the beach every morning because it's quiet.", "In Canggu I walk on the beach every morning because it is quiet.", "I walk on the beach every morning in Canggu because it's quiet.", "I walk on the beach every morning in Canggu because it is quiet."], "tip": "Önce yer, sonra zaman: on the beach every morning."}
+    ],
+    "talk": ["What do you do every morning?", "What do you sell in your shop?", "Where do your friends live?"]
+  },
+  "14": {
+    "focusTr": "Sayılamayan isimlere (water, money, time, information, advice) a/an gelmez ve -s eklenmez. Sayılabilenlerde tekil için a/an, çoğul için -s kullan.",
+    "pattern": "a/an + sayılabilen tekil | sayılabilen + -s | sayılamayan (a/an yok, -s yok)",
+    "items": [
+      {"tr": "Zamanım yok.", "en": ["I don't have time.", "I do not have time.", "I haven't got time.", "I have no time.", "I don't have any time."]},
+      {"tr": "Bir kahve lütfen.", "en": ["A coffee please.", "A coffee, please.", "One coffee please.", "One coffee, please."]},
+      {"tr": "Paraya ihtiyacım var.", "en": ["I need money.", "I need some money."], "tip": "Money sayılamaz: 'a money' veya 'moneys' yok."},
+      {"tr": "Bagajım çok ağır.", "en": ["My luggage is very heavy.", "My luggage is really heavy."], "tip": "Luggage sayılamaz: 'luggages' denmez."},
+      {"tr": "İki şişe su var.", "en": ["There are two bottles of water."], "tip": "Su sayılmaz, şişe sayılır: two bottles of water."},
+      {"tr": "Bana bir tavsiye ver.", "en": ["Give me some advice.", "Give me a piece of advice.", "Give me some advice, please.", "Please give me some advice."], "tip": "'an advice' denmez: some advice."},
+      {"tr": "Bu ürün hakkında bilgiye ihtiyacım var.", "en": ["I need information about this product.", "I need some information about this product."], "tip": "'informations' yok; information hep tekil."},
+      {"tr": "Villada yeni mobilyalar var.", "en": ["There is new furniture in the villa.", "There's new furniture in the villa."], "tip": "Furniture sayılamaz: there is + furniture."},
+      {"tr": "Kahvaltıda bir kahve içerim ve iki yumurta yerim.", "en": ["I drink a coffee and eat two eggs for breakfast.", "I drink a coffee and I eat two eggs for breakfast.", "I have a coffee and two eggs for breakfast.", "For breakfast I drink a coffee and eat two eggs.", "For breakfast I have a coffee and two eggs."]},
+      {"tr": "Yeni ürünlerim var ama bilgiler hazır değil.", "en": ["I have new products but the information isn't ready.", "I have new products but the information is not ready.", "I've got new products but the information isn't ready.", "I have got new products but the information is not ready.", "I have new products, but the information isn't ready."], "tip": "Bilgiler = information, tekil fiil: is."},
+      {"tr": "Plaj çantamda bir havlu, su ve güneş kremi var.", "en": ["There is a towel, water and sunscreen in my beach bag.", "There's a towel, water and sunscreen in my beach bag.", "In my beach bag there is a towel, water and sunscreen.", "I have a towel, water and sunscreen in my beach bag.", "I've got a towel, water and sunscreen in my beach bag."]},
+      {"tr": "Canggu'da kahve ucuz ama villalar çok pahalı.", "en": ["Coffee is cheap in Canggu but the villas are very expensive.", "Coffee is cheap in Canggu but villas are very expensive.", "In Canggu coffee is cheap but villas are very expensive.", "In Canggu coffee is cheap but the villas are very expensive."], "tip": "Genel anlamda coffee: önüne a/the gelmez."}
+    ],
+    "talk": ["What do you have for breakfast?", "What's in your bag right now?", "Is coffee expensive in Istanbul?"]
+  },
+  "15": {
+    "focusTr": "Sayılabilen çoğulda many / a few, sayılamayanda much / a little. Emin değilsen 'a lot of' ikisinde de çalışır; soru ve olumsuzda 'any' kullan.",
+    "pattern": "some / any / a lot of + isim | many / a few + çoğul | much / a little + sayılamayan",
+    "items": [
+      {"tr": "Biraz kahve istiyorum.", "en": ["I want some coffee.", "I'd like some coffee.", "I would like some coffee."]},
+      {"tr": "Çok müşterim var.", "en": ["I have many customers.", "I have a lot of customers.", "I've got a lot of customers.", "I have lots of customers.", "I've got many customers."]},
+      {"tr": "Hiç zamanım yok.", "en": ["I don't have any time.", "I do not have any time.", "I haven't got any time.", "I have no time."], "tip": "Olumsuzda 'some' değil 'any'."},
+      {"tr": "Birkaç arkadaşım var.", "en": ["I have a few friends.", "I've got a few friends.", "I have got a few friends."]},
+      {"tr": "Buzdolabında hiç süt var mı?", "en": ["Is there any milk in the fridge?", "Have we got any milk in the fridge?"]},
+      {"tr": "Bugün çok fazla sipariş yok.", "en": ["There aren't many orders today.", "There are not many orders today.", "There aren't a lot of orders today.", "Today there aren't many orders."], "tip": "Olumsuzda many / much daha doğal."},
+      {"tr": "Kahveme biraz şeker koy lütfen.", "en": ["Put a little sugar in my coffee please.", "Put a little sugar in my coffee, please.", "Please put a little sugar in my coffee.", "Put some sugar in my coffee please.", "Put some sugar in my coffee, please."]},
+      {"tr": "Ne kadar paran var?", "en": ["How much money do you have?", "How much money have you got?"], "tip": "Para sayılmaz: how much, how many değil."},
+      {"tr": "Spor salonunda çok insan var ama çok fazla alet yok.", "en": ["There are a lot of people at the gym but there isn't much equipment.", "There are many people at the gym but there isn't much equipment.", "There are lots of people at the gym but there isn't much equipment.", "There are a lot of people in the gym but there isn't much equipment.", "There are a lot of people at the gym but there is not much equipment."], "tip": "Equipment sayılmaz: much equipment."},
+      {"tr": "Mağazamda birkaç yeni ürün var ama çok fazla stok yok.", "en": ["There are a few new products in my shop but there isn't much stock.", "There are a few new products in my shop but there is not much stock.", "I have a few new products in my shop but there isn't much stock.", "I have a few new products in my shop but I don't have much stock.", "There are a few new products in my store but there isn't much stock."]},
+      {"tr": "Canggu'da çok kafe var çünkü çok turist var.", "en": ["There are a lot of cafes in Canggu because there are a lot of tourists.", "There are many cafes in Canggu because there are many tourists.", "There are lots of cafes in Canggu because there are lots of tourists.", "In Canggu there are a lot of cafes because there are a lot of tourists."]},
+      {"tr": "Her gün çok su içerim ama sadece biraz kahve.", "en": ["I drink a lot of water every day but only a little coffee.", "Every day I drink a lot of water but only a little coffee.", "I drink a lot of water every day but I only drink a little coffee.", "I drink a lot of water every day but I drink only a little coffee.", "I drink lots of water every day but only a little coffee."]}
+    ],
+    "talk": ["How many customers do you have?", "How much coffee do you drink every day?", "Are there any good cafes near your home?"]
+  },
+  "16": {
+    "focusTr": "Günlerin önüne 'on' gelir: on Monday. 'Every', 'next' ve 'last' ile edat kullanılmaz: every Friday, next Monday.",
+    "pattern": "on + Monday | on Mondays (her pazartesi) | every / next / last + Friday | from Monday to Friday",
+    "items": [
+      {"tr": "Bugün pazartesi.", "en": ["Today is Monday.", "It's Monday today.", "It is Monday today.", "It's Monday."]},
+      {"tr": "Cuma görüşürüz.", "en": ["See you on Friday.", "See you Friday."]},
+      {"tr": "Pazar günleri dinlenirim.", "en": ["I rest on Sundays.", "I relax on Sundays.", "On Sundays I rest.", "On Sundays I relax."]},
+      {"tr": "Salı günü boşum.", "en": ["I'm free on Tuesday.", "I am free on Tuesday.", "I'm free on Tuesdays."]},
+      {"tr": "Her pazartesi ve perşembe spor salonuna giderim.", "en": ["I go to the gym every Monday and Thursday.", "I go to the gym on Mondays and Thursdays.", "Every Monday and Thursday I go to the gym."], "tip": "Every ile 'on' kullanılmaz."},
+      {"tr": "Siparişleri her cumartesi gönderirim.", "en": ["I send the orders every Saturday.", "I send orders every Saturday.", "I ship the orders every Saturday.", "I ship orders every Saturday.", "I send the orders on Saturdays."]},
+      {"tr": "Hafta sonu kafe çok kalabalık.", "en": ["The cafe is very busy at the weekend.", "The cafe is very crowded at the weekend.", "The cafe is very busy on the weekend.", "The cafe is very crowded on the weekend.", "The cafe is very busy on weekends.", "At the weekend the cafe is very busy."]},
+      {"tr": "Gelecek çarşamba İstanbul'dayım.", "en": ["I'm in Istanbul next Wednesday.", "I am in Istanbul next Wednesday.", "I'll be in Istanbul next Wednesday.", "I will be in Istanbul next Wednesday.", "Next Wednesday I'm in Istanbul."], "tip": "'on next Wednesday' denmez."},
+      {"tr": "Pazartesiden cumaya çalışırım ama hafta sonları boşum.", "en": ["I work from Monday to Friday but I'm free at the weekend.", "I work from Monday to Friday but I am free at the weekend.", "I work from Monday to Friday but I'm free on weekends.", "I work from Monday to Friday but I'm free at weekends.", "I work Monday to Friday but I'm free at the weekend."]},
+      {"tr": "Cuma günü bir toplantım var ve cumartesi günü boşum.", "en": ["I have a meeting on Friday and I'm free on Saturday.", "I have a meeting on Friday and I am free on Saturday.", "I've got a meeting on Friday and I'm free on Saturday.", "I have got a meeting on Friday and I am free on Saturday."]},
+      {"tr": "Canggu'da her pazar günü sahilde bir pazar var.", "en": ["In Canggu there is a market on the beach every Sunday.", "In Canggu there's a market on the beach every Sunday.", "There is a market on the beach every Sunday in Canggu.", "There's a market on the beach every Sunday in Canggu."], "tip": "Pazar = Sunday, pazar yeri = market."},
+      {"tr": "Annemi her pazar ararım çünkü İstanbul'da yalnız yaşıyor.", "en": ["I call my mother every Sunday because she lives alone in Istanbul.", "I call my mom every Sunday because she lives alone in Istanbul.", "I call my mum every Sunday because she lives alone in Istanbul.", "Every Sunday I call my mother because she lives alone in Istanbul.", "I call my mother on Sundays because she lives alone in Istanbul."], "tip": "She lives: üçüncü tekil kişide fiile -s."}
+    ],
+    "talk": ["What do you usually do on Sundays?", "Which days do you go to the gym?", "What's your favourite day of the week?"]
+  },
+  "17": {
+    "focusTr": "Ay ve mevsimlerin önüne 'in' gelir: in July, in summer. Aylar hep büyük harfle başlar; 'kışın' = in winter.",
+    "pattern": "in + ay / mevsim (in March, in winter) | It's + ay",
+    "items": [
+      {"tr": "Doğum günüm mayısta.", "en": ["My birthday is in May."]},
+      {"tr": "Kışı sevmiyorum.", "en": ["I don't like winter.", "I do not like winter.", "I don't like the winter."]},
+      {"tr": "Şimdi ekim ayı.", "en": ["It's October now.", "It is October now.", "Now it's October.", "It's October."]},
+      {"tr": "Yazı çok seviyorum.", "en": ["I love summer.", "I really love summer.", "I love the summer.", "I really like summer."]},
+      {"tr": "Ağustosta İstanbul çok sıcak.", "en": ["Istanbul is very hot in August.", "In August Istanbul is very hot.", "It's very hot in Istanbul in August.", "It is very hot in Istanbul in August."]},
+      {"tr": "Kışın satışlarım çok iyi.", "en": ["My sales are very good in winter.", "My sales are very good in the winter.", "In winter my sales are very good.", "In the winter my sales are very good."]},
+      {"tr": "Bali'de kış yok.", "en": ["There is no winter in Bali.", "There's no winter in Bali.", "There isn't a winter in Bali.", "In Bali there is no winter."]},
+      {"tr": "Yeni koleksiyonum martta hazır.", "en": ["My new collection is ready in March.", "My new collection will be ready in March.", "In March my new collection is ready."]},
+      {"tr": "Bali'de iki mevsim var: yağışlı ve kurak.", "en": ["There are two seasons in Bali: the wet season and the dry season.", "There are two seasons in Bali, the wet season and the dry season.", "There are two seasons in Bali: wet and dry.", "There are two seasons in Bali, wet and dry.", "In Bali there are two seasons: the wet season and the dry season.", "There are two seasons in Bali: the rainy season and the dry season."]},
+      {"tr": "Kasım ve aralıkta çok sipariş alırım çünkü Black Friday var.", "en": ["I get a lot of orders in November and December because there is Black Friday.", "I get a lot of orders in November and December because there's Black Friday.", "I get many orders in November and December because there is Black Friday.", "I get a lot of orders in November and December because of Black Friday.", "In November and December I get a lot of orders because there is Black Friday."]},
+      {"tr": "Şubatta Canggu'ya dönmek istiyorum ama orada yağmur mevsimi.", "en": ["I want to go back to Canggu in February but it's the rainy season there.", "I want to go back to Canggu in February but it is the rainy season there.", "I want to go back to Canggu in February but it's the wet season there.", "I want to return to Canggu in February but it's the rainy season there.", "In February I want to go back to Canggu but it's the rainy season there."], "tip": "'the Canggu' değil; 'want to' unutma."},
+      {"tr": "Sonbaharı seviyorum çünkü hava ne çok sıcak ne çok soğuk.", "en": ["I like autumn because it's not too hot and not too cold.", "I like autumn because it is not too hot and not too cold.", "I like autumn because it isn't too hot or too cold.", "I love autumn because it's not too hot and not too cold.", "I like fall because it's not too hot and not too cold."]}
+    ],
+    "talk": ["When is your birthday?", "What's your favourite season and why?", "Which month do you want to go back to Bali?"]
+  },
+  "18": {
+    "focusTr": "Yılı ikişer ikişer oku: 1995 = nineteen ninety-five, 2026 = twenty twenty-six. 2000-2009 arası: two thousand and eight. Yılın önüne 'in' gelir.",
+    "pattern": "in + yıl (in nineteen ninety-five / in twenty twenty-six / in two thousand and eight)",
+    "items": [
+      {"tr": "Yıl 2026.", "en": ["It's twenty twenty-six.", "It is twenty twenty-six.", "The year is twenty twenty-six.", "It's two thousand twenty-six.", "It's 2026."], "tip": "İkişer oku: twenty / twenty-six."},
+      {"tr": "Bu bir 2026 modeli.", "en": ["It's a twenty twenty-six model.", "It is a twenty twenty-six model.", "This is a twenty twenty-six model.", "It's a 2026 model."]},
+      {"tr": "Hedefim 2030.", "en": ["My goal is twenty thirty.", "My target is twenty thirty.", "My goal is 2030."]},
+      {"tr": "Hangi yıldayız?", "en": ["What year is it?", "What year is it now?", "Which year is it?"]},
+      {"tr": "Bu fotoğraf 2008'den.", "en": ["This photo is from two thousand and eight.", "This photo is from two thousand eight.", "This picture is from two thousand and eight.", "This photo is from 2008."], "tip": "2008 = two thousand and eight, 'twenty eight' değil."},
+      {"tr": "Bu ceket 1990'lardan.", "en": ["This jacket is from the nineteen nineties.", "This jacket is from the nineties.", "This jacket is from the 1990s.", "This jacket is from the 90s."]},
+      {"tr": "En sevdiğim şarkı 1999'dan.", "en": ["My favourite song is from nineteen ninety-nine.", "My favorite song is from nineteen ninety-nine.", "My favourite song is from 1999.", "My favorite song is from 1999."]},
+      {"tr": "2030'da büyük bir mağaza istiyorum.", "en": ["I want a big shop in twenty thirty.", "I want a big store in twenty thirty.", "In twenty thirty I want a big shop.", "I want a big shop in 2030."]},
+      {"tr": "Bu vintage ceket 1985'ten ama hâlâ çok güzel.", "en": ["This vintage jacket is from nineteen eighty-five but it's still very nice.", "This vintage jacket is from nineteen eighty-five but it is still very nice.", "This vintage jacket is from nineteen eighty-five but it's still really nice.", "This vintage jacket is from nineteen eighty-five but it's still very beautiful.", "This vintage jacket is from 1985 but it's still very nice."]},
+      {"tr": "Bali'ye 2027'de dönmek istiyorum çünkü orayı çok seviyorum.", "en": ["I want to go back to Bali in twenty twenty-seven because I love it there.", "I want to go back to Bali in twenty twenty-seven because I really love it.", "I want to return to Bali in twenty twenty-seven because I love it there.", "In twenty twenty-seven I want to go back to Bali because I love it there.", "I want to go back to Bali in 2027 because I love it there."]},
+      {"tr": "Yıl 2026 ve mağazam dört yaşında.", "en": ["It's twenty twenty-six and my shop is four years old.", "It is twenty twenty-six and my shop is four years old.", "It's twenty twenty-six and my store is four years old.", "It's 2026 and my shop is four years old."]},
+      {"tr": "Babamın arabası 1998 model ama benim scooter'ım 2023 model.", "en": ["My father's car is a nineteen ninety-eight model but my scooter is a twenty twenty-three model.", "My dad's car is a nineteen ninety-eight model but my scooter is a twenty twenty-three model.", "My father's car is from nineteen ninety-eight but my scooter is from twenty twenty-three.", "My dad's car is from nineteen ninety-eight but my scooter is from twenty twenty-three.", "My father's car is a 1998 model but my scooter is a 2023 model."]}
+    ],
+    "talk": ["What year is it now?", "Which year do you want to go back to Bali?", "What is your favourite year so far and why?"]
+  },
+  "19": {
+    "focusTr": "Tarihte sıra sayı kullan: May fifth veya the fifth of May. Belli bir tarihin önüne 'on' gelir: on the tenth of June.",
+    "pattern": "on + the + sıra sayı + of + ay (on the fifth of May) | on + ay + sıra sayı (on May fifth)",
+    "items": [
+      {"tr": "Bugün 2 Ekim.", "en": ["Today is October second.", "Today is the second of October.", "It's October second today.", "It's the second of October today.", "Today is October the second."], "tip": "'two' değil sıra sayı: second."},
+      {"tr": "Doğum günüm 3 Mayıs'ta.", "en": ["My birthday is May third.", "My birthday is on May third.", "My birthday is on the third of May.", "My birthday is the third of May."]},
+      {"tr": "Bugün ayın kaçı?", "en": ["What's the date today?", "What is the date today?", "What date is it today?", "What's today's date?"]},
+      {"tr": "Uçuşum 1 Şubat'ta.", "en": ["My flight is February first.", "My flight is on February first.", "My flight is on the first of February.", "My flight is the first of February."]},
+      {"tr": "Büyük indirim 25 Kasım'da başlıyor.", "en": ["The big sale starts on November twenty-fifth.", "The big sale starts on the twenty-fifth of November.", "The big sale begins on November twenty-fifth.", "The big sale starts November twenty-fifth."]},
+      {"tr": "Bali vizem 15 Mart'ta bitiyor.", "en": ["My Bali visa ends on March fifteenth.", "My Bali visa ends on the fifteenth of March.", "My Bali visa expires on March fifteenth.", "My Bali visa expires on the fifteenth of March."]},
+      {"tr": "Siparişiniz 12 Ekim'de geliyor.", "en": ["Your order arrives on October twelfth.", "Your order arrives on the twelfth of October.", "Your order is arriving on October twelfth.", "Your order will arrive on October twelfth."]},
+      {"tr": "Annemin doğum günü 20 Haziran'da.", "en": ["My mother's birthday is on June twentieth.", "My mother's birthday is on the twentieth of June.", "My mom's birthday is on June twentieth.", "My mum's birthday is on the twentieth of June.", "My mother's birthday is June twentieth."]},
+      {"tr": "Bali uçuşum 1 Şubat'ta ve dönüş uçuşum 1 Mart'ta.", "en": ["My flight to Bali is on February first and my return flight is on March first.", "My flight to Bali is on the first of February and my return flight is on the first of March.", "My Bali flight is on February first and my return flight is on March first.", "My flight to Bali is on February first and my flight back is on March first."]},
+      {"tr": "Mağazamın doğum günü 10 Nisan'da ve o gün indirim var.", "en": ["My shop's birthday is on April tenth and there is a sale on that day.", "My shop's birthday is on April tenth and there's a sale that day.", "My shop's birthday is on the tenth of April and there is a sale on that day.", "My shop's birthday is on the tenth of April and there's a sale that day.", "My store's birthday is on April tenth and there is a sale on that day."]},
+      {"tr": "Toplantı 3 Kasım'da değil, 5 Kasım'da.", "en": ["The meeting isn't on November third, it's on November fifth.", "The meeting is not on November third, it is on November fifth.", "The meeting isn't on the third of November, it's on the fifth of November.", "The meeting is on November fifth, not November third.", "The meeting is on the fifth of November, not the third."]},
+      {"tr": "29 Ekim'de İstanbul'dayım çünkü resmi tatil.", "en": ["I'm in Istanbul on October twenty-ninth because it's a national holiday.", "I am in Istanbul on October twenty-ninth because it is a national holiday.", "I'm in Istanbul on the twenty-ninth of October because it's a national holiday.", "I'm in Istanbul on October twenty-ninth because it's a public holiday.", "On October twenty-ninth I'm in Istanbul because it's a national holiday."]}
+    ],
+    "talk": ["When is your birthday?", "What's the date today?", "When is your flight back to Bali?"]
+  },
+  "20": {
+    "focusTr": "Saati söylerken 'It's' ile başla; bir şeyi belli bir saatte yapıyorsan 'at' kullan: at seven. En kolay yol saati rakam gibi okumak: seven thirty.",
+    "pattern": "It's + saat (It's half past seven / It's seven thirty) | at + saat (at eight)",
+    "items": [
+      {"tr": "Saat kaç?", "en": ["What time is it?", "What's the time?", "What is the time?"]},
+      {"tr": "Saat yedi buçuk.", "en": ["It's half past seven.", "It's seven thirty.", "It is half past seven.", "It is seven thirty."]},
+      {"tr": "Saat dokuzu çeyrek geçiyor.", "en": ["It's quarter past nine.", "It's a quarter past nine.", "It's nine fifteen.", "It is quarter past nine.", "It is a quarter past nine.", "It is nine fifteen."]},
+      {"tr": "Altıda kalkarım.", "en": ["I get up at six.", "I wake up at six.", "I get up at six o'clock.", "I wake up at six o'clock."], "tip": "Saatin önüne 'at' gelir."},
+      {"tr": "Kafe saat yedide açılıyor.", "en": ["The cafe opens at seven o'clock.", "The cafe opens at seven."]},
+      {"tr": "Toplantı üçe çeyrek kala.", "en": ["The meeting is at quarter to three.", "The meeting is at a quarter to three.", "The meeting is at two forty-five."]},
+      {"tr": "Akşam sekizde spor salonuna giderim.", "en": ["I go to the gym at eight in the evening.", "I go to the gym at eight p.m.", "I go to the gym at eight o'clock in the evening.", "In the evening I go to the gym at eight."]},
+      {"tr": "Kargocu öğlen on ikide geliyor.", "en": ["The courier comes at twelve o'clock.", "The courier comes at noon.", "The courier comes at twelve.", "The courier comes at twelve noon."]},
+      {"tr": "Sabah altıda kalkarım ve yedide kahve içerim.", "en": ["I get up at six in the morning and I drink coffee at seven.", "I get up at six in the morning and drink coffee at seven.", "I wake up at six in the morning and I drink coffee at seven.", "I wake up at six in the morning and drink coffee at seven.", "I get up at six a.m. and I drink coffee at seven."]},
+      {"tr": "Mağaza dokuzda açılıyor ama ben sekiz buçukta oradayım.", "en": ["The shop opens at nine but I'm there at half past eight.", "The shop opens at nine but I am there at half past eight.", "The shop opens at nine but I'm there at eight thirty.", "The shop opens at nine o'clock but I'm there at half past eight.", "The store opens at nine but I'm there at eight thirty."]},
+      {"tr": "Plaja altıda giderim çünkü gün batımı altı buçukta.", "en": ["I go to the beach at six because the sunset is at half past six.", "I go to the beach at six because sunset is at half past six.", "I go to the beach at six because the sunset is at six thirty.", "I go to the beach at six because sunset is at six thirty.", "I go to the beach at six o'clock because the sunset is at half past six."]},
+      {"tr": "İstanbul'da saat on ama Bali'de saat üç.", "en": ["It's ten o'clock in Istanbul but it's three o'clock in Bali.", "It is ten o'clock in Istanbul but it is three o'clock in Bali.", "It's ten in Istanbul but it's three in Bali.", "In Istanbul it's ten o'clock but in Bali it's three o'clock.", "In Istanbul it's ten but in Bali it's three."]}
+    ],
+    "talk": ["What time do you get up?", "What time do you go to the gym?", "What time is it in Bali right now?"]
+  },
+  "21": {
+    "focusTr": "Şehir, ülke ve kapalı alan için 'in', yüzey ve scooter için 'on', nokta mekân için 'at' (at home, at the gym). Yeri cümlenin sonuna koy.",
+    "pattern": "Özne + am/is/are + in / on / at / next to / behind / between / under / opposite + yer",
+    "items": [
+      {"tr": "Spor salonundayım.", "en": ["I'm at the gym.", "I am at the gym.", "I'm in the gym.", "I am in the gym."], "tip": "Gym, work, home: genelde 'at'."},
+      {"tr": "Evdeyim.", "en": ["I'm at home.", "I am at home."], "tip": "'at the home' denmez: at home."},
+      {"tr": "Canggu'dayım.", "en": ["I'm in Canggu.", "I am in Canggu."], "tip": "'the Canggu' değil, sadece Canggu."},
+      {"tr": "Scooter'ın üstündeyim.", "en": ["I'm on the scooter.", "I am on the scooter.", "I'm on my scooter.", "I am on my scooter."], "tip": "Scooter, otobüs, uçak: 'on'; araba, taksi: 'in'."},
+      {"tr": "Telefonum masanın üstünde.", "en": ["My phone is on the table.", "My phone's on the table."]},
+      {"tr": "Villa plajın yanında.", "en": ["The villa is next to the beach.", "The villa is beside the beach.", "The villa's next to the beach."]},
+      {"tr": "Kafe iki dükkânın arasında.", "en": ["The cafe is between two shops.", "The cafe is between two stores."]},
+      {"tr": "Scooter'ım villanın arkasında.", "en": ["My scooter is behind the villa.", "My scooter's behind the villa."]},
+      {"tr": "Kutular masanın altında ve etiketler kutuların içinde.", "en": ["The boxes are under the table and the labels are in the boxes.", "The boxes are under the table and the labels are inside the boxes.", "The boxes are under the table and the tags are in the boxes.", "The boxes are under the table and the labels are in them."]},
+      {"tr": "Ben kafedeyim ama arkadaşım hâlâ sahilde.", "en": ["I'm at the cafe but my friend is still at the beach.", "I am at the cafe but my friend is still at the beach.", "I'm at the cafe but my friend is still on the beach.", "I'm in the cafe but my friend is still at the beach.", "I'm at the cafe, but my friend is still at the beach."]},
+      {"tr": "Spor salonu kafenin karşısında ve eczanenin yanında.", "en": ["The gym is opposite the cafe and next to the pharmacy.", "The gym is across from the cafe and next to the pharmacy.", "The gym is opposite the cafe and beside the pharmacy.", "The gym's opposite the cafe and next to the pharmacy."]},
+      {"tr": "Telefonum çantamda değil, belki scooter'ın üstünde.", "en": ["My phone isn't in my bag, maybe it's on the scooter.", "My phone is not in my bag, maybe it is on the scooter.", "My phone isn't in my bag. Maybe it's on the scooter.", "My phone isn't in my bag, maybe it's on my scooter.", "My phone's not in my bag, maybe it's on the scooter."]}
+    ],
+    "talk": ["Where are you right now?", "Where is your favourite cafe?", "What is next to your house?"]
+  },
+  "22": {
+    "focusTr": "'I like' genel olarak sevdiğin şey; 'I'd like' şu an istediğin şey (kibar 'want'). Kafede, otelde, dükkânda hep 'I'd like...' kullan.",
+    "pattern": "I like + isim / Ving (genel) | I'd like + isim / to + fiil (şu an, kibar) | Would you like...?",
+    "items": [
+      {"tr": "Bir latte istiyorum lütfen.", "en": ["I'd like a latte please.", "I'd like a latte, please.", "I would like a latte please.", "I would like a latte, please."], "tip": "Siparişte 'I want' yerine kibar 'I'd like'."},
+      {"tr": "Kahveyi severim.", "en": ["I like coffee.", "I love coffee."], "tip": "Genel sevme: 'the coffee' değil, sadece coffee."},
+      {"tr": "Su ister misiniz?", "en": ["Would you like some water?", "Would you like water?", "Would you like some water, please?"]},
+      {"tr": "Plajı severim.", "en": ["I like the beach.", "I love the beach."]},
+      {"tr": "Hesabı rica ediyorum.", "en": ["I'd like the bill please.", "I'd like the bill, please.", "I would like the bill please.", "I would like the bill, please.", "I'd like the check please."]},
+      {"tr": "Sabahları spor yapmayı severim.", "en": ["I like working out in the morning.", "I like to work out in the morning.", "I like going to the gym in the morning.", "I like training in the morning.", "I like exercising in the morning."]},
+      {"tr": "Bir scooter kiralamak istiyorum.", "en": ["I'd like to rent a scooter.", "I would like to rent a scooter.", "I'd like to hire a scooter."], "tip": "I'd like + TO + fiil."},
+      {"tr": "Ne içmek istersin?", "en": ["What would you like to drink?"]},
+      {"tr": "Kahveyi severim ama şimdi bir çay istiyorum.", "en": ["I like coffee but I'd like a tea now.", "I like coffee but now I'd like a tea.", "I like coffee but I would like a tea now.", "I like coffee but right now I'd like a tea.", "I like coffee but I'd like some tea now."], "tip": "Genel = like, şu an = would like."},
+      {"tr": "İki gece için bir oda ayırtmak istiyorum ve deniz manzarası istiyorum.", "en": ["I'd like to book a room for two nights and I'd like a sea view.", "I would like to book a room for two nights and I would like a sea view.", "I'd like to book a room for two nights and I'd like an ocean view.", "I'd like to book a room for two nights and I would like a sea view."]},
+      {"tr": "Bali'yi çok seviyorum ve orada bir villa kiralamak istiyorum.", "en": ["I really like Bali and I'd like to rent a villa there.", "I love Bali and I'd like to rent a villa there.", "I like Bali very much and I'd like to rent a villa there.", "I really like Bali and I would like to rent a villa there.", "I love Bali and I would like to rent a villa there."]},
+      {"tr": "Spor salonunu severim ama bugün sahilde yürümek istiyorum.", "en": ["I like the gym but today I'd like to walk on the beach.", "I like the gym but I'd like to walk on the beach today.", "I like the gym but today I would like to walk on the beach.", "I like going to the gym but today I'd like to walk on the beach.", "I like the gym but today I'd like to go for a walk on the beach."]}
+    ],
+    "talk": ["What would you like to drink?", "What do you like doing in Bali?", "What would you like to do this weekend?"]
+  },
+  "23": {
+    "focusTr": "'Doğdum' = I was born (was + born). 'I born' veya 'I am born' deme. Yer ve yıl için in, tam tarih için on.",
+    "pattern": "I / He / She was born + in + şehir / yıl / ay | on + tarih | Where were you born?",
+    "items": [
+      {"tr": "İstanbul'da doğdum.", "en": ["I was born in Istanbul."], "tip": "'I born' değil: I WAS born."},
+      {"tr": "Nerede doğdun?", "en": ["Where were you born?"]},
+      {"tr": "Haziranda doğdum.", "en": ["I was born in June."]},
+      {"tr": "Ne zaman doğdun?", "en": ["When were you born?"], "tip": "Soruda 'were' öne gelir: When were you born?"},
+      {"tr": "Annem İzmir'de doğdu.", "en": ["My mother was born in Izmir.", "My mom was born in Izmir.", "My mum was born in Izmir."]},
+      {"tr": "Kız kardeşim 1998'de doğdu.", "en": ["My sister was born in nineteen ninety-eight.", "My younger sister was born in nineteen ninety-eight.", "My little sister was born in nineteen ninety-eight.", "My sister was born in 1998."]},
+      {"tr": "Babam 12 Mart'ta doğdu.", "en": ["My father was born on March twelfth.", "My father was born on the twelfth of March.", "My dad was born on March twelfth.", "My dad was born on the twelfth of March."], "tip": "Tam tarih için 'on'."},
+      {"tr": "İstanbul'da mı doğdun?", "en": ["Were you born in Istanbul?"]},
+      {"tr": "İstanbul'da doğdum ama şimdi Bali'yi çok seviyorum.", "en": ["I was born in Istanbul but now I really love Bali.", "I was born in Istanbul but now I love Bali.", "I was born in Istanbul but I really love Bali now.", "I was born in Istanbul but I love Bali very much now."]},
+      {"tr": "Arkadaşım Avustralya'da doğdu ama Canggu'da yaşıyor.", "en": ["My friend was born in Australia but he lives in Canggu.", "My friend was born in Australia but she lives in Canggu.", "My friend was born in Australia but lives in Canggu.", "My friend was born in Australia but now he lives in Canggu.", "My friend was born in Australia but now she lives in Canggu."], "tip": "'the Canggu' değil; lives: -s unutma."},
+      {"tr": "Yeğenim 2020'de doğdu ve şimdi altı yaşında.", "en": ["My nephew was born in twenty twenty and now he is six years old.", "My nephew was born in twenty twenty and he's six now.", "My niece was born in twenty twenty and now she is six years old.", "My niece was born in twenty twenty and she's six now.", "My nephew was born in twenty twenty and now he's six."]},
+      {"tr": "Kışın doğdum ama yazı daha çok seviyorum.", "en": ["I was born in winter but I love summer more.", "I was born in the winter but I love the summer more.", "I was born in winter but I like summer more.", "I was born in winter but I prefer summer."]}
+    ],
+    "talk": ["Where were you born?", "When were you born?", "Where was your mother born?"]
+  },
+  "24": {
+    "focusTr": "Can'den sonra fiil yalın gelir ve -s almaz: I can swim, he can drive. Rica için en kolay kalıp 'Can I...?' ve 'Can you...?'.",
+    "pattern": "Özne + can / can't + fiil (yalın) | Can I / Can you + fiil?",
+    "items": [
+      {"tr": "Yüzebilirim.", "en": ["I can swim."]},
+      {"tr": "Scooter kullanabilirim.", "en": ["I can ride a scooter."], "tip": "Scooter için 'drive' değil 'ride'."},
+      {"tr": "Kartla ödeyebilir miyim?", "en": ["Can I pay by card?", "Can I pay with card?", "Can I pay with a card?", "Can I pay by credit card?"]},
+      {"tr": "Sörf yapamam.", "en": ["I can't surf.", "I cannot surf.", "I can not surf."]},
+      {"tr": "Bana bir fotoğraf çekebilir misin?", "en": ["Can you take a photo of me?", "Can you take a picture of me?", "Can you take my photo?", "Can you take my picture?"]},
+      {"tr": "Wi-Fi şifresini alabilir miyim?", "en": ["Can I have the Wi-Fi password?", "Can I get the Wi-Fi password?", "Can I have the WiFi password?", "Can I get the WiFi password?"]},
+      {"tr": "Siparişi bugün gönderebilirim.", "en": ["I can send the order today.", "I can ship the order today.", "I can send the order out today.", "Today I can send the order."]},
+      {"tr": "Müşteriler bedeni değiştirebilir.", "en": ["Customers can change the size.", "The customers can change the size.", "Customers can exchange the size."], "tip": "Can'den sonra fiil yalın: can change."},
+      {"tr": "İngilizceyi anlayabiliyorum ama iyi konuşamıyorum.", "en": ["I can understand English but I can't speak it well.", "I can understand English but I cannot speak it well.", "I can understand English but I can't speak well.", "I can understand English but I can't speak it very well.", "I can understand English, but I can't speak it well."]},
+      {"tr": "Bir hafta kalabilirim ama indirim yapabilir misiniz?", "en": ["I can stay for a week but can you give me a discount?", "I can stay for a week but can you give me a better price?", "I can stay for one week but can you give me a discount?", "I can stay a week but can you give me a discount?", "I can stay for a week, but can you give me a discount?"]},
+      {"tr": "Arkadaşım çok iyi sörf yapabiliyor ama ben yapamıyorum.", "en": ["My friend can surf very well but I can't.", "My friend can surf very well but I cannot.", "My friend can surf really well but I can't.", "My friend can surf very well but I can't surf.", "My friend can surf very well, but I can't."], "tip": "Kısa cevap: but I can't (fiili tekrarlama)."},
+      {"tr": "Bali'den çalışabilirim çünkü mağazamı telefonumdan yönetebilirim.", "en": ["I can work from Bali because I can manage my shop from my phone.", "I can work from Bali because I can run my shop from my phone.", "I can work from Bali because I can manage my shop on my phone.", "I can work from Bali because I can run my shop on my phone.", "I can work from Bali because I can manage my store from my phone."]}
+    ],
+    "talk": ["Can you ride a scooter?", "What can you do in Canggu?", "Can you cook?"]
+  },
+  "25": {
+    "focusTr": "Could iki işe yarar: geçmişte yapabildiğin/yapamadığın şey (I couldn't sleep = uyuyamadım) ve kibar rica (Could you...?). Sonrasında fiil yine yalın.",
+    "pattern": "I could / couldn't + fiil (geçmiş) | Could you / Could I + fiil? (kibar rica)",
+    "items": [
+      {"tr": "Uyuyamadım.", "en": ["I couldn't sleep.", "I could not sleep."]},
+      {"tr": "Tekrar edebilir misiniz?", "en": ["Could you repeat that?", "Could you repeat that please?", "Could you repeat it?", "Could you say that again?", "Could you repeat that, please?"]},
+      {"tr": "Daha yavaş konuşabilir misiniz?", "en": ["Could you speak slower?", "Could you speak more slowly?", "Could you speak slowly?", "Could you speak slower please?", "Could you speak more slowly, please?"]},
+      {"tr": "Menüyü alabilir miyim?", "en": ["Could I have the menu?", "Could I see the menu?", "Could I get the menu?", "Could I have the menu please?"]},
+      {"tr": "Dün gece seni arayamadım.", "en": ["I couldn't call you last night.", "I could not call you last night.", "Last night I couldn't call you."], "tip": "Yapamadım = couldn't + yalın fiil."},
+      {"tr": "Çocukken yüzemiyordum.", "en": ["I couldn't swim as a child.", "I could not swim as a child.", "I couldn't swim when I was a child.", "I could not swim when I was a child.", "When I was a child I couldn't swim."]},
+      {"tr": "Bana bir taksi çağırabilir misiniz?", "en": ["Could you call me a taxi?", "Could you call a taxi for me?", "Could you get me a taxi?", "Could you call me a taxi please?", "Could you call a taxi for me, please?"]},
+      {"tr": "Villada Wi-Fi'a bağlanamadım.", "en": ["I couldn't connect to the Wi-Fi in the villa.", "I couldn't connect to the Wi-Fi at the villa.", "I could not connect to the Wi-Fi in the villa.", "I couldn't connect to the WiFi in the villa.", "I couldn't connect to the WiFi at the villa."]},
+      {"tr": "Dün spor salonuna gidemedim çünkü çok yorgundum.", "en": ["I couldn't go to the gym yesterday because I was very tired.", "I could not go to the gym yesterday because I was very tired.", "Yesterday I couldn't go to the gym because I was very tired.", "I couldn't go to the gym yesterday because I was really tired.", "I couldn't go to the gym yesterday because I was so tired."]},
+      {"tr": "Siparişi dün gönderemedim ama bugün gönderebilirim.", "en": ["I couldn't send the order yesterday but I can send it today.", "I could not send the order yesterday but I can send it today.", "I couldn't ship the order yesterday but I can ship it today.", "Yesterday I couldn't send the order but I can send it today.", "I couldn't send the order yesterday, but I can send it today."], "tip": "Geçmiş = couldn't, şimdi = can."},
+      {"tr": "Canggu'da ilk hafta İngilizce konuşamadım ama sonra biraz konuşabildim.", "en": ["In the first week in Canggu I couldn't speak English but then I could speak a little.", "In my first week in Canggu I couldn't speak English but then I could speak a little.", "In the first week in Canggu I could not speak English but then I could speak a little.", "I couldn't speak English in the first week in Canggu but then I could speak a little.", "In my first week in Canggu I couldn't speak English but later I could speak a little."]},
+      {"tr": "Bana yardım edebilir misiniz? Villamı bulamadım.", "en": ["Could you help me? I couldn't find my villa.", "Could you help me please? I couldn't find my villa.", "Could you help me? I could not find my villa.", "Could you help me? I can't find my villa.", "Could you please help me? I couldn't find my villa."]}
+    ],
+    "talk": ["Could you swim when you were a child?", "What couldn't you do in Bali?", "Could you speak English in Canggu?"]
+  },
+  "26": {
+    "focusTr": "'Ago' süreden SONRA gelir: two weeks ago (iki hafta önce). 'Last' ile edat yok: last week, last month. İkisi de geçmiş zaman ister: was, went, liked.",
+    "pattern": "süre + ago (two days ago) | last + night / week / month / year | fiil geçmiş zamanda",
+    "items": [
+      {"tr": "Geçen hafta oradaydım.", "en": ["I was there last week.", "Last week I was there."]},
+      {"tr": "Dün gece yorgundum.", "en": ["I was tired last night.", "Last night I was tired."]},
+      {"tr": "Beş dakika önce aradım.", "en": ["I called five minutes ago.", "I phoned five minutes ago.", "I called you five minutes ago."], "tip": "Ago sona gelir: five minutes ago."},
+      {"tr": "Geçen ay döndüm.", "en": ["I came back last month.", "I returned last month.", "Last month I came back."], "tip": "'in last month' denmez."},
+      {"tr": "İki hafta önce Canggu'daydım.", "en": ["I was in Canggu two weeks ago.", "Two weeks ago I was in Canggu."]},
+      {"tr": "Müşteri bir saat önce yazdı.", "en": ["The customer wrote an hour ago.", "The customer wrote one hour ago.", "The customer messaged an hour ago.", "A customer wrote an hour ago.", "The customer wrote to me an hour ago."]},
+      {"tr": "Geçen yıl mağazam çok küçüktü.", "en": ["My shop was very small last year.", "Last year my shop was very small.", "My store was very small last year.", "My shop was really small last year."]},
+      {"tr": "Üç gün önce spor salonuna gittim.", "en": ["I went to the gym three days ago.", "Three days ago I went to the gym."], "tip": "go değil went: geçmiş zaman."},
+      {"tr": "Geçen ay Bali'deydim ve her gün plaja gittim.", "en": ["I was in Bali last month and I went to the beach every day.", "I was in Bali last month and went to the beach every day.", "Last month I was in Bali and I went to the beach every day.", "Last month I was in Bali and went to the beach every day."]},
+      {"tr": "Paketi iki gün önce gönderdim ve müşteri onu bugün aldı.", "en": ["I sent the package two days ago and the customer got it today.", "I sent the package two days ago and the customer received it today.", "I sent the parcel two days ago and the customer got it today.", "I sent the parcel two days ago and the customer received it today.", "Two days ago I sent the package and the customer got it today."]},
+      {"tr": "Geçen hafta sonu İstanbul'daydım çünkü ablamın düğünü vardı.", "en": ["I was in Istanbul last weekend because it was my sister's wedding.", "Last weekend I was in Istanbul because it was my sister's wedding.", "I was in Istanbul last weekend because my sister had her wedding.", "I was in Istanbul last weekend because of my sister's wedding.", "I was in Istanbul last weekend because there was my sister's wedding."]},
+      {"tr": "Bir ay önce Canggu'da bir kulübe gittim ve orayı çok sevdim.", "en": ["I went to a club in Canggu a month ago and I really liked it.", "A month ago I went to a club in Canggu and I really liked it.", "I went to a club in Canggu a month ago and I liked it very much.", "I went to a club in Canggu a month ago and I loved it.", "I went to a club in Canggu one month ago and I really liked it."], "tip": "like değil LIKED: geçmişi unutma."}
+    ],
+    "talk": ["Where were you two months ago?", "What did you do last weekend?", "When did you come back from Bali?"]
+  },
+  "27": {
+    "focusTr": "'For' süre söyler (for two years = iki yıldır / iki yıl boyunca), 'since' başlangıç noktası (since March = marttan beri). '-dır / -den beri' için 'I've been / I've had / I've known' kalıbını kullan.",
+    "pattern": "for + süre (for a month) | since + başlangıç (since Monday) | I've been / I've had / I've known + ...",
+    "items": [
+      {"tr": "Sabahtan beri buradayım.", "en": ["I've been here since morning.", "I have been here since morning.", "I've been here since this morning.", "I have been here since this morning."], "tip": "'-den beri buradayım': I am here değil, I've been here."},
+      {"tr": "Pazartesiden beri hastayım.", "en": ["I've been sick since Monday.", "I have been sick since Monday.", "I've been ill since Monday.", "I have been ill since Monday."]},
+      {"tr": "Onu yıllardır tanıyorum.", "en": ["I've known him for years.", "I have known him for years.", "I've known her for years.", "I have known her for years."]},
+      {"tr": "Bir ay kaldım.", "en": ["I stayed for a month.", "I stayed for one month."]},
+      {"tr": "Canggu'da bir ay kaldım.", "en": ["I stayed in Canggu for a month.", "I stayed in Canggu for one month.", "I was in Canggu for a month.", "I was in Canggu for one month."]},
+      {"tr": "2022'den beri bir online mağazam var.", "en": ["I've had an online shop since twenty twenty-two.", "I have had an online shop since twenty twenty-two.", "I've had an online store since twenty twenty-two.", "I've had an online shop since 2022."], "tip": "Başlangıç yılı = since, 'for' değil."},
+      {"tr": "Bu telefon üç yıldır bende.", "en": ["I've had this phone for three years.", "I have had this phone for three years.", "I've had this phone for 3 years."]},
+      {"tr": "Ocaktan beri bu spor salonunun üyesiyim.", "en": ["I've been a member of this gym since January.", "I have been a member of this gym since January.", "I've been a member at this gym since January."]},
+      {"tr": "Bali'de bir ay kaldım ve iki hafta boyunca sörf dersi aldım.", "en": ["I stayed in Bali for a month and I took surf lessons for two weeks.", "I stayed in Bali for a month and took surf lessons for two weeks.", "I stayed in Bali for a month and I had surf lessons for two weeks.", "I was in Bali for a month and I took surf lessons for two weeks.", "I stayed in Bali for one month and I took surf lessons for two weeks."]},
+      {"tr": "Ahmet'i 2015'ten beri tanıyorum çünkü aynı spor salonuna gidiyoruz.", "en": ["I've known Ahmet since twenty fifteen because we go to the same gym.", "I have known Ahmet since twenty fifteen because we go to the same gym.", "I've known Ahmet since two thousand and fifteen because we go to the same gym.", "I've known Ahmet since 2015 because we go to the same gym."]},
+      {"tr": "Mağazam 2022'den beri açık ve iki yıldır bir depom var.", "en": ["My shop has been open since twenty twenty-two and I've had a warehouse for two years.", "My shop has been open since twenty twenty-two and I have had a warehouse for two years.", "My store has been open since twenty twenty-two and I've had a warehouse for two years.", "My shop has been open since 2022 and I've had a warehouse for two years."]},
+      {"tr": "Bir aydır Bali'den uzaktayım ve orayı çok özlüyorum.", "en": ["I've been away from Bali for a month and I really miss it.", "I have been away from Bali for a month and I really miss it.", "I've been away from Bali for a month and I miss it a lot.", "I've been away from Bali for one month and I really miss it.", "I've been away from Bali for a month and I miss it very much."]}
+    ],
+    "talk": ["How long have you had your online shop?", "How long did you stay in Bali?", "How long have you known your best friend?"]
+  },
+  "28": {
+    "focusTr": "Saat için 'at', gün ve tarih için 'on', ay, yıl ve mevsim için 'in'. Kalıplar: in the morning, in the evening, at night, at the weekend.",
+    "pattern": "at + saat / night | on + gün / tarih | in + ay / yıl / mevsim / the morning",
+    "items": [
+      {"tr": "Gece çalışırım.", "en": ["I work at night."], "tip": "'in the night' değil: at night."},
+      {"tr": "Saat yedide kalkarım.", "en": ["I get up at seven.", "I wake up at seven.", "I get up at seven o'clock.", "I wake up at seven o'clock."]},
+      {"tr": "Pazartesi görüşürüz.", "en": ["See you on Monday.", "See you Monday."]},
+      {"tr": "Haziranda boşum.", "en": ["I'm free in June.", "I am free in June."]},
+      {"tr": "Sabahları sahilde kahve içerim.", "en": ["I drink coffee on the beach in the morning.", "I drink coffee on the beach in the mornings.", "In the morning I drink coffee on the beach.", "I have coffee on the beach in the morning."]},
+      {"tr": "Uçuşum 1 Şubat'ta saat onda.", "en": ["My flight is on February first at ten.", "My flight is on February first at ten o'clock.", "My flight is on the first of February at ten.", "My flight is at ten on February first.", "My flight is at ten o'clock on the first of February."], "tip": "Tarih = on, saat = at."},
+      {"tr": "Kışın mağaza çok yoğun.", "en": ["The shop is very busy in winter.", "The shop is very busy in the winter.", "My shop is very busy in winter.", "In winter the shop is very busy.", "The store is very busy in winter."]},
+      {"tr": "Hafta sonu ailemleyim.", "en": ["I'm with my family at the weekend.", "I am with my family at the weekend.", "I'm with my family on the weekend.", "At the weekend I'm with my family.", "I'm with my family this weekend."]},
+      {"tr": "Sabah sekizde spora giderim ve öğleden sonra siparişleri paketlerim.", "en": ["I go to the gym at eight in the morning and I pack the orders in the afternoon.", "I go to the gym at eight in the morning and pack the orders in the afternoon.", "I go to the gym at eight in the morning and I pack orders in the afternoon.", "At eight in the morning I go to the gym and in the afternoon I pack the orders.", "I go to the gym at eight a.m. and I pack the orders in the afternoon."]},
+      {"tr": "Yağmur mevsimi kasımda başlıyor ve martta bitiyor.", "en": ["The rainy season starts in November and ends in March.", "The wet season starts in November and ends in March.", "The rainy season begins in November and ends in March.", "The rainy season starts in November and finishes in March."]},
+      {"tr": "Cuma akşamı saat dokuzda bir parti var ve ben de gitmek istiyorum.", "en": ["There is a party on Friday evening at nine and I want to go.", "There's a party on Friday evening at nine and I want to go.", "There is a party on Friday evening at nine and I want to go too.", "There is a party at nine on Friday evening and I want to go.", "There's a party on Friday night at nine and I want to go."]},
+      {"tr": "Kafe sabah yedide açılıyor ama pazar günleri dokuzda açılıyor.", "en": ["The cafe opens at seven in the morning but on Sundays it opens at nine.", "The cafe opens at seven in the morning but it opens at nine on Sundays.", "The cafe opens at seven a.m. but on Sundays it opens at nine.", "The cafe opens at seven in the morning, but on Sundays it opens at nine."]}
+    ],
+    "talk": ["What time do you usually go to bed?", "What do you do on Saturdays?", "What do you usually do in the evening?"]
+  },
+  "29": {
+    "focusTr": "Öneri için en kolayı 'Let's + fiil' (hadi ... yapalım). Soru şeklinde 'Shall we...?' veya 'Why don't we...?' — üçünden sonra da fiil yalın gelir.",
+    "pattern": "Let's + fiil | Shall we + fiil? | Why don't we + fiil? | How about + Ving?",
+    "items": [
+      {"tr": "Hadi plaja gidelim.", "en": ["Let's go to the beach."]},
+      {"tr": "Kahve içelim mi?", "en": ["Shall we have coffee?", "Shall we have a coffee?", "Shall we get a coffee?", "Shall we get coffee?", "Shall we drink coffee?"]},
+      {"tr": "Hadi taksi tutalım.", "en": ["Let's take a taxi.", "Let's get a taxi.", "Let's take a cab."]},
+      {"tr": "Neden yürümüyoruz?", "en": ["Why don't we walk?"], "tip": "Olumsuz soru gibi ama aslında öneri."},
+      {"tr": "Neden bir scooter kiralamıyoruz?", "en": ["Why don't we rent a scooter?", "Why don't we hire a scooter?"]},
+      {"tr": "Bu akşam sushi yiyelim mi?", "en": ["Shall we eat sushi tonight?", "Shall we have sushi tonight?", "Shall we eat sushi this evening?", "Shall we have sushi this evening?"]},
+      {"tr": "Hadi saat yedide kafede buluşalım.", "en": ["Let's meet at the cafe at seven.", "Let's meet at the cafe at seven o'clock.", "Let's meet in the cafe at seven.", "Let's meet at seven at the cafe."]},
+      {"tr": "Gün batımını izlemeye ne dersin?", "en": ["How about watching the sunset?", "What about watching the sunset?", "Why don't we watch the sunset?", "Shall we watch the sunset?"], "tip": "How about + fiil-ing: watching."},
+      {"tr": "Hadi havuza girelim çünkü hava çok sıcak.", "en": ["Let's go in the pool because it's very hot.", "Let's go in the pool because it is very hot.", "Let's go into the pool because it's very hot.", "Let's swim in the pool because it's very hot.", "Let's get in the pool because it's very hot."]},
+      {"tr": "Neden Canggu'da bir çekim yapmıyoruz? Orada ışık çok güzel.", "en": ["Why don't we do a photo shoot in Canggu? The light is beautiful there.", "Why don't we have a photo shoot in Canggu? The light is beautiful there.", "Why don't we do a photo shoot in Canggu? The light there is beautiful.", "Why don't we do a shoot in Canggu? The light is beautiful there.", "Why don't we do a photo shoot in Canggu? The light is very nice there."]},
+      {"tr": "Bugün çok yorgunum, hadi yarın spora gidelim.", "en": ["I'm very tired today so let's go to the gym tomorrow.", "I'm very tired today. Let's go to the gym tomorrow.", "I'm very tired today, let's go to the gym tomorrow.", "I am very tired today so let's go to the gym tomorrow.", "I'm really tired today so let's go to the gym tomorrow."]},
+      {"tr": "Cumartesi Uluwatu'ya gidip akşam dönelim mi?", "en": ["Shall we go to Uluwatu on Saturday and come back in the evening?", "Why don't we go to Uluwatu on Saturday and come back in the evening?", "Shall we go to Uluwatu on Saturday and come back at night?"]}
+    ],
+    "talk": ["What shall we do this weekend?", "Why don't we get a coffee?", "Where shall we eat tonight?"]
+  },
+  "30": {
+    "focusTr": "Olumlu cümlede some- (something, someone), soru ve olumsuzda any- (anything, anyone). Bu kelimeler tekil sayılır: Everybody IS happy.",
+    "pattern": "some- (olumlu) | any- (soru / olumsuz) | no- (hiç) | every- (herkes, her şey) + -body / -one / -thing / -where",
+    "items": [
+      {"tr": "Herkes burada.", "en": ["Everybody is here.", "Everyone is here.", "Everybody's here.", "Everyone's here."], "tip": "Everybody tekildir: is, 'are' değil."},
+      {"tr": "Bir şey istiyorum.", "en": ["I want something.", "I'd like something.", "I would like something."]},
+      {"tr": "Burada kimse yok.", "en": ["There is nobody here.", "There's nobody here.", "There isn't anybody here.", "There's no one here.", "There is no one here.", "There isn't anyone here."]},
+      {"tr": "Bir şey sorabilir miyim?", "en": ["Can I ask something?", "Can I ask you something?", "Could I ask something?", "Could I ask you something?"]},
+      {"tr": "Canggu'da herkes scooter kullanıyor.", "en": ["Everybody rides a scooter in Canggu.", "Everyone rides a scooter in Canggu.", "In Canggu everybody rides a scooter.", "In Canggu everyone rides a scooter.", "Everybody uses a scooter in Canggu."], "tip": "Everybody + fiil-s: rides."},
+      {"tr": "Yakında bir yerde iyi bir kafe var mı?", "en": ["Is there a good cafe somewhere near here?", "Is there a good cafe anywhere near here?", "Is there a good cafe somewhere nearby?", "Is there a good cafe anywhere nearby?"]},
+      {"tr": "Telefonumu hiçbir yerde bulamıyorum.", "en": ["I can't find my phone anywhere.", "I cannot find my phone anywhere."], "tip": "Olumsuzda nowhere değil: can't + anywhere."},
+      {"tr": "Bu akşam bir şey yapmak ister misin?", "en": ["Do you want to do something tonight?", "Would you like to do something tonight?", "Do you want to do anything tonight?", "Do you want to do something this evening?", "Would you like to do something this evening?"]},
+      {"tr": "Biri mağazamı aradı ama kimse cevap vermedi.", "en": ["Someone called my shop but nobody answered.", "Somebody called my shop but nobody answered.", "Someone called my shop but no one answered.", "Somebody called my shop but no one answered.", "Someone called my store but nobody answered."]},
+      {"tr": "Bali'de her yer çok güzel ama trafik çok kötü.", "en": ["Everywhere in Bali is very beautiful but the traffic is very bad.", "Everywhere in Bali is beautiful but the traffic is very bad.", "Everywhere is very beautiful in Bali but the traffic is very bad.", "In Bali everywhere is very beautiful but the traffic is very bad.", "Everywhere in Bali is very beautiful but the traffic is terrible."]},
+      {"tr": "Bugün hiçbir şey satmadım ama herkes ürünlere baktı.", "en": ["I didn't sell anything today but everybody looked at the products.", "I didn't sell anything today but everyone looked at the products.", "I did not sell anything today but everybody looked at the products.", "I sold nothing today but everybody looked at the products.", "Today I didn't sell anything but everyone looked at the products."]},
+      {"tr": "Spor salonunda kimseyi tanımıyorum ama herkes çok sıcakkanlı.", "en": ["I don't know anybody at the gym but everybody is very friendly.", "I don't know anyone at the gym but everyone is very friendly.", "I do not know anybody at the gym but everybody is very friendly.", "I don't know anybody in the gym but everybody is very friendly.", "I don't know anyone at the gym but everybody is really friendly."]}
+    ],
+    "talk": ["Do you know anyone in Canggu?", "Is there anything you want to buy in Bali?", "Is there somewhere special you go every week?"]
+  }
+}

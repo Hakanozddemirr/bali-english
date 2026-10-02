@@ -1,7 +1,7 @@
 import { days, TOTAL_DAYS } from '../content'
 import { useApp, getDayState, daysUntilTrip, activeDayNum, readiness } from '../lib/store'
 
-export default function Home({ onOpenDay, onCalib }) {
+export default function Home({ onOpenDay, onCalib, onBack }) {
   const { state } = useApp()
   const left = daysUntilTrip(state)
   const doneCount = days.filter((d) => getDayState(state, d.day).done).length
@@ -11,6 +11,12 @@ export default function Home({ onOpenDay, onCalib }) {
 
   return (
     <div className="screen">
+      {onBack && (
+        <div className="topbar">
+          <button className="back-btn" onClick={onBack}>←</button>
+          <h2>🏝️ Bali Sprinti (arşiv)</h2>
+        </div>
+      )}
       <header className="hero">
         <h1>Bali English 🌴</h1>
         <div className="sub">7 günlük sosyal akıcılık sprinti — hedef: gerçek sohbet</div>

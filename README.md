@@ -1,8 +1,8 @@
-# Bali English 🌴 — 7 Günlük Sosyal Akıcılık Sprinti
+# Bali English 🌴 — Sabah Sistemi (v3)
 
-Hedef: 7 gün sonunda Bali'de başka bir gezginle 5-15 dakikalık spontane İngilizce
-sohbeti rahatça yürütebilmek. Kelime ezberi değil — **chunk** (hazır kalıp), tepki,
-takip sorusu, plan yapma, hikâye anlatma ve sohbet kurtarma antrenmanı.
+Her sabah 1 saat, konuşma odaklı: **Tekrar (5) → Ders + Yapı Lab (25) → Kitap (15) → Konuşma (10) → Today I… (5)**.
+Gramer: Aksen Kahraman YouTube oynatma listesi (138 ünite → 72 günlük seans). Kitaplar: 50 Basic Reading Passages,
+1000 English Words With Puzzles. Kötü gün = minimum (tekrar + 5 dk konuşma), seri bozulmaz.
 
 ## Yayın
 
@@ -16,27 +16,19 @@ npm run build && rm -rf docs && cp -R dist docs && touch docs/.nojekyll
 git add -A && git commit -m "güncelleme" && git push
 ```
 
-## Mimari (v2)
+## Mimari (v3)
 
-- 7 gün × `src/content/dayN.json`: `chunks` (kalıp+TR+kullanım notu+örnek),
-  `quick` (⚡ hızlı cevap), `social` (react/follow/build/story), `grammar`
-  (mikro gramer + TR→EN üretim drilleri), `listening`, `scenario` (kişilikli,
-  değişken beat'ler). Gün 7: `sims` (9 mini simülasyon) + final serbest konuşma.
-- `guide.json`: 126 kalıplık aranabilir, ⭐ favorili Cep Rehberi (14 kategori).
-- `freetalk.json`: 11 bağlam + 8 kişilik + genel beat havuzu.
-- Durum: `localStorage["baliEnglish.v2"]` (v1'den yalnız ayarlar göç eder).
-  SRS chunk bazlı Leitner; `known` seti ("Bunu biliyorum") + 3 dk kalibrasyon.
-- Konuşma iki modlu: API anahtarıyla **Claude** (doğal gezgin kişilikleri,
-  Guided/Normal/Realistic, oturum sonu yapılandırılmış geri bildirim + hata
-  bankası) — anahtarsız **çevrimdışı beat motoru** (kabul-öncelikli, `beats.js`).
-- Hata bankası: gramer drillerinden ve Claude geri bildiriminden otomatik dolar
-  (Ayarlar ekranında).
-- TTS: ABD/İngiliz/Avustralya aksan rotasyonu + 0.85–1.2x hız (`tts.js`).
-- "Konuşma Netliği": STT karşılaştırması — telaffuz puanı DEĞİL, anlaşılabilirlik
-  tahmini (gölgeleme modu dahil).
-
-## İçerik düzenleme
-
-Tüm müfredat düz JSON. Sınav soruları `quizGen.js` ile içerikten üretilir —
-doğru cevaplar `listening.options[0]` ve `grammar.drills.keys` üzerinden.
-Beat şablonlarında `{name} {from} {days}` gibi alanlar kişilikten doldurulur.
+- `src/content/course.json` — `scripts/buildCourse.py` ile oynatma listesinden üretilir
+  (`yt-dlp --flat-playlist` çıktısı → `scripts/playlist.txt`). Tanıtım videoları atlanır, alıştırma videoları
+  konusuna bağlanır, kısa dersler ≤28 dk video olacak şekilde aynı güne birleştirilir.
+- `src/content/lab/*.json` — Yapı Laboratuvarı (TR → EN sesli cümle kurma), ders anahtarı bazında
+  (`focusTr`, `pattern`, 12 `items` {tr, en[], tip}, 3 `talk` sorusu). Ders 1–40 hazır; sonrası API anahtarıyla
+  Claude tarafından üretilip `labCache`'e yazılır. İçerik kuralları: `scripts/LAB_BRIEF.md`.
+- Kontrol: `match.js → checkSentence` (kısaltma/kesmesiz yazım normalize) → tutmazsa Claude Haiku ile anlam kontrolü.
+- Tekrar destesi (`cards.js`): kitap kelimesi / hata / Lab cümlesi / Yakala; aralıklar 0-1-3-7-16-35 gün.
+- Günlük kayıt `state.log[YYYY-MM-DD]` → seri, 4 haftalık ısı haritası, minimum gün.
+- Konuşma: günlük modda sabahki yapı + günün kelimeleri sistem promptuna girer; süre bugünün kaydına yazılır.
+- Haftalık Kontrol: 2 dk konuşma → akıcılık/doğruluk/çeşitlilik puanı (API).
+- Yedek: Ayarlar → JSON indir/yükle (API anahtarı hariç). Claude Code'a verilirse `context/english/` güncellenir.
+- Durum: `localStorage["baliEnglish.v3"]` (v2 verisi silinmeden taşınır). 7 günlük v2 sprinti "Konuş → Arşiv"de.
+- Modeller: Opus 5.5 (varsayılan), Sonnet 5.5, Haiku 4.5. Opus/Sonnet 5.5'te sunucu taraflı yedek model açık.

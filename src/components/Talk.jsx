@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { getDay, freetalk, TOTAL_DAYS } from '../content'
-import { useApp, getDayState, ensureDay, recomputeDay, addMistake, activeDayNum } from '../lib/store'
+import { useApp, getDayState, ensureDay, recomputeDay, addMistake, activeDayNum, ensureLog, getLog, FULL_TALK } from '../lib/store'
+import { todayFocus } from '../lib/course'
+import { dueCards } from '../lib/cards'
+import { todayISO } from '../lib/dates'
 import { speak, stopSpeaking } from '../lib/tts'
 import { chatReply, buildTalkPrompt, parseMistakes } from '../lib/claude'
 import { pickPersona, fill, runBeatTurn, offlineFeedback } from '../lib/beats'
@@ -9,6 +12,15 @@ import { fireConfetti } from '../lib/confetti'
 import AnswerInput from './AnswerInput'
 
 const TARGET_SEC = 600
+
+// Günlük konuşma için Bali + gündelik hayat bağlamları
+const LIFE_CONTEXTS = [
+  { id: 'istanbul-cafe', title: 'İstanbul\'da Kafe', emoji: '☕', settingEn: 'a cafe in Istanbul; you are a tourist visiting Istanbul and you start chatting with him at the next table', situationTr: 'İstanbul\'da bir kafede yan masadaki turist seninle sohbet ediyor.' },
+  { id: 'coworking', title: 'Coworking Tanışma', emoji: '💻', settingEn: 'a coworking space in Canggu; you are a digital nomad meeting him at the coffee machine', situationTr: 'Canggu\'da coworking\'desin; kahve makinesinin başında biriyle tanışıyorsun.' },
+  { id: 'gym', title: 'Spor Salonu', emoji: '🏋️', settingEn: 'a gym; you are another regular who chats with him between sets', situationTr: 'Spor salonunda setler arasında biriyle sohbet.' },
+  { id: 'business', title: 'İş Sohbeti', emoji: '🛍️', settingEn: 'a networking event for online sellers; you run a small e-commerce brand and ask about his online clothing shop', situationTr: 'E-ticaret networking etkinliği; biri senin online mağazanı soruyor.' },
+  { id: 'weekend', title: 'Hafta Sonu Planları', emoji: '📅', settingEn: 'a video call with a friend you met in Bali; you catch up about last week and plans', situationTr: 'Bali\'de tanıştığın bir arkadaşla görüntülü konuşma: geçen hafta ne yaptın, planın ne?' },
+]
 const IS_PUBLISHED = /claude(usercontent)?\.(ai|com)$/.test(window.location.hostname)
 
 function fmt(sec) {
@@ -21,14 +33,27 @@ const MODES = [
   { id: 'realistic', label: '⚡ Realistic', descTr: 'Gerçek hız, beklenmedik sorular.' },
 ]
 
-export default function Talk({ day, simId, freeCtxId, onBack }) {
+export default function Talk({ day, simId, freeCtxId, daily, onBack }) {
   const { state, update } = useApp()
   const { apiKey, model, rate, talkMode } = state.settings
+  // Günlük ve serbest konuşma bugünün kaydına yazılır; eski 7 günlük sprint kendi gününe
+  const toLog = daily || !!freeCtxId
   const creditDay = day || activeDayNum(state, TOTAL_DAYS)
   const st = getDayState(state, creditDay)
+  const todayLog = getLog(state)
+  const [ctxSeed, setCtxSeed] = useState(() => Math.random())
 
   // Kaynak senaryoyu çöz: gün senaryosu / gün-7 simülasyonu / free talk bağlamı
   const src = useMemo(() => {
+    if (daily) {
+      const pool = [...LIFE_CONTEXTS, ...freetalk.contexts]
+      const ctx = pool[Math.floor(ctxSeed * pool.length)]
+      return {
+        title: `${ctx.emoji} ${ctx.title}`, situationTr: ctx.situationTr,
+        settingEn: ctx.settingEn, beats: freetalk.beats, personas: freetalk.personas,
+        goalTr: 'Her cevaba en az 2 cümle: …because… / …and… Bugünkü yapıyı kullan.',
+      }
+    }
     if (freeCtxId) {
       const ctx = freetalk.contexts.find((c) => c.id === freeCtxId)
       return {
@@ -50,7 +75,19 @@ export default function Talk({ day, simId, freeCtxId, onBack }) {
       title: sc.title, situationTr: sc.situationTr, settingEn: sc.situationTr, beats: sc.beats,
       personas: sc.personas, goalTr: sc.goalTr,
     }
-  }, [day, simId, freeCtxId])
+  }, [day, simId, freeCtxId, daily, ctxSeed])
+
+  // Bugünün odağı: sabah çalışılan yapı + kitaptan eklenen / vadesi gelen kelimeler
+  const focus = useMemo(() => {
+    if (!toLog) return null
+    const f = todayFocus(state, todayLog.lessons)
+    const words = [
+      ...Object.values(state.cards).filter((c) => c.type === 'word' && c.created === todayISO()),
+      ...dueCards(state).filter((c) => c.type === 'word'),
+    ].map((c) => c.en)
+    return { ...f, words: [...new Set(words)].slice(0, 6) }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [toLog])
 
   const persona = useMemo(() => pickPersona(src.personas), [src])
   const mode = talkMode || 'normal'
@@ -60,7 +97,8 @@ export default function Talk({ day, simId, freeCtxId, onBack }) {
   const [messages, setMessages] = useState([]) // {role:'user'|'assistant'|'sys', text, tr?}
   const [busy, setBusy] = useState(false)
   const [err, setErr] = useState('')
-  const [secs, setSecs] = useState(st.talkSec)
+  const [secs, setSecs] = useState(toLog ? todayLog.talkSec : st.talkSec)
+  const target = toLog ? FULL_TALK : TARGET_SEC
   const [stepIdx, setStepIdx] = useState(0)
   const statsRef = useRef({ turns: 0, nudges: 0 })
   const scrollRef = useRef(null)
@@ -75,6 +113,11 @@ export default function Talk({ day, simId, freeCtxId, onBack }) {
 
   const persist = () =>
     update((s) => {
+      if (toLog) {
+        const l = ensureLog(s)
+        if (secsRef.current > l.talkSec) l.talkSec = secsRef.current
+        return
+      }
       const d = ensureDay(s, creditDay)
       if (secsRef.current > d.talkSec) d.talkSec = secsRef.current
       if (d.talkSec >= TARGET_SEC && !d.talkDone) {
@@ -85,6 +128,11 @@ export default function Talk({ day, simId, freeCtxId, onBack }) {
 
   useEffect(() => {
     if (!started || secs === 0) return
+    if (toLog) {
+      if (secs % 10 === 0) persist()
+      if (secs === target) fireConfetti(1400)
+      return
+    }
     if (secs % 10 === 0 || secs === TARGET_SEC) {
       const prevDone = getDayState(state, creditDay).done
       const prevTalk = getDayState(state, creditDay).talkDone
@@ -144,10 +192,12 @@ export default function Talk({ day, simId, freeCtxId, onBack }) {
           })),
           ...(isCmd ? [{ role: 'user', content: text }] : []),
         ]
-        const personaLine = `${persona.name}, a traveler from ${persona.from} who has been in Bali for ${persona.days || 'a while'}`
+        const personaLine = daily
+          ? `${persona.name}, a friendly person from ${persona.from} (fit the character to the setting)`
+          : `${persona.name}, a traveler from ${persona.from} who has been in Bali for ${persona.days || 'a while'}`
         const reply = await chatReply({
           apiKey, model,
-          system: buildTalkPrompt({ personaLine, settingEn: src.settingEn, mode }),
+          system: buildTalkPrompt({ personaLine, settingEn: src.settingEn, mode, focus }),
           history,
         })
         if (text === '[[feedback]]') {
@@ -227,8 +277,8 @@ export default function Talk({ day, simId, freeCtxId, onBack }) {
         <div className="topbar" style={{ marginBottom: 6 }}>
           <button className="back-btn" onClick={onBack}>←</button>
           <h2 style={{ fontSize: 17 }}>{src.title}</h2>
-          <span className={`timer-chip ${st.talkDone || secs >= TARGET_SEC ? 'done' : ''}`}>
-            ⏱ {fmt(Math.min(secs, TARGET_SEC))} {st.talkDone || secs >= TARGET_SEC ? '✓' : ''}
+          <span className={`timer-chip ${(!toLog && st.talkDone) || secs >= target ? 'done' : ''}`}>
+            ⏱ {fmt(Math.min(secs, target))} {(!toLog && st.talkDone) || secs >= target ? '✓' : ''}
           </span>
         </div>
       </div>
@@ -240,6 +290,13 @@ export default function Talk({ day, simId, freeCtxId, onBack }) {
             <p className="desc">📍 {src.situationTr}</p>
             <p className="desc">🎯 {src.goalTr}</p>
             <p className="desc">👤 Karşındaki: <b>{persona.name}</b> ({persona.from})</p>
+            {focus && (
+              <div className="sample-box">
+                🎯 <b>Bugünkü yapı:</b> {focus.pattern}
+                {focus.words.length > 0 && <><br />📗 <b>Kullanmaya çalış:</b> {focus.words.join(', ')}</>}
+              </div>
+            )}
+            {daily && <button className="link-btn" onClick={() => setCtxSeed(Math.random())}>🔀 Başka senaryo</button>}
             <div className="mode-chips">
               {MODES.map((m) => (
                 <button key={m.id} className={mode === m.id ? 'on' : ''}

@@ -25,7 +25,7 @@ export default defineConfig({
       manifest: {
         name: 'Bali English',
         short_name: 'Bali English',
-        description: '10 günde Bali için hayatta kalma İngilizcesi',
+        description: 'Her sabah 1 saat: ders, kitap, konuşma — Bali için İngilizce',
         lang: 'tr',
         display: 'standalone',
         orientation: 'portrait',

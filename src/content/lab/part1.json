@@ -1,0 +1,1406 @@
+{
+  "1": {
+    "focusTr": "Türkçede 'yorgunum' tek kelime ama İngilizcede am/is/are asla düşmez: I am tired. Sıfat, yer veya meslekten önce mutlaka to be koy.",
+    "pattern": "I am / You-We-They are / He-She-It is + sıfat / yer / isim",
+    "items": [
+      {
+        "tr": "Ben yorgunum.",
+        "en": [
+          "I am tired.",
+          "I'm tired."
+        ],
+        "tip": "'I tired' değil; am asla düşmez."
+      },
+      {
+        "tr": "Kahve sıcak.",
+        "en": [
+          "The coffee is hot.",
+          "The coffee's hot."
+        ]
+      },
+      {
+        "tr": "Biz Bali'deyiz.",
+        "en": [
+          "We are in Bali.",
+          "We're in Bali."
+        ],
+        "tip": "Yer isminden önce 'the' yok: in Bali."
+      },
+      {
+        "tr": "Annem evde.",
+        "en": [
+          "My mother is at home.",
+          "My mom is at home.",
+          "My mum is at home.",
+          "My mother's at home.",
+          "My mom's at home."
+        ]
+      },
+      {
+        "tr": "Ahmet benim en iyi arkadaşım.",
+        "en": [
+          "Ahmet is my best friend.",
+          "Ahmet's my best friend."
+        ]
+      },
+      {
+        "tr": "Spor salonu bugün çok kalabalık.",
+        "en": [
+          "The gym is very busy today.",
+          "The gym is very crowded today.",
+          "The gym's very busy today.",
+          "The gym's very crowded today."
+        ]
+      },
+      {
+        "tr": "Müşterilerim Türkiye'den.",
+        "en": [
+          "My customers are from Turkey.",
+          "My customers are from Türkiye."
+        ]
+      },
+      {
+        "tr": "Erkek kardeşin şu an Bali'de mi?",
+        "en": [
+          "Is your brother in Bali now?",
+          "Is your brother in Bali right now?"
+        ],
+        "tip": "Soruda to be başa geçer: Is your brother...?"
+      },
+      {
+        "tr": "Ben İstanbul'danım ama şu an Canggu'dayım.",
+        "en": [
+          "I am from Istanbul but I am in Canggu now.",
+          "I'm from Istanbul but I'm in Canggu now.",
+          "I'm from Istanbul, but I'm in Canggu now.",
+          "I am from Istanbul, but I am in Canggu now.",
+          "I'm from Istanbul but now I'm in Canggu."
+        ],
+        "tip": "'the Canggu' değil, sadece Canggu."
+      },
+      {
+        "tr": "Villa çok güzel ama plaj uzak.",
+        "en": [
+          "The villa is very nice but the beach is far.",
+          "The villa is very nice, but the beach is far.",
+          "The villa is very beautiful but the beach is far.",
+          "The villa's very nice but the beach is far.",
+          "The villa is very nice but the beach is far away."
+        ]
+      },
+      {
+        "tr": "Mutluyum çünkü arkadaşlarım burada.",
+        "en": [
+          "I am happy because my friends are here.",
+          "I'm happy because my friends are here."
+        ]
+      },
+      {
+        "tr": "Telefonum çantamda değil ve çok endişeliyim.",
+        "en": [
+          "My phone is not in my bag and I am very worried.",
+          "My phone isn't in my bag and I'm very worried.",
+          "My phone's not in my bag and I'm very worried.",
+          "My phone isn't in my bag, and I'm very worried.",
+          "My phone is not in my bag and I'm very worried."
+        ]
+      }
+    ],
+    "talk": [
+      "Where are you from?",
+      "Are you tired today?",
+      "How is the weather in Istanbul now?"
+    ]
+  },
+  "2": {
+    "focusTr": "Tekil, sayılabilir bir şeyden bahsederken başına a/an koy: I am an entrepreneur. Ünlü SESİYLE başlıyorsa an: an online shop, an hour.",
+    "pattern": "a + ünsüz sesi / an + ünlü sesi + tekil isim",
+    "items": [
+      {
+        "tr": "Ben bir girişimciyim.",
+        "en": [
+          "I am an entrepreneur.",
+          "I'm an entrepreneur."
+        ],
+        "tip": "Meslekten önce a/an şart."
+      },
+      {
+        "tr": "O bir scooter.",
+        "en": [
+          "It is a scooter.",
+          "It's a scooter."
+        ]
+      },
+      {
+        "tr": "Bir Americano istiyorum.",
+        "en": [
+          "I want an Americano.",
+          "I want an americano."
+        ]
+      },
+      {
+        "tr": "Ali bir müşteri.",
+        "en": [
+          "Ali is a customer.",
+          "Ali's a customer."
+        ]
+      },
+      {
+        "tr": "Benim bir online giyim mağazam var.",
+        "en": [
+          "I have an online clothing shop.",
+          "I have an online clothing store.",
+          "I've got an online clothing shop.",
+          "I've got an online clothing store."
+        ],
+        "tip": "'online' ünlüyle başlar: an online shop."
+      },
+      {
+        "tr": "Babam bir mühendis.",
+        "en": [
+          "My father is an engineer.",
+          "My dad is an engineer.",
+          "My father's an engineer.",
+          "My dad's an engineer."
+        ]
+      },
+      {
+        "tr": "Kuta, Canggu'ya bir saat uzaklıkta.",
+        "en": [
+          "Kuta is an hour from Canggu.",
+          "Kuta is one hour from Canggu.",
+          "Kuta is an hour away from Canggu.",
+          "Kuta is one hour away from Canggu."
+        ],
+        "tip": "hour'da h okunmaz: an hour."
+      },
+      {
+        "tr": "Canggu'da güzel bir villadayım.",
+        "en": [
+          "I am in a nice villa in Canggu.",
+          "I'm in a nice villa in Canggu.",
+          "I am in a beautiful villa in Canggu.",
+          "I'm in a beautiful villa in Canggu."
+        ]
+      },
+      {
+        "tr": "Bir scooter ve bir kask istiyorum çünkü plaj uzak.",
+        "en": [
+          "I want a scooter and a helmet because the beach is far.",
+          "I want a scooter and a helmet because the beach is far away."
+        ]
+      },
+      {
+        "tr": "Mert bir mimar ama şu an tatilde.",
+        "en": [
+          "Mert is an architect but he is on holiday now.",
+          "Mert is an architect but he's on holiday now.",
+          "Mert is an architect, but he's on holiday now.",
+          "Mert is an architect, but he is on holiday now.",
+          "Mert is an architect but he is on vacation now.",
+          "Mert is an architect but he's on vacation now."
+        ]
+      },
+      {
+        "tr": "Spor salonundan sonra bir muz ve bir yumurta istiyorum.",
+        "en": [
+          "After the gym I want a banana and an egg.",
+          "After the gym, I want a banana and an egg.",
+          "I want a banana and an egg after the gym."
+        ]
+      },
+      {
+        "tr": "Bir fikrim var ve bu çok iyi bir fikir.",
+        "en": [
+          "I have an idea and it is a very good idea.",
+          "I have an idea and it's a very good idea.",
+          "I've got an idea and it's a very good idea.",
+          "I have an idea, and it's a very good idea."
+        ]
+      }
+    ],
+    "talk": [
+      "What is your job?",
+      "Do you have a car or a scooter?",
+      "What do you want for breakfast?"
+    ]
+  },
+  "3": {
+    "focusTr": "Türkçedeki 'benim ... var' = I've got. He/she/it için has got kullan; olumsuzu haven't got / hasn't got.",
+    "pattern": "I/You/We/They have got ('ve got) · He/She/It has got ('s got) + isim · Have/Has + özne + got...?",
+    "items": [
+      {
+        "tr": "Bir scooter'ım var.",
+        "en": [
+          "I have got a scooter.",
+          "I've got a scooter.",
+          "I have a scooter."
+        ],
+        "tip": "'Benim var' = I've got; 'There is' değil."
+      },
+      {
+        "tr": "Elif'in bir kedisi var.",
+        "en": [
+          "Elif has got a cat.",
+          "Elif's got a cat.",
+          "Elif has a cat."
+        ],
+        "tip": "He/she için have değil has got."
+      },
+      {
+        "tr": "Zamanım yok.",
+        "en": [
+          "I haven't got time.",
+          "I have not got time.",
+          "I haven't got any time.",
+          "I don't have time."
+        ]
+      },
+      {
+        "tr": "Kahven var mı?",
+        "en": [
+          "Have you got coffee?",
+          "Have you got any coffee?",
+          "Do you have coffee?",
+          "Do you have any coffee?"
+        ]
+      },
+      {
+        "tr": "Benim bir online giyim mağazam var.",
+        "en": [
+          "I have got an online clothing shop.",
+          "I've got an online clothing shop.",
+          "I have got an online clothing store.",
+          "I've got an online clothing store.",
+          "I have an online clothing shop."
+        ]
+      },
+      {
+        "tr": "Erkek kardeşimin İstanbul'da bir kafesi var.",
+        "en": [
+          "My brother has got a cafe in Istanbul.",
+          "My brother's got a cafe in Istanbul.",
+          "My brother has a cafe in Istanbul.",
+          "My brother has got a café in Istanbul."
+        ]
+      },
+      {
+        "tr": "Villanın havuzu var mı?",
+        "en": [
+          "Has the villa got a pool?",
+          "Has the villa got a swimming pool?",
+          "Does the villa have a pool?",
+          "Does the villa have a swimming pool?"
+        ]
+      },
+      {
+        "tr": "Bugün çok müşterimiz var.",
+        "en": [
+          "We have got a lot of customers today.",
+          "We've got a lot of customers today.",
+          "We have got many customers today.",
+          "We've got many customers today.",
+          "We have a lot of customers today."
+        ]
+      },
+      {
+        "tr": "Yeni bir telefonum var ama kılıfım yok.",
+        "en": [
+          "I have got a new phone but I haven't got a case.",
+          "I've got a new phone but I haven't got a case.",
+          "I've got a new phone, but I haven't got a case.",
+          "I have a new phone but I don't have a case.",
+          "I've got a new phone but I haven't got a phone case."
+        ]
+      },
+      {
+        "tr": "Emre'nin bir scooter'ı var ama kaskı yok.",
+        "en": [
+          "Emre has got a scooter but he hasn't got a helmet.",
+          "Emre's got a scooter but he hasn't got a helmet.",
+          "Emre has got a scooter, but he hasn't got a helmet.",
+          "Emre has a scooter but he doesn't have a helmet.",
+          "Emre has got a scooter but he has not got a helmet."
+        ],
+        "tip": "Emre = he → has got / hasn't got."
+      },
+      {
+        "tr": "Spor salonunun iyi makineleri var ama saunası yok.",
+        "en": [
+          "The gym has got good machines but it hasn't got a sauna.",
+          "The gym's got good machines but it hasn't got a sauna.",
+          "The gym has got good machines, but it hasn't got a sauna.",
+          "The gym has good machines but it doesn't have a sauna."
+        ]
+      },
+      {
+        "tr": "Zamanım yok çünkü bugün bir toplantım var.",
+        "en": [
+          "I haven't got time because I have got a meeting today.",
+          "I haven't got time because I've got a meeting today.",
+          "I haven't got any time because I've got a meeting today.",
+          "I have not got time because I have got a meeting today.",
+          "I don't have time because I have a meeting today."
+        ]
+      }
+    ],
+    "talk": [
+      "Have you got any brothers or sisters?",
+      "Have you got a scooter in Bali?",
+      "Have you got a pet?"
+    ]
+  },
+  "4": {
+    "focusTr": "Bir yerde bir şey 'var' diyorsan I have değil There is / There are kullan. Tekil → There is, çoğul → There are.",
+    "pattern": "There is + tekil / There are + çoğul (+ yer) · Is there...? / Are there...?",
+    "items": [
+      {
+        "tr": "Bir sorun var.",
+        "en": [
+          "There is a problem.",
+          "There's a problem."
+        ]
+      },
+      {
+        "tr": "Burada kafe var mı?",
+        "en": [
+          "Is there a cafe here?",
+          "Is there a café here?"
+        ]
+      },
+      {
+        "tr": "Bugün dalga yok.",
+        "en": [
+          "There are no waves today.",
+          "There aren't any waves today.",
+          "There are not any waves today."
+        ]
+      },
+      {
+        "tr": "Çok müşteri var.",
+        "en": [
+          "There are many customers.",
+          "There are a lot of customers.",
+          "There are lots of customers."
+        ],
+        "tip": "Çoğul isimle there is değil there are."
+      },
+      {
+        "tr": "Canggu'da çok güzel kafeler var.",
+        "en": [
+          "There are many nice cafes in Canggu.",
+          "There are a lot of nice cafes in Canggu.",
+          "There are lots of nice cafes in Canggu.",
+          "There are very nice cafes in Canggu.",
+          "There are many beautiful cafes in Canggu.",
+          "There are a lot of beautiful cafes in Canggu."
+        ]
+      },
+      {
+        "tr": "Villada bir havuz var.",
+        "en": [
+          "There is a pool in the villa.",
+          "There's a pool in the villa.",
+          "There is a swimming pool in the villa.",
+          "There's a swimming pool in the villa.",
+          "There is a pool at the villa.",
+          "There's a pool at the villa."
+        ]
+      },
+      {
+        "tr": "Bu otelde spor salonu var mı?",
+        "en": [
+          "Is there a gym in this hotel?",
+          "Is there a gym at this hotel?"
+        ]
+      },
+      {
+        "tr": "Bugün yeni sipariş yok.",
+        "en": [
+          "There are no new orders today.",
+          "There aren't any new orders today.",
+          "There are not any new orders today."
+        ]
+      },
+      {
+        "tr": "Plajın yanında bir kafe var ve kahvesi çok iyi.",
+        "en": [
+          "There is a cafe near the beach and the coffee is very good.",
+          "There's a cafe near the beach and the coffee is very good.",
+          "There is a cafe near the beach and its coffee is very good.",
+          "There's a cafe near the beach, and the coffee is very good.",
+          "There is a cafe next to the beach and the coffee is very good."
+        ]
+      },
+      {
+        "tr": "İstanbul'da çok trafik var ama Bali'de çok scooter var.",
+        "en": [
+          "There is a lot of traffic in Istanbul but there are a lot of scooters in Bali.",
+          "There's a lot of traffic in Istanbul but there are a lot of scooters in Bali.",
+          "There is a lot of traffic in Istanbul, but there are a lot of scooters in Bali.",
+          "There is a lot of traffic in Istanbul but there are many scooters in Bali.",
+          "There's a lot of traffic in Istanbul but there are lots of scooters in Bali."
+        ],
+        "tip": "traffic tekil: there is; scooters çoğul: there are."
+      },
+      {
+        "tr": "Telefonumda çok mesaj var çünkü bugün indirim var.",
+        "en": [
+          "There are a lot of messages on my phone because there is a sale today.",
+          "There are many messages on my phone because there is a sale today.",
+          "There are a lot of messages on my phone because there's a sale today.",
+          "There are lots of messages on my phone because there's a sale today."
+        ]
+      },
+      {
+        "tr": "Odada bir masa var ama sandalye yok.",
+        "en": [
+          "There is a desk in the room but there isn't a chair.",
+          "There's a desk in the room but there isn't a chair.",
+          "There is a desk in the room but there is no chair.",
+          "There's a desk in the room but there's no chair.",
+          "There is a table in the room but there isn't a chair.",
+          "There's a table in the room but there's no chair."
+        ]
+      }
+    ],
+    "talk": [
+      "Is there a good gym near your villa?",
+      "What is there in Canggu?",
+      "Are there many cafes in your area?"
+    ]
+  },
+  "5": {
+    "focusTr": "Türkçede iyelik eki sonda (mağazam), İngilizcede başta: my shop. Erkek için his, kadın için her; şeyler için its (kesme işaretsiz).",
+    "pattern": "my / your / his / her / its / our / their + isim",
+    "items": [
+      {
+        "tr": "Telefonum yeni.",
+        "en": [
+          "My phone is new.",
+          "My phone's new."
+        ]
+      },
+      {
+        "tr": "Onun adı Elif.",
+        "en": [
+          "Her name is Elif.",
+          "Her name's Elif."
+        ],
+        "tip": "Kadın için his değil her."
+      },
+      {
+        "tr": "Kahvemiz soğuk.",
+        "en": [
+          "Our coffee is cold.",
+          "Our coffee's cold."
+        ]
+      },
+      {
+        "tr": "Senin scooter'ın burada.",
+        "en": [
+          "Your scooter is here.",
+          "Your scooter's here."
+        ]
+      },
+      {
+        "tr": "Erkek kardeşim ve karısı İstanbul'da.",
+        "en": [
+          "My brother and his wife are in Istanbul."
+        ],
+        "tip": "Erkeğin karısı: his wife, her wife değil."
+      },
+      {
+        "tr": "Müşterilerimiz Türkiye'den ve Almanya'dan.",
+        "en": [
+          "Our customers are from Turkey and Germany.",
+          "Our customers are from Türkiye and Germany.",
+          "Our customers are from Turkey and from Germany."
+        ]
+      },
+      {
+        "tr": "Onların villası plaja çok yakın.",
+        "en": [
+          "Their villa is very close to the beach.",
+          "Their villa is very near the beach.",
+          "Their villa's very close to the beach."
+        ]
+      },
+      {
+        "tr": "Senin İstanbul'daki spor salonun pahalı mı?",
+        "en": [
+          "Is your gym in Istanbul expensive?"
+        ]
+      },
+      {
+        "tr": "Benim mağazam online ve logosu siyah beyaz.",
+        "en": [
+          "My shop is online and its logo is black and white.",
+          "My shop is online, and its logo is black and white.",
+          "My store is online and its logo is black and white.",
+          "My shop's online and its logo is black and white."
+        ],
+        "tip": "Şey için it's değil its."
+      },
+      {
+        "tr": "Emre burada ama telefonu villada.",
+        "en": [
+          "Emre is here but his phone is in the villa.",
+          "Emre is here but his phone is at the villa.",
+          "Emre's here but his phone is at the villa.",
+          "Emre is here, but his phone is at the villa.",
+          "Emre's here but his phone's in the villa."
+        ]
+      },
+      {
+        "tr": "Kız kardeşim mutlu çünkü yeni işi çok iyi.",
+        "en": [
+          "My sister is happy because her new job is very good.",
+          "My sister's happy because her new job is very good.",
+          "My sister is happy because her new job is great."
+        ]
+      },
+      {
+        "tr": "Bizim kafemiz küçük ama onların kafesi çok büyük.",
+        "en": [
+          "Our cafe is small but their cafe is very big.",
+          "Our cafe is small, but their cafe is very big.",
+          "Our cafe is small but theirs is very big.",
+          "Our café is small but their café is very big.",
+          "Our cafe is small but their cafe is very large."
+        ]
+      }
+    ],
+    "talk": [
+      "What is your favourite cafe in Canggu?",
+      "Tell me about your family. What is your sister's name?",
+      "What is your shop's name?"
+    ]
+  },
+  "6": {
+    "focusTr": "Fiyat, yaş ve miktarı takılmadan söyle. 13-19 '-teen' (vurgu sonda), 30-90 '-ty' (vurgu başta): fifteen ≠ fifty.",
+    "pattern": "I am + sayı (yaş) · It is + sayı + lira/dollars · There are / I've got + sayı + çoğul isim",
+    "items": [
+      {
+        "tr": "Ben otuz iki yaşındayım.",
+        "en": [
+          "I am thirty-two.",
+          "I'm thirty-two.",
+          "I am thirty-two years old.",
+          "I'm thirty-two years old.",
+          "I am thirty two.",
+          "I'm thirty two."
+        ],
+        "tip": "Yaşta 'I have 32' değil: I am thirty-two."
+      },
+      {
+        "tr": "On iki siparişim var.",
+        "en": [
+          "I have got twelve orders.",
+          "I've got twelve orders.",
+          "I have twelve orders."
+        ]
+      },
+      {
+        "tr": "Kahve kırk lira.",
+        "en": [
+          "The coffee is forty lira.",
+          "The coffee's forty lira.",
+          "The coffee is forty liras."
+        ]
+      },
+      {
+        "tr": "Biz beş kişiyiz.",
+        "en": [
+          "We are five people.",
+          "We're five people.",
+          "There are five of us."
+        ]
+      },
+      {
+        "tr": "Mağazamda iki yüz ürün var.",
+        "en": [
+          "There are two hundred products in my shop.",
+          "There are two hundred products in my store.",
+          "My shop has got two hundred products.",
+          "I have got two hundred products in my shop.",
+          "I've got two hundred products in my shop."
+        ],
+        "tip": "two hundred, 'two hundreds' değil."
+      },
+      {
+        "tr": "Plaj on beş dakika uzaklıkta.",
+        "en": [
+          "The beach is fifteen minutes away.",
+          "The beach is fifteen minutes from here.",
+          "The beach's fifteen minutes away."
+        ],
+        "tip": "fifteen'de vurgu sonda; fifty ile karışmasın."
+      },
+      {
+        "tr": "Bugün otuz müşterimiz var.",
+        "en": [
+          "We have got thirty customers today.",
+          "We've got thirty customers today.",
+          "We have thirty customers today."
+        ]
+      },
+      {
+        "tr": "Erkek kardeşim on dokuz yaşında.",
+        "en": [
+          "My brother is nineteen years old.",
+          "My brother is nineteen.",
+          "My brother's nineteen years old.",
+          "My brother's nineteen."
+        ]
+      },
+      {
+        "tr": "Villa gecelik yüz yirmi dolar ama havuzu var.",
+        "en": [
+          "The villa is one hundred and twenty dollars a night but it has got a pool.",
+          "The villa is a hundred and twenty dollars a night but it's got a pool.",
+          "The villa is one hundred and twenty dollars a night, but it has got a pool.",
+          "The villa is one hundred and twenty dollars per night but it has got a pool.",
+          "The villa is one hundred twenty dollars a night but it has a pool.",
+          "The villa is a hundred and twenty dollars a night but it has a pool."
+        ]
+      },
+      {
+        "tr": "Tişört dört yüz lira ve sweatshirt dokuz yüz lira.",
+        "en": [
+          "The T-shirt is four hundred lira and the sweatshirt is nine hundred lira.",
+          "The t-shirt is four hundred lira and the sweatshirt is nine hundred lira.",
+          "The T-shirt is four hundred lira, and the sweatshirt is nine hundred lira.",
+          "The T-shirt is four hundred liras and the sweatshirt is nine hundred liras."
+        ]
+      },
+      {
+        "tr": "Spor salonunda kırk kişi var ve sadece iki koşu bandı var.",
+        "en": [
+          "There are forty people in the gym and there are only two treadmills.",
+          "There are forty people at the gym and there are only two treadmills.",
+          "There are forty people in the gym, and there are only two treadmills.",
+          "There are forty people in the gym and only two treadmills."
+        ]
+      },
+      {
+        "tr": "İstanbul'da on beş milyondan fazla insan var ama Canggu çok küçük.",
+        "en": [
+          "There are more than fifteen million people in Istanbul but Canggu is very small.",
+          "There are more than fifteen million people in Istanbul, but Canggu is very small.",
+          "There are over fifteen million people in Istanbul but Canggu is very small.",
+          "Istanbul has got more than fifteen million people but Canggu is very small."
+        ],
+        "tip": "fifteen million, 'millions' değil."
+      }
+    ],
+    "talk": [
+      "How old are you?",
+      "How much is a coffee in Canggu?",
+      "How many orders have you got today?"
+    ]
+  },
+  "7": {
+    "focusTr": "Fiilden sonra I değil me, he değil him gelir: Send me a message. İsim olmadan sahiplik için mine/yours/ours: It's mine.",
+    "pattern": "Özne: I/you/he/she/we/they · Nesne: me/you/him/her/us/them · Tek başına sahiplik: mine/yours/his/hers/ours/theirs",
+    "items": [
+      {
+        "tr": "Kask benim.",
+        "en": [
+          "The helmet is mine.",
+          "The helmet's mine.",
+          "It is my helmet.",
+          "It's my helmet."
+        ]
+      },
+      {
+        "tr": "Bana mesaj at.",
+        "en": [
+          "Send me a message.",
+          "Text me.",
+          "Message me.",
+          "Send me a text."
+        ],
+        "tip": "Fiilden sonra I değil me."
+      },
+      {
+        "tr": "Kahve senin mi?",
+        "en": [
+          "Is the coffee yours?",
+          "Is this coffee yours?",
+          "Is it your coffee?"
+        ]
+      },
+      {
+        "tr": "Villa onların.",
+        "en": [
+          "The villa is theirs.",
+          "The villa's theirs.",
+          "It is their villa.",
+          "It's their villa."
+        ]
+      },
+      {
+        "tr": "Müşterilerimiz bizi çok seviyor.",
+        "en": [
+          "Our customers love us a lot.",
+          "Our customers love us very much.",
+          "Our customers really love us."
+        ]
+      },
+      {
+        "tr": "Sipariş senin değil, benim.",
+        "en": [
+          "The order is not yours, it is mine.",
+          "The order isn't yours, it's mine.",
+          "The order is not yours. It is mine.",
+          "The order isn't yours. It's mine.",
+          "It isn't your order, it's mine."
+        ]
+      },
+      {
+        "tr": "Onlarla gitmek istiyorum.",
+        "en": [
+          "I want to go with them."
+        ],
+        "tip": "with they değil, with them."
+      },
+      {
+        "tr": "Bizim scooter'ımız beyaz, sizinki siyah.",
+        "en": [
+          "Our scooter is white and yours is black.",
+          "Our scooter is white, and yours is black.",
+          "Our scooter is white but yours is black.",
+          "Our scooter is white, yours is black."
+        ]
+      },
+      {
+        "tr": "Elif burada değil ve onu aramak istiyorum.",
+        "en": [
+          "Elif is not here and I want to call her.",
+          "Elif isn't here and I want to call her.",
+          "Elif's not here and I want to call her.",
+          "Elif isn't here, and I want to call her.",
+          "Elif isn't here so I want to call her."
+        ],
+        "tip": "Kadın nesne: her; she değil."
+      },
+      {
+        "tr": "Emre benim arkadaşım ve onu her gün spor salonunda görüyorum.",
+        "en": [
+          "Emre is my friend and I see him at the gym every day.",
+          "Emre's my friend and I see him at the gym every day.",
+          "Emre is my friend, and I see him at the gym every day.",
+          "Emre is my friend and I see him in the gym every day.",
+          "Emre is my friend and I see him every day at the gym."
+        ]
+      },
+      {
+        "tr": "Bu telefon benim değil çünkü benimki siyah.",
+        "en": [
+          "This phone is not mine because mine is black.",
+          "This phone isn't mine because mine is black.",
+          "This phone's not mine because mine is black.",
+          "This isn't my phone because mine is black."
+        ]
+      },
+      {
+        "tr": "Müşterilerim bana mesaj atıyor ve ben onlara hızlı cevap veriyorum.",
+        "en": [
+          "My customers send me messages and I answer them quickly.",
+          "My customers message me and I answer them quickly.",
+          "My customers send me messages and I reply to them quickly.",
+          "My customers message me and I reply to them quickly.",
+          "My customers text me and I answer them quickly.",
+          "My customers text me and I reply to them quickly."
+        ]
+      }
+    ],
+    "talk": [
+      "Is that scooter yours?",
+      "Do your customers call you or text you?",
+      "Who do you want to see in Bali?"
+    ]
+  },
+  "8": {
+    "focusTr": "Yakın için this (tekil) / these (çoğul), uzak için that / those. Çoğulda fiil de değişir: These are..., Those are...",
+    "pattern": "This / That + is + tekil · These / Those + are + çoğul",
+    "items": [
+      {
+        "tr": "Bu kahve çok iyi.",
+        "en": [
+          "This coffee is very good.",
+          "This coffee's very good."
+        ]
+      },
+      {
+        "tr": "Şu villa bizim.",
+        "en": [
+          "That villa is ours.",
+          "That villa's ours."
+        ]
+      },
+      {
+        "tr": "Bunlar yeni tişörtler.",
+        "en": [
+          "These are new T-shirts.",
+          "These are new t-shirts.",
+          "These are the new T-shirts."
+        ]
+      },
+      {
+        "tr": "Şunlar benim arkadaşlarım.",
+        "en": [
+          "Those are my friends."
+        ],
+        "tip": "Çoğulda that değil those + are."
+      },
+      {
+        "tr": "Bu ayakkabılar çok rahat.",
+        "en": [
+          "These shoes are very comfortable.",
+          "These shoes are really comfortable."
+        ]
+      },
+      {
+        "tr": "Şu kafe Canggu'da çok popüler.",
+        "en": [
+          "That cafe is very popular in Canggu.",
+          "That café is very popular in Canggu.",
+          "That cafe's very popular in Canggu."
+        ]
+      },
+      {
+        "tr": "Şu müşteriler Almanya'dan mı?",
+        "en": [
+          "Are those customers from Germany?"
+        ]
+      },
+      {
+        "tr": "Bu benim ilk Bali seyahatim.",
+        "en": [
+          "This is my first trip to Bali.",
+          "This is my first Bali trip.",
+          "This is my first time in Bali."
+        ]
+      },
+      {
+        "tr": "Bu tişört siyah ama şu tişört beyaz.",
+        "en": [
+          "This T-shirt is black but that T-shirt is white.",
+          "This T-shirt is black but that one is white.",
+          "This T-shirt is black, but that one is white.",
+          "This t-shirt is black but that t-shirt is white.",
+          "This T-shirt is black, but that T-shirt is white."
+        ]
+      },
+      {
+        "tr": "Bugün sörf yapmak istemiyorum çünkü şu dalgalar çok büyük.",
+        "en": [
+          "I don't want to surf today because those waves are very big.",
+          "I do not want to surf today because those waves are very big.",
+          "I don't want to surf today because those waves are too big.",
+          "Today I don't want to surf because those waves are very big."
+        ],
+        "tip": "waves çoğul: those waves are."
+      },
+      {
+        "tr": "Bu fotoğraflar mağaza için ve çok güzeller.",
+        "en": [
+          "These photos are for the shop and they are very nice.",
+          "These photos are for the shop and they're very nice.",
+          "These photos are for the shop and they are very beautiful.",
+          "These photos are for the store and they're very nice.",
+          "These photos are for the shop, and they're very nice."
+        ]
+      },
+      {
+        "tr": "Bu benim scooter'ım ve şu da senin kaskın.",
+        "en": [
+          "This is my scooter and that is your helmet.",
+          "This is my scooter and that's your helmet.",
+          "This is my scooter, and that is your helmet.",
+          "This is my scooter, and that's your helmet."
+        ]
+      }
+    ],
+    "talk": [
+      "Is this your first time in Bali?",
+      "Are these photos from your shop?",
+      "What is that place near the beach?"
+    ]
+  },
+  "9": {
+    "focusTr": "Türkçede sayıdan sonra isim tekil kalır (iki tişört), İngilizcede çoğul olur: two T-shirts. Düzensizleri ezberle: person→people, child→children, man→men, woman→women.",
+    "pattern": "isim + s / es / ies · person→people · child→children · man→men · woman→women",
+    "items": [
+      {
+        "tr": "İki kahve istiyorum.",
+        "en": [
+          "I want two coffees."
+        ],
+        "tip": "Sayıdan sonra çoğul: two coffees."
+      },
+      {
+        "tr": "Müşteriler mutlu.",
+        "en": [
+          "The customers are happy.",
+          "Customers are happy."
+        ]
+      },
+      {
+        "tr": "Üç kutu var.",
+        "en": [
+          "There are three boxes."
+        ],
+        "tip": "-x, -s, -sh, -ch ile biten isme -es."
+      },
+      {
+        "tr": "Çocuklar burada.",
+        "en": [
+          "The children are here.",
+          "The kids are here."
+        ],
+        "tip": "child → children, childs değil."
+      },
+      {
+        "tr": "Kafede çok insan var.",
+        "en": [
+          "There are many people in the cafe.",
+          "There are a lot of people in the cafe.",
+          "There are lots of people in the cafe.",
+          "There are many people in the café.",
+          "There are a lot of people at the cafe."
+        ],
+        "tip": "peoples değil, people."
+      },
+      {
+        "tr": "Mağazamda yeni elbiseler var.",
+        "en": [
+          "There are new dresses in my shop.",
+          "There are new dresses in my store.",
+          "My shop has got new dresses.",
+          "I have got new dresses in my shop.",
+          "I've got new dresses in my shop."
+        ]
+      },
+      {
+        "tr": "Bali'de çok güzel plajlar var.",
+        "en": [
+          "There are very beautiful beaches in Bali.",
+          "There are very nice beaches in Bali.",
+          "There are many beautiful beaches in Bali.",
+          "There are a lot of beautiful beaches in Bali.",
+          "There are beautiful beaches in Bali.",
+          "Bali has got very beautiful beaches."
+        ]
+      },
+      {
+        "tr": "Telefonumda çok fotoğraf var.",
+        "en": [
+          "There are many photos on my phone.",
+          "There are a lot of photos on my phone.",
+          "There are lots of photos on my phone.",
+          "I have got a lot of photos on my phone.",
+          "I've got a lot of photos on my phone."
+        ]
+      },
+      {
+        "tr": "Spor salonunda iki kadın ve üç erkek var.",
+        "en": [
+          "There are two women and three men in the gym.",
+          "There are two women and three men at the gym."
+        ],
+        "tip": "woman → women, man → men."
+      },
+      {
+        "tr": "İki villa istiyoruz çünkü biz altı kişiyiz.",
+        "en": [
+          "We want two villas because we are six people.",
+          "We want two villas because we're six people.",
+          "We want two villas because there are six of us."
+        ]
+      },
+      {
+        "tr": "Mağazada elli tişört ve yirmi elbise var ama hiç ceket yok.",
+        "en": [
+          "There are fifty T-shirts and twenty dresses in the shop but there are no jackets.",
+          "There are fifty T-shirts and twenty dresses in the shop but there aren't any jackets.",
+          "There are fifty T-shirts and twenty dresses in the shop, but there are no jackets.",
+          "There are fifty t-shirts and twenty dresses in the shop but there are no jackets.",
+          "There are fifty T-shirts and twenty dresses in the store but there are no jackets."
+        ]
+      },
+      {
+        "tr": "Bu şehirdeki kafeler güzel ama fiyatlar çok yüksek.",
+        "en": [
+          "The cafes in this city are nice but the prices are very high.",
+          "The cafes in this city are nice, but the prices are very high.",
+          "The cafes in this city are beautiful but the prices are very high.",
+          "The cafés in this city are nice but the prices are very high."
+        ]
+      }
+    ],
+    "talk": [
+      "How many people are there in your family?",
+      "What products are there in your shop?",
+      "Are there many cafes near your villa?"
+    ]
+  },
+  "10": {
+    "focusTr": "Soru kelimesi en başa, sonra to be veya do gelir: Where is the beach? / What do you do? Türkçe sırayla ('The beach where?') kurma.",
+    "pattern": "What / Where / Who / When / Why / How (much/many) + is/are + özne? · Soru kelimesi + do/does + özne + fiil?",
+    "items": [
+      {
+        "tr": "Plaj nerede?",
+        "en": [
+          "Where is the beach?",
+          "Where's the beach?"
+        ],
+        "tip": "Soru kelimesi başa: Where is...?"
+      },
+      {
+        "tr": "Adın ne?",
+        "en": [
+          "What is your name?",
+          "What's your name?"
+        ]
+      },
+      {
+        "tr": "Nasılsın?",
+        "en": [
+          "How are you?"
+        ]
+      },
+      {
+        "tr": "Kahve ne kadar?",
+        "en": [
+          "How much is the coffee?",
+          "How much is this coffee?",
+          "How much does the coffee cost?"
+        ]
+      },
+      {
+        "tr": "Bali'de nerede yaşıyorsun?",
+        "en": [
+          "Where do you live in Bali?",
+          "Where are you living in Bali?",
+          "Where do you stay in Bali?",
+          "Where are you staying in Bali?"
+        ],
+        "tip": "Fiil cümlesinde soru kelimesinden sonra do."
+      },
+      {
+        "tr": "En sevdiğin kafe hangisi?",
+        "en": [
+          "What is your favourite cafe?",
+          "What's your favourite cafe?",
+          "What is your favorite cafe?",
+          "What's your favorite cafe?",
+          "Which is your favourite cafe?",
+          "Which is your favorite cafe?"
+        ]
+      },
+      {
+        "tr": "Spor salonu bugün neden kapalı?",
+        "en": [
+          "Why is the gym closed today?",
+          "Why is the gym closed?"
+        ]
+      },
+      {
+        "tr": "Bir scooter günlüğü ne kadar?",
+        "en": [
+          "How much is a scooter for a day?",
+          "How much is a scooter per day?",
+          "How much is a scooter a day?",
+          "How much is it to rent a scooter for a day?"
+        ]
+      },
+      {
+        "tr": "Ne iş yapıyorsun ve nerede çalışıyorsun?",
+        "en": [
+          "What do you do and where do you work?",
+          "What do you do, and where do you work?",
+          "What is your job and where do you work?",
+          "What's your job and where do you work?"
+        ]
+      },
+      {
+        "tr": "Bu adam kim ve neden bizim villamızda?",
+        "en": [
+          "Who is this man and why is he in our villa?",
+          "Who's this man and why is he in our villa?",
+          "Who is this man, and why is he in our villa?",
+          "Who is this guy and why is he in our villa?",
+          "Who is that man and why is he in our villa?"
+        ]
+      },
+      {
+        "tr": "Bu tişört ne kadar ve hangi renkler var?",
+        "en": [
+          "How much is this T-shirt and what colours are there?",
+          "How much is this T-shirt and what colors are there?",
+          "How much is this T-shirt and which colours are there?",
+          "How much is this T-shirt and what colours have you got?",
+          "How much is this T-shirt and what colours do you have?",
+          "How much is this T-shirt and what colors do you have?"
+        ]
+      },
+      {
+        "tr": "Canggu'da kaç gün kalmak istiyorsun ve neden?",
+        "en": [
+          "How many days do you want to stay in Canggu and why?",
+          "How many days do you want to stay in Canggu, and why?"
+        ],
+        "tip": "'the Canggu' değil; yer isminde the yok."
+      }
+    ],
+    "talk": [
+      "What do you sell in your online shop?",
+      "Where do you want to go in Bali?",
+      "Why do you want to learn English?"
+    ]
+  },
+  "11": {
+    "focusTr": "Rica ve talimatta 'you' kullanma, direkt fiille başla: Open the door. Olumsuzu Don't + fiil, öneri için Let's + fiil. Kibarlık için please ekle.",
+    "pattern": "Fiil (+ please) · Don't + fiil · Let's + fiil",
+    "items": [
+      {
+        "tr": "Kapıyı aç lütfen.",
+        "en": [
+          "Please open the door.",
+          "Open the door please.",
+          "Open the door, please."
+        ]
+      },
+      {
+        "tr": "Yarın beni ara.",
+        "en": [
+          "Call me tomorrow.",
+          "Give me a call tomorrow."
+        ]
+      },
+      {
+        "tr": "Hızlı sürme.",
+        "en": [
+          "Don't drive fast.",
+          "Do not drive fast.",
+          "Don't ride fast.",
+          "Do not ride fast."
+        ],
+        "tip": "No drive değil: Don't drive."
+      },
+      {
+        "tr": "Hadi plaja gidelim.",
+        "en": [
+          "Let's go to the beach.",
+          "Let us go to the beach."
+        ]
+      },
+      {
+        "tr": "Lütfen siparişimi bugün gönder.",
+        "en": [
+          "Please send my order today.",
+          "Send my order today please.",
+          "Send my order today, please.",
+          "Please ship my order today."
+        ]
+      },
+      {
+        "tr": "Lütfen kahveme şeker koyma.",
+        "en": [
+          "Please don't put sugar in my coffee.",
+          "Don't put sugar in my coffee please.",
+          "Don't put sugar in my coffee, please.",
+          "Please do not put sugar in my coffee.",
+          "No sugar in my coffee, please."
+        ]
+      },
+      {
+        "tr": "Beni villanın önünde bırak.",
+        "en": [
+          "Drop me in front of the villa.",
+          "Drop me off in front of the villa.",
+          "Please drop me in front of the villa.",
+          "Please drop me off in front of the villa."
+        ]
+      },
+      {
+        "tr": "Bugün kaskını unutma.",
+        "en": [
+          "Don't forget your helmet today.",
+          "Do not forget your helmet today.",
+          "Today don't forget your helmet."
+        ]
+      },
+      {
+        "tr": "Sola dön ve kafenin önünde dur.",
+        "en": [
+          "Turn left and stop in front of the cafe.",
+          "Turn left and stop in front of the café.",
+          "Turn left, and stop in front of the cafe.",
+          "Go left and stop in front of the cafe."
+        ]
+      },
+      {
+        "tr": "Lütfen beden tablosuna bak çünkü kalıplar küçük.",
+        "en": [
+          "Please check the size chart because the sizes are small.",
+          "Please check the size chart because the sizes run small.",
+          "Check the size chart please because the sizes are small.",
+          "Please look at the size chart because the sizes are small.",
+          "Please check the size chart because the items run small."
+        ]
+      },
+      {
+        "tr": "Hadi sabah spor salonuna gidelim ve sonra kahve içelim.",
+        "en": [
+          "Let's go to the gym in the morning and then have a coffee.",
+          "Let's go to the gym in the morning and then drink coffee.",
+          "Let's go to the gym in the morning and then get a coffee.",
+          "Let's go to the gym in the morning, and then have a coffee.",
+          "Let's go to the gym in the morning and have a coffee after."
+        ]
+      },
+      {
+        "tr": "Endişelenme ve bana sipariş numaranı gönder.",
+        "en": [
+          "Don't worry and send me your order number.",
+          "Don't worry, just send me your order number.",
+          "Do not worry and send me your order number.",
+          "Don't worry, and send me your order number.",
+          "Don't worry. Send me your order number."
+        ]
+      }
+    ],
+    "talk": [
+      "How do I get to your villa from the beach?",
+      "What do you say to a customer with a wrong size?",
+      "What are your tips for a first trip to Bali?"
+    ]
+  },
+  "12": {
+    "focusTr": "Bir işi kendin yapıyorsan cümle sonuna myself koy: I do it myself. 'Tek başıma' = by myself. Özneyle uyumlu olmalı: he → himself, we → ourselves.",
+    "pattern": "myself / yourself / himself / herself / itself / ourselves / yourselves / themselves · by + myself = tek başıma",
+    "items": [
+      {
+        "tr": "Bunu kendim yapıyorum.",
+        "en": [
+          "I do it myself.",
+          "I'm doing it myself.",
+          "I am doing it myself.",
+          "I do this myself."
+        ]
+      },
+      {
+        "tr": "Kendine iyi bak.",
+        "en": [
+          "Take care of yourself.",
+          "Look after yourself."
+        ]
+      },
+      {
+        "tr": "Tek başıma yaşıyorum.",
+        "en": [
+          "I live by myself.",
+          "I live alone.",
+          "I live on my own."
+        ],
+        "tip": "Tek başıma = by myself."
+      },
+      {
+        "tr": "Lütfen kendini tanıt.",
+        "en": [
+          "Please introduce yourself.",
+          "Introduce yourself please.",
+          "Introduce yourself, please."
+        ]
+      },
+      {
+        "tr": "Mağazamın fotoğraflarını kendim çekiyorum.",
+        "en": [
+          "I take the photos for my shop myself.",
+          "I take the photos of my shop myself.",
+          "I take photos for my shop myself.",
+          "I take my shop's photos myself.",
+          "I take the photos for my store myself."
+        ],
+        "tip": "'kendim' vurgusu: myself cümle sonunda."
+      },
+      {
+        "tr": "Bali'de tek başıma seyahat etmek istiyorum.",
+        "en": [
+          "I want to travel by myself in Bali.",
+          "I want to travel in Bali by myself.",
+          "I want to travel alone in Bali.",
+          "I want to travel in Bali alone.",
+          "I want to travel on my own in Bali."
+        ]
+      },
+      {
+        "tr": "Erkek kardeşim web sitesini kendisi yapıyor.",
+        "en": [
+          "My brother makes the website himself.",
+          "My brother builds the website himself.",
+          "My brother makes the website by himself.",
+          "My brother is making the website himself."
+        ],
+        "tip": "he → himself, 'hisself' değil."
+      },
+      {
+        "tr": "Kız kardeşim kendine yeni bir telefon istiyor.",
+        "en": [
+          "My sister wants a new phone for herself.",
+          "My sister wants to buy herself a new phone.",
+          "My sister wants a new phone for herself too."
+        ]
+      },
+      {
+        "tr": "Spor salonunda kendi kendime antrenman yapıyorum çünkü hocam yok.",
+        "en": [
+          "I train by myself at the gym because I haven't got a coach.",
+          "I train by myself at the gym because I don't have a coach.",
+          "I work out by myself at the gym because I haven't got a trainer.",
+          "I work out by myself at the gym because I don't have a trainer.",
+          "I train by myself at the gym because I haven't got a trainer.",
+          "I work out alone at the gym because I don't have a coach."
+        ]
+      },
+      {
+        "tr": "Videoları kendimiz çekiyoruz çünkü ajans çok pahalı.",
+        "en": [
+          "We make the videos ourselves because an agency is very expensive.",
+          "We shoot the videos ourselves because an agency is very expensive.",
+          "We make the videos ourselves because the agency is very expensive.",
+          "We film the videos ourselves because an agency is very expensive.",
+          "We make the videos ourselves because agencies are very expensive."
+        ],
+        "tip": "we → ourselves (çoğulda -selves)."
+      },
+      {
+        "tr": "Kendine bir kahve al ve otur.",
+        "en": [
+          "Get yourself a coffee and sit down.",
+          "Buy yourself a coffee and sit down.",
+          "Get yourself a coffee and have a seat.",
+          "Grab yourself a coffee and sit down."
+        ]
+      },
+      {
+        "tr": "Scooter'da dikkatli ol ve kendine iyi bak çünkü yollar tehlikeli.",
+        "en": [
+          "Be careful on the scooter and take care of yourself because the roads are dangerous.",
+          "Be careful on the scooter and look after yourself because the roads are dangerous.",
+          "Be careful on the scooter, and take care of yourself because the roads are dangerous.",
+          "Be careful on your scooter and take care of yourself because the roads are dangerous."
+        ]
+      }
+    ],
+    "talk": [
+      "Do you take the photos for your shop yourself?",
+      "Do you like to travel by yourself?",
+      "Can you introduce yourself?"
+    ]
+  }
+}
