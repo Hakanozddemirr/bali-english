@@ -66,9 +66,12 @@ export default function Lab({ lessonKey, skip, onBack, onTalk }) {
   const [res, setRes] = useState(null) // {attempt, verdict, best, diff, ai}
   const [busy, setBusy] = useState(false)
   const [err, setErr] = useState('')
-  const [firstTry, setFirstTry] = useState(0)
+  // Puan: ilk denemede doğru/çok yakın = 1, sonraki denemede doğru = 0,5
+  const [points, setPoints] = useState(0)
   const [showTip, setShowTip] = useState(false)
   const [tries, setTries] = useState(0)
+  const [missed, setMissed] = useState(false) // bu cümlede gerçek bir yanlış oldu mu
+  const [lastAi, setLastAi] = useState(null)   // son yanlışın Claude düzeltmesi
 
   const items = lab?.items || []
   const item = items[i]
@@ -81,9 +84,13 @@ export default function Lab({ lessonKey, skip, onBack, onTalk }) {
     } catch (e) { setErr(e.message) } finally { setBusy(false) }
   }
 
-  const evaluate = async (attempt) => {
+  const award = (firstAttempt) => setPoints((p) => p + (firstAttempt ? 1 : 0.5))
+
+  const evaluate = async (attempt, { voice = false } = {}) => {
     const local = checkSentence(attempt, item.en)
-    let r = { attempt, ...local, ai: null }
+    // Kelime dizmede tüm kelimeler verili: sıra tam doğru olmalı, "yakın" yok
+    if (i < TILE_ITEMS && local.verdict === 'close') local.verdict = 'wrong'
+    let r = { attempt, ...local, ai: null, voice }
     if (local.verdict !== 'correct' && canClaude) {
       setBusy(true); setErr('')
       try {
@@ -91,30 +98,41 @@ export default function Lab({ lessonKey, skip, onBack, onTalk }) {
         r = { ...r, ai, verdict: ai.ok ? 'correct' : local.verdict }
       } catch (e) { setErr(e.message) } finally { setBusy(false) }
     }
-    const ok = r.verdict === 'correct'
-    if (ok && tries === 0) setFirstTry((n) => n + 1)
-    if (!ok) {
+    // "Çok yakın" (küçük kayma ya da ses tanıma hatası) doğru sayılır
+    const ok = r.verdict === 'correct' || r.verdict === 'close'
+    if (ok) award(tries === 0)
+    else { setMissed(true); if (r.ai?.noteTr) setLastAi({ attempt, ...r.ai }) }
+    setTries((n) => n + 1)
+    setRes(r)
+    speak(r.verdict === 'correct' ? attempt : item.en[0], rate)
+  }
+
+  // Mikrofon yanlış duyduysa: kullanıcının beyanıyla doğru say, desteye ekleme
+  const micOverride = () => {
+    award(tries === 1)
+    setMissed(false)
+    setLastAi(null)
+    setRes((r) => ({ ...r, verdict: 'correct', overridden: true }))
+  }
+
+  const next = () => {
+    // Desteye sadece gerçekten yanlış yapılan cümleler girer
+    if (missed) {
       update((s) => {
         addCard(s, { type: 'lab', en: item.en[0], tr: item.tr, src: lessonLabel(lesson) })
-        if (r.ai?.noteTr && canon(attempt) !== canon(r.ai.corrected)) {
-          s.mistakes.unshift({ orig: attempt, fix: r.ai.corrected, note: r.ai.noteTr, date: todayISO() })
+        if (lastAi && canon(lastAi.attempt) !== canon(lastAi.corrected)) {
+          s.mistakes.unshift({ orig: lastAi.attempt, fix: lastAi.corrected, note: lastAi.noteTr, date: todayISO() })
           s.mistakes = s.mistakes.slice(0, 80)
         }
       })
     }
-    setTries((n) => n + 1)
-    setRes(r)
-    speak(ok ? attempt : item.en[0], rate)
-  }
-
-  const next = () => {
-    setRes(null); setShowTip(false); setTries(0)
+    setRes(null); setShowTip(false); setTries(0); setMissed(false); setLastAi(null)
     if (i + 1 >= items.length) return finish()
     setI(i + 1)
   }
 
   const finish = () => {
-    const pct = Math.round((firstTry / items.length) * 100)
+    const pct = Math.round((points / items.length) * 100)
     update((s) => {
       s.course.labBest[lessonKey] = Math.max(s.course.labBest[lessonKey] || 0, pct)
       if (pct >= (skip ? PASS_SKIP : PASS)) {
@@ -176,13 +194,13 @@ export default function Lab({ lessonKey, skip, onBack, onTalk }) {
   }
 
   if (phase === 'end') {
-    const pct = Math.round((firstTry / items.length) * 100)
+    const pct = Math.round((points / items.length) * 100)
     return (
       <div className="screen">
         {header}
         <div className="task-card" style={{ textAlign: 'center' }}>
           <div style={{ fontSize: 44 }}>{pct >= 70 ? '🎉' : '💪'}</div>
-          <p className="desc"><b>İlk denemede {firstTry}/{items.length} (%{pct}).</b> {pct >= 70 ? 'Bu yapı oturuyor.' : 'Bu yapı birkaç tekrar daha istiyor — yanlışlar tekrar destende.'}</p>
+          <p className="desc"><b>Puan: %{pct}</b> (ilk denemede doğru = 1, ikinci denemede = ½).  {pct >= 70 ? 'Bu yapı oturuyor.' : 'Bu yapı birkaç tekrar daha istiyor — yanlışlar tekrar destende.'}</p>
           {pct < (skip ? PASS_SKIP : PASS) && (
             <div className="warn-box">
               %{skip ? PASS_SKIP : PASS}'ın altında kaldı — ders henüz tamamlanmadı. {skip ? 'Videoyu izleyip' : 'Alıştırma videosuna tekrar bakıp'} Lab'ı yeniden çöz.
@@ -212,6 +230,8 @@ export default function Lab({ lessonKey, skip, onBack, onTalk }) {
 
   const isTiles = i < TILE_ITEMS
   const ok = res?.verdict === 'correct'
+  const close = res?.verdict === 'close'
+  const wrong = res && !ok && !close
   return (
     <div className="screen">
       {header}
@@ -228,25 +248,32 @@ export default function Lab({ lessonKey, skip, onBack, onTalk }) {
 
       {!res && (isTiles
         ? <Tiles key={i} item={item} rate={rate} onResult={evaluate} />
-        : <AnswerInput onSubmit={evaluate} disabled={busy} placeholder="🎙️ ile söyle ya da yaz…" />)}
+        : <AnswerInput onSubmit={(t, meta) => evaluate(t, meta)} disabled={busy} placeholder="🎙️ ile söyle ya da yaz…" />)}
       {busy && <div className="empty-note" style={{ padding: 10 }}>⏳ Kontrol ediliyor…</div>}
       {err && <div className="error-box">{err}</div>}
 
       {res && (
         <div className="task-card">
           <div className="heard-line">Sen: “{res.attempt}”</div>
-          {ok ? <div className="feedback good">✅ Doğru!{res.ai && res.verdict === 'correct' && res.ai.ok && canon(res.attempt) !== canon(item.en[0]) ? ' (farklı ama doğru bir cevap)' : ''}</div>
-            : res.verdict === 'close' ? <div className="feedback" style={{ color: 'var(--gold)' }}>🟡 Çok yakın</div>
-              : <div className="feedback bad">❌ Tam değil</div>}
+          {res.overridden ? <div className="feedback good">✅ Doğru sayıldı (mikrofon yanlış duymuş)</div>
+            : ok ? <div className="feedback good">✅ Doğru!{res.ai?.ok && canon(res.attempt) !== canon(item.en[0]) ? ' (farklı ama doğru bir cevap)' : ''}</div>
+              : close ? <div className="feedback" style={{ color: 'var(--gold)' }}>🟡 Çok yakın — doğru sayıldı</div>
+                : <div className="feedback bad">❌ Tam değil</div>}
           {!ok && res.diff && <WordDiff diff={res.diff} />}
-          {!ok && res.ai?.noteTr && <div className="sample-box">🔧 {res.ai.noteTr}<br /><b>Senin cümlenin doğrusu:</b> {res.ai.corrected}</div>}
+          {close && <p className="desc" style={{ textAlign: 'center' }}>Kırmızı kelimeye dikkat — küçük bir kayma ya da mikrofon hatası.</p>}
+          {wrong && res.ai?.noteTr && <div className="sample-box">🔧 {res.ai.noteTr}<br /><b>Senin cümlenin doğrusu:</b> {res.ai.corrected}</div>}
           <div className="phrase" style={{ boxShadow: 'none', background: 'var(--accent-soft)' }}>
             <div className="txt"><div className="en">{item.en[0]}</div>{item.tip && <div className="tr">💡 {item.tip}</div>}</div>
             <button className="speaker" onClick={() => speak(item.en[0], rate)}>🔊</button>
           </div>
           {!ok && <p className="desc">Doğrusunu <b>bir kez sesli</b> tekrar et, sonra devam.</p>}
+          {wrong && res.voice && (
+            <button className="btn ghost" style={{ marginBottom: 8 }} onClick={micOverride}>
+              🎙️ Doğru söyledim, mikrofon yanlış duydu
+            </button>
+          )}
           <div className="btn-row" style={{ marginTop: 8 }}>
-            {!ok && !isTiles && <button className="btn ghost" onClick={() => setRes(null)}>Tekrar dene</button>}
+            {wrong && !isTiles && <button className="btn ghost" onClick={() => setRes(null)}>Tekrar dene (½ puan)</button>}
             <button className="btn primary" onClick={next}>{i + 1 >= items.length ? 'Bitir' : 'Devam →'}</button>
           </div>
         </div>

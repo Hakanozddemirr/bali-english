@@ -58,19 +58,61 @@ export function canon(s) {
   return t.replace(/\s+/g, ' ').trim()
 }
 
+// Gramer açısından kritik kelimeler: bunlardaki fark mikrofon hatası sayılmaz, gerçek hata sayılır
+const CRIT = new Set(('am is are was were be been being do does did done have has had will would can could should must ' +
+  'not no to the a an go goes going went gone want wants wanted than more most my your his her its our their me him us them ' +
+  'this that these those there here i you he she it we they mine yours ours theirs myself yourself himself herself ' +
+  'some any much many few little every all both either neither also too very at on in by for from since ago last ' +
+  // düzensiz fiiller: yalın ↔ geçmiş farkı gerçek hatadır
+  'eat ate buy bought see saw meet met take took come came get got make made say said tell told find found leave left ' +
+  'sleep slept drink drank feel felt pay paid spend spent think thought know knew give gave write wrote sell sold ' +
+  'send sent bring brought begin began run ran swim swam drive drove ride rode wake woke lose lost win won').split(' '))
+
+// -ed/-s gibi ek farkları sameStem ile yakalanır (like/liked, customer/customers)
+const isCrit = (w) => CRIT.has(w)
+const sameStem = (a, b) => a !== b && a.length >= 3 && b.length >= 3 && a.slice(0, 3) === b.slice(0, 3)
+
+// Kesin (birebir kelime) hizalama: eksik ve fazla kelimeleri bul
+function strictAlign(T, H) {
+  const m = T.length, n = H.length
+  const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0))
+  for (let i = m - 1; i >= 0; i--)
+    for (let j = n - 1; j >= 0; j--)
+      dp[i][j] = T[i] === H[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1])
+  const tHit = Array(m).fill(false), hHit = Array(n).fill(false)
+  let i = 0, j = 0
+  while (i < m && j < n) {
+    if (T[i] === H[j]) { tHit[i] = hHit[j] = true; i++; j++ }
+    else if (dp[i + 1][j] >= dp[i][j + 1]) i++
+    else j++
+  }
+  return { missing: T.filter((_, k) => !tHit[k]), extra: H.filter((_, k) => !hHit[k]), matched: tHit }
+}
+
+// "Çok yakın": sadece içerik kelimesinde küçük fark (çoğunlukla ses tanıma). Gramer farkı asla yakın sayılmaz.
+function isClose(T, H) {
+  const { missing, extra } = strictAlign(T, H)
+  const allowed = T.length <= 6 ? 1 : 2
+  if (Math.max(missing.length, extra.length) > allowed) return false
+  if (missing.some(isCrit) || extra.some(isCrit)) return false
+  if (missing.some((m) => extra.some((x) => sameStem(m, x)))) return false // customer/customers, like/likes
+  return true
+}
+
 // answers: kabul edilen cevaplar. Dönüş: {verdict: 'correct'|'close'|'wrong', best, score, diff}
 export function checkSentence(attempt, answers) {
   const a = canon(attempt)
   if (!a) return { verdict: 'wrong', best: answers[0], score: 0 }
-  let best = answers[0], bestScore = -1, diff = null
+  const H = a.split(' ')
+  let best = answers[0], bestScore = -1, diff = null, close = false
   for (const ans of answers) {
     const c = canon(ans)
     if (c === a) return { verdict: 'correct', best: ans, score: 1 }
-    const cmp = compareSentence(c, a)
-    // fazladan kelime de cezalandırılsın
-    const extra = Math.max(0, a.split(' ').length - c.split(' ').length)
-    const sc = cmp.score - extra * 0.08
-    if (sc > bestScore) { bestScore = sc; best = ans; diff = cmp }
+    const T = c.split(' ')
+    const al = strictAlign(T, H)
+    const sc = (T.length - al.missing.length - al.extra.length * 0.5) / T.length
+    if (isClose(T, H)) close = true
+    if (sc > bestScore) { bestScore = sc; best = ans; diff = { targetWords: T, matched: al.matched } }
   }
-  return { verdict: bestScore >= 0.86 ? 'close' : 'wrong', best, score: Math.max(0, bestScore), diff }
+  return { verdict: close ? 'close' : 'wrong', best, score: Math.max(0, bestScore), diff }
 }

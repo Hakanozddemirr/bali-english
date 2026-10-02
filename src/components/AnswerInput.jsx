@@ -9,11 +9,12 @@ export default function AnswerInput({ onSubmit, placeholder = 'Konuş ya da yaz�
   const [err, setErr] = useState('')
   const recRef = useRef(null)
 
-  const send = (text) => {
+  // meta.voice: cevap mikrofondan mı geldi (ses tanıma hatası olasılığı için)
+  const send = (text, meta = {}) => {
     const t = (text ?? input).trim()
     if (!t || disabled) return
     setInput('')
-    onSubmit(t)
+    onSubmit(t, meta)
   }
 
   const toggleMic = () => {
@@ -29,7 +30,7 @@ export default function AnswerInput({ onSubmit, placeholder = 'Konuş ya da yaz�
       onInterim: (t) => setInput(t),
       onFinal: (t) => {
         setListening(false)
-        send(t)
+        send(t, { voice: true })
       },
       onError: (m) => {
         setErr(m)
