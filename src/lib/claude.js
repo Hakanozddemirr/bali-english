@@ -28,7 +28,7 @@ function trError(e) {
 
 const MODE_LINES = {
   guided:
-    'MODE: GUIDED. Speak a little slower and simpler than normal (A2-friendly). Keep replies to 1–2 short sentences. If the learner seems stuck, gently offer a phrase they could use.',
+    'MODE: GUIDED. Simple A2 English, 1–2 short sentences per reply, ONE question at a time. End EVERY reply with a new line in exactly this format: "Try: <a short sentence frame that answers your question, with ___ for the parts he fills in>" — e.g. "Try: I went to ___ with ___." The frame must be easy and use the structure he is practising.',
   normal:
     'MODE: NORMAL. Natural, casual international traveler English — contractions, light fillers ("honestly", "I mean"), 1–3 sentences per reply.',
   realistic:
@@ -53,7 +53,9 @@ export function buildTalkPrompt({ personaLine, settingEn, mode = 'normal', focus
     `- Most replies should end with a question or a hook that keeps the conversation alive.`,
     `- Vary your details naturally (places, plans, small stories). Occasionally invite the learner somewhere or suggest exchanging Instagram/WhatsApp.`,
     `CORRECTIONS: Do not interrupt the flow. About once every 2–3 turns, if there is a clear mistake (especially in today's focus), give ONE quick recast in parentheses, e.g. (better: "I liked the beach clubs") — then continue the conversation immediately. Never lecture.`,
+    `MIXING TURKISH IS OK: when he doesn't know a word he may say it in Turkish (e.g. "I went to the plaj"). Then begin your reply with the word in brackets, e.g. [plaj = beach], and continue naturally. Never criticize mixing — it keeps him talking.`,
     `SPECIAL COMMANDS from the learner:`,
+    `- "[[word: X]]" → X is a Turkish word or phrase he needs. Reply ONLY with: [X = English] + one very short example sentence, then repeat your last question in simple words.`,
     `- "yardım" or "help" alone → give the Turkish translation of your previous message, then repeat it in English and continue.`,
     `- "[[hint]]" → in ≤10 words, suggest in English what they could say next (as a coach aside, in parentheses), then wait.`,
     `- "[[answer]]" → give one full natural sentence they could say, in quotes, then continue in character as if waiting for them to say it.`,

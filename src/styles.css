@@ -349,3 +349,14 @@ input, select { font: inherit; color: inherit; }
 .hist th { color: var(--ink-soft); font-size: 12px; }
 .del-btn { font-size: 15px; color: var(--ink-soft); padding: 4px 6px; flex-shrink: 0; }
 .sample-box a, .empty-note a { color: var(--accent); font-weight: 700; }
+.tile { touch-action: none; user-select: none; -webkit-user-select: none; }
+.tile.on { cursor: grab; }
+.tile.dragging { background: var(--accent); color: #fff; transform: scale(1.08); box-shadow: var(--shadow); cursor: grabbing; }
+.tile-help { text-align: center; font-size: 12.5px; color: var(--ink-soft); margin: -4px 0 10px; }
+.try-bubble { background: var(--accent-soft); color: var(--ink); border-radius: 14px; padding: 8px 12px; font-size: 14.5px; margin: -4px 0 10px; max-width: 92%; }
+.try-bubble b { color: var(--accent); }
+.word-ask { display: flex; gap: 8px; padding: 0 16px 6px; }
+.word-ask input { flex: 1; padding: 11px 13px; border-radius: 14px; border: 2px solid var(--accent); background: var(--card); font-size: 16px; outline: none; min-width: 0; }
+.word-ask .btn { width: auto; padding: 10px 16px; }
+.rescue { font-size: 13.5px; margin-top: 3px; }
+.rescue span { color: var(--ink-soft); }

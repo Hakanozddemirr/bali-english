@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { useApp, ensureLog } from '../lib/store'
 import { todayISO } from '../lib/dates'
 import { lessonByKey, labFor, lessonLabel } from '../lib/course'
@@ -28,25 +28,76 @@ const shuffle = (arr) => {
 
 const tilesOf = (sentence) => sentence.replace(/[.?!,]+$/g, '').split(/\s+/).filter(Boolean)
 
+// Kelime dizme: dokun = ekle/çıkar, sürükle = sıradaki yerini değiştir (dokunmatik + fare)
 function Tiles({ item, onResult, rate }) {
   const words = useMemo(() => tilesOf(item.en[0]), [item])
   const [pool, setPool] = useState(() => shuffle(words.map((w, i) => ({ w, i }))))
   const [line, setLine] = useState([])
+  const [dragId, setDragId] = useState(null)
+  const drag = useRef(null)       // {id, x, y, moved}
+  const refs = useRef({})         // tile id -> DOM
   const full = line.length === words.length
+
   const take = (t) => { setPool((p) => p.filter((x) => x !== t)); setLine((l) => [...l, t]) }
   const drop = (t) => { setLine((l) => l.filter((x) => x !== t)); setPool((p) => [...p, t]) }
-  const check = () => {
-    const attempt = line.map((t) => t.w).join(' ')
-    onResult(attempt)
+  const undo = () => line.length && drop(line[line.length - 1])
+  const clear = () => { setPool((p) => [...p, ...line]); setLine([]) }
+
+  const onDown = (e, t) => {
+    drag.current = { id: t.i, x: e.clientX, y: e.clientY, moved: false }
+    e.currentTarget.setPointerCapture?.(e.pointerId)
   }
+  const onMove = (e) => {
+    const d = drag.current
+    if (!d) return
+    if (!d.moved && Math.hypot(e.clientX - d.x, e.clientY - d.y) < 8) return
+    if (!d.moved) { d.moved = true; setDragId(d.id) }
+    // Parmağa en yakın kutunun yerine taşı
+    setLine((l) => {
+      let best = -1, bestDist = Infinity
+      l.forEach((t, k) => {
+        const r = refs.current[t.i]?.getBoundingClientRect()
+        if (!r) return
+        const dist = Math.hypot(e.clientX - (r.left + r.width / 2), e.clientY - (r.top + r.height / 2))
+        if (dist < bestDist) { bestDist = dist; best = k }
+      })
+      const from = l.findIndex((t) => t.i === d.id)
+      if (best < 0 || from < 0 || best === from) return l
+      const next = [...l]
+      const [moving] = next.splice(from, 1)
+      next.splice(best, 0, moving)
+      return next
+    })
+  }
+  const onUp = (t) => {
+    const d = drag.current
+    drag.current = null
+    setDragId(null)
+    if (d && !d.moved) drop(t) // sürüklemeden bırakıldı = dokunma → geri gönder
+  }
+
+  const check = () => onResult(line.map((t) => t.w).join(' '))
+
   return (
     <div>
       <div className="tile-line">
         {line.length === 0 && <span className="tile-ph">Kelimelere sırayla dokun…</span>}
-        {line.map((t) => <button key={t.i} className="tile on" onClick={() => drop(t)}>{t.w}</button>)}
+        {line.map((t) => (
+          <button key={t.i} ref={(el) => { refs.current[t.i] = el }}
+            className={`tile on ${dragId === t.i ? 'dragging' : ''}`}
+            onPointerDown={(e) => onDown(e, t)} onPointerMove={onMove} onPointerUp={() => onUp(t)}
+            onPointerCancel={() => { drag.current = null; setDragId(null) }}>
+            {t.w}
+          </button>
+        ))}
       </div>
+      <div className="tile-help">Dokun: ekle / geri çıkar · Sürükle: yerini değiştir</div>
       <div className="tile-pool">
         {pool.map((t) => <button key={t.i} className="tile" onClick={() => take(t)}>{t.w}</button>)}
+      </div>
+      <div className="btn-row" style={{ marginBottom: 8 }}>
+        <button className="btn ghost" disabled={!line.length} onClick={undo}>↩ Geri al</button>
+        <button className="btn ghost" disabled={!line.length} onClick={clear}>🗑 Temizle</button>
       </div>
       <button className="btn primary" disabled={!full} onClick={check}>Kontrol et</button>
       <button className="btn ghost" style={{ marginTop: 8 }} onClick={() => speak(item.en[0], rate * 0.85)}>🐢 Doğrusunu dinle (ipucu)</button>

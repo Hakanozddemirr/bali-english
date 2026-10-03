@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { getDay, freetalk, TOTAL_DAYS } from '../content'
+import { getDay, freetalk, TOTAL_DAYS, allChunkList, guide } from '../content'
 import { useApp, getDayState, ensureDay, recomputeDay, addMistake, activeDayNum, ensureLog, getLog, FULL_TALK } from '../lib/store'
 import { todayFocus } from '../lib/course'
 import { dueCards } from '../lib/cards'
@@ -22,6 +22,42 @@ const LIFE_CONTEXTS = [
   { id: 'weekend', title: 'Hafta Sonu Planları', emoji: '📅', settingEn: 'a video call with a friend you met in Bali; you catch up about last week and plans', situationTr: 'Bali\'de tanıştığın bir arkadaşla görüntülü konuşma: geçen hafta ne yaptın, planın ne?' },
 ]
 const IS_PUBLISHED = /claude(usercontent)?\.(ai|com)$/.test(window.location.hostname)
+
+// Claude cevabındaki "Try: ___" kalıbını ayır (ayrı balonda gösterilir, sesli okunmaz)
+function splitTry(reply) {
+  const m = reply.match(/\n?\s*Try:\s*(.+)\s*$/i)
+  if (!m) return { body: reply, tryLine: null }
+  return { body: reply.slice(0, m.index).trim(), tryLine: m[1].replace(/^["“]|["”]$/g, '') }
+}
+
+// Konuşmada kelime sesli okunurken parantez/köşeli parantez içi atlanır
+const forSpeech = (t) => t.replace(/\(.*?\)/g, '').replace(/\[.*?\]/g, '')
+
+const RESCUE = [
+  ['How do you say ___ in English?', '___ İngilizcede nasıl denir?'],
+  ["Sorry, can you say that again?", 'Pardon, tekrar eder misin?'],
+  ['Can you speak slowly, please?', 'Yavaş konuşur musun?'],
+  ["I don't know the word, but…", 'Kelimeyi bilmiyorum ama…'],
+  ['What does ___ mean?', '___ ne demek?'],
+]
+
+// Çevrimdışı kelime arama: Bali kalıpları + rehber + kendi kartların
+function localLookup(q, cards) {
+  const n = (x) => (x || '').toLocaleLowerCase('tr').trim()
+  const query = n(q)
+  if (!query) return []
+  const pool = [
+    ...Object.values(cards).map((c) => ({ tr: c.tr, en: c.en })),
+    ...allChunkList.map((c) => ({ tr: c.tr, en: c.en })),
+    ...guide.categories.flatMap((c) => c.phrases.map((p) => ({ tr: p.tr, en: p.en }))),
+  ]
+  // Türkçe ekler için kök yakalama: "hesap" → "hesa" (hesabı, hesabı alabilir miyiz…)
+  const stem = query.length > 4 ? query.slice(0, Math.max(4, query.length - 1)) : query
+  const hits = pool.filter((p) => p.tr && n(p.tr).includes(stem))
+  hits.sort((a, b) => a.tr.length - b.tr.length)
+  const seen = new Set()
+  return hits.filter((h) => !seen.has(h.en) && seen.add(h.en)).slice(0, 3)
+}
 
 function fmt(sec) {
   return `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`
@@ -206,8 +242,9 @@ export default function Talk({ day, simId, freeCtxId, daily, onBack }) {
           if (found.length) update((s) => found.forEach((f) => addMistake(s, { ...f, note: src.title })))
           markSimDone()
         } else {
-          setMessages((m) => [...m, { role: 'assistant', text: reply }])
-          speak(reply.replace(/\(.*?\)/g, ''), rate, { accent: 'rotate' })
+          const { body, tryLine } = splitTry(reply)
+          setMessages((m) => [...m, { role: 'assistant', text: body, tryLine }])
+          speak(forSpeech(body), rate, { accent: 'rotate' })
         }
       } catch (e) {
         setErr(e.message)
@@ -239,6 +276,19 @@ export default function Talk({ day, simId, freeCtxId, daily, onBack }) {
     setMessages((m) => [...m, ...out])
     if (turn.advance) setStepIdx((i) => i + 1)
     speak(turn.reply, rate * (src.fast ? 1.15 : 1), { accent: 'rotate' })
+  }
+
+  const [wordOpen, setWordOpen] = useState(false)
+  const [wordQ, setWordQ] = useState('')
+  const askWord = () => {
+    const q = wordQ.trim()
+    if (!q) return
+    setWordQ(''); setWordOpen(false)
+    if (claudeMode) return send(`[[word: ${q}]]`)
+    const hits = localLookup(q, state.cards)
+    pushSys(hits.length
+      ? `🇹🇷→🇬🇧 “${q}”:\n` + hits.map((h) => `• ${h.en} — ${h.tr}`).join('\n')
+      : `“${q}” kayıtlı kalıplarda yok. API anahtarı girersen her kelimeyi sorabilirsin. Şimdilik: “I don't know the word, but…” deyip anlatmayı dene.`)
   }
 
   const lastAi = [...messages].reverse().find((m) => m.role === 'assistant')
@@ -297,6 +347,11 @@ export default function Talk({ day, simId, freeCtxId, daily, onBack }) {
               </div>
             )}
             {daily && <button className="link-btn" onClick={() => setCtxSeed(Math.random())}>🔀 Başka senaryo</button>}
+            <div className="sample-box">
+              <b>🛟 Takılınca:</b> Türkçe kelime karıştırmak serbest (“I went to the <i>plaj</i>”) — doğrusunu söyler.
+              Ya da 🇹🇷 <b>Kelime sor</b>. Kurtarıcı cümleler:
+              {RESCUE.map(([en, tr]) => <div key={en} className="rescue">• <b>{en}</b> <span>{tr}</span></div>)}
+            </div>
             <div className="mode-chips">
               {MODES.map((m) => (
                 <button key={m.id} className={mode === m.id ? 'on' : ''}
@@ -318,11 +373,14 @@ export default function Talk({ day, simId, freeCtxId, daily, onBack }) {
             <div className="bubble sys">🎬 {src.situationTr}</div>
             {messages.map((m, i) =>
               m.role === 'assistant' ? (
-                <button key={i} className="bubble ai" style={{ display: 'block', textAlign: 'left', whiteSpace: 'pre-wrap' }}
-                  onClick={() => speak(m.text.replace(/\(.*?\)/g, ''), rate, { accent: 'rotate' })}>
-                  {m.text}
-                  <div className="re-listen">🔊 tekrar dinle</div>
-                </button>
+                <div key={i}>
+                  <button className="bubble ai" style={{ display: 'block', textAlign: 'left', whiteSpace: 'pre-wrap' }}
+                    onClick={() => speak(forSpeech(m.text), rate, { accent: 'rotate' })}>
+                    {m.text}
+                    <div className="re-listen">🔊 tekrar dinle</div>
+                  </button>
+                  {m.tryLine && <div className="try-bubble">💬 Şöyle başla: <b>{m.tryLine}</b></div>}
+                </div>
               ) : m.role === 'user' ? (
                 <div key={i} className="bubble me">{m.text}</div>
               ) : (
@@ -343,8 +401,16 @@ export default function Talk({ day, simId, freeCtxId, daily, onBack }) {
             <button onClick={whatTr}>🇹🇷 Ne dedi?</button>
             <button onClick={replay}>🔁</button>
             <button onClick={slower}>🐢</button>
+            <button onClick={() => setWordOpen((v) => !v)}>🇹🇷 Kelime sor</button>
             <button onClick={finishFeedback}>🏁 Bitir</button>
           </div>
+          {wordOpen && (
+            <div className="word-ask">
+              <input value={wordQ} onChange={(e) => setWordQ(e.target.value)} placeholder="Türkçe kelime (ör. kiralamak)"
+                onKeyDown={(e) => e.key === 'Enter' && askWord()} autoFocus />
+              <button className="btn primary" onClick={askWord} disabled={!wordQ.trim() || busy}>Sor</button>
+            </div>
+          )}
           <div style={{ padding: '0 16px calc(10px + env(safe-area-inset-bottom))' }}>
             <AnswerInput onSubmit={send} disabled={busy} />
           </div>
